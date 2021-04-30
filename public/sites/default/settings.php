@@ -96,3 +96,7 @@ if ($env = getenv('APP_ENV')) {
   }
 }
 
+// Automatic Platform.sh settings.
+if (file_exists($app_root . '/' . $site_path . '/settings.platformsh.php')) {
+  include $app_root . '/' . $site_path . '/settings.platformsh.php';
+}
