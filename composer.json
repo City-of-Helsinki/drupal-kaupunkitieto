@@ -87,14 +87,5 @@
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
-    ],
-    "scripts": {
-        "copy-commit-message-script": "make copy-commit-message-script",
-        "post-install-cmd": [
-            "@copy-commit-message-script"
-        ],
-        "post-update-cmd": [
-            "@copy-commit-message-script"
-        ]
-    }
+    ]
 }

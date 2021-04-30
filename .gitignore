@@ -22,3 +22,11 @@ public/modules/custom/helfi_*
 
 !*.gitkeep
 !*.keepme
+
+# Ignore mounts
+tmp
+private
+.drush
+drush-backups
+.console
+/.editorconfig
