@@ -1,0 +1,12 @@
+uuid: 97267325-b17e-4bbf-8bef-9d3b68a61a72
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: M-cucF_MywQRWs1GedbjUzT6HAIH-QUhLICxcZgEPFg
+id: image
+label: Image
+icon_uuid: null
+icon_default: null
+description: 'Image with a caption'
+behavior_plugins: {  }

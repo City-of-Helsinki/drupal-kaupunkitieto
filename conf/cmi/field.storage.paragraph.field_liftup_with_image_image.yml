@@ -1,0 +1,22 @@
+uuid: 7c9bff5c-5a58-4d35-98b9-b241b77c2cb3
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+_core:
+  default_config_hash: _UsQEVpN-k96IiYHWU1_EJ2OuPyWCv8vo95g9qeiEDQ
+id: paragraph.field_liftup_with_image_image
+field_name: field_liftup_with_image_image
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,17 @@
+uuid: d75e88af-04b0-4ae0-8f83-711f7763f967
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: xNj4uho3-eLZgZEB-QW1gSHrWNfzDifsXlURLQDZGXE
+name: original_l
+label: 'Original L'
+effects:
+  0c465a35-1ef2-4e25-b6a9-30b461a5f89d:
+    uuid: 0c465a35-1ef2-4e25-b6a9-30b461a5f89d
+    id: image_scale
+    weight: 1
+    data:
+      width: 1200
+      height: null
+      upscale: true
