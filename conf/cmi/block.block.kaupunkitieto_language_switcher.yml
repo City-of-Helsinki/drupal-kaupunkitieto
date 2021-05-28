@@ -1,0 +1,22 @@
+uuid: 6d02ec5e-82b4-4f0d-b480-f14dfeb07166
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - kaupunkitieto
+_core:
+  default_config_hash: jDpKvB-ZNjf7l-dHk_CINYgToXHW1HAv6Yf9ZBphRYQ
+id: kaupunkitieto_language_switcher
+theme: kaupunkitieto
+region: header_top
+weight: 0
+provider: null
+plugin: 'language_block:language_content'
+settings:
+  id: 'language_block:language_content'
+  label: 'Kielen vaihtaja'
+  provider: language
+  label_display: '0'
+visibility: {  }

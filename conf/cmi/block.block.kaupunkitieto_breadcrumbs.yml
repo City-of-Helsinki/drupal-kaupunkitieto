@@ -1,0 +1,22 @@
+uuid: f436267d-a692-4c9c-8cdb-8b433b0a3477
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kaupunkitieto
+_core:
+  default_config_hash: X6F3oSAls1r1jwOVU5n7EG6Uaz0yFqo-GQcEXDzxxLk
+id: kaupunkitieto_breadcrumbs
+theme: kaupunkitieto
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Murupolku
+  provider: system
+  label_display: '0'
+visibility: {  }

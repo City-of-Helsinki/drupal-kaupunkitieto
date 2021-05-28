@@ -1,0 +1,25 @@
+uuid: c4dbed76-779e-48ea-abca-19a2e83b3b6e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kaupunkitieto
+_core:
+  default_config_hash: ZzdJcSkjBoQgZejw_QMj17rr48OGJ1nrMTff0Ll9Hhw
+id: kaupunkitieto_sitebranding
+theme: kaupunkitieto
+region: header_top
+weight: -4
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Sivuston brändäys'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: b96e2d9b-3353-4f8c-9d33-348f908a26b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - hdbt_content
+  theme:
+    - kaupunkitieto
+_core:
+  default_config_hash: IsZxrQIR5fs_5xZDQ1BJ8K5LXwiaRAM3Gk-HY4vuVb4
+id: kaupunkitieto_footertopblock
+theme: kaupunkitieto
+region: footer_top
+weight: -3
+provider: null
+plugin: footer_top_block
+settings:
+  id: footer_top_block
+  label: 'Footer top block'
+  provider: hdbt_content
+  label_display: '0'
+visibility: {  }

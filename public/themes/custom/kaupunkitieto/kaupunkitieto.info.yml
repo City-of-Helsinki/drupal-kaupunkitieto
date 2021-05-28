@@ -1,5 +1,5 @@
-name: HDBT - Subtheme
-description: Subtheme for Helsinki Drupal instances.
+name: HDBT - Kaupunkitieto
+description: Subtheme for Kaupunkitieto Drupal instances.
 type: theme
 base theme: hdbt
 tags: sub-theme
