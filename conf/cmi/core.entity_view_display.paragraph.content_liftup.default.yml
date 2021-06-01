@@ -1,0 +1,33 @@
+uuid: e8636e8e-2028-43d0-9a51-cf2183ae762f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_liftup.field_content_liftup_items
+    - field.field.paragraph.content_liftup.field_content_liftup_title
+    - paragraphs.paragraphs_type.content_liftup
+  module:
+    - entity_reference_revisions
+id: paragraph.content_liftup.default
+targetEntityType: paragraph
+bundle: content_liftup
+mode: default
+content:
+  field_content_liftup_items:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_content_liftup_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

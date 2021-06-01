@@ -1,0 +1,29 @@
+uuid: 51fa8def-96a5-4c7e-81c5-87760fd364e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content_liftup_item_media
+    - media.type.file
+    - paragraphs.paragraphs_type.content_liftup_item
+id: paragraph.content_liftup_item.field_content_liftup_item_media
+field_name: field_content_liftup_item_media
+entity_type: paragraph
+bundle: content_liftup_item
+label: Media
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

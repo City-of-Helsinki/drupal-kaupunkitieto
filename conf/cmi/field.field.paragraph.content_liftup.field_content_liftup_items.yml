@@ -1,0 +1,73 @@
+uuid: 53788de2-ccc5-4ca0-870d-f8d2df0a88f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content_liftup_items
+    - paragraphs.paragraphs_type.content_liftup
+    - paragraphs.paragraphs_type.content_liftup_item
+  module:
+    - entity_reference_revisions
+id: paragraph.content_liftup.field_content_liftup_items
+field_name: field_content_liftup_items
+entity_type: paragraph
+bundle: content_liftup
+label: Liftups
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      content_liftup_item: content_liftup_item
+    target_bundles_drag_drop:
+      accordion:
+        weight: 16
+        enabled: false
+      accordion_item:
+        weight: 17
+        enabled: false
+      banner:
+        weight: 18
+        enabled: false
+      columns:
+        weight: 19
+        enabled: false
+      content_cards:
+        weight: 20
+        enabled: false
+      content_liftup:
+        weight: 21
+        enabled: false
+      content_liftup_item:
+        enabled: true
+        weight: 22
+      gallery:
+        weight: 23
+        enabled: false
+      gallery_slide:
+        weight: 24
+        enabled: false
+      hero:
+        weight: 25
+        enabled: false
+      image:
+        weight: 26
+        enabled: false
+      liftup_with_image:
+        weight: 27
+        enabled: false
+      list_of_links:
+        weight: 28
+        enabled: false
+      list_of_links_item:
+        weight: 29
+        enabled: false
+      text:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions

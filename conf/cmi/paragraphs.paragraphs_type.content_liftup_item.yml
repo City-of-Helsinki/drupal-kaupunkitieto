@@ -1,0 +1,10 @@
+uuid: e90dac03-df1a-44ab-9255-0b3cbe105303
+langcode: en
+status: true
+dependencies: {  }
+id: content_liftup_item
+label: 'Content liftup item'
+icon_uuid: null
+icon_default: null
+description: 'One item of content liftup.'
+behavior_plugins: {  }

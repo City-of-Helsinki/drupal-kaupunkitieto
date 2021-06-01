@@ -1,0 +1,10 @@
+uuid: fc42a8ed-8f12-46a3-b03e-3ade5b5da4b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.liftup
+label: Liftup
+targetEntityType: media
+cache: true

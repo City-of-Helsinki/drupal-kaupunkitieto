@@ -1,0 +1,32 @@
+uuid: cd1fdf75-5c3e-4a34-ad1d-1cdaba5bb82e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_liftup_item.field_content_liftup_item_media
+    - field.field.paragraph.content_liftup_item.field_content_liftup_item_node
+    - paragraphs.paragraphs_type.content_liftup_item
+id: paragraph.content_liftup_item.default
+targetEntityType: paragraph
+bundle: content_liftup_item
+mode: default
+content:
+  field_content_liftup_item_media:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: liftup
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_content_liftup_item_node:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: liftup
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

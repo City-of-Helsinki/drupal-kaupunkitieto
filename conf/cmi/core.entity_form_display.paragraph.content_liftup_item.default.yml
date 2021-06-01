@@ -1,0 +1,35 @@
+uuid: d7de1653-e80f-4e9e-9301-2f009cee3514
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_liftup_item.field_content_liftup_item_media
+    - field.field.paragraph.content_liftup_item.field_content_liftup_item_node
+    - paragraphs.paragraphs_type.content_liftup_item
+  module:
+    - media_library
+id: paragraph.content_liftup_item.default
+targetEntityType: paragraph
+bundle: content_liftup_item
+mode: default
+content:
+  field_content_liftup_item_media:
+    type: media_library_widget
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_content_liftup_item_node:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
