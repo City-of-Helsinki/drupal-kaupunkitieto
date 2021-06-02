@@ -23,7 +23,7 @@ settings:
   file_directory: ''
   file_extensions: 'txt doc docx pdf xls xlsx'
   max_filesize: ''
-  description_field: false
+  description_field: true
   handler: 'default:file'
   handler_settings: {  }
 field_type: file

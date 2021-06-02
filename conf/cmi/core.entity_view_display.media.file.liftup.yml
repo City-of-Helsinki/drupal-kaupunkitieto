@@ -1,0 +1,31 @@
+uuid: d05a681b-4b6d-4c0a-8ebf-92935d1467b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.liftup
+    - field.field.media.file.field_media_file
+    - media.type.file
+  module:
+    - file
+_core:
+  default_config_hash: jwQKir29dK1SOV5MVD2m4ZqCY6UdoUVAgBUBKkCu518
+id: media.file.liftup
+targetEntityType: media
+bundle: file
+mode: liftup
+content:
+  field_media_file:
+    label: hidden
+    weight: 0
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

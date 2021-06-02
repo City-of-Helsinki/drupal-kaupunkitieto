@@ -97,7 +97,7 @@
     {{ title_suffix }}
     {% set created_date = node.createdtime|format_date('long') %}
     {% if created_date|render %}
-      <div class="content-liftup__item__date">
+      <div class="content-liftup__item__meta">
         {{ created_date }}
       </div>
     {% endif %}

@@ -1,0 +1,66 @@
+{#
+/**
+ * @file
+ * Theme override to present a media item.
+ *
+ * Available variables:
+ * - media: The media item, with limited access to object properties and
+ *   methods. Only method names starting with "get", "has", or "is" and
+ *   a few common methods such as "id", "label", and "bundle" are available.
+ *   For example:
+ *   - entity.getEntityTypeId() will return the entity type ID.
+ *   - entity.hasField('field_example') returns TRUE if the entity includes
+ *     field_example. (This does not indicate the presence of a value in this
+ *     field.)
+ *   Calling other methods, such as entity.delete(), will result in
+ *   an exception.
+ *   See \Drupal\Core\Entity\EntityInterface for a full list of methods.
+ * - name: Name of the media item.
+ * - content: Media content.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - attributes: HTML attributes for the containing element.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ *
+ * @see template_preprocess_media()
+ */
+#}
+
+{%
+  set classes = [
+  'media--type-' ~ media.bundle()|clean_class,
+  not media.isPublished() ? 'media--unpublished',
+  view_mode ? 'media--view-mode-' ~ view_mode|clean_class,
+]
+%}
+
+{% set file_name = media.field_media_file.entity.filename.value %}
+{% set file_desc = media.field_media_file.description %}
+{% set file_uri = media.field_media_file.entity.uri.value %}
+{% set file_size = media.field_media_file.entity.filesize.value %}
+
+{%
+  set title_classes = [
+    'content-liftup__item__title'
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+  <a href="{{ file_url(file_uri) }}" class="content-liftup__item__link" rel="bookmark">
+    {{ title_prefix }}
+    <h3{{ title_attributes.addClass(title_classes) }}>
+      {{ file_desc ?: file_name }}
+    </h3>
+    {{ title_suffix }}
+    {% if file_size|render %}
+      <div class="content-liftup__item__meta">
+        {{ file_name|split('.')|last }} ({{ file_size|format_size }})
+      </div>
+    {% endif %}
+  </a>
+
+</article>
