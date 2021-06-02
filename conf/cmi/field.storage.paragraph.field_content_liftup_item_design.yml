@@ -1,0 +1,27 @@
+uuid: 3b841642-e9f1-4c1b-8875-24119fa8fad2
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_content_liftup_item_design
+field_name: field_content_liftup_item_design
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: node
+      label: Content
+    -
+      value: media
+      label: Media
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

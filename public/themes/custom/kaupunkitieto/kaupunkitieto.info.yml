@@ -3,6 +3,7 @@ description: Subtheme for Kaupunkitieto Drupal instances.
 type: theme
 base theme: hdbt
 tags: sub-theme
+package: 'Kaupunkitieto'
 core_version_requirement: ^8 || ^9
 screenshot: kaupunkitieto.png
 

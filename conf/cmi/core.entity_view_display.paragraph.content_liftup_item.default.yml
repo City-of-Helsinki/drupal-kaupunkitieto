@@ -3,17 +3,27 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.content_liftup_item.field_content_liftup_item_design
     - field.field.paragraph.content_liftup_item.field_content_liftup_item_media
     - field.field.paragraph.content_liftup_item.field_content_liftup_item_node
     - paragraphs.paragraphs_type.content_liftup_item
+  module:
+    - options
 id: paragraph.content_liftup_item.default
 targetEntityType: paragraph
 bundle: content_liftup_item
 mode: default
 content:
+  field_content_liftup_item_design:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
   field_content_liftup_item_media:
     type: entity_reference_entity_view
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       view_mode: liftup
@@ -21,7 +31,7 @@ content:
     third_party_settings: {  }
     region: content
   field_content_liftup_item_node:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       view_mode: liftup

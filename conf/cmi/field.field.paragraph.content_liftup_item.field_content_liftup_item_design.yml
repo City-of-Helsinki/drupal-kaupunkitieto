@@ -1,0 +1,23 @@
+uuid: 34ccf0ca-d364-41b9-8832-2587e4a72a39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content_liftup_item_design
+    - paragraphs.paragraphs_type.content_liftup_item
+  module:
+    - options
+id: paragraph.content_liftup_item.field_content_liftup_item_design
+field_name: field_content_liftup_item_design
+entity_type: paragraph
+bundle: content_liftup_item
+label: Design
+description: 'Choose the liftup type from the dropdown.'
+required: true
+translatable: false
+default_value:
+  -
+    value: content
+default_value_callback: ''
+settings: {  }
+field_type: list_string

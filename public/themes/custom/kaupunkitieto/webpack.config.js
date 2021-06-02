@@ -15,13 +15,10 @@ module.exports = {
     styles: ["./src/scss/styles.scss"],
     bundle: glob.sync("./src/js/**/*.js",{
       ignore: [
-        // './src/js/some-example-component.js',
+        "./src/js/contentLiftup.js",
       ]
     }),
-    // "some-example-component": [
-    //   "./src/js/some-example-component.js",
-    //   "./src/scss/some-example-component.scss"
-    // ],
+    contentLiftup: ["./src/js/contentLiftup.js"],
   },
   output: {
     devtoolLineToLine: true,

@@ -10,3 +10,11 @@ global-scripting:
     dist/js/bundle.min.js: {}
   dependencies:
     - core/drupal
+
+admin-content-liftup:
+  js:
+    dist/js/contentLiftup.min.js: {}
+  version: 1.x
+  dependencies:
+    - core/drupal
+    - core/jquery

@@ -44,15 +44,14 @@
   ]
 %}
 
-{% set design = content.content_liftup_item_design.0 %}
-{% set node = content.field_content_liftup_item_node %}
-{% set media = content.field_content_liftup_item_media %}
+{% set design = content.field_content_liftup_item_design.0|first|clean_class %}
+{% set item = 'field_content_liftup_item_' ~ design %}
+{% set selected = attribute(content, item) %}
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-      {{ node }}
-      {{ media }}
+    {% block selected %}
+      {{ selected }}
     {% endblock %}
   </div>
 {% endblock paragraph %}
