@@ -14,7 +14,7 @@ dependencies:
         composer/composer: '^2'
     nodejs:
         npm: '^6.0'
-        webpack: '^4.46.0'
+        webpack: '^5.6.0'
 
 runtime:
     # Enable the redis extension so Drupal can communicate with the Redis cache.
@@ -25,7 +25,7 @@ variables:
     env:
         # Update these for your desired NVM and Node versions.
         NVM_VERSION: v0.36.0
-        NODE_VERSION: v14.12.0
+        NODE_VERSION: v14.15.0
 
 # The relationships of the application with services or other applications.
 #
