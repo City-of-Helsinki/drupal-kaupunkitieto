@@ -12,11 +12,20 @@ type: 'php:7.4'
 dependencies:
     php:
         composer/composer: '^2'
+    nodejs:
+        npm: '^6.0'
+        webpack: '^4.46.0'
 
 runtime:
     # Enable the redis extension so Drupal can communicate with the Redis cache.
     extensions:
         - redis
+
+variables:
+    env:
+        # Update these for your desired NVM and Node versions.
+        NVM_VERSION: v0.36.0
+        NODE_VERSION: v14.12.0
 
 # The relationships of the application with services or other applications.
 #
@@ -73,7 +82,6 @@ hooks:
     build: |
         set -e
         cd public/themes/custom/kaupunkitieto
-        node -v
         npm install
         npm run build
     # The deploy hook runs after your application has been deployed and started.
