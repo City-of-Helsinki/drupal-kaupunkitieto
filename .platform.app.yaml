@@ -83,7 +83,7 @@ hooks:
         set -e
         cd public/themes/custom/kaupunkitieto
         rm -rf node_modules/
-        npm clear cache
+        npm cache clean
         npm install
         npm run build
     # The deploy hook runs after your application has been deployed and started.
