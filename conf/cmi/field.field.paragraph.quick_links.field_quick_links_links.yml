@@ -1,22 +1,19 @@
-uuid: 7f72a47b-d6f3-4f3a-80bf-7386d3cba0c5
+uuid: 1b2fc08c-9588-43b4-bbb2-985b87661baf
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_columns_left_column
-    - paragraphs.paragraphs_type.columns
-    - paragraphs.paragraphs_type.image
-    - paragraphs.paragraphs_type.text
+    - field.storage.paragraph.field_quick_links_links
+    - paragraphs.paragraphs_type.quick_links
+    - paragraphs.paragraphs_type.quick_links_item
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: NLMGpf1VFdb-RxU3UFqmyu4hthGDUQBihq-HGvM9qj0
-id: paragraph.columns.field_columns_left_column
-field_name: field_columns_left_column
+id: paragraph.quick_links.field_quick_links_links
+field_name: field_quick_links_links
 entity_type: paragraph
-bundle: columns
-label: 'Left column'
-description: ''
+bundle: quick_links
+label: Links
+description: 'The links that you want the paragraph to display.'
 required: true
 translatable: false
 default_value: {  }
@@ -26,20 +23,19 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      image: image
-      text: text
+      quick_links_item: quick_links_item
     target_bundles_drag_drop:
       accordion:
-        weight: 14
+        weight: 19
         enabled: false
       accordion_item:
-        weight: 15
+        weight: 20
         enabled: false
       banner:
-        weight: 16
+        weight: 21
         enabled: false
       columns:
-        weight: -14
+        weight: 22
         enabled: false
       content_cards:
         weight: 23
@@ -51,33 +47,33 @@ settings:
         weight: 25
         enabled: false
       gallery:
-        weight: 17
+        weight: 26
         enabled: false
       gallery_slide:
-        weight: 18
+        weight: 27
         enabled: false
       hero:
-        weight: -13
+        weight: 28
         enabled: false
       image:
-        enabled: true
-        weight: -12
+        weight: 29
+        enabled: false
       liftup_with_image:
-        weight: 21
+        weight: 30
         enabled: false
       list_of_links:
-        weight: -10
+        weight: 31
         enabled: false
       list_of_links_item:
-        weight: -8
+        weight: 32
         enabled: false
       quick_links:
         weight: 33
         enabled: false
       quick_links_item:
-        weight: 18
-        enabled: false
-      text:
         enabled: true
-        weight: -11
+        weight: 18
+      text:
+        weight: 34
+        enabled: false
 field_type: entity_reference_revisions

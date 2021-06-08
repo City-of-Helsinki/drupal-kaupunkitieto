@@ -1,0 +1,10 @@
+uuid: 10cf6eed-524a-4e63-b176-254dc3a8f9cc
+langcode: en
+status: true
+dependencies: {  }
+id: quick_links
+label: 'Quick links'
+icon_uuid: null
+icon_default: null
+description: 'List of internal or external quick links. Different colours available for items.'
+behavior_plugins: {  }

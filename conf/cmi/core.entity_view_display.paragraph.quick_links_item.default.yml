@@ -1,0 +1,36 @@
+uuid: d69b5605-5a85-400f-a262-9cdb8e757b46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quick_links_item.field_quick_links_item_icon
+    - field.field.paragraph.quick_links_item.field_quick_links_item_link
+    - paragraphs.paragraphs_type.quick_links_item
+  module:
+    - link
+    - select2_icon
+id: paragraph.quick_links_item.default
+targetEntityType: paragraph
+bundle: quick_links_item
+mode: default
+content:
+  field_quick_links_item_icon:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: select2_icon_formatter
+    region: content
+  field_quick_links_item_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 255
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

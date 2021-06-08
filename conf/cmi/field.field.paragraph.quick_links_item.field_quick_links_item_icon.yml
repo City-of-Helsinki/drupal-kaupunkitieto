@@ -1,0 +1,21 @@
+uuid: a5866c5d-c247-4c8d-9c29-b672e3ec1028
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quick_links_item_icon
+    - paragraphs.paragraphs_type.quick_links_item
+  module:
+    - select2_icon
+id: paragraph.quick_links_item.field_quick_links_item_icon
+field_name: field_quick_links_item_icon
+entity_type: paragraph
+bundle: quick_links_item
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: select2_icon
