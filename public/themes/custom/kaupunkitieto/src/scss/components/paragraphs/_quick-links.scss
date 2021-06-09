@@ -1,7 +1,11 @@
+$item_spacing: $spacing;
+
 .quick-links {
-  // @include breakpoint($breakpoint-l) {
-  //   margin-top: $spacing-quadruple;
-  // }
+  width: calc(50% - (#{$item_spacing} / 2));
+  @include breakpoint($breakpoint-m) {
+    margin: 0;
+    width: 100%;
+  }
 }
 
 .quick-links__container {
@@ -37,27 +41,28 @@
   align-items: center;
   display: flex;
   margin-bottom: $spacing;
+  padding: $spacing;
   width: 100%;
 
-  // @include breakpoint($breakpoint-s) {
-  // }
-  // @include breakpoint($breakpoint-l) {
-  // }
+  @include breakpoint($breakpoint-l) {
+    padding: $spacing-and-half;
+  }
 
   > * {
     height: 100%;
   }
 
   .quick-links__item__link {
-    background-color: $color-tram;
     box-sizing: border-box;
     display: flex;
-    height: 100%;
+    // height: 100%;
     overflow: hidden;
-    padding: $spacing-and-half;
     position: relative;
     text-decoration: none;
-    width: 100%;
+
+    @include breakpoint($breakpoint-m) {
+      width: 100%;
+    }
 
     &:hover {
       .quick-links__item__title {
@@ -74,13 +79,19 @@
   }
 
   .quick-links__item__title {
-    @include font-size(18px);
+    @include font-size(16px);
     color: $color-white;
     font-weight: 500;
-
-    @include breakpoint($breakpoint-m) {
-      @include font-size(16px);
-    }
   }
 
+}
+
+// Quick-links__item colors
+.quick-links__item--bg-color {
+  &--bus {
+    background-color: $color-bus-dark;
+  }
+  &--tram {
+    background-color: $color-tram;
+  }
 }

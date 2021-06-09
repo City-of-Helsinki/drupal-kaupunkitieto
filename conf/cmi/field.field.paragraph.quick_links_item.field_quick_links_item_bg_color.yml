@@ -1,0 +1,23 @@
+uuid: 831e9239-ed78-4698-bec0-ece79884157b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quick_links_item_bg_color
+    - paragraphs.paragraphs_type.quick_links_item
+  module:
+    - options
+id: paragraph.quick_links_item.field_quick_links_item_bg_color
+field_name: field_quick_links_item_bg_color
+entity_type: paragraph
+bundle: quick_links_item
+label: 'Background color'
+description: 'Choose the background color for the link element.'
+required: true
+translatable: false
+default_value:
+  -
+    value: tram
+default_value_callback: ''
+settings: {  }
+field_type: list_string

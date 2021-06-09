@@ -38,14 +38,18 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
-    'quick-links__item'
-  ]
-%}
 
+{% set background_color = content.field_quick_links_item_bg_color[0]['#markup'] %}
 {% set url = content.field_quick_links_item_link.0['#url'] %}
 {% set text = content.field_quick_links_item_link.0['#title'] %}
+{% set target_new = content.field_quick_links_item_link.0['#options']['target_new'] %}
+
+{%
+  set classes = [
+    'quick-links__item',
+    background_color ? 'quick-links__item--bg-color--' ~ background_color
+  ]
+%}
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>

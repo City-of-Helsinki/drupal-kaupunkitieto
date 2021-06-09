@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.quick_links_item.field_quick_links_item_bg_color
     - field.field.paragraph.quick_links_item.field_quick_links_item_icon
     - field.field.paragraph.quick_links_item.field_quick_links_item_link
     - paragraphs.paragraphs_type.quick_links_item
@@ -14,14 +15,20 @@ targetEntityType: paragraph
 bundle: quick_links_item
 mode: default
 content:
-  field_quick_links_item_icon:
+  field_quick_links_item_bg_color:
     weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_quick_links_item_icon:
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: select2_icon_widget
     region: content
   field_quick_links_item_link:
-    weight: 1
+    weight: 2
     settings:
       placeholder_url: ''
       placeholder_title: ''
