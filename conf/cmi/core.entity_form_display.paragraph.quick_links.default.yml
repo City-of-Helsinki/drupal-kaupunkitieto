@@ -3,19 +3,30 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.quick_links.field_quick_links_link
     - field.field.paragraph.quick_links.field_quick_links_links
     - field.field.paragraph.quick_links.field_quick_links_title
     - paragraphs.paragraphs_type.quick_links
   module:
+    - hdbt_admin_editorial
     - paragraphs
 id: paragraph.quick_links.default
 targetEntityType: paragraph
 bundle: quick_links
 mode: default
 content:
+  field_quick_links_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      link_target: ''
+    third_party_settings: {  }
+    type: link_target_field_widget
+    region: content
   field_quick_links_links:
     type: paragraphs
-    weight: 1
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs

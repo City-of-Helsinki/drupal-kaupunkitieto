@@ -3,16 +3,30 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.quick_links.field_quick_links_link
     - field.field.paragraph.quick_links.field_quick_links_links
     - field.field.paragraph.quick_links.field_quick_links_title
     - paragraphs.paragraphs_type.quick_links
   module:
     - entity_reference_revisions
+    - link
 id: paragraph.quick_links.default
 targetEntityType: paragraph
 bundle: quick_links
 mode: default
 content:
+  field_quick_links_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 255
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
   field_quick_links_links:
     type: entity_reference_revisions_entity_view
     weight: 1

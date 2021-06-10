@@ -1,10 +1,33 @@
-$item_spacing: $spacing;
-
 .quick-links {
-  width: calc(50% - (#{$item_spacing} / 2));
+  margin-bottom: $spacing-double;
+  width: 100%;
+
+  @include breakpoint($breakpoint-s) {
+    margin-bottom: $spacing-and-half;
+    width: calc(50% - (#{$spacing} / 2));
+  }
+
   @include breakpoint($breakpoint-m) {
-    margin: 0;
     width: 100%;
+  }
+
+  @include breakpoint($breakpoint-l) {
+    margin-bottom: $spacing-triple;
+  }
+
+  &__read-more {
+    .quick-links__title {
+      @include breakpoint($breakpoint-l) {
+        display: none;
+      }
+
+      &__link {
+        @include breakpoint($breakpoint-l) {
+          display: flex;
+        }
+      }
+
+    }
   }
 }
 
@@ -13,36 +36,75 @@ $item_spacing: $spacing;
 }
 
 .quick-links__content {
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  margin-bottom: $spacing;
-  margin-top: $spacing;
 
   @include breakpoint($breakpoint-s) {
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: $spacing;
   }
 }
 
 .quick-links__title {
   @include font-size(24px);
+  display: flex;
   font-weight: 700;
+  margin-bottom: $spacing;
   margin-top: 0;
   width: 100%;
 
   @include breakpoint($breakpoint-l) {
     @include font-size(24px);
   }
+
+  &__link {
+    display: none;
+    justify-content: space-between;
+    text-decoration: none;
+
+    @include breakpoint($breakpoint-l) {
+      display: flex;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
+.quick-links__link {
+  display: flex;
+  font-weight: 700;
+  margin-top: $spacing-double;
+  text-decoration: none;
+
+  @include breakpoint($breakpoint-m) {
+    margin-top: $spacing-and-half;
+  }
+
+  @include breakpoint($breakpoint-l) {
+    display: none;
+  }
+
+  &__arrow {
+    margin-left: $spacing;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 .quick-links__item {
   align-items: center;
   display: flex;
-  margin-bottom: $spacing;
   padding: $spacing;
   width: 100%;
+
+  &:not(:last-of-type) {
+    margin-bottom: $spacing;
+  }
 
   @include breakpoint($breakpoint-l) {
     padding: $spacing-and-half;
@@ -55,7 +117,6 @@ $item_spacing: $spacing;
   .quick-links__item__link {
     box-sizing: border-box;
     display: flex;
-    // height: 100%;
     overflow: hidden;
     position: relative;
     text-decoration: none;

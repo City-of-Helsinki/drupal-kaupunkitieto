@@ -1,0 +1,23 @@
+uuid: 8b12eb31-4c04-469a-aa3f-02ddaee755e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quick_links_link
+    - paragraphs.paragraphs_type.quick_links
+  module:
+    - link
+id: paragraph.quick_links.field_quick_links_link
+field_name: field_quick_links_link
+entity_type: paragraph
+bundle: quick_links
+label: 'Read more'
+description: 'Optinal link related to the paragraph. Link is added to the title field on desktop and displayed separately after the quick links on smaller devices.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

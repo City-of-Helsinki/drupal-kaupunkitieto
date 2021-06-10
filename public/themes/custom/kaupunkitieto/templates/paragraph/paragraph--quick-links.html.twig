@@ -40,21 +40,37 @@
 #}
 
 {% set title = content.field_quick_links_title.0 %}
+{% set url = content.field_quick_links_link.0['#url'] %}
+{% set text = content.field_quick_links_link.0['#title'] %}
+{% set target_new = content.field_quick_links_link.0['#options']['target_new'] %}
 
 {%
   set classes = [
     'quick-links',
     view_mode ? 'quick-links--' ~ view_mode|clean_class,
+    url ? 'quick-links__read-more',
   ]
 %}
+
+{% set arrow %}
+  <span class="quick-links__link__arrow{% if target_new %} is-outbound{% endif %}">
+    {% include '@hdbt/misc/icon.twig' with {icon: 'arrow-right' } %}
+  </span>
+{% endset %}
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% embed "@hdbt/misc/container.twig" with {container_element: 'quick-links'} %}
       {% block container_content %}
         <h3 class="quick-links__title">{{ title }}</h3>
+        {% if url %}
+          <a href="{{ url }}" {% if target_new %}target="_blank"{% endif %} class="quick-links__title quick-links__title__link">{{ title }} {{ arrow }}</a>
+        {% endif %}
         <div class="quick-links__content">
-          {{ content|without('field_quick_links_title') }}
+          {{ content|without('field_quick_links_title', 'field_quick_links_link') }}
+          {% if url %}
+            <a href="{{ url }}" {% if target_new %}target="_blank"{% endif %} class="quick-links__link">{{ text }} {{ arrow }}</a>
+          {% endif %}
         </div>
       {% endblock %}
     {% endembed %}
