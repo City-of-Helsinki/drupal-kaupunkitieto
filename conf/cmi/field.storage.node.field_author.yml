@@ -1,19 +1,16 @@
-uuid: 35d94873-0a55-4d6a-ab99-a6967b245f8e
+uuid: 0cb4ac11-a5cb-4529-a75c-62a136912786
 langcode: en
 status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: pP4SCsjHchk9WVmmxxs9egtpSrcqsXJmOTVx9N65JVw
+    - taxonomy
 id: node.field_author
 field_name: field_author
 entity_type: node
-type: string
+type: entity_reference
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

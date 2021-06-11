@@ -1,21 +1,29 @@
-uuid: 05f13254-b8d6-46dd-b6a3-f7946bbbd231
+uuid: e22f826d-123e-47e3-afa8-89cd48248051
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_author
     - node.type.article
-_core:
-  default_config_hash: 1oqobfI8cP7lwC92-ke2O_wtHzD16wfuRS5zOSSxEVY
+    - taxonomy.vocabulary.author
 id: node.article.field_author
 field_name: field_author
 entity_type: node
 bundle: article
 label: Author
-description: ''
+description: 'Select author for this article.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      author: author
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

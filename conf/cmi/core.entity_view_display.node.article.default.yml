@@ -25,9 +25,9 @@ content:
     weight: 2
     label: inline
     settings:
-      link_to_entity: false
+      link: false
     third_party_settings: {  }
-    type: string
+    type: entity_reference_label
     region: content
   field_content:
     weight: 3

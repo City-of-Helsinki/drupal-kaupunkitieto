@@ -22,14 +22,6 @@ targetEntityType: node
 bundle: article
 mode: liftup
 content:
-  field_author:
-    weight: 2
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_content:
     weight: 3
     label: hidden
@@ -67,5 +59,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_author: true
   field_liftup_image: true
   langcode: true
