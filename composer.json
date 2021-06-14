@@ -27,6 +27,8 @@
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
         "drupal/coder": "^8.3",
         "drupal/core-dev": "^9.1",
+        "drupal/devel": "^4.1",
+        "kint-php/kint": "^3.3",
         "phpspec/prophecy-phpunit": "^2",
         "phpunit/phpunit": "~9.4.0"
     },
@@ -76,6 +78,11 @@
             "drush/{$name}": [
                 "type:drupal-drush"
             ]
+        },
+        "patches": {
+            "drupal/devel": {
+                "Brings back the Available Methods & Properties tabs for Kint dumps — Issue #221": "https://raw.githubusercontent.com/politsin/snipets/master/patch/kint.patch"
+            }
         }
     },
     "repositories": [

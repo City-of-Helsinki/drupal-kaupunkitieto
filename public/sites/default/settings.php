@@ -100,3 +100,6 @@ if ($env = getenv('APP_ENV')) {
 if (file_exists($app_root . '/' . $site_path . '/settings.platformsh.php')) {
   include $app_root . '/' . $site_path . '/settings.platformsh.php';
 }
+
+// Exclude development modules from configuration management.
+$settings['config_exclude_modules'] = ['devel'];
