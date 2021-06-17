@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.article.field_article_series
     - field.field.node.article.field_attachment
     - field.field.node.article.field_author
     - field.field.node.article.field_content
@@ -27,18 +28,11 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_attachment:
-    type: media_library_widget
-    weight: 3
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
-    region: content
-  field_author:
+  field_article_series:
     weight: 2
     settings:
       width: 300px
@@ -48,8 +42,25 @@ content:
     third_party_settings: {  }
     type: select2_entity_reference
     region: content
+  field_attachment:
+    type: media_library_widget
+    weight: 4
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_author:
+    weight: 3
+    settings:
+      width: 300px
+      autocomplete: true
+      match_operator: CONTAINS
+      match_limit: 10
+    third_party_settings: {  }
+    type: select2_entity_reference
+    region: content
   field_content:
-    weight: 6
+    weight: 7
     settings:
       title: Lohko
       title_plural: Lohkot
@@ -68,7 +79,7 @@ content:
     type: paragraphs
     region: content
   field_keywords:
-    weight: 7
+    weight: 8
     settings:
       width: 100%
       autocomplete: true
@@ -78,7 +89,7 @@ content:
     type: select2_entity_reference
     region: content
   field_lead:
-    weight: 5
+    weight: 6
     settings:
       rows: 5
       placeholder: ''
@@ -86,14 +97,14 @@ content:
     type: string_textarea
     region: content
   field_liftup_image:
-    weight: 4
+    weight: 5
     settings:
       media_types: {  }
     third_party_settings: {  }
     type: media_library_widget
     region: content
   field_metatags:
-    weight: 19
+    weight: 20
     settings:
       sidebar: false
     third_party_settings: {  }
@@ -108,7 +119,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 13
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -116,17 +127,17 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 12
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 16
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 15
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -134,14 +145,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 15
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 13
     region: content
     third_party_settings: {  }
   title:
@@ -153,13 +164,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 9
     settings:
       match_operator: CONTAINS
       size: 60
@@ -169,12 +180,12 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 17
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 18
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }

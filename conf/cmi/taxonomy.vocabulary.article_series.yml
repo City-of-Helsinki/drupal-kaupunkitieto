@@ -1,0 +1,8 @@
+uuid: 28ec67fe-1091-447d-a593-fbf1d40e7098
+langcode: en
+status: true
+dependencies: {  }
+name: 'Article series'
+vid: article_series
+description: 'Categorisation for article type content.'
+weight: 0

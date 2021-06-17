@@ -1,0 +1,14 @@
+uuid: 2694715e-a795-42bd-a6fe-9606cb2545c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.author
+id: taxonomy_term.author.default
+targetEntityType: taxonomy_term
+bundle: author
+mode: default
+content: {  }
+hidden:
+  description: true
+  langcode: true

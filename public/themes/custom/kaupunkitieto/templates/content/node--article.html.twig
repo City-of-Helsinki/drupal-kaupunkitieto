@@ -105,11 +105,19 @@
 
       {{ drupal_block('hdbt_content_social_sharing_block') }}
 
-      {% if content.field_attachment|render %}
-        <div class="{{ node.bundle|clean_class }}__attachment">
-          {{ content.field_attachment }}
-        </div>
-      {% endif %}
+      <div class="article__bottom-wrapper">
+        {% if content.field_article_series|render %}
+          <div class="{{ node.bundle|clean_class }}__series">
+            <span class=="article__series__label">{{ 'Belongs to the series'|trans }}:</span> {{ content.field_article_series }}
+          </div>
+        {% endif %}
+
+        {% if content.field_attachment|render %}
+          <div class="{{ node.bundle|clean_class }}__attachment">
+            {{ content.field_attachment }}
+          </div>
+        {% endif %}
+      </div>
     {% endblock container_content %}
   {% endembed %}
 

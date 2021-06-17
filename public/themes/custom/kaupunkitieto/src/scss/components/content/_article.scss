@@ -1,5 +1,25 @@
 .page-type--article {
   .node--type-article {
+    .article-header__container {
+      .article__bottom-wrapper {
+        align-items: flex-end;
+        display: flex;
+        justify-content: space-between;
+        max-width: none;
+      }
+    }
+
+    .article__author {
+      @include font-size(16px, 24px);
+      color: $color-black;
+      font-weight: $font-weight-regular;
+      margin-bottom: $spacing-quarter;
+    }
+
+    .social-media-sharing {
+      margin-bottom: $spacing-half;
+    }
+
     .article__attachment {
       &__link {
         background-color: $color-black;
