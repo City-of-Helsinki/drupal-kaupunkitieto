@@ -1,0 +1,22 @@
+.page-type--article {
+  .node--type-article {
+    .article__attachment {
+      &__link {
+        background-color: $color-black;
+        color: $color-white;
+
+        &:hover {
+          background-color: $color-black-80;
+        }
+
+        &:focus {
+          color: $color-white;
+
+          &::after {
+            border-color: $color-black-80;
+          }
+        }
+      }
+    }
+  }
+}

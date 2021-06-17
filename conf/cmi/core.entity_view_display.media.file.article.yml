@@ -1,0 +1,30 @@
+uuid: 11437bb2-39b2-4253-ada2-cd1fb344e26f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.article
+    - field.field.media.file.field_media_file
+    - media.type.file
+  module:
+    - file
+_core:
+  default_config_hash: jwQKir29dK1SOV5MVD2m4ZqCY6UdoUVAgBUBKkCu518
+id: media.file.article
+targetEntityType: media
+bundle: file
+mode: article
+content:
+  field_media_file:
+    label: hidden
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: file_url_plain
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true
