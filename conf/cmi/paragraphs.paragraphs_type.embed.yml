@@ -1,0 +1,10 @@
+uuid: 6e5ecce8-57a9-4440-9334-f60e9305110c
+langcode: en
+status: true
+dependencies: {  }
+id: embed
+label: Embed
+icon_uuid: null
+icon_default: null
+description: 'Embed content from an external source, such as YouTube and Power BI.'
+behavior_plugins: {  }

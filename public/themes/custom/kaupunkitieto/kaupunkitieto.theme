@@ -32,3 +32,48 @@ function kaupunkitieto_preprocess(&$variables) {
   $variables['kaupunkitieto_icons_path'] = kaupunkitieto_get_icons_path();
   $variables['#attached']['drupalSettings']['hdbtSubthemeIconsPath'] = $variables['kaupunkitieto_icons_path'];
 }
+
+
+/**
+ * Implements template_preprocess_paragraph().
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An array of elements to display in view mode.
+ *   - paragraph: The paragraph object.
+ *   - view_mode: View mode; e.g., 'full', 'teaser'...
+ */
+function kaupunkitieto_preprocess_paragraph(array &$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $paragraph_type = $paragraph->getType();
+
+  // In case we need to do alter embedding URL, e.g. for YouTube links.
+  if ($paragraph_type == 'embed') {
+    $embed_url = $paragraph->get('field_embed_link')->getValue()[0]['uri'];
+    $youtubeId = _kaupunkitieto_youtube_id($embed_url);
+
+    if ($youtubeId) {
+      $variables['embed_url'] = 'https://www.youtube.com/embed/' . $youtubeId;
+    }
+    else {
+      $variables['embed_url'] = $embed_url;
+    }
+
+  }
+
+}
+
+/**
+ * Get YouTube video ID from path.
+ *
+ * @param string $input
+ *   URI from the link field.
+ *
+ * @return string
+ *   YouTube video ID or false.
+ */
+function _kaupunkitieto_youtube_id($input) {
+  preg_match('/^https?:\/\/(www\.)?((?!.*list=)youtube\.com\/watch\?.*v=|youtu\.be\/)(?<id>[0-9A-Za-z_-]*)/', $input, $matches);
+  return isset($matches['id']) ? $matches['id'] : FALSE;
+}
