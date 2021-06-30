@@ -33,7 +33,6 @@ function kaupunkitieto_preprocess(&$variables) {
   $variables['#attached']['drupalSettings']['hdbtSubthemeIconsPath'] = $variables['kaupunkitieto_icons_path'];
 }
 
-
 /**
  * Implements template_preprocess_paragraph().
  *

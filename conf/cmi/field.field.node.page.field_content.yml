@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.accordion
     - paragraphs.paragraphs_type.columns
     - paragraphs.paragraphs_type.content_cards
+    - paragraphs.paragraphs_type.content_liftup
     - paragraphs.paragraphs_type.gallery
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.list_of_links
@@ -38,44 +39,60 @@ settings:
       gallery: gallery
       list_of_links: list_of_links
       content_cards: content_cards
+      content_liftup: content_liftup
     target_bundles_drag_drop:
       accordion:
         enabled: true
-        weight: -25
+        weight: -35
       accordion_item:
-        weight: -20
+        weight: -29
         enabled: false
       banner:
-        weight: -16
+        weight: -25
         enabled: false
       columns:
         enabled: true
-        weight: -26
+        weight: -36
       content_cards:
         enabled: true
-        weight: -21
+        weight: -31
+      content_liftup:
+        enabled: true
+        weight: -30
+      content_liftup_item:
+        weight: -22
+        enabled: false
+      embed:
+        weight: -23
+        enabled: false
       gallery:
         enabled: true
-        weight: -23
+        weight: -33
       gallery_slide:
-        weight: -19
+        weight: -28
         enabled: false
       hero:
-        weight: -18
+        weight: -27
         enabled: false
       image:
         enabled: true
-        weight: -24
+        weight: -34
       liftup_with_image:
-        weight: -15
+        weight: -24
         enabled: false
       list_of_links:
         enabled: true
-        weight: -22
+        weight: -32
       list_of_links_item:
-        weight: -17
+        weight: -26
+        enabled: false
+      quick_links:
+        weight: -21
+        enabled: false
+      quick_links_item:
+        weight: -20
         enabled: false
       text:
         enabled: true
-        weight: -27
+        weight: -37
 field_type: entity_reference_revisions
