@@ -1,0 +1,10 @@
+uuid: 2efa59fb-c8eb-4244-a595-42a3af4bf134
+langcode: en
+status: true
+dependencies: {  }
+id: content_menu
+label: 'Content menu'
+icon_uuid: null
+icon_default: null
+description: 'With content menu you can divide content into separate in-page menu items. '
+behavior_plugins: {  }

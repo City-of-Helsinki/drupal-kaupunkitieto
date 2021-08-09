@@ -61,6 +61,17 @@ function kaupunkitieto_preprocess_paragraph(array &$variables) {
 
   }
 
+  // Get titles for content menu items to be displayed in left-hand navigation.
+  if ($paragraph_type == 'content_menu') {
+    $items = $paragraph->get('field_content_menu_items');
+
+    foreach ($items as $item) {
+      $item_entity = $item->entity;
+      $variables['menu_links'][$item_entity->id()] = $item_entity->get('field_content_menu_item_title')->first()->getValue();
+    }
+
+  }
+
 }
 
 /**

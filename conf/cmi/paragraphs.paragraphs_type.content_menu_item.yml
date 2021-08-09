@@ -1,0 +1,10 @@
+uuid: c4fd171e-1a06-48a0-9576-dc68ce447e48
+langcode: en
+status: true
+dependencies: {  }
+id: content_menu_item
+label: 'Content menu item'
+icon_uuid: null
+icon_default: null
+description: 'One item of content menu.'
+behavior_plugins: {  }

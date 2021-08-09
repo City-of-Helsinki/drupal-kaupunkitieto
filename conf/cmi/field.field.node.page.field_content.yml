@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.columns
     - paragraphs.paragraphs_type.content_cards
     - paragraphs.paragraphs_type.content_liftup
+    - paragraphs.paragraphs_type.content_menu
     - paragraphs.paragraphs_type.gallery
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.list_of_links
@@ -40,6 +41,7 @@ settings:
       list_of_links: list_of_links
       content_cards: content_cards
       content_liftup: content_liftup
+      content_menu: content_menu
     target_bundles_drag_drop:
       accordion:
         enabled: true
@@ -61,6 +63,12 @@ settings:
         weight: -30
       content_liftup_item:
         weight: -22
+        enabled: false
+      content_menu:
+        enabled: true
+        weight: 29
+      content_menu_item:
+        weight: 21
         enabled: false
       embed:
         weight: -23
