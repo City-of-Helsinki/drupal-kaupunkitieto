@@ -46,6 +46,7 @@
   ]
 %}
 
+{{ attach_library('kaupunkitieto/content-menu') }}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% embed "@hdbt/misc/container.twig" with {container_element: 'content-menu'} %}

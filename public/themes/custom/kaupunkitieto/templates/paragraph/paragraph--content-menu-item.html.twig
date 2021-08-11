@@ -41,7 +41,8 @@
 {%
   set classes = [
     'content-menu__item',
-    'content-menu__item-' ~ paragraph.id()
+    'content-menu__item-' ~ paragraph.id(),
+    delta == 0 ? 'active',
   ]
 %}
 

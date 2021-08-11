@@ -72,6 +72,18 @@ function kaupunkitieto_preprocess_paragraph(array &$variables) {
 
   }
 
+  if ($paragraph_type == 'content_menu_item') {
+    // Add delta value to variable to define first active item.
+    $parent = $variables['paragraph']->getParentEntity();
+    if ($parent->hasField('field_content_menu_items')) {
+      foreach ($parent->get('field_content_menu_items')->getValue() as $key => $item) {
+        if ($item['target_id'] === $variables['paragraph']->id()) {
+          $variables['delta'] = $key;
+        }
+      }
+    }
+  }
+
 }
 
 /**

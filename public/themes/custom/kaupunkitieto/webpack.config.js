@@ -16,9 +16,11 @@ module.exports = {
     bundle: glob.sync("./src/js/**/*.js",{
       ignore: [
         "./src/js/contentLiftup.js",
+        "./src/js/contentMenu.js",
       ]
     }),
     contentLiftup: ["./src/js/contentLiftup.js"],
+    contentMenu: ["./src/js/contentMenu.js"],
   },
   output: {
     devtoolLineToLine: true,

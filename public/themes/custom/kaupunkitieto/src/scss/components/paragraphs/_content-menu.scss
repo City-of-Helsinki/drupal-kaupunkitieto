@@ -63,7 +63,7 @@ $item_spacing: $spacing-triple;
   margin-top: $spacing;
   padding-left: $spacing-double;
 
-  &:not(:first-of-type) {
+  &:not(.active) {
     display: none;
   }
 

@@ -18,3 +18,11 @@ admin-content-liftup:
   dependencies:
     - core/drupal
     - core/jquery
+
+content-menu:
+  js:
+    dist/js/contentMenu.min.js: {}
+  version: 1.x
+  dependencies:
+    - core/drupal
+    - core/jquery
