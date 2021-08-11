@@ -67,7 +67,9 @@ function kaupunkitieto_preprocess_paragraph(array &$variables) {
 
     foreach ($items as $item) {
       $item_entity = $item->entity;
-      $variables['menu_links'][$item_entity->id()] = $item_entity->get('field_content_menu_item_title')->first()->getValue();
+      $title = $item_entity->get('field_content_menu_item_title')->first()->getValue();
+      $variables['menu_links'][$item_entity->id()]['title'] = $title;
+      $variables['menu_links'][$item_entity->id()]['title']['aria'] = str_replace(' ', '-', strtolower($title['value']));
     }
 
   }

@@ -38,6 +38,8 @@
  * @ingroup themeable
  */
 #}
+
+{% set title = content.field_content_menu_item_title.0['#context'].value|replace({' ': '-'})|lower %}
 {%
   set classes = [
     'content-menu__item',
@@ -46,8 +48,11 @@
   ]
 %}
 
+{% set attributes = attributes.setAttribute('role', 'tabpanel') %}
+{% set attributes = attributes.setAttribute('aria-labelledby', title) %}
+
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
+  <div id="{{ title }}-tab" {{ attributes.addClass(classes) }}>
     {% block content %}
       {{ content|without('field_content_menu_item_title') }}
     {% endblock %}

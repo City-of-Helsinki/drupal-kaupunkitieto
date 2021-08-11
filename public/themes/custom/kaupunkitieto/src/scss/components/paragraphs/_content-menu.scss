@@ -18,8 +18,6 @@ $item_spacing: $spacing-triple;
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: $spacing-quadruple;
-  //   margin-left: -$item_spacing;
-  //   width: calc(100% + #{$item_spacing});
   }
 }
 
@@ -41,7 +39,7 @@ $item_spacing: $spacing-triple;
   &-link {
     @include font-size(20px, 24px);
     cursor: pointer;
-    display: inline-block;
+    display: block;
     padding: $spacing 0;
 
     &.active {

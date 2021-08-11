@@ -52,7 +52,7 @@
     {% embed "@hdbt/misc/container.twig" with {container_element: 'content-menu'} %}
       {% block container_content %}
         <div class="content-menu__content">
-          <ul class="content-menu__navigation">
+          <ul class="content-menu__navigation" role="tablist">
             {% for key, link in menu_links %}
               {% set linkAttributes = create_attribute() %}
               {%
@@ -61,8 +61,13 @@
                   loop.first ? 'active',
                 ]
               %}
-              <li class="content-menu__navigation-item">
-                <a {{ linkAttributes.addClass(linkClasses) }} data-id="{{ key }}">{{ link.value }}</a>
+              {% if loop.first %}
+                {% set linkAttributes = linkAttributes.setAttribute('aria-selected', 'true') %}
+              {% else %}
+                {% set linkAttributes = linkAttributes.setAttribute('aria-selected', 'false') %}
+              {% endif %}
+              <li class="content-menu__navigation-item" role="tab" >
+                <a id="{{ link.title.aria }}" {{ linkAttributes.addClass(linkClasses) }} data-id="{{ key }}" tabindex="0" aria-controls="{{ link.title.aria }}-tab">{{ link.title.value }}</a>
               </li>
             {% endfor %}
           </ul>
