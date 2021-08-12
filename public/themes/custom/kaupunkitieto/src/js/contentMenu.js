@@ -4,30 +4,48 @@ document.addEventListener('DOMContentLoaded', function () {
   // Bind event for navigation links.
   for (let navigationLink of navigationLinks) {
     navigationLink.addEventListener('click', () => {
-      openItem(navigationLink);
+      let id = navigationLink.dataset.id;
+      openItem(id);
     });
     navigationLink.addEventListener('keydown', (event) => {
       if (event.key === 'Enter') {
-        openItem(navigationLink);
+        let id = navigationLink.dataset.id;
+        openItem(id);
       }
     });
   }
+  // Bind keydown event to select.
+  const navigationSelect = document.querySelector('.content-menu__navigation-select');
+  navigationSelect.addEventListener('change', (event) => {
+      let id = event.target.value;
+      openItem(id);
+  });
 
 });
 
 /**
  * Active the selected content menu item.
  */
-function openItem(link) {
+function openItem(id) {
+  let links = document.querySelectorAll('.content-menu__navigation-link[data-id="' + id + '"]');
+  const navigationSelect = document.querySelector('.content-menu__navigation-select');
 
   // Already active? Nothing to do here.
-  if (!link.classList.contains('active')) {
-    let id = link.dataset.id;
+  if (!links[0].classList.contains('active')) {
     closeItems(id);
     let currentItem = document.querySelector('.content-menu__item-' + id);
     currentItem.classList.add('active');
-    link.classList.add('active');
-    link.setAttribute('aria-selected', 'true');
+
+    navigationSelect.value = id;
+    for (let link of links) {
+      link.classList.add('active');
+      if (link.nodeName == 'A') {
+        link.setAttribute('aria-selected', 'true');
+      }
+      if (link.nodeName == 'OPTION') {
+        link.setAttribute('selected', 'true');
+      }
+    }
   }
 
 }
@@ -46,7 +64,12 @@ function closeItems(currentId) {
     // Remove active class from links.
     for (let activeLink of activeLinks) {
       activeLink.classList.remove('active');
-      activeLink.setAttribute('aria-selected', 'false');
+      if (activeLink.nodeName == 'A') {
+        activeLink.setAttribute('aria-selected', 'false');
+      }
+      if (activeLink.nodeName == 'OPTION') {
+        activeLink.removeAttribute('selected');
+      }
     }
     // Remove active class from items.
     for (let menuItem of menuItems) {

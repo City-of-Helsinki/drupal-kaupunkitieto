@@ -1,13 +1,5 @@
 $item_spacing: $spacing-triple;
 
-.content-menu {
-  // margin-top: $spacing-double;
-
-  // @include breakpoint($breakpoint-l) {
-  //   margin-top: $spacing-quadruple;
-  // }
-}
-
 .content-menu__content {
   display: flex;
   flex-direction: column;
@@ -21,15 +13,21 @@ $item_spacing: $spacing-triple;
   }
 }
 
-.content-menu__container {
-}
-
 .content-menu__navigation {
+  display: none;
   list-style: none;
   margin: 0;
 
   @include breakpoint($breakpoint-m) {
+    display: block;
     width: 30%;
+  }
+
+  &-select {
+    display: block;
+    @include breakpoint($breakpoint-m) {
+      display: none;
+    }
   }
 
   &-item {
@@ -58,8 +56,10 @@ $item_spacing: $spacing-triple;
 }
 
 .content-menu__item {
-  margin-top: $spacing;
-  padding-left: $spacing-double;
+  @include breakpoint($breakpoint-m) {
+    margin-top: $spacing;
+    padding-left: $spacing-double;
+  }
 
   &:not(.active) {
     display: none;
