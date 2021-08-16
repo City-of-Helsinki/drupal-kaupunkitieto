@@ -11,6 +11,17 @@ $item_spacing: $spacing-triple;
     flex-wrap: wrap;
     margin-bottom: $spacing-quadruple;
   }
+
+  .select2 {
+    display: block;
+    width: 100% !important;
+    @include breakpoint($breakpoint-s) {
+      width: auto;
+    }
+    @include breakpoint($breakpoint-m) {
+      display: none;
+    }
+  }
 }
 
 .content-menu__navigation {
@@ -21,13 +32,6 @@ $item_spacing: $spacing-triple;
   @include breakpoint($breakpoint-m) {
     display: block;
     width: 30%;
-  }
-
-  &-select {
-    display: block;
-    @include breakpoint($breakpoint-m) {
-      display: none;
-    }
   }
 
   &-item {
