@@ -34,6 +34,11 @@ select2:
     - core/jquery.once
     - core/drupal
 
+main-menu:
+  version: 1.x
+  js:
+    dist/js/mainMenu.min.js: {}
+
 content-menu:
   js:
     dist/js/contentMenu.min.js: {}

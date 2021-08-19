@@ -18,10 +18,12 @@ module.exports = {
       ignore: [
         "./src/js/contentLiftup.js",
         "./src/js/contentMenu.js",
+        "./src/js/mainMenu.js",
       ]
     }),
     contentLiftup: ["./src/js/contentLiftup.js"],
     contentMenu: ["./src/js/contentMenu.js"],
+    mainMenu: ["./src/js/mainMenu.js"],
   },
   output: {
     devtoolLineToLine: true,

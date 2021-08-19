@@ -1,0 +1,115 @@
+.header-bottom .menu {
+
+  .menu__toggle-button {
+    .icon {
+      display: block;
+    }
+    &:focus {
+      padding: 0;
+    }
+  }
+
+  &#menu--level-0 {
+    display: none;
+    margin: 0;
+    padding: 0;
+
+    @include breakpoint($breakpoint-l) {
+      display: flex;
+    }
+  }
+  &#menu--level-1 {
+    .menu__toggle-button {
+      margin: 0 $spacing-quarter;
+    }
+    > .menu__item {
+      > .menu__link-wrapper {
+        > .menu__toggle-button {
+          .icon {
+            transform: rotate(270deg);
+          }
+        }
+      }
+      &.menu__item--hover ,
+      &.menu__item--open {
+        > .menu__link-wrapper {
+          > .menu__toggle-button {
+            .icon {
+              transform: rotate(90deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  &#menu--level-2 {
+    left: 100%;
+    top: -1px; // Offset by border width.
+  }
+
+  .menu__item {
+    &.menu__item--active-trail {
+      > .menu__link-wrapper {
+        > a {
+          font-weight: 700;
+          &.is-active {
+            &:hover {
+              &:before {
+                width: 4px;
+              }
+            }
+            &:before {
+              width: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .menu__item--children {
+    .menu {
+      display: none;
+    }
+
+    > .menu__link-wrapper {
+      > .menu__toggle-button {
+        .icon {
+          transform: none;
+        }
+      }
+    }
+  }
+
+  .menu__item--hover ,
+  .menu__item--open {
+    position: relative;
+
+    > .menu__link-wrapper {
+      > .menu__toggle-button {
+        .icon {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    // Secondary menu items
+    > ul.menu {
+      background-color: $color-white;
+      border: 1px solid $color-black-20;
+      bottom: auto;
+      display: block;
+      left: -$spacing-double;
+      position: absolute;
+      width: 310px;
+      z-index: 100;
+      > .menu__item {
+        > .menu__link-wrapper {
+          > .menu__toggle-button {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
