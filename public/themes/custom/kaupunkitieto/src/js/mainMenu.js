@@ -6,7 +6,6 @@ function closeOpenItems(element) {
       // Check that the item we are about to close is not the
       // element-variable given to the function.
       if (item === element) {
-
         return;
       }
       item.classList.remove('menu__item--open');
@@ -32,7 +31,7 @@ function toggleMenuLevel(item) {
     toggleButton.addEventListener('click', function () {
       let level = item.parentNode.dataset.level;
       if (level == 0 && item.classList.contains('menu__item--open')) {
-        closeOpenItems(item);
+        closeOpenItems();
       }
       else {
         closeSiblings(item);
@@ -80,8 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
       );
 
       toggleMenuLevel(item);
-      // link.addEventListener('mouseover', mouseOver, false);
-      // item.addEventListener('mouseleave', mouseLeave, false);
+      link.addEventListener('mouseover', mouseOver, false);
+      item.addEventListener('mouseleave', mouseLeave, false);
     }
   }
 });

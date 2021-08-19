@@ -67,7 +67,7 @@
           {% endif %}
 
           {% if item.is_collapsed or item.is_expanded %}
-            <button type="button" aria-expanded="true" aria-controls="menu--level-{{ menu_level + 1 }}" class="menu__toggle-button">
+            <button type="button" aria-expanded="true" aria-controls="menu--level-{{ menu_level + 1 }}" aria-label="Menu toggle" class="menu__toggle-button">
               {% include '@hdbt/misc/icon.twig' with {icon: 'angle-down', icons_path: icons_path} %}
             </button>
           {% endif %}
