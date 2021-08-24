@@ -11,9 +11,22 @@
 
     > .menu__item {
       position: initial;
+
+      &.menu__item--hover,
+      &.menu__item--open {
+        > .menu__link-wrapper {
+          > a {
+            &:before {
+              height: 4px;
+              width: 100%;
+            }
+          }
+        }
+      }
     }
 
   }
+
   &#menu--level-1 {
     left: 0;
     padding: 12px 0 $spacing;
@@ -56,6 +69,26 @@
         }
       }
     }
+
+    .menu__item {
+      &.menu__item--active-trail {
+        > .menu__link-wrapper {
+          > a {
+            font-weight: 700;
+            &.is-active {
+              &:hover {
+                &:before {
+                  width: 4px;
+                }
+              }
+              &:before {
+                width: 0;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   &#menu--level-2 {
@@ -84,26 +117,6 @@
     }
     &:focus {
       padding: 0;
-    }
-  }
-
-  .menu__item {
-    &.menu__item--active-trail {
-      > .menu__link-wrapper {
-        > a {
-          font-weight: 700;
-          &.is-active {
-            &:hover {
-              &:before {
-                width: 4px;
-              }
-            }
-            &:before {
-              width: 0;
-            }
-          }
-        }
-      }
     }
   }
 
