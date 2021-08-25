@@ -1,3 +1,16 @@
 .block--branding {
+  height: auto;
   order: unset;
+  width: auto;
+
+  .site-name {
+    @include font-size(14px, 18px);
+    width: 210px;
+
+    @include breakpoint($breakpoint-m) {
+      @include font-size(20px, 20px);
+      width: auto;
+    }
+  }
+
 }

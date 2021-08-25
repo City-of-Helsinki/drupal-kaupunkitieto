@@ -1,0 +1,22 @@
+.logo--header {
+    padding: 0;
+
+    .icon {
+      height: 32px;
+      width: 69px;
+
+      @include breakpoint($breakpoint-m $breakpoint-l) {
+        max-width: 82px;
+      }
+
+      @include breakpoint($breakpoint-m) {
+        height: 56px;
+        width: auto;
+      }
+
+      @include breakpoint($breakpoint-l) {
+        max-width: 121px;
+      }
+    }
+  }
+
