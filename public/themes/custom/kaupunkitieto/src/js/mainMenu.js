@@ -43,13 +43,17 @@ function toggleMenuLevel(item) {
 
 function mouseOver() {
 
-  this.closest('.menu__item--children').classList.add('menu__item--hover');
-  closeOpenItems(this.closest('.menu__item--children'));
+  if (window.innerWidth >= 992) {
+    this.closest('.menu__item--children').classList.add('menu__item--hover');
+    closeOpenItems(this.closest('.menu__item--children'));
+  }
 }
 
 function mouseLeave() {
 
-  this.classList.remove('menu__item--hover');
+  if (window.innerWidth >= 992) {
+    this.classList.remove('menu__item--hover');
+  }
 }
 
 // Utility functions
@@ -83,6 +87,20 @@ document.addEventListener('DOMContentLoaded', function () {
       item.addEventListener('mouseleave', mouseLeave, false);
     }
   }
+
+  // Bind mobile navigation toggle.
+  let toggleButton = document.querySelector('.menu-hamburger__trigger');
+
+  // Check if there was menu toggle button under the menu item.
+  if (toggleButton !== null) {
+    toggleButton.addEventListener('click', function (event) {
+      event.stopPropagation();
+      const menu = document.querySelector('#menu--level-0');
+      menu.classList.toggle('menu--open');
+      closeOpenItems();
+    });
+  }
+
 });
 
 // Functionality when other menu item is clicked while one is open or

@@ -5,7 +5,7 @@
       height: 32px;
       width: 69px;
 
-      @include breakpoint($breakpoint-m $breakpoint-l) {
+      @include breakpoint($breakpoint-m ($breakpoint-l - 1)) {
         max-width: 82px;
       }
 
