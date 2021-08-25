@@ -94,9 +94,14 @@ document.addEventListener('DOMContentLoaded', function () {
   // Check if there was menu toggle button under the menu item.
   if (toggleButton !== null) {
     toggleButton.addEventListener('click', function (event) {
-      event.stopPropagation();
       const menu = document.querySelector('#menu--level-0');
       menu.classList.toggle('menu--open');
+      if (menu.classList.contains('menu--open')) {
+        toggleButton.setAttribute('aria-expanded', true);
+      }
+      else {
+        toggleButton.setAttribute('aria-expanded', false);
+      }
       closeOpenItems();
     });
   }
