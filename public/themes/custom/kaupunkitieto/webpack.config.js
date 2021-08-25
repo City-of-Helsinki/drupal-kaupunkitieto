@@ -10,6 +10,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const SVGSpritemapPlugin = require("svg-spritemap-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
+const SvgToJson = require('./webpack.svgToJson');
+const SvgToCss = require('./webpack.svgToCss');
 
 module.exports = {
   entry: {
@@ -128,6 +130,8 @@ module.exports = {
     extensions: [".js", ".json"],
   },
   plugins: [
+    new SvgToJson(path.resolve(__dirname, 'src/icons/**/*.svg'),'icons.json'),
+    new SvgToCss(path.resolve(__dirname, 'src/icons/**/*.svg'), 'css/hdbt-icons.css'),
     new FriendlyErrorsWebpackPlugin(),
     new FixStyleOnlyEntriesPlugin(),
     new CleanWebpackPlugin(["dist"], {
@@ -161,14 +165,19 @@ module.exports = {
           "to": path.resolve(__dirname, "dist") + "/js/",
           "force": true,
           "flatten": true
-        },
-        {
+        }, {
           "context": "./",
           "from": "node_modules/select2/dist/css/select2.min.css",
           "to": path.resolve(__dirname, "dist") + "/css/",
           "force": true,
           "flatten": true
-        }
+        }, {
+          'context': './',
+          'from': 'src/icons/**/*.svg',
+          'to': path.resolve(__dirname, 'dist') + '/icons/svg/',
+          'force': true,
+          'flatten': true
+        },
       ]
     }),
     new MiniCssExtractPlugin({
