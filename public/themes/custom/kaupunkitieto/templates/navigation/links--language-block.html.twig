@@ -38,9 +38,9 @@
     <div class="language-switcher__globe">
       {% include '@hdbt/misc/icon.twig' with {icon: 'globe'} %}
     </div>
-    <div class="language-switcher__toggle">
+    <a class="language-switcher__toggle" tabindex="0">
       {% include '@hdbt/misc/icon.twig' with {icon: 'angle-down'} %}
-    </div>
+    </a>
     <div class="language-links">
       {% for item in links %}
         {% set language_link = '' %}

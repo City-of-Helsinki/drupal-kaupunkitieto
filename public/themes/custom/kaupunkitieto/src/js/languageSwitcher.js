@@ -1,12 +1,15 @@
 (function ($) {
 
   document.addEventListener('DOMContentLoaded', function () {
-    console.log('lesgo');
-
-    const toggleButton = document.querySelector('.language-switcher__toggle .icon');
+    const toggleButton = document.querySelector('.language-switcher__toggle');
     // Bind event click event.
     toggleButton.addEventListener('click', () => {
-      toggleMenu();
+      toggleMenu(toggleButton);
+    });
+    toggleButton.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        toggleMenu(toggleButton);
+      }
     });
 
   });
@@ -15,10 +18,17 @@
    * Toggle the language menu.
    */
   function toggleMenu() {
-    console.log('click');
-
     const menu = document.querySelector('.language-switcher');
     menu.classList.toggle('open');
+
+    const links = document.querySelector('.language-switcher .language-links');
+    if (menu.classList.contains('open')) {
+      links.setAttribute('aria-expanded', true);
+    }
+    else {
+      links.setAttribute('aria-expanded', false);
+    }
+
   }
 
 })(jQuery);
