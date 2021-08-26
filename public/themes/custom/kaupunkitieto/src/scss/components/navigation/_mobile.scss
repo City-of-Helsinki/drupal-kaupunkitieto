@@ -25,6 +25,7 @@
   @include breakpoint(0 ($breakpoint-l - 1)) {
 
     &#menu--level-0 {
+      border-bottom: 1px solid $color-black-5;
       padding: $spacing-half 0;
 
       &.menu--open {

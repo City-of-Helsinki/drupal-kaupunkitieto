@@ -47,3 +47,10 @@ content-menu:
     - core/drupal
     - core/jquery
     - kaupunkitieto/select2
+
+language-switcher:
+  js:
+    dist/js/languageSwitcher.min.js: {}
+  version: 1.x
+  dependencies:
+    - core/drupal
