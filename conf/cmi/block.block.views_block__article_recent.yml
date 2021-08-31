@@ -1,0 +1,29 @@
+uuid: b8afd98d-569b-4ebb-aa2e-557a63b7df9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.article
+  module:
+    - system
+    - views
+  theme:
+    - kaupunkitieto
+id: views_block__article_recent
+theme: kaupunkitieto
+region: after_content
+weight: -6
+provider: null
+plugin: 'views_block:article-recent'
+settings:
+  id: 'views_block:article-recent'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
