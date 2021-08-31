@@ -1,0 +1,62 @@
+#block-views-block-article-recent {
+  margin: 0 auto;
+  max-width: 1264px;
+  padding: $spacing-and-half $spacing-double 0;
+
+  h2 {
+    @include font-size(48px, 64px);
+    font-weight: 400;
+    margin-bottom: $spacing-double;
+  }
+}
+
+.views--article.views--recent {
+
+  display: flex;
+
+  @include breakpoint(0 $breakpoint-m) {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+  }
+
+  @include breakpoint($breakpoint-m) {
+    flex-wrap: wrap;
+  }
+
+  .views-row {
+    width: 100%;
+
+    @include breakpoint(0 $breakpoint-m) {
+      flex: 0 0 auto;
+      max-width: 306px;
+      margin-right: $spacing-double;
+    }
+
+    @include breakpoint(0 $breakpoint-m) {
+      margin-bottom: $spacing-triple;
+    }
+
+    @include breakpoint($breakpoint-m $breakpoint-l) {
+      width: calc(100% / 2 - #{$spacing-quarter} - #{$spacing-half});
+
+      &:not(:nth-child(2n+2)) {
+        margin-right: $spacing-and-half;
+      }
+    }
+
+    @include breakpoint($breakpoint-l) {
+      width: calc(100% / 3 - #{$spacing});
+
+      &:not(:nth-child(3n+3)) {
+        margin-right: $spacing-and-half;
+      }
+    }
+
+  }
+
+  .content-card {
+    padding: 0;
+    width: 100%;
+  }
+}
