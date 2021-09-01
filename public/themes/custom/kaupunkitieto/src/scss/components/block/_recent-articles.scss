@@ -1,23 +1,34 @@
 #block-views-block-article-recent {
   margin: 0 auto;
   max-width: 1264px;
-  padding: $spacing-and-half $spacing-double 0;
+
+  @include breakpoint($breakpoint-m) {
+    padding: $spacing-and-half $spacing-double 0;
+  }
 
   h2 {
-    @include font-size(48px, 64px);
+    @include font-size(36px, 64px);
     font-weight: 400;
     margin-bottom: $spacing-double;
+
+    @include breakpoint(0 ($breakpoint-m - 1px)) {
+      padding: 0 $spacing;
+    }
+
+    @include breakpoint($breakpoint-l) {
+      @include font-size(48px, 64px);
+    }
+
   }
 }
 
 .views--article.views--recent {
-
   display: flex;
 
-  @include breakpoint(0 $breakpoint-m) {
+  @include breakpoint(0 ($breakpoint-m - 1px)) {
     flex-wrap: nowrap;
     overflow-x: auto;
-
+    padding: $spacing-and-half 0 0 $spacing;
   }
 
   @include breakpoint($breakpoint-m) {
@@ -27,17 +38,21 @@
   .views-row {
     width: 100%;
 
-    @include breakpoint(0 $breakpoint-m) {
-      flex: 0 0 auto;
+    @include breakpoint(0 ($breakpoint-s - 1px)) {
+      max-width: 288px;
+    }
+
+    @include breakpoint($breakpoint-s ($breakpoint-m - 1px)) {
       max-width: 306px;
-      margin-right: $spacing-double;
     }
 
-    @include breakpoint(0 $breakpoint-m) {
+    @include breakpoint(0 ($breakpoint-m - 1px)) {
+      flex: 0 0 auto;
       margin-bottom: $spacing-triple;
+      margin-right: $spacing;
     }
 
-    @include breakpoint($breakpoint-m $breakpoint-l) {
+    @include breakpoint($breakpoint-m ($breakpoint-l - 1px)) {
       width: calc(100% / 2 - #{$spacing-quarter} - #{$spacing-half});
 
       &:not(:nth-child(2n+2)) {
