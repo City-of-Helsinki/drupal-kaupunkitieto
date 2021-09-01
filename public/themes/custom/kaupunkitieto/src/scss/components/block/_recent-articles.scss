@@ -74,4 +74,10 @@
     padding: 0;
     width: 100%;
   }
+
+  @include breakpoint(0 ($breakpoint-m - 1px)) {
+    .pager {
+      display: none;
+    }
+  }
 }
