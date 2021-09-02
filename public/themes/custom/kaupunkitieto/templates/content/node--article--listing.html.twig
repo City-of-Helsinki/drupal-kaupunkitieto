@@ -93,26 +93,40 @@
 
 <article{{ attributes.addClass(classes) }}>
 
-  <a href="{{ url }}" class="content-card__link" rel="bookmark">
-    <div class="content-card__image">
-      {% if image.0 %}
-        {{ image }}
-      {% else %}
-        {% include '@hdbt/media/image--card.html.twig' with {content: '' } %}
+    <a href="{{ url }}" class="content-card__link" rel="bookmark">
+      <div class="content-card__image">
+        {% if image.0 %}
+          {{ image }}
+        {% else %}
+          {% include '@hdbt/media/image--card.html.twig' with {content: '' } %}
+        {% endif %}
+      </div>
+
+      {{ title_prefix }}
+      <h3{{ title_attributes.addClass(title_classes) }}>
+        {{ label }}
+      </h3>
+      {{ title_suffix }}
+    </a>
+
+    <div class="content-card__meta">
+      {% set created_date = node.createdtime|format_date('long') %}
+      {% if created_date|render %}
+        <div class="content-card__date">
+          {{ created_date }}
+        </div>
+      {% endif %}
+      {% if content.field_author|render %}
+        <div class="content-card__author">
+          {{ content.field_author }}
+        </div>
+      {% endif %}
+      {% if content.field_article_series|render %}
+        <div class="content-card__series">
+          {{ content.field_article_series }}
+        </div>
       {% endif %}
     </div>
-
-    {% set created_date = node.createdtime|format_date('long') %}
-    {% if created_date|render %}
-      <div class="content-card__date">
-        {{ created_date }}
-      </div>
-    {% endif %}
-    {{ title_prefix }}
-    <h3{{ title_attributes.addClass(title_classes) }}>
-      {{ label }}
-    </h3>
-    {{ title_suffix }}
 
     {% if content.field_lead|render %}
       <div class="content-card__lead">
@@ -120,7 +134,6 @@
       </div>
     {% endif %}
 
-  </a>
 
   {% if content.field_keywords|render %}
     <div class="content-card__keywords">

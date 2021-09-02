@@ -48,8 +48,11 @@
 
     @include breakpoint(0 ($breakpoint-m - 1px)) {
       flex: 0 0 auto;
-      margin-bottom: $spacing-triple;
       margin-right: $spacing;
+    }
+
+    @include breakpoint($breakpoint-m) {
+      margin-bottom: $spacing-triple;
     }
 
     @include breakpoint($breakpoint-m ($breakpoint-l - 1px)) {
