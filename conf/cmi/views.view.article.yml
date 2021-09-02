@@ -164,7 +164,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Recent publications'
+      title: 'Recent articles'
       header: {  }
       footer: {  }
       empty: {  }
@@ -189,7 +189,7 @@ display:
     display_options:
       display_extenders:
         metatag_display_extender: {  }
-      block_description: 'Recent publications'
+      block_description: 'Recent articles'
       display_description: ''
     cache_metadata:
       max-age: -1
