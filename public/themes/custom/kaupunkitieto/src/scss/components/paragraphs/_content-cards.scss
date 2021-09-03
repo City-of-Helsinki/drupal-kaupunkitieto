@@ -26,6 +26,12 @@
           padding-right: $spacing-half;
         }
       }
+
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
 
     .content-card__lead {
