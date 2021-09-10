@@ -83,6 +83,9 @@
         "patches": {
             "drupal/devel": {
                 "Brings back the Available Methods & Properties tabs for Kint dumps — Issue #221": "https://raw.githubusercontent.com/politsin/snipets/master/patch/kint.patch"
+            },
+            "drupal/core": {
+                "Cannot use relationship for rendered entity on Views — Issue #2457999": "https://www.drupal.org/files/issues/2021-05-13/9.1.x-2457999-267-views-relationship-rendered-entity.patch"
             }
         }
     },
