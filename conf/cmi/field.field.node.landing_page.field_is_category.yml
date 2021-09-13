@@ -1,0 +1,23 @@
+uuid: beccee36-b8d6-4c4f-9dd1-e59258d659c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_category
+    - node.type.landing_page
+id: node.landing_page.field_is_category
+field_name: field_is_category
+entity_type: node
+bundle: landing_page
+label: Category
+description: 'Check this box for a category page. Category page will include a listing of recent articles related to the selected category and hero''s background color will automatically defined by menu level.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean
