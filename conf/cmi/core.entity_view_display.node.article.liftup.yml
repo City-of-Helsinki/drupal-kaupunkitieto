@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.article.field_lead
     - field.field.node.article.field_liftup_image
     - field.field.node.article.field_metatags
+    - field.field.node.article.field_search_result_text
     - node.type.article
   module:
     - entity_reference_revisions
@@ -65,4 +66,6 @@ hidden:
   field_attachment: true
   field_author: true
   field_liftup_image: true
+  field_search_result_text: true
   langcode: true
+  search_api_excerpt: true

@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.article.field_lead
     - field.field.node.article.field_liftup_image
     - field.field.node.article.field_metatags
+    - field.field.node.article.field_search_result_text
     - node.type.article
   module:
     - user
@@ -52,5 +53,7 @@ hidden:
   field_author: true
   field_content: true
   field_metatags: true
+  field_search_result_text: true
   langcode: true
   links: true
+  search_api_excerpt: true

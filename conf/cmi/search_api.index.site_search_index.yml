@@ -1,0 +1,168 @@
+uuid: 7e7b6171-c3cd-4eab-830b-d8534391d719
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_article_series
+    - field.storage.node.field_author
+    - field.storage.node.field_content
+    - field.storage.node.field_keywords
+    - field.storage.node.field_lead
+    - field.storage.node.field_liftup_image
+    - field.storage.node.field_search_result_text
+    - search_api.server.site_search_db
+  module:
+    - node
+    - search_api
+id: site_search_index
+name: 'Site search index'
+description: ''
+read_only: false
+field_settings:
+  changed:
+    label: Changed
+    datasource_id: 'entity:node'
+    property_path: changed
+    type: date
+    dependencies:
+      module:
+        - node
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  field_article_series:
+    label: 'Article series'
+    datasource_id: 'entity:node'
+    property_path: field_article_series
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_article_series
+  field_author:
+    label: Author
+    datasource_id: 'entity:node'
+    property_path: field_author
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_author
+  field_content:
+    label: Content
+    datasource_id: 'entity:node'
+    property_path: field_content
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_content
+  field_keywords:
+    label: Keywords
+    datasource_id: 'entity:node'
+    property_path: field_keywords
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_keywords
+  field_lead:
+    label: Lead
+    datasource_id: 'entity:node'
+    property_path: field_lead
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_lead
+  field_liftup_image:
+    label: 'Liftup image'
+    datasource_id: 'entity:node'
+    property_path: field_liftup_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_liftup_image
+  field_search_result_text:
+    label: 'Search result text'
+    datasource_id: 'entity:node'
+    property_path: field_search_result_text
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_search_result_text
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  status:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+  uid:
+    label: uid
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  content_access:
+    weights:
+      preprocess_query: -30
+  entity_status: {  }
+  ignorecase:
+    all_fields: false
+    fields:
+      - field_lead
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  language_with_fallback: {  }
+  rendered_item: {  }
+  transliteration:
+    all_fields: false
+    fields:
+      - field_lead
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: site_search_db

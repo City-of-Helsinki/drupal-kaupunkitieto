@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.landing_page.field_author
     - field.field.node.landing_page.field_content
     - field.field.node.landing_page.field_has_hero
     - field.field.node.landing_page.field_hero
@@ -28,6 +29,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_author:
+    weight: 52
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_content:
     weight: 12
     settings:

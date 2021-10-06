@@ -1,0 +1,33 @@
+.select2-container {
+  .select2-results__option--highlighted[aria-selected] {
+    background-color: var(--color-black) !important; // this might need fixin'.
+    color: var(--color-white);
+}
+
+  .select2-selection--multiple .select2-selection__choice {
+    background-color: var(--color-black-10) !important; // this might need fixin'.
+    color: var(--color-black);
+    border: 0;
+    border-radius: 0;
+    font-weight: normal;
+  }
+}
+
+.block-facet {
+  &--select2 {
+    padding-top: $spacing;
+
+    @include breakpoint($breakpoint-l) {
+      float: left;
+      width: 30%;
+      margin-right: 3%;
+      padding-top: $spacing * 2;
+    }
+
+    h2 {
+      @include font-size(16px, 24px);
+      margin: 4px 0;
+      font-weight: $font-weight-medium;
+    }
+  }
+}
