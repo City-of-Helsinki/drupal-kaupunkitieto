@@ -8,6 +8,8 @@ dependencies:
     - field.field.node.landing_page.field_content
     - field.field.node.landing_page.field_has_hero
     - field.field.node.landing_page.field_hero
+    - field.field.node.landing_page.field_is_category
+    - field.field.node.landing_page.field_keywords
     - field.field.node.landing_page.field_liftup_image
     - field.field.node.landing_page.field_metatags
     - node.type.landing_page
@@ -34,6 +36,8 @@ hidden:
   field_content: true
   field_has_hero: true
   field_hero: true
+  field_is_category: true
+  field_keywords: true
   field_metatags: true
   langcode: true
   links: true

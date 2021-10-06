@@ -5,7 +5,7 @@ dependencies:
   config:
     - views.view.article
   module:
-    - system
+    - node
     - views
   theme:
     - kaupunkitieto
@@ -22,8 +22,12 @@ settings:
   label_display: visible
   views_label: ''
   items_per_page: none
+  context_mapping: {  }
 visibility:
-  request_path:
-    id: request_path
-    pages: '<front>'
+  node_type:
+    id: node_type
+    bundles:
+      landing_page: landing_page
     negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

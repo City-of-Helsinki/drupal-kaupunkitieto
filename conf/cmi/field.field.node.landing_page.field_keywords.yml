@@ -1,17 +1,15 @@
-uuid: d814d2e3-c57d-49bc-850e-d00e951b236e
+uuid: dc14c99b-5470-43b0-9352-142db8b42c36
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_keywords
-    - node.type.article
+    - node.type.landing_page
     - taxonomy.vocabulary.keywords
-_core:
-  default_config_hash: LSKCct3_vvTchT4_8ijyWaV3tYa0K1ihTS_cxpSBCxM
-id: node.article.field_keywords
+id: node.landing_page.field_keywords
 field_name: field_keywords
 entity_type: node
-bundle: article
+bundle: landing_page
 label: Keywords
 description: ''
 required: false
@@ -26,6 +24,6 @@ settings:
     sort:
       field: name
       direction: asc
-    auto_create: true
+    auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference
