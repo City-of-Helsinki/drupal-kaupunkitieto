@@ -1,0 +1,19 @@
+uuid: 2f6a77d9-ae6c-480c-b01a-2898d2177ce6
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_search_result_text
+    - node.type.page
+id: node.page.field_search_result_text
+field_name: field_search_result_text
+entity_type: node
+bundle: page
+label: 'Search result text'
+description: 'This text is shown in the search result page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

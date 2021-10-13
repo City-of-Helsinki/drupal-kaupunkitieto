@@ -1,0 +1,132 @@
+.site-search {
+  .main-content {
+    margin: 0 auto;
+    max-width: 1264px;
+  }
+}
+
+.views-element-container {
+  clear: both;
+  padding-top: $spacing;
+
+  @include breakpoint($breakpoint-l) {
+    padding-top: $spacing * 2;
+  }
+}
+
+.views--site-search {
+  .form-select {
+    border: 0;
+    background: var(--color-black-10);
+    padding: $spacing-half;
+  }
+
+  .form-item-search-api-fulltext {
+    display: inline-block;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    justify-content: space-between;
+  }
+
+  header {
+    margin-top: $spacing;
+    margin-bottom: $spacing;
+
+    h4 {
+      margin-top: 0;
+    }
+  }
+
+  .views-row {
+    width: 100%;
+    margin-bottom: $spacing * 2;
+
+    @include breakpoint($breakpoint-m ($breakpoint-l - 1)) {
+      width: 48%;
+    }
+
+    @include breakpoint($breakpoint-m) {
+      width: 23%;
+    }
+  }
+
+  .views-field {
+    margin-bottom: $spacing-half;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  .views-field-title {
+    margin-top: $spacing;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .views-field-nid {
+    svg {
+      width: 53px;
+      height: 53px;
+    }
+  }
+
+  .views-field-field-search-result-text {
+    color: var(--color-black-80);
+  }
+
+  .views-field-field-keywords{
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      display: inline-block;
+      background: $color-black;
+      border-radius: $spacing;
+      color: $color-white;
+      padding: 0 $spacing;
+      margin-right: $spacing-half;
+      margin-bottom: $spacing-half;
+      @include font-size(14px, 30px);
+    }
+  }
+
+  .form-actions {
+    display: inline-block;
+
+    .form-submit {
+      background: var(--color-black-90);
+      border: 0;
+    }
+  }
+}
+
+#views-exposed-form-site-search-page-1 {
+  display: flex;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+  justify-content: flex-start;
+  align-items: center;
+
+  .form-actions {
+    @include breakpoint($breakpoint-s) {
+      margin-bottom: -11px; // Flex align offsetting.
+      margin-left: $spacing;
+    }
+  }
+
+  #edit-items-per-page {
+    background-color: var(--hdbt-color-coat-of-arms--secondary);
+    border: 0;
+  }
+}

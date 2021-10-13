@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.article.field_lead
     - field.field.node.article.field_liftup_image
     - field.field.node.article.field_metatags
+    - field.field.node.article.field_search_result_text
     - node.type.article
   module:
     - entity_reference_revisions
@@ -79,6 +80,13 @@ content:
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
+  field_search_result_text:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   links:
     weight: 0
     region: content
@@ -87,3 +95,4 @@ content:
 hidden:
   field_liftup_image: true
   langcode: true
+  search_api_excerpt: true

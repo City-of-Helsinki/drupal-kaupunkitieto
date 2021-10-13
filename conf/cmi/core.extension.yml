@@ -4,6 +4,7 @@ module:
   aet: 0
   api_tools: 0
   block: 0
+  block_content: 0
   breakpoint: 0
   ckeditor: 0
   config: 0
@@ -14,11 +15,15 @@ module:
   datetime: 0
   dblog: 0
   default_content: 0
+  devel: 0
+  devel_generate: 0
   diff: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
   entity_reference_revisions: 0
+  facets: 0
+  facets_range_widget: 0
   features: 0
   field: 0
   field_ui: 0
@@ -68,11 +73,15 @@ module:
   redirect: 0
   responsive_image: 0
   scheduler: 0
+  search_api: 0
+  search_api_db: 0
   select2: 0
+  select2_facets: 0
   select2_icon: 0
   serialization: 0
   simple_sitemap: 0
   social_media: 0
+  stage_file_proxy: 0
   system: 0
   taxonomy: 0
   text: 0

@@ -3,9 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.landing_page.field_author
     - field.field.node.landing_page.field_content
     - field.field.node.landing_page.field_has_hero
     - field.field.node.landing_page.field_hero
+    - field.field.node.landing_page.field_is_category
+    - field.field.node.landing_page.field_keywords
     - field.field.node.landing_page.field_liftup_image
     - field.field.node.landing_page.field_metatags
     - node.type.landing_page
@@ -15,6 +18,7 @@ dependencies:
     - paragraphs
     - path
     - scheduler
+    - select2
 _core:
   default_config_hash: EpKucMjH6qBboFur_x0R89tX9KYcPmS9ijWcfK2fQPA
 id: node.landing_page.default
@@ -24,15 +28,25 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_content:
-    weight: 12
+  field_author:
+    weight: 52
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_content:
+    weight: 13
+    settings:
+      title: Lohko
+      title_plural: Lohkot
       edit_mode: open
       closed_mode: summary
       autocollapse: none
@@ -48,17 +62,17 @@ content:
     type: paragraphs
     region: content
   field_has_hero:
-    weight: 2
+    weight: 3
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_hero:
-    weight: 3
+    weight: 5
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
+      title: Lohko
+      title_plural: Lohkot
       edit_mode: closed_expand_nested
       closed_mode: summary
       autocollapse: none
@@ -73,15 +87,32 @@ content:
     third_party_settings: {  }
     type: paragraphs
     region: content
+  field_is_category:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_keywords:
+    weight: 14
+    settings:
+      width: 100%
+      autocomplete: true
+      match_operator: CONTAINS
+      match_limit: 10
+    third_party_settings: {  }
+    type: select2_entity_reference
+    region: content
   field_liftup_image:
-    weight: 3
+    weight: 4
     settings:
       media_types: {  }
     third_party_settings: {  }
     type: media_library_widget
     region: content
   field_metatags:
-    weight: 51
+    weight: 19
     settings:
       sidebar: false
     third_party_settings: {  }
@@ -96,7 +127,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -104,32 +135,32 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 9
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 20
+    weight: 15
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 12
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
@@ -141,13 +172,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
@@ -157,13 +188,13 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 18
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }
