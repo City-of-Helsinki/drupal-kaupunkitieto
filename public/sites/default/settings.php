@@ -65,7 +65,7 @@ if ($drush_options_uri && !in_array($drush_options_uri, $routes)) {
 $settings['config_sync_directory'] = '../conf/cmi';
 $settings['file_public_path'] = getenv('DRUPAL_FILES_PUBLIC') ?: 'sites/default/files';
 //$settings['file_private_path'] = getenv('DRUPAL_FILES_PRIVATE');
-$settings['file_temp_path'] = getenv('DRUPAL_TMP_PATH') ?: '/tmp';
+//$settings['file_temp_path'] = getenv('DRUPAL_TMP_PATH') ?: '/tmp';
 
 if ($reverse_proxy_address = getenv('DRUPAL_REVERSE_PROXY_ADDRESS')) {
   $reverse_proxy_address = explode(',', $reverse_proxy_address);
