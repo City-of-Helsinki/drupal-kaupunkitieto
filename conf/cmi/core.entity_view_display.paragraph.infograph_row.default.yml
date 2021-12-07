@@ -1,0 +1,39 @@
+uuid: 008be6e1-ac47-4ad9-8429-a177c011e3f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.infograph_row.field_data
+    - field.field.paragraph.infograph_row.field_label
+    - field.field.paragraph.infograph_row.field_url
+    - paragraphs.paragraphs_type.infograph_row
+id: paragraph.infograph_row.default
+targetEntityType: paragraph
+bundle: infograph_row
+mode: default
+content:
+  field_data:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_label:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_url:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,0 +1,21 @@
+uuid: c28ad2ec-b123-4f7d-bf32-97c5e4b9b312
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_type_infograph
+    - paragraphs.paragraphs_type.infograph
+  module:
+    - options
+id: paragraph.infograph.field_type_infograph
+field_name: field_type_infograph
+entity_type: paragraph
+bundle: infograph
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

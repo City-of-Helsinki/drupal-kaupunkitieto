@@ -1,0 +1,41 @@
+uuid: 73af6f9e-1cb8-4904-9171-9f8528528205
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.infograph_row.field_data
+    - field.field.paragraph.infograph_row.field_label
+    - field.field.paragraph.infograph_row.field_url
+    - paragraphs.paragraphs_type.infograph_row
+id: paragraph.infograph_row.default
+targetEntityType: paragraph
+bundle: infograph_row
+mode: default
+content:
+  field_data:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_label:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_url:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

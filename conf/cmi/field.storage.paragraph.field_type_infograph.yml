@@ -1,0 +1,36 @@
+uuid: afb12b5d-364c-4f48-9ffa-dee31138e0e3
+langcode: fi
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_type_infograph
+field_name: field_type_infograph
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Type 1'
+    -
+      value: '2'
+      label: 'Type 2'
+    -
+      value: '3'
+      label: 'Type 3'
+    -
+      value: '4'
+      label: 'Type 4'
+    -
+      value: '5'
+      label: 'Type 5'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

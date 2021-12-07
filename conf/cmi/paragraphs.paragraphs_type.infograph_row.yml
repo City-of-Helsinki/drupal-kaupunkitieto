@@ -1,0 +1,10 @@
+uuid: be6b27c0-94ab-46ae-a1db-9328c5988029
+langcode: en
+status: true
+dependencies: {  }
+id: infograph_row
+label: 'Infograph Row'
+icon_uuid: null
+icon_default: null
+description: 'These rows populate Infograph Paragraph'
+behavior_plugins: {  }

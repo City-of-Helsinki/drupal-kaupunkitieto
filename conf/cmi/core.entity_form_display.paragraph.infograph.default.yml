@@ -1,0 +1,45 @@
+uuid: 7d6d2ae9-cab0-49ff-acd1-509a6921fc01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.infograph.field_graph_id
+    - field.field.paragraph.infograph.field_rows
+    - field.field.paragraph.infograph.field_type_infograph
+    - paragraphs.paragraphs_type.infograph
+  module:
+    - paragraphs
+id: paragraph.infograph.default
+targetEntityType: paragraph
+bundle: infograph
+mode: default
+content:
+  field_graph_id:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_rows:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_type_infograph:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
