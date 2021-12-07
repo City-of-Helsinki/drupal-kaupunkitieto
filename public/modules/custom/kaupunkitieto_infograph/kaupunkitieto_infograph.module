@@ -1,0 +1,118 @@
+<?php
+
+use Drupal\paragraphs\Entity\Paragraph;
+
+/**
+ * When saving info paragraph we get actual values from external interface.
+ */
+function kaupunkitieto_infograph_paragraph_presave($entity) {
+  if($entity->bundle() == "infograph") {
+    if($entity->hasField('field_graph_id')) {
+
+      $rows = _fetch_data($entity->get('field_graph_id')->value);
+
+      if($rows) {
+        $entity->set('field_type_infograph', $rows->graphType);
+
+        $new_set = array();
+
+        foreach ($rows->graphParts as $key => $value) {
+          $paragraph = Paragraph::create(['type' => 'infograph_row',]);
+          $paragraph->set('field_data', $value->data[1]);
+          $paragraph->set('field_label', $value->data[0]);
+          $paragraph->set('field_url', $value->url);
+          $paragraph->isNew();
+          $paragraph->save();
+
+          $new_set[] = array(
+            'target_id' => $paragraph->id(),
+            'target_revision_id' => $paragraph->getRevisionId(),
+          );
+        }
+
+        $entity->set('field_rows', $new_set);
+      }
+      else {
+        \Drupal::logger('some_channel_name')->warning('No rows found for Graph Id: ' . $entity->get('field_graph_id')->value);
+      }
+
+    }
+  }
+}
+
+/**
+ * Updata infograph values during cron run.
+ */
+function kaupunkitieto_infograph_cron() {
+  foreach (_get_graphs() as $paragraph) { // Go trough all Inforgraphs.
+    if($paragraph->hasField('field_graph_id')) {
+      $rows = _fetch_data($paragraph->get('field_graph_id')->value);
+
+      if($rows) {
+        $paragraph->set('field_type_infograph', $rows->graphType);
+
+        $new_set = array();
+
+        foreach ($rows->graphParts as $key => $value) {
+          $subParagraph = Paragraph::create(['type' => 'infograph_row',]);
+          $subParagraph->set('field_data', $value->data[1]);
+          $subParagraph->set('field_label', $value->data[0]);
+          $subParagraph->set('field_url', $value->url);
+          $subParagraph->isNew();
+          $subParagraph->save();
+
+          $new_set[] = array(
+            'target_id' => $subParagraph->id(),
+            'target_revision_id' => $subParagraph->getRevisionId(),
+          );
+        }
+
+        $paragraph->set('field_rows', $new_set);
+      }
+      else {
+        \Drupal::logger('some_channel_name')->warning('No rows found for Graph Id: ' . $paragraph->get('field_graph_id')->value);
+      }
+    }
+  }
+}
+
+/**
+ *
+ */
+function _get_graphs() {
+  $all_paragraphs = NULL;
+  $paragraphStorage = \Drupal::entityTypeManager()->getStorage('paragraph');
+  $paragraphQuery    = $paragraphStorage->getQuery()->condition('type', 'infograph');
+  $paragraphIds = $paragraphQuery->execute();
+
+  // fetch rows
+  $all_paragraphs = $paragraphStorage->loadMultiple($paragraphIds);
+
+  return $all_paragraphs;
+}
+
+/**
+ * Query data from external interface.
+ *
+ * https://infographic-api.herokuapp.com/docs
+ *
+ */
+function _fetch_data($id) {
+  $client = \Drupal::httpClient();
+
+  $config = \Drupal::config('kaupunkitieto_infograph.settings');
+
+  if(trim($config->get('url')) == '') { // Not that good of a check but it's something.
+    return NULL;
+  }
+
+  try {
+    $request = $client->get($config->get('url').$id);
+    $response = json_decode($request->getBody());
+    return $response;
+  }
+  catch (Exception $e) {
+    return NULL;
+  }
+
+}

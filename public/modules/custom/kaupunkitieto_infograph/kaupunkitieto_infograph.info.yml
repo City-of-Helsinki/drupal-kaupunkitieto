@@ -1,0 +1,6 @@
+name: Kaupunkitieto Infograph
+description: Fetch infograph data from interface.
+package: Custom
+
+type: module
+core_version_requirement: ^9
