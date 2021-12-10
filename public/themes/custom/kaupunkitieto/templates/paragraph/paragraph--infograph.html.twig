@@ -44,6 +44,9 @@
  * Get list item label.
  */
 #}
+
+{{ attach_library('kaupunkitieto/infograph') }}
+
 {% set type = content.field_type_infograph[0]['#markup'] %}
 
 {%
@@ -57,6 +60,7 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
+
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
@@ -68,7 +72,7 @@
           {{ item.entity.field_label.value }}
         </div>
         <div class="infograph__value">
-          {{ item.entity.field_data.value }}
+          <a href="{{ item.entity.field_url.value }}">{{ item.entity.field_data.value }}</a>
         </div>
 
       </div>

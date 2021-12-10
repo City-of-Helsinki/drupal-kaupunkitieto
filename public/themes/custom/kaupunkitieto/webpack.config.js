@@ -22,12 +22,14 @@ module.exports = {
         "./src/js/contentMenu.js",
         "./src/js/languageSwitcher.js",
         "./src/js/mainMenu.js",
+        "./src/js/infograph.js",
       ]
     }),
     contentLiftup: ["./src/js/contentLiftup.js"],
     contentMenu: ["./src/js/contentMenu.js"],
     languageSwitcher: ["./src/js/languageSwitcher.js"],
     mainMenu: ["./src/js/mainMenu.js"],
+    infograph: ["./src/js/infograph.js"],
   },
   output: {
     devtoolLineToLine: true,

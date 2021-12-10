@@ -1,54 +1,285 @@
-@include breakpoint($breakpoint-m) {
-  %full-row {
-    flex: auto;
-    width: 100%;
+%full-row {
+  flex: auto;
+  width: 100%;
+  text-align: left;
+
+  .infograph__value {
+    @include font-size(55px, 56px);
+
+    @include breakpoint($breakpoint-m ($breakpoint-l - 1)) {
+      @include font-size(110px, 112px);
+    }
+
+    @include breakpoint($breakpoint-m) {
+      @include font-size(220px, 224px);
+    }
+  }
+}
+
+%small-row {
+  .infograph__value {
+    @include font-size(32px, 36px);
+
+    @include breakpoint($breakpoint-m ($breakpoint-l - 1)) {
+      @include font-size(54px, 58px);
+    }
+
+    @include breakpoint($breakpoint-m) {
+      @include font-size(65px, 65px);
+    }
+  }
+}
+
+%half-row {
+  width: 50%;
+
+  .infograph__value {
+    @include font-size(32px, 36px);
+
+    @include breakpoint($breakpoint-m ($breakpoint-l - 1)) {
+      @include font-size(58px, 60px);
+    }
+
+    @include breakpoint($breakpoint-m) {
+      @include font-size(110px, 116px);
+    }
+  }
+}
+
+%half-row-large {
+  width: 50%;
+
+  .infograph__value {
+    @include font-size(32px, 36px);
+
+    @include breakpoint($breakpoint-m ($breakpoint-l - 1)) {
+      @include font-size(65px, 72px);
+    }
+
+    @include breakpoint($breakpoint-m) {
+      @include font-size(180px, 185px);
+    }
+  }
+}
+
+%row-light-blue {
+  background-color: $infograph-light-blue;
+  color: var(--color-bus);
+
+  a {
+    color: var(--color-bus);
+  }
+}
+
+%row-medium-blue {
+  background-color: $color-fog;
+  color: var(--color-bus);
+
+  a {
+    color: var(--color-bus);
+  }
+}
+
+%row-second-medium-blue {
+  background-color: $color-coat-of-arms;
+  color: $color-white;
+
+  a {
+    color: $color-white;
+  }
+
+  .infograph__label {
+    color: $color-white;
+  }
+}
+
+%row-dark-blue {
+  background-color: var(--color-bus);
+  color: $color-white;
+
+  a {
+    color: $color-white;
+  }
+
+  .infograph__label {
+    color: $color-white;
+  }
+}
+
+%row-light-green {
+  background-color: $infograph-light-green;
+  color: $color-tram;
+
+  a {
+    color: $color-tram;
+  }
+}
+
+%row-dark-green {
+  background-color: $color-tram;
+  color: $color-white;
+
+  a {
+    color: $color-white;
+  }
+
+  .infograph__label {
+    color: $color-white;
   }
 }
 
 .infograph {
   display: flex;
   flex-wrap: wrap;
+  gap: 6px;
+
+  a {
+    text-decoration: none;
+  }
 
   &__item {
-
+    flex: 1;
+    padding: 1.35rem;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    cursor: pointer;
   }
 
   &__label {
-    @include font-size(26px, 30px);
+    @include font-size(22px, 24px);
     color: $color-black;
-  }
+    margin-bottom: 1rem;
 
-  &__value {
-
+    @include breakpoint($breakpoint-m) {
+      @include font-size(26px, 30px);
+    }
   }
 
   &__type-one {
     .infograph__item {
-      flex: 1;
-
       &:first-child {
         @extend %full-row;
+        @extend %row-light-blue;
+      }
+
+      &:nth-child(2) {
+        @extend %small-row;
+        @extend %row-light-green;
+      }
+
+      &:nth-child(3) {
+        @extend %small-row;
+        @extend %row-medium-blue;
+      }
+
+      &:nth-child(4) {
+        @extend %small-row;
+        @extend %row-light-green;
       }
     }
   }
 
   &__type-two {
     .infograph__item {
-      flex: 1;
-
       &:first-child {
         @extend %full-row;
+        @extend %row-light-green;
+      }
+
+      &:nth-child(2) {
+        @extend %half-row;
+        @extend %row-dark-blue;
+      }
+
+      &:nth-child(3) {
+        @extend %half-row;
+        @extend %row-medium-blue;
       }
     }
   }
+
   &__type-three {
+    .infograph__item {
+      &:first-child {
+        @extend %half-row-large;
+        @extend %row-light-blue;
+      }
 
+      &:nth-child(2) {
+        @extend %half-row-large;
+        @extend %row-medium-blue;
+      }
+
+      &:nth-child(3) {
+        @extend %half-row;
+        @extend %row-second-medium-blue;
+      }
+
+      &:nth-child(4) {
+        @extend %half-row;
+        @extend %row-dark-green;
+      }
+    }
   }
+
   &__type-four {
+    .infograph__item {
+      &:first-child {
+        @extend %half-row-large;
+        @extend %row-medium-blue;
+      }
 
+      &:nth-child(2) {
+        @extend %half-row-large;
+        @extend %row-dark-blue;
+      }
+
+      &:nth-child(3) {
+        @extend %row-dark-green;
+        @extend %small-row;
+      }
+
+      &:nth-child(4) {
+        @extend %row-medium-blue;
+        @extend %small-row;
+      }
+
+      &:nth-child(5) {
+        @extend %row-dark-green;
+        @extend %small-row;
+      }
+    }
   }
-  &__type-five {
 
+  &__type-five {
+    .infograph__item {
+      &:first-child {
+        @extend %half-row-large;
+        @extend %row-medium-blue;
+
+        .infograph__label {
+          color: var(--color-bus);
+        }
+      }
+
+      &:nth-child(2) {
+        @extend %half-row-large;
+        @extend %row-dark-green;
+      }
+
+      &:last-child {
+        @extend %full-row;
+        background: var(--color-bus);
+
+        a {
+          color: $color-white;
+        }
+        
+        .infograph__label {
+          color: $color-white;
+        }
+      }
+    }
   }
 
 }

@@ -39,6 +39,12 @@ main-menu:
   js:
     dist/js/mainMenu.min.js: {}
 
+infograph:
+  version: 1.x
+  js:
+    dist/js/infograph.min.js: {}
+
+
 content-menu:
   js:
     dist/js/contentMenu.min.js: {}
