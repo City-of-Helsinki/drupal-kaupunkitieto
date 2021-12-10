@@ -13,19 +13,19 @@ settings:
   allowed_values:
     -
       value: '1'
-      label: 'Type 1'
+      label: type_one
     -
       value: '2'
-      label: 'Type 2'
+      label: type_two
     -
       value: '3'
-      label: 'Type 3'
+      label: type_three
     -
       value: '4'
-      label: 'Type 4'
+      label: type_four
     -
       value: '5'
-      label: 'Type 5'
+      label: type_five
   allowed_values_function: ''
 module: options
 locked: false

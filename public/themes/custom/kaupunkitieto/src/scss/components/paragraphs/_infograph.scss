@@ -1,0 +1,54 @@
+@include breakpoint($breakpoint-m) {
+  %full-row {
+    flex: auto;
+    width: 100%;
+  }
+}
+
+.infograph {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+
+  }
+
+  &__label {
+    @include font-size(26px, 30px);
+    color: $color-black;
+  }
+
+  &__value {
+
+  }
+
+  &__type-one {
+    .infograph__item {
+      flex: 1;
+
+      &:first-child {
+        @extend %full-row;
+      }
+    }
+  }
+
+  &__type-two {
+    .infograph__item {
+      flex: 1;
+
+      &:first-child {
+        @extend %full-row;
+      }
+    }
+  }
+  &__type-three {
+
+  }
+  &__type-four {
+
+  }
+  &__type-five {
+
+  }
+
+}
