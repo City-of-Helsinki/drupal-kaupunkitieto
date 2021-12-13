@@ -49,6 +49,7 @@ module:
   image_style_quality: 0
   imagecache_external: 0
   kaupunkitieto_admin: 0
+  kaupunkitieto_infograph: 0
   language: 0
   link: 0
   linkit: 0
