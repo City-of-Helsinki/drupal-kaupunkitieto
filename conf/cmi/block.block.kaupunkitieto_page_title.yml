@@ -11,7 +11,7 @@ _core:
 id: kaupunkitieto_page_title
 theme: kaupunkitieto
 region: content
-weight: -9
+weight: -8
 provider: null
 plugin: page_title_block
 settings:

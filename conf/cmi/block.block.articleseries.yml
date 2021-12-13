@@ -1,0 +1,28 @@
+uuid: 7b5925d8-aa83-4ec7-94d5-a3faf16893b0
+langcode: fi
+status: true
+dependencies:
+  config:
+    - facets.facet.article_series
+  module:
+    - facets
+    - system
+  theme:
+    - kaupunkitieto
+id: articleseries
+theme: kaupunkitieto
+region: content
+weight: -5
+provider: null
+plugin: 'facet_block:article_series'
+settings:
+  id: 'facet_block:article_series'
+  label: 'Rajaa sisältötyypin mukaan'
+  provider: facets
+  label_display: visible
+  block_id: articleseries
+visibility:
+  request_path:
+    id: request_path
+    pages: "/haku\r\n/haku/*"
+    negate: false

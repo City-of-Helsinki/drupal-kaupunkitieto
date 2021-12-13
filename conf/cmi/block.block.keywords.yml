@@ -1,0 +1,28 @@
+uuid: 6ed754fd-871e-4451-a317-4d0bd62e33b8
+langcode: fi
+status: true
+dependencies:
+  config:
+    - facets.facet.keywords
+  module:
+    - facets
+    - system
+  theme:
+    - kaupunkitieto
+id: keywords
+theme: kaupunkitieto
+region: content
+weight: -6
+provider: null
+plugin: 'facet_block:keywords'
+settings:
+  id: 'facet_block:keywords'
+  label: 'Rajaa aihetyypin mukaan'
+  provider: facets
+  label_display: visible
+  block_id: keywords
+visibility:
+  request_path:
+    id: request_path
+    pages: "/haku\r\n/haku/*"
+    negate: false
