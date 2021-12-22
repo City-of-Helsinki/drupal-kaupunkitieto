@@ -1,6 +1,5 @@
 %full-row {
-  flex: auto;
-  width: 100%;
+  flex: 1 0 90%;
   text-align: left;
 
   .infograph__value {
@@ -31,7 +30,7 @@
 }
 
 %half-row {
-  width: 50%;
+  flex: 1 0 44%;
 
   .infograph__value {
     @include font-size(32px, 36px);
@@ -47,7 +46,7 @@
 }
 
 %half-row-large {
-  width: 50%;
+  flex-basis: 44%;
 
   .infograph__value {
     @include font-size(32px, 36px);
@@ -274,11 +273,19 @@
         a {
           color: $color-white;
         }
-        
+
         .infograph__label {
           color: $color-white;
         }
       }
+    }
+  }
+
+  .small-char {
+    @include font-size(32px, 36px);
+
+    @include breakpoint($breakpoint-m) {
+      @include font-size(50px, 50px);
     }
   }
 
