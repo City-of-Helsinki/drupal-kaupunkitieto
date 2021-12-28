@@ -1,0 +1,34 @@
+uuid: c6521da3-1faa-485d-9ae1-15d53430326b
+langcode: fi
+status: true
+dependencies: {  }
+id: matomo
+label: Matomo
+code: |
+  <!-- Matomo -->
+    var _paq = window._paq = window._paq || [];
+    _paq.push(["setDomains", ["*.kaupunkitieto.hel.fi","*.kaupunkitieto.hel.fi"]]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+     var u="//webanalytics.digiaiiris.com/js/";
+      _paq.push(['setTrackerUrl', u+'tracker.php']);
+      _paq.push(['setSiteId', '532']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.src=u+'piwik.min.js'; s.parentNode.insertBefore(g,s);
+    })();
+  <!-- End Matomo Code -->
+conditions_require_all: true
+conditions: {  }
+contexts: {  }
+header: true
+preprocess: true
+jquery: false
+noscript: '<img src="//digiaiiris.com/web-analytics/matomo.php?idsite=532&amp;rec=1" style="border:0;" alt="" />'
+noscriptRegion:
+  claro: ''
+  stark: ''
+  gin: ''
+  hdbt: ''
+  hdbt_admin: ''
+  kaupunkitieto: footer_bottom
