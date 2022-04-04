@@ -33,6 +33,12 @@
     gap: 20px;
   }
 
+  .views-exposed-form {
+    .flex-container {
+      justify-content: space-between;
+    }
+  }
+
   header {
     margin-top: $spacing;
     margin-bottom: $spacing;
