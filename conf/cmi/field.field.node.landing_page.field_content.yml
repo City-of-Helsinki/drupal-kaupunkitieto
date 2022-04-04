@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.columns
     - paragraphs.paragraphs_type.content_cards
     - paragraphs.paragraphs_type.content_liftup
+    - paragraphs.paragraphs_type.infograph
     - paragraphs.paragraphs_type.liftup_with_image
     - paragraphs.paragraphs_type.list_of_links
   module:
@@ -36,6 +37,7 @@ settings:
       liftup_with_image: liftup_with_image
       content_cards: content_cards
       content_liftup: content_liftup
+      infograph: infograph
     target_bundles_drag_drop:
       accordion:
         weight: -25
@@ -58,6 +60,15 @@ settings:
       content_liftup_item:
         weight: -17
         enabled: false
+      content_menu:
+        weight: 30
+        enabled: false
+      content_menu_item:
+        weight: 31
+        enabled: false
+      embed:
+        weight: 32
+        enabled: false
       gallery:
         weight: -23
         enabled: false
@@ -70,6 +81,12 @@ settings:
       image:
         weight: -20
         enabled: false
+      infograph:
+        enabled: true
+        weight: 37
+      infograph_row:
+        weight: 38
+        enabled: false
       liftup_with_image:
         enabled: true
         weight: -28
@@ -78,6 +95,12 @@ settings:
         weight: -29
       list_of_links_item:
         weight: -19
+        enabled: false
+      quick_links:
+        weight: 42
+        enabled: false
+      quick_links_item:
+        weight: 43
         enabled: false
       text:
         weight: -18

@@ -33,3 +33,4 @@ content:
     third_party_settings: {  }
 hidden:
   field_graph_id: true
+  search_api_excerpt: true

@@ -3,6 +3,7 @@ module:
   admin_toolbar: 0
   aet: 0
   api_tools: 0
+  asset_injector: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -15,7 +16,6 @@ module:
   datetime: 0
   dblog: 0
   default_content: 0
-  devel: 0
   devel_generate: 0
   diff: 0
   dynamic_page_cache: 0
