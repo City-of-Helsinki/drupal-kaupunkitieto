@@ -5,6 +5,7 @@
   border-bottom: 1px solid $color-black-5;
   display: flex;
   justify-content: space-between;
+  gap: 50px;
   padding: 14px $spacing-and-half; // Specific pixel size for top and bottom padding from layout.
 
   @include breakpoint($breakpoint-l) {

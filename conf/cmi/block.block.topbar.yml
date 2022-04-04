@@ -1,0 +1,29 @@
+uuid: 4dfb2f13-08a2-473e-9c30-c5808a606e01
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.top-bar
+  module:
+    - menu_block_current_language
+  theme:
+    - kaupunkitieto
+id: topbar
+theme: kaupunkitieto
+region: header_top
+weight: -5
+provider: null
+plugin: 'menu_block_current_language:top-bar'
+settings:
+  id: 'menu_block_current_language:top-bar'
+  label: 'Top Bar'
+  provider: menu_block_current_language
+  label_display: '0'
+  translation_providers:
+    views: '0'
+    menu_link_content: '0'
+    default: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

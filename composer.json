@@ -23,6 +23,7 @@
         "drupal/helfi_platform_config": "^1.1",
         "drupal/helfi_tpr": "^1.0",
         "drupal/helfi_tunnistamo": "^1.0",
+        "drupal/menu_link_attributes": "^1.2",
         "drupal/stage_file_proxy": "^1.1",
         "drush/drush": "^10.4",
         "platformsh/config-reader": "^2.4"

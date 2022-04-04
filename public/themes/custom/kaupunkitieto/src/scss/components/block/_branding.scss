@@ -3,6 +3,10 @@
   order: unset;
   width: auto;
 
+  @include breakpoint($breakpoint-m) {
+    margin-right: auto; // Push Flex items to the right.
+  }
+
   .site-name {
     @include font-size(14px, 18px);
     width: 210px;
