@@ -52,10 +52,20 @@
 
     @include breakpoint($breakpoint-m ($breakpoint-l - 1)) {
       width: 48%;
+      margin-left: 0;
+
+      &:nth-child(odd) {
+        margin-left: 4%;
+      }
     }
 
     @include breakpoint($breakpoint-m) {
-      width: 23%;
+      width: 24%;
+      margin-left: 1.33%;
+
+      &:nth-child(4n-7) {
+        margin-left: 0;
+      }
     }
   }
 
