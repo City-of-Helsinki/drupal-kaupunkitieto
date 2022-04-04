@@ -315,7 +315,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ created }} | {{ field_author }}'
+            text: '{{ created }} | <a href="/haku?filter[0]=author:{{ field_author__target_id }}">{{ field_author }}</a>'
             make_link: false
             path: ''
             absolute: false
@@ -465,8 +465,8 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
+            make_link: true
+            path: '/haku/?filter[0]=keywords:{{ field_keywords__target_id }}'
             absolute: false
             external: false
             replace_spaces: false

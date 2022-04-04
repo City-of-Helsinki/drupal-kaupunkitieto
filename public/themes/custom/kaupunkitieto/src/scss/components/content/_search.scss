@@ -94,11 +94,15 @@
       display: inline-block;
       background: $color-black;
       border-radius: $spacing;
-      color: $color-white;
       padding: 0 $spacing;
       margin-right: $spacing-half;
       margin-bottom: $spacing-half;
       @include font-size(14px, 30px);
+
+      a {
+        color: $color-white;
+        text-decoration: none;
+      }
     }
   }
 
