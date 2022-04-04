@@ -20,8 +20,15 @@
     @include breakpoint($breakpoint-l) {
       float: left;
       width: 30%;
-      margin-right: 3%;
       padding-top: $spacing * 2;
+
+      &:nth-child(2) {
+        margin-left: 5%;
+      }
+
+      &:nth-child(3) {
+        float: right;
+      }
     }
 
     h2 {

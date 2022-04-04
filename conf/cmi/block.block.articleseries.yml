@@ -17,7 +17,7 @@ provider: null
 plugin: 'facet_block:article_series'
 settings:
   id: 'facet_block:article_series'
-  label: 'Rajaa sisältötyypin mukaan'
+  label: 'Rajaa julkaisusarjan mukaan'
   provider: facets
   label_display: visible
   block_id: articleseries

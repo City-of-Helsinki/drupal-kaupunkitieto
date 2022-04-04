@@ -11,7 +11,7 @@ dependencies:
 id: topbar
 theme: kaupunkitieto
 region: header_top
-weight: -5
+weight: -7
 provider: null
 plugin: 'menu_block_current_language:top-bar'
 settings:

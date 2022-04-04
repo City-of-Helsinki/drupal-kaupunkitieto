@@ -29,7 +29,8 @@
     display: flex;
     flex-wrap: wrap;
     word-wrap: break-word;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 20px;
   }
 
   header {
