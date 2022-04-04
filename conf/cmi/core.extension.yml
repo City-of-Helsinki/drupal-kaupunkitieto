@@ -9,6 +9,7 @@ module:
   breakpoint: 0
   ckeditor: 0
   config: 0
+  config_rewrite: 0
   config_translation: 0
   config_update: 0
   crop: 0
@@ -16,7 +17,6 @@ module:
   datetime: 0
   dblog: 0
   default_content: 0
-  devel_generate: 0
   diff: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
@@ -58,6 +58,7 @@ module:
   media_entity_soundcloud: 0
   media_library: 0
   menu_block_current_language: 0
+  menu_link_attributes: 0
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
@@ -82,7 +83,6 @@ module:
   serialization: 0
   simple_sitemap: 0
   social_media: 0
-  stage_file_proxy: 0
   system: 0
   taxonomy: 0
   text: 0
@@ -91,6 +91,7 @@ module:
   toolbar: 0
   twig_tweak: 0
   update: 0
+  update_helper: 0
   user: 0
   views_ui: 0
   pathauto: 1
