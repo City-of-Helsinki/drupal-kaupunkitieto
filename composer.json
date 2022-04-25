@@ -90,6 +90,9 @@
             },
             "drupal/core": {
                 "Cannot use relationship for rendered entity on Views — Issue #2457999": "https://www.drupal.org/files/issues/2021-05-13/9.1.x-2457999-267-views-relationship-rendered-entity.patch"
+            },
+            "drupal/core": {
+                "Improve error message on unrouted URLs": "https://www.drupal.org/files/issues/2022-04-11/3013802-31.patch"
             }
         }
     },
