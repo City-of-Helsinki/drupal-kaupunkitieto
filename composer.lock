@@ -3836,7 +3836,7 @@
         },
         {
             "name": "drupal/hdbt_admin",
-            "version": "1.5.7",
+            "version": "1.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt-admin.git",
