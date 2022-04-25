@@ -45,7 +45,7 @@
         "sort-packages": true
     },
     "extra": {
-        "composer-exit-on-patch-failure": true,
+        "composer-exit-on-patch-failure": false,
         "drupal-scaffold": {
             "allowed-packages": [
                 "drupal/core"
