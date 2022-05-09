@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.hero.field_display_search_field
     - field.field.paragraph.hero.field_hero_bg_color
     - field.field.paragraph.hero.field_hero_desc
     - field.field.paragraph.hero.field_hero_design
@@ -22,56 +23,63 @@ targetEntityType: paragraph
 bundle: hero
 mode: default
 content:
+  field_display_search_field:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_hero_bg_color:
+    type: options_select
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_hero_desc:
+    type: text_textarea
     weight: 3
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_hero_design:
+    type: design_field_widget
     weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: design_field_widget
-    region: content
   field_hero_image:
     type: media_library_widget
     weight: 4
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   field_hero_link:
+    type: link_target_field_widget
     weight: 6
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
       link_target: ''
     third_party_settings: {  }
-    type: link_target_field_widget
-    region: content
   field_hero_link_design:
+    type: design_field_widget
     weight: 5
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: design_field_widget
-    region: content
   field_hero_title:
+    type: string_textfield
     weight: 2
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
 hidden:
   created: true
   status: true

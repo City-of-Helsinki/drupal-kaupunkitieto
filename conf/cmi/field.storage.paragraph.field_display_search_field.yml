@@ -1,0 +1,18 @@
+uuid: f38f3660-2a93-446a-9069-96d639761039
+langcode: fi
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_display_search_field
+field_name: field_display_search_field
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

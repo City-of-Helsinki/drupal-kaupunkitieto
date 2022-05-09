@@ -100,6 +100,12 @@ function kaupunkitieto_preprocess_paragraph(array &$variables) {
 
   }
 
+  if ($paragraph_type == 'hero') {
+    if($paragraph->hasField('field_display_search_field')) {
+      $variables['show_search'] = $paragraph->get('field_display_search_field')->value;
+    }
+  }
+
   // Get titles for content menu items to be displayed in left-hand navigation.
   if ($paragraph_type == 'content_menu') {
     $items = $paragraph->get('field_content_menu_items');

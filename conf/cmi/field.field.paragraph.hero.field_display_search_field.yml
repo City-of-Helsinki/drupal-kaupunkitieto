@@ -1,0 +1,23 @@
+uuid: bb41ffff-d8ab-4355-9fc0-2c668a54ade2
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_search_field
+    - paragraphs.paragraphs_type.hero
+id: paragraph.hero.field_display_search_field
+field_name: field_display_search_field
+entity_type: paragraph
+bundle: hero
+label: 'Display Search field'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean
