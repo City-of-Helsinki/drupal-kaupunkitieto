@@ -16,7 +16,7 @@ bundle: quick_links
 mode: default
 content:
   field_quick_links_link:
-    weight: 2
+    type: link
     label: hidden
     settings:
       trim_length: 255
@@ -25,23 +25,24 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    type: link
+    weight: 2
     region: content
   field_quick_links_links:
     type: entity_reference_revisions_entity_view
-    weight: 1
     label: visually_hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 1
     region: content
   field_quick_links_title:
-    weight: 0
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

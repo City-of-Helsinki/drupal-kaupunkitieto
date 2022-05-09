@@ -14,7 +14,7 @@ bundle: embed
 mode: default
 content:
   field_embed_link:
-    weight: 2
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -23,14 +23,15 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    type: link
+    weight: 2
     region: content
   field_embed_title:
-    weight: 1
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

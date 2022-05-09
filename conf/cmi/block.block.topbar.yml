@@ -17,13 +17,13 @@ plugin: 'menu_block_current_language:top-bar'
 settings:
   id: 'menu_block_current_language:top-bar'
   label: 'Top Bar'
-  provider: menu_block_current_language
   label_display: '0'
+  provider: menu_block_current_language
+  level: 1
+  expand_all_items: false
+  depth: 0
   translation_providers:
     views: '0'
     menu_link_content: '0'
     default: '0'
-  level: 1
-  depth: 0
-  expand_all_items: false
 visibility: {  }

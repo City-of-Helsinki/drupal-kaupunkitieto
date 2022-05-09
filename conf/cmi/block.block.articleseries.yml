@@ -18,11 +18,11 @@ plugin: 'facet_block:article_series'
 settings:
   id: 'facet_block:article_series'
   label: 'Rajaa julkaisusarjan mukaan'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: articleseries
 visibility:
   request_path:
     id: request_path
-    pages: "/haku\r\n/haku/*"
     negate: false
+    pages: "/haku\r\n/haku/*"

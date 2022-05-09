@@ -17,21 +17,21 @@ bundle: quick_links_item
 mode: default
 content:
   field_quick_links_item_bg_color:
-    weight: 0
+    type: list_key
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 0
     region: content
   field_quick_links_item_icon:
-    weight: 1
+    type: select2_icon_formatter
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: select2_icon_formatter
+    weight: 1
     region: content
   field_quick_links_item_link:
-    weight: 2
+    type: link
     label: hidden
     settings:
       trim_length: 255
@@ -40,6 +40,7 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    type: link
+    weight: 2
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

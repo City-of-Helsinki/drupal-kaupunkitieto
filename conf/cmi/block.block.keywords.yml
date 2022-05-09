@@ -18,11 +18,11 @@ plugin: 'facet_block:keywords'
 settings:
   id: 'facet_block:keywords'
   label: 'Rajaa aiheen mukaan'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: keywords
 visibility:
   request_path:
     id: request_path
-    pages: "/haku\r\n/haku/*"
     negate: false
+    pages: "/haku\r\n/haku/*"

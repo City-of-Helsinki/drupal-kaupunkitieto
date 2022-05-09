@@ -18,13 +18,13 @@ plugin: 'block_content:ee7f7285-520d-4be6-bfb1-7d409e6c3173'
 settings:
   id: 'block_content:ee7f7285-520d-4be6-bfb1-7d409e6c3173'
   label: 'Suorittamasi haku antoi seuraavat tulokset'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: /haku
     negate: false
+    pages: /haku

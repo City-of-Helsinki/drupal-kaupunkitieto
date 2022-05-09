@@ -18,11 +18,11 @@ plugin: 'facet_block:author'
 settings:
   id: 'facet_block:author'
   label: 'Rajaa kirjoittajan mukaan'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: author
 visibility:
   request_path:
     id: request_path
-    pages: "/haku\r\n/haku/*"
     negate: false
+    pages: "/haku\r\n/haku/*"

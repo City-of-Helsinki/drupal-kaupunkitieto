@@ -18,12 +18,6 @@ code: |
       g.type='text/javascript'; g.async=true; g.src=u+'piwik.min.js'; s.parentNode.insertBefore(g,s);
     })();
   <!-- End Matomo Code -->
-conditions_require_all: true
-conditions: {  }
-contexts: {  }
-header: true
-preprocess: true
-jquery: false
 noscript: '<img src="//digiaiiris.com/web-analytics/matomo.php?idsite=532&amp;rec=1" style="border:0;" alt="" />'
 noscriptRegion:
   claro: ''
@@ -32,3 +26,9 @@ noscriptRegion:
   hdbt: ''
   hdbt_admin: ''
   kaupunkitieto: footer_bottom
+jquery: false
+header: true
+preprocess: true
+conditions: {  }
+contexts: {  }
+conditions_require_all: true

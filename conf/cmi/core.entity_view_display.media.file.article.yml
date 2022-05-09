@@ -16,15 +16,16 @@ bundle: file
 mode: article
 content:
   field_media_file:
+    type: file_url_plain
     label: hidden
-    weight: 0
     settings: {  }
     third_party_settings: {  }
-    type: file_url_plain
+    weight: 0
     region: content
 hidden:
   created: true
   langcode: true
   name: true
+  search_api_excerpt: true
   thumbnail: true
   uid: true

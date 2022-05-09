@@ -29,7 +29,6 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       columns: columns
       banner: banner
@@ -38,6 +37,7 @@ settings:
       content_cards: content_cards
       content_liftup: content_liftup
       infograph: infograph
+    negate: 0
     target_bundles_drag_drop:
       accordion:
         weight: -25
@@ -46,17 +46,17 @@ settings:
         weight: -24
         enabled: false
       banner:
-        enabled: true
         weight: -30
+        enabled: true
       columns:
-        enabled: true
         weight: -31
+        enabled: true
       content_cards:
-        enabled: true
         weight: -27
-      content_liftup:
         enabled: true
+      content_liftup:
         weight: -26
+        enabled: true
       content_liftup_item:
         weight: -17
         enabled: false
@@ -82,17 +82,17 @@ settings:
         weight: -20
         enabled: false
       infograph:
-        enabled: true
         weight: 37
+        enabled: true
       infograph_row:
         weight: 38
         enabled: false
       liftup_with_image:
-        enabled: true
         weight: -28
-      list_of_links:
         enabled: true
+      list_of_links:
         weight: -29
+        enabled: true
       list_of_links_item:
         weight: -19
         enabled: false

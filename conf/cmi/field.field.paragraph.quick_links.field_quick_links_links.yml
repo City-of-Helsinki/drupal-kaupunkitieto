@@ -21,9 +21,9 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       quick_links_item: quick_links_item
+    negate: 0
     target_bundles_drag_drop:
       accordion:
         weight: 19
@@ -71,8 +71,8 @@ settings:
         weight: 33
         enabled: false
       quick_links_item:
-        enabled: true
         weight: 18
+        enabled: true
       text:
         weight: 34
         enabled: false

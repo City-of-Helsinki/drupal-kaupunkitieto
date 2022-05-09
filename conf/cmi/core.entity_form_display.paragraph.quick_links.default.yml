@@ -16,17 +16,18 @@ bundle: quick_links
 mode: default
 content:
   field_quick_links_link:
+    type: link_target_field_widget
     weight: 1
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
       link_target: ''
     third_party_settings: {  }
-    type: link_target_field_widget
-    region: content
   field_quick_links_links:
     type: paragraphs
     weight: 2
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -42,15 +43,14 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-    region: content
   field_quick_links_title:
+    type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
 hidden:
   created: true
   status: true
