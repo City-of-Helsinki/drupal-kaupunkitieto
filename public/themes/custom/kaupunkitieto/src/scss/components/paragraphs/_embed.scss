@@ -8,19 +8,12 @@
   .embed__iframe {
     position: relative;
     max-width: $content-width-max;
-    
-    &:after {
-      content: '';
-      display: block;
-      padding-bottom: 56.25%;
-    }
+    padding-bottom: 75%;
   }
 
   iframe {
     position  : absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
