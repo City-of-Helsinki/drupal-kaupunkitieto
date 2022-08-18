@@ -10,6 +10,7 @@ dependencies:
     - paragraphs.paragraphs_type.content_cards
     - paragraphs.paragraphs_type.content_liftup
     - paragraphs.paragraphs_type.content_menu
+    - paragraphs.paragraphs_type.embed
     - paragraphs.paragraphs_type.gallery
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.list_of_links
@@ -40,6 +41,7 @@ settings:
       list_of_links: list_of_links
       content_cards: content_cards
       content_liftup: content_liftup
+      embed: embed
       content_menu: content_menu
     negate: 0
     target_bundles_drag_drop:
@@ -72,7 +74,7 @@ settings:
         enabled: false
       embed:
         weight: -23
-        enabled: false
+        enabled: true
       gallery:
         weight: -33
         enabled: true
@@ -85,6 +87,15 @@ settings:
       image:
         weight: -34
         enabled: true
+      infograph:
+        weight: 38
+        enabled: false
+      infograph_group:
+        weight: 39
+        enabled: false
+      infograph_row:
+        weight: 40
+        enabled: false
       liftup_with_image:
         weight: -24
         enabled: false
