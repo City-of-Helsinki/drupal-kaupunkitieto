@@ -1,0 +1,97 @@
+uuid: 5e922dab-de57-4074-82cc-5d37159d6b7f
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_rows
+    - paragraphs.paragraphs_type.infograph
+    - paragraphs.paragraphs_type.infograph_group
+  module:
+    - entity_reference_revisions
+id: paragraph.infograph_group.field_rows
+field_name: field_rows
+entity_type: paragraph
+bundle: infograph_group
+label: Rows
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      infograph: infograph
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 25
+        enabled: false
+      accordion_item:
+        weight: 26
+        enabled: false
+      banner:
+        weight: 27
+        enabled: false
+      columns:
+        weight: 28
+        enabled: false
+      content_cards:
+        weight: 29
+        enabled: false
+      content_liftup:
+        weight: 30
+        enabled: false
+      content_liftup_item:
+        weight: 31
+        enabled: false
+      content_menu:
+        weight: 32
+        enabled: false
+      content_menu_item:
+        weight: 33
+        enabled: false
+      embed:
+        weight: 34
+        enabled: false
+      gallery:
+        weight: 35
+        enabled: false
+      gallery_slide:
+        weight: 36
+        enabled: false
+      hero:
+        weight: 37
+        enabled: false
+      image:
+        weight: 38
+        enabled: false
+      infograph:
+        weight: 39
+        enabled: true
+      infograph_group:
+        weight: 24
+        enabled: false
+      infograph_row:
+        weight: 40
+        enabled: false
+      liftup_with_image:
+        weight: 41
+        enabled: false
+      list_of_links:
+        weight: 42
+        enabled: false
+      list_of_links_item:
+        weight: 43
+        enabled: false
+      quick_links:
+        weight: 44
+        enabled: false
+      quick_links_item:
+        weight: 45
+        enabled: false
+      text:
+        weight: 46
+        enabled: false
+field_type: entity_reference_revisions

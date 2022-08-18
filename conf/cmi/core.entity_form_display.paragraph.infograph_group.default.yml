@@ -1,0 +1,27 @@
+uuid: cac77317-25d0-4d7e-a769-006e6204a462
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.infograph_group.field_rows
+    - paragraphs.paragraphs_type.infograph_group
+  module:
+    - entity_reference_revisions
+id: paragraph.infograph_group.default
+targetEntityType: paragraph
+bundle: infograph_group
+mode: default
+content:
+  field_rows:
+    type: entity_reference_revisions_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

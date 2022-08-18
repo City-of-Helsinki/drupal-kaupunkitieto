@@ -86,19 +86,6 @@ function kaupunkitieto_preprocess_paragraph(array &$variables) {
   $paragraph = $variables['paragraph'];
   $paragraph_type = $paragraph->getType();
 
-  // In case we need to do alter embedding URL, e.g. for YouTube links.
-  if ($paragraph_type == 'embed') {
-    $embed_url = $paragraph->get('field_embed_link')->getValue()[0]['uri'];
-    $youtubeId = _kaupunkitieto_youtube_id($embed_url);
-
-    if ($youtubeId) {
-      $variables['embed_url'] = 'https://www.youtube.com/embed/' . $youtubeId;
-    }
-    else {
-      $variables['embed_url'] = $embed_url;
-    }
-
-  }
 
   if ($paragraph_type == 'hero') {
     if($paragraph->hasField('field_display_search_field')) {
@@ -131,18 +118,4 @@ function kaupunkitieto_preprocess_paragraph(array &$variables) {
     }
   }
 
-}
-
-/**
- * Get YouTube video ID from path.
- *
- * @param string $input
- *   URI from the link field.
- *
- * @return string
- *   YouTube video ID or false.
- */
-function _kaupunkitieto_youtube_id($input) {
-  preg_match('/^https?:\/\/(www\.)?((?!.*list=)youtube\.com\/watch\?.*v=|youtu\.be\/)(?<id>[0-9A-Za-z_-]*)/', $input, $matches);
-  return isset($matches['id']) ? $matches['id'] : FALSE;
 }

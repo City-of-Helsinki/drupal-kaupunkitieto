@@ -1,0 +1,10 @@
+uuid: d2bad402-99e5-4a2c-a369-82e81e81388e
+langcode: fi
+status: true
+dependencies: {  }
+id: infograph_group
+label: 'Infograph group'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

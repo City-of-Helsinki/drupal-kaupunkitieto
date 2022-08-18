@@ -40,7 +40,6 @@
 #}
 
 {% set title = content.field_embed_title.0 %}
-{% set url = embed_url ?: content.field_embed_link.0 %}
 
 {%
   set classes = [
@@ -53,9 +52,20 @@
   <div{{ attributes.addClass(classes) }}>
     {% embed "@hdbt/misc/container.twig" with {container_element: 'embed'} %}
       {% block container_content %}
-        <div class="embed__iframe">
-          <iframe frameborder="0" src="{{ url }}" title="{{ title }}"></iframe>
-        </div>
+
+        {% if content.field_embed_code %}
+          <div class="embed__code">
+            <script id="{{ content.field_embed_code_id.0 }}" src="{{ content.field_embed_code.0 }}" type="text/javascript">
+            </script>
+          </div>
+        {% endif %}
+
+        {% if content.field_embed_code %}
+          <div class="embed__video">
+            {{ content.field_embed_video }}
+          </div>
+        {% endif %}
+
       {% endblock %}
     {% endembed %}
   </div>
