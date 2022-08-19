@@ -43,7 +43,10 @@ infograph:
   version: 1.x
   js:
     dist/js/infograph.min.js: {}
-
+    dist/js/slick.min.js: {}
+  css:
+    component:
+      dist/css/slick.css: { preprocess: false }
 
 content-menu:
   js:

@@ -6,6 +6,7 @@ dependencies:
     - field.storage.paragraph.field_columns_left_column
     - paragraphs.paragraphs_type.columns
     - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.infograph_group
     - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
@@ -27,6 +28,7 @@ settings:
     target_bundles:
       image: image
       text: text
+      infograph_group: infograph_group
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -50,6 +52,15 @@ settings:
       content_liftup_item:
         weight: 25
         enabled: false
+      content_menu:
+        weight: 31
+        enabled: false
+      content_menu_item:
+        weight: 32
+        enabled: false
+      embed:
+        weight: 33
+        enabled: false
       gallery:
         weight: 17
         enabled: false
@@ -62,6 +73,15 @@ settings:
       image:
         weight: -12
         enabled: true
+      infograph:
+        weight: 38
+        enabled: false
+      infograph_group:
+        weight: 39
+        enabled: true
+      infograph_row:
+        weight: 40
+        enabled: false
       liftup_with_image:
         weight: 21
         enabled: false

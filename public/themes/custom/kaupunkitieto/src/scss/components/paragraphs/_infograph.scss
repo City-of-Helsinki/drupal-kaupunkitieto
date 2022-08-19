@@ -290,3 +290,28 @@
   }
 
 }
+
+.paragraph--type--infograph-group {
+  max-width: 100%;
+
+  .paragraph--type--infograph {
+    padding: 0;
+  }
+}
+
+.infograph-group-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem 0;
+  @include font-size(26px, 40px);
+
+  .pagingInfo {
+    margin: 0 1rem;
+  }
+
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+}
