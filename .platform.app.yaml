@@ -87,6 +87,7 @@ hooks:
         curl -f -o- https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_VERSION/install.sh | bash
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
         cd public/themes/custom/kaupunkitieto
+        npm rebuild
         npm install
         npm run build
     # The deploy hook runs after your application has been deployed and started.
