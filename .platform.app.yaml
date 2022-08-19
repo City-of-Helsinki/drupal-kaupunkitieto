@@ -13,7 +13,7 @@ dependencies:
     php:
         composer/composer: '^2'
     nodejs:
-        npm: '^6.0'
+        npm: '^8.1'
         webpack: '^5.6.0'
 
 runtime:
