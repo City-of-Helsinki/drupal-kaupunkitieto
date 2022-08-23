@@ -15,6 +15,18 @@
       border: 0;
       color: currentColor;
       outline: none;
+
+      &::placeholder {
+        color: currentColor;
+      }
+    }
+
+    input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: currentColor;
+    }
+
+    input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: currentColor;
     }
   }
 
