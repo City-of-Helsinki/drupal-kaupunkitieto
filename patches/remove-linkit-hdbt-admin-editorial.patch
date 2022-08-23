@@ -1,0 +1,22 @@
+diff --git a/modules/hdbt_admin_editorial/src/Plugin/Field/FieldWidget/LinkTargetFieldWidget.php b/modules/hdbt_admin_editorial/src/Plugin/Field/FieldWidget/LinkTargetFieldWidget.php
+index 80259b5..dea1459 100644
+--- a/modules/hdbt_admin_editorial/src/Plugin/Field/FieldWidget/LinkTargetFieldWidget.php
++++ b/modules/hdbt_admin_editorial/src/Plugin/Field/FieldWidget/LinkTargetFieldWidget.php
+@@ -6,7 +6,7 @@ namespace Drupal\hdbt_admin_editorial\Plugin\Field\FieldWidget;
+ 
+ use Drupal\Core\Field\FieldItemListInterface;
+ use Drupal\Core\Form\FormStateInterface;
+-use Drupal\linkit\Plugin\Field\FieldWidget\LinkitWidget;
++use Drupal\link\Plugin\Field\FieldWidget\LinkWidget;
+ 
+ /**
+  * Plugin implementation of the 'link_target_field_widget' widget.
+@@ -19,7 +19,7 @@ use Drupal\linkit\Plugin\Field\FieldWidget\LinkitWidget;
+  *   }
+  * )
+  */
+-class LinkTargetFieldWidget extends LinkitWidget {
++class LinkTargetFieldWidget extends LinkWidget {
+ 
+   /**
+    * {@inheritdoc}
