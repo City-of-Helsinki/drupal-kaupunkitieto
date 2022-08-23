@@ -33,7 +33,7 @@ function kaupunkitieto_infograph_paragraph_presave($entity) {
         $entity->set('field_rows', $new_set);
       }
       else {
-        \Drupal::logger('some_channel_name')->warning('No rows found for Graph Id: ' . $entity->get('field_graph_id')->value);
+        \Drupal::logger('kaupunkitieto_infograph')->warning('No rows found for Graph Id: ' . $entity->get('field_graph_id')->value);
       }
 
     }
@@ -70,7 +70,7 @@ function kaupunkitieto_infograph_cron() {
         $paragraph->set('field_rows', $new_set);
       }
       else {
-        \Drupal::logger('some_channel_name')->warning('No rows found for Graph Id: ' . $paragraph->get('field_graph_id')->value);
+        \Drupal::logger('kaupunkitieto_infograph')->warning('No rows found for Graph Id: ' . $paragraph->get('field_graph_id')->value);
       }
     }
   }

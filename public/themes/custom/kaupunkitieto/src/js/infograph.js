@@ -33,8 +33,8 @@
         });
 
         $('.paragraph--type--infograph-group').slick({
-          nextArrow: '.arrow-left-wrapper svg',
-          prevArrow: '.arrow-right-wrapper svg'
+          prevArrow: '.arrow-left-wrapper svg',
+          nextArrow: '.arrow-right-wrapper svg'
         });
 
       });

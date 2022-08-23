@@ -128,7 +128,7 @@
 }
 
 .infograph {
-  display: flex;
+  display: flex !important; // sometimes infograph is in slick slider so make sure it is a flex.
   flex-wrap: wrap;
   gap: 6px;
 
@@ -296,6 +296,15 @@
 
   .paragraph--type--infograph {
     padding: 0;
+  }
+
+  /* make slides equal height. */
+  .slick-track {
+      display: flex;
+  }
+
+  .infograph {
+    height: inherit !important;
   }
 }
 
