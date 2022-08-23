@@ -5,8 +5,12 @@ dependencies:
   config:
     - field.field.paragraph.embed.field_embed_code
     - field.field.paragraph.embed.field_embed_code_id
+    - field.field.paragraph.embed.field_embed_link
+    - field.field.paragraph.embed.field_embed_title
     - field.field.paragraph.embed.field_embed_video
     - paragraphs.paragraphs_type.embed
+  module:
+    - link
 id: paragraph.embed.default
 targetEntityType: paragraph
 bundle: embed
@@ -27,6 +31,26 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_embed_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_embed_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
     region: content
   field_embed_video:
     type: entity_reference_entity_view

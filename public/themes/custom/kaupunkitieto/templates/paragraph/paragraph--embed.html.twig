@@ -39,6 +39,9 @@
  */
 #}
 
+{% set title = content.field_embed_title.0 %}
+{% set url = embed_url ?: content.field_embed_link.0 %}
+
 {%
   set classes = [
     'embed',
@@ -50,6 +53,12 @@
   <div{{ attributes.addClass(classes) }}>
     {% embed "@hdbt/misc/container.twig" with {container_element: 'embed'} %}
       {% block container_content %}
+
+        {% if url %}
+          <div class="embed__iframe">
+            <iframe frameborder="0" src="{{ url }}" title="{{ title }}"></iframe>
+          </div>
+        {% endif %}
 
         {% if content.field_embed_code %}
           <div class="embed__code">

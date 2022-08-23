@@ -1,0 +1,19 @@
+uuid: 5a4279f4-a885-41e5-a96d-9e2624da38e1
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_embed_title
+    - paragraphs.paragraphs_type.embed
+id: paragraph.embed.field_embed_title
+field_name: field_embed_title
+entity_type: paragraph
+bundle: embed
+label: 'Embed title'
+description: 'Title attribute for the iframe. Provides value for users using assistive technologies e.g. screen readers.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
