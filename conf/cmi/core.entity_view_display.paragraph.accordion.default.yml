@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.accordion.field_accordion_design
     - field.field.paragraph.accordion.field_accordion_heading_level
     - field.field.paragraph.accordion.field_accordion_items
+    - field.field.paragraph.accordion.field_accordion_title_level
     - paragraphs.paragraphs_type.accordion
   module:
     - entity_reference_revisions
@@ -41,4 +42,5 @@ content:
     weight: 2
     region: content
 hidden:
+  field_accordion_title_level: true
   search_api_excerpt: true
