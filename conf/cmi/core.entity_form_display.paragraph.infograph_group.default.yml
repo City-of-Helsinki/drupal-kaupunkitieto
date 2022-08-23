@@ -6,21 +6,23 @@ dependencies:
     - field.field.paragraph.infograph_group.field_rows
     - paragraphs.paragraphs_type.infograph_group
   module:
-    - entity_reference_revisions
+    - paragraphs_asymmetric_translation_widgets
 id: paragraph.infograph_group.default
 targetEntityType: paragraph
 bundle: infograph_group
 mode: default
 content:
   field_rows:
-    type: entity_reference_revisions_autocomplete
+    type: paragraphs_classic_asymmetric
     weight: 0
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      title: Lohko
+      title_plural: Lohkot
+      edit_mode: open
+      add_mode: select
+      form_display_mode: default
+      default_paragraph_type: infograph
     third_party_settings: {  }
 hidden:
   created: true
