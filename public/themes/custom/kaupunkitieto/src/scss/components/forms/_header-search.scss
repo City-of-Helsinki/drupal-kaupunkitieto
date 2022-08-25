@@ -1,0 +1,18 @@
+.header-search {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: var(--color-white);
+  padding: 26px 32px;
+  margin-top: 15px;
+  border-top: 1px solid var(--color-black-90);
+  border-bottom: 1px solid var(--color-black-90);
+
+  .hds-text-input--search {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}

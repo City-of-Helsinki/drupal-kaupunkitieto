@@ -1,0 +1,5 @@
+name: 'Kaupunkitieto Search'
+type: module
+description: 'Provides search related customizations. Original: https://github.com/City-of-Helsinki/historiaportaali'
+core_version_requirement: '^9'
+package: 'Custom'

@@ -1,9 +1,22 @@
-// eslint-disable-next-line no-unused-vars
-((Drupal, drupalSettings) => {
+/**
+ * @file
+ * Placeholder file for custom sub-theme behaviors.
+ *
+ */
+(function ($, Drupal) {
+
   Drupal.behaviors.themeCommon = {
     attach: function attach() {
-      // Code here.
+      // Header search form
+       const $searchToggleBtn = $('.toggle-search-form');
+       const searchForm = $('.header-search');
+       if ($searchToggleBtn.length) {
+         $searchToggleBtn.on('click', function(e) {
+           e.preventDefault()
+           $(searchForm).toggle();
+         });
+       }
     },
   };
-  // eslint-disable-next-line no-undef
-})(Drupal, drupalSettings);
+
+})(jQuery, Drupal);

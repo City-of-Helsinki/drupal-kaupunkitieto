@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function kaupunkitieto_search_theme($existing, $type, $theme, $path) {
+  return [
+    'header_search' => [
+      'variables' => [
+        'search_page_path' => ''
+      ]
+    ]
+  ];
+}
