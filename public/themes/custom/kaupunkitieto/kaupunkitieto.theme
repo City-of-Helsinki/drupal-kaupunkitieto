@@ -88,8 +88,10 @@ function kaupunkitieto_preprocess_paragraph(array &$variables) {
 
   // In case we need to do alter embedding URL, e.g. for YouTube links.
   if ($paragraph_type == 'embed') {
-    $embed_url = $paragraph->get('field_embed_link')->getValue()[0]['uri'];
-    $variables['embed_url'] = $embed_url;
+    if (isset($paragraph->get('field_embed_link')->getValue()[0])) {
+      $embed_url = $paragraph->get('field_embed_link')->getValue()[0]['uri'];
+      $variables['embed_url'] = $embed_url;
+    }
   }
 
   if ($paragraph_type == 'hero') {
