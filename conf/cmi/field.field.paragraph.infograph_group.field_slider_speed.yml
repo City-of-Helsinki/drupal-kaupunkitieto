@@ -1,0 +1,25 @@
+uuid: 3e06012a-7979-47c8-a0fa-1e1da898e3bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slider_speed
+    - paragraphs.paragraphs_type.infograph_group
+id: paragraph.infograph_group.field_slider_speed
+field_name: field_slider_speed
+entity_type: paragraph
+bundle: infograph_group
+label: 'Slider Speed'
+description: 'Slider autoplay speed in milliseconds. If set to 0 autoplay is disabled.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.infograph_group.field_rows
+    - field.field.paragraph.infograph_group.field_slider_speed
     - paragraphs.paragraphs_type.infograph_group
   module:
     - paragraphs_asymmetric_translation_widgets
@@ -23,6 +24,13 @@ content:
       add_mode: select
       form_display_mode: default
       default_paragraph_type: infograph
+    third_party_settings: {  }
+  field_slider_speed:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
     third_party_settings: {  }
 hidden:
   created: true

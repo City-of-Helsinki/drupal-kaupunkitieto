@@ -125,4 +125,26 @@ function kaupunkitieto_preprocess_paragraph(array &$variables) {
     }
   }
 
+  if ($paragraph_type == 'infograph_group') {
+
+    $speed = 0;
+    $autoplay = FALSE;
+
+    if($paragraph->hasField('field_slider_speed')) {
+      if ($speed = $paragraph->get('field_slider_speed')->value) {
+        $autoplay = TRUE;
+      }
+    }
+
+    // Send variables to Javascript (Slick).
+    $variables['#attached'] = [
+      'drupalSettings' => [
+        'infograph_group' => [
+          'autoplay' => $autoplay,
+          'speed' => $speed
+        ],
+      ],
+    ];
+  }
+
 }
