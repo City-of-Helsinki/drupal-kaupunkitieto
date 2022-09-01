@@ -1,0 +1,21 @@
+uuid: 4fad7222-6d0a-415c-abb7-81d6d387d572
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_for_screen_readers
+    - paragraphs.paragraphs_type.embed
+  module:
+    - text
+id: paragraph.embed.field_text_for_screen_readers
+field_name: field_text_for_screen_readers
+entity_type: paragraph
+bundle: embed
+label: 'Text for screen readers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,19 @@
+uuid: 05edb426-a54b-4220-affc-9373aa493a92
+langcode: fi
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_text_for_screen_readers
+field_name: field_text_for_screen_readers
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
