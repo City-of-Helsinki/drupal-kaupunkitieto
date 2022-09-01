@@ -55,13 +55,13 @@
       {% block container_content %}
 
         {% if url %}
-          <div class="embed__iframe">
+          <div class="embed__iframe" role="figure" aria-label="{{ title }}">
             <iframe frameborder="0" src="{{ url }}" title="{{ title }}"></iframe>
           </div>
         {% endif %}
 
         {% if content.field_embed_code %}
-          <div class="embed__code">
+          <div class="embed__code" role="figure">>
             <script id="{{ content.field_embed_code_id.0 }}" src="{{ content.field_embed_code.0 }}" type="text/javascript">
             </script>
           </div>
@@ -73,6 +73,9 @@
           </div>
         {% endif %}
 
+        <div class="visually-hidden">
+          {{ content.field_text_for_screen_readers }}
+        </div>
       {% endblock %}
     {% endembed %}
   </div>

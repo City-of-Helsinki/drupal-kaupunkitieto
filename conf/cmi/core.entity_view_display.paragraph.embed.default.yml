@@ -8,9 +8,11 @@ dependencies:
     - field.field.paragraph.embed.field_embed_link
     - field.field.paragraph.embed.field_embed_title
     - field.field.paragraph.embed.field_embed_video
+    - field.field.paragraph.embed.field_text_for_screen_readers
     - paragraphs.paragraphs_type.embed
   module:
     - link
+    - text
 id: paragraph.embed.default
 targetEntityType: paragraph
 bundle: embed
@@ -46,7 +48,7 @@ content:
     region: content
   field_embed_title:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -60,6 +62,13 @@ content:
       link: false
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_text_for_screen_readers:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
     region: content
 hidden:
   search_api_excerpt: true
