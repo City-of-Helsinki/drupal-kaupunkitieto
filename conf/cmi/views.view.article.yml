@@ -8,7 +8,6 @@ dependencies:
     - taxonomy.vocabulary.keywords
   module:
     - node
-    - taxonomy
     - user
 id: article
 label: Article
@@ -113,21 +112,6 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        sticky:
-          id: sticky
-          table: node_field_data
-          field: sticky
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: sticky
-          plugin_id: standard
-          order: DESC
-          expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
         created:
           id: created
           table: node_field_data
@@ -149,7 +133,7 @@ display:
           id: field_keywords_target_id
           table: node__field_keywords
           field: field_keywords_target_id
-          relationship: reverse__node__field_keywords
+          relationship: none
           group_type: group
           admin_label: ''
           plugin_id: numeric
@@ -268,28 +252,9 @@ display:
           distinct: true
           replica: false
           query_tags: {  }
-      relationships:
-        field_keywords:
-          id: field_keywords
-          table: node__field_keywords
-          field: field_keywords
-          relationship: none
-          group_type: group
-          admin_label: 'field_keywords: Taxonomy term'
-          plugin_id: standard
-          required: false
-        reverse__node__field_keywords:
-          id: reverse__node__field_keywords
-          table: taxonomy_term_field_data
-          field: reverse__node__field_keywords
-          relationship: field_keywords
-          group_type: group
-          admin_label: field_keywords
-          entity_type: taxonomy_term
-          plugin_id: entity_reverse
-          required: false
+      relationships: {  }
       use_ajax: false
-      group_by: true
+      group_by: false
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -311,7 +276,9 @@ display:
     display_options:
       display_description: ''
       display_extenders:
-        metatag_display_extender: {  }
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
       block_description: 'Recent articles'
     cache_metadata:
       max-age: -1
