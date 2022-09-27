@@ -32,12 +32,21 @@
           $status.text(i + '/' + slick.slideCount);
         });
 
-        $('.paragraph--type--infograph-group').slick({
-          prevArrow: '.arrow-left-wrapper svg',
-          nextArrow: '.arrow-right-wrapper svg',
-          autoplay: settings.infograph_group.autoplay,
-          autoplaySpeed: settings.infograph_group.speed,
+        reSlick();
+
+        $(window).on('resize orientationchange', function() {
+          $('.slick-slider').slick('unslick');
+          reSlick();
         });
+
+        function reSlick() {
+          $('.paragraph--type--infograph-group').slick({
+            prevArrow: '.arrow-left-wrapper svg',
+            nextArrow: '.arrow-right-wrapper svg',
+            autoplay: settings.infograph_group.autoplay,
+            autoplaySpeed: settings.infograph_group.speed,
+          });
+        }
 
       });
     }
