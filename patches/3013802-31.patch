@@ -1,0 +1,13 @@
+diff --git a/core/lib/Drupal/Core/Url.php b/core/lib/Drupal/Core/Url.php
+index 4282d2b341..c4779cf9a0 100644
+--- a/core/lib/Drupal/Core/Url.php
++++ b/core/lib/Drupal/Core/Url.php
+@@ -564,7 +564,7 @@ public function isRouted() {
+    */
+   public function getRouteName() {
+     if ($this->unrouted) {
+-      throw new \UnexpectedValueException('External URLs do not have an internal route name.');
++      throw new \UnexpectedValueException($this->getUri() . ' has no corresponding route.');
+     }
+ 
+     return $this->routeName;
