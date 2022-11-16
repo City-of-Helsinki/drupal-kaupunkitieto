@@ -17,12 +17,8 @@
         "drupal/facets": "^2.0",
         "drupal/hdbt": "^1.0",
         "drupal/hdbt_admin": "^1.0",
-        "drupal/helfi_ahjo": "^1.0",
-        "drupal/helfi_hauki": "^1.0",
         "drupal/helfi_linkedevents": "^1.0",
         "drupal/helfi_platform_config": "^1.1",
-        "drupal/helfi_tpr": "^1.0",
-        "drupal/helfi_tunnistamo": "^1.0",
         "drupal/menu_link_attributes": "^1.2",
         "drupal/stage_file_proxy": "^1.1",
         "drush/drush": "^10.4",
@@ -85,14 +81,8 @@
             ]
         },
         "patches": {
-            "drupal/devel": {
-                "Brings back the Available Methods & Properties tabs for Kint dumps — Issue #221": "https://raw.githubusercontent.com/politsin/snipets/master/patch/kint.patch"
-            },
             "drupal/core": {
                 "Cannot use relationship for rendered entity on Views — Issue #2457999": "https://www.drupal.org/files/issues/2021-05-13/9.1.x-2457999-267-views-relationship-rendered-entity.patch"
-            },
-            "drupal/core": {
-                "Improve error message on unrouted URLs": "https://www.drupal.org/files/issues/2022-04-11/3013802-31.patch"
             }
         }
     },
