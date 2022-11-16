@@ -93,9 +93,6 @@
             },
             "drupal/core": {
                 "Improve error message on unrouted URLs": "https://www.drupal.org/files/issues/2022-04-11/3013802-31.patch"
-            },
-            "drupal/hdbt_admin": {
-                "Remove Linkit because it breaks things": "patches/remove-linkit-hdbt-admin-editorial.patch"
             }
         }
     },
