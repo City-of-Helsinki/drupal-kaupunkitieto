@@ -3,6 +3,7 @@ _core:
 module:
   address: 0
   admin_toolbar: 0
+  admin_toolbar_tools: 0
   aet: 0
   allowed_formats: 0
   api_tools: 0
@@ -12,6 +13,8 @@ module:
   breakpoint: 0
   ckeditor: 0
   config: 0
+  config_filter: 0
+  config_ignore: 0
   config_rewrite: 0
   config_translation: 0
   config_update: 0
@@ -29,6 +32,7 @@ module:
   entity_reference_revisions: 0
   facets: 0
   features: 0
+  field_group: 0
   field: 0
   field_ui: 0
   file: 0
