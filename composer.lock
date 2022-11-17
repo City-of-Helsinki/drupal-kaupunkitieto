@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3cedf8c958dbb2be6e4757994cef2fd3",
+    "content-hash": "dfa8565e4a7a34fa9c8dd7481e3e9b39",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2601,17 +2601,17 @@
         },
         {
             "name": "drupal/ctools",
-            "version": "4.0.2",
+            "version": "4.0.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ctools.git",
-                "reference": "4.0.2"
+                "reference": "4.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ctools-4.0.2.zip",
-                "reference": "4.0.2",
-                "shasum": "c90325ce9a42add5ebce67a5506bbafc34edc242"
+                "url": "https://ftp.drupal.org/files/projects/ctools-4.0.3.zip",
+                "reference": "4.0.3",
+                "shasum": "4f389b14bd2120069386c2f28f8c4cd49bd2ebfc"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10"
@@ -2619,8 +2619,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.0.2",
-                    "datestamp": "1668486570",
+                    "version": "4.0.3",
+                    "datestamp": "1668631947",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3847,16 +3847,16 @@
         },
         {
             "name": "drupal/hdbt_admin",
-            "version": "1.8.1",
+            "version": "1.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt-admin.git",
-                "reference": "ed84e286b03619decd6e45836cac86cfee2c80c9"
+                "reference": "74d8c167196df56026be45339a70f91b87e3c430"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/ed84e286b03619decd6e45836cac86cfee2c80c9",
-                "reference": "ed84e286b03619decd6e45836cac86cfee2c80c9",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/74d8c167196df56026be45339a70f91b87e3c430",
+                "reference": "74d8c167196df56026be45339a70f91b87e3c430",
                 "shasum": ""
             },
             "require": {
@@ -3872,10 +3872,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/1.8.1",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/1.8.2",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/issues"
             },
-            "time": "2022-11-09T19:40:10+00:00"
+            "time": "2022-11-16T14:06:42+00:00"
         },
         {
             "name": "drupal/helfi_ahjo",
@@ -4146,16 +4146,16 @@
         },
         {
             "name": "drupal/helfi_tpr",
-            "version": "1.4.6",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr.git",
-                "reference": "54feebeaff443a90a5abb78680d9f914d9871e65"
+                "reference": "2d76114b1b003e7db6f5b30879bdb95c88131f26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/54feebeaff443a90a5abb78680d9f914d9871e65",
-                "reference": "54feebeaff443a90a5abb78680d9f914d9871e65",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/2d76114b1b003e7db6f5b30879bdb95c88131f26",
+                "reference": "2d76114b1b003e7db6f5b30879bdb95c88131f26",
                 "shasum": ""
             },
             "require": {
@@ -4163,7 +4163,8 @@
                 "drupal/helfi_api_base": "*",
                 "drupal/readonly_field_widget": "^1.0",
                 "drupal/twig_tweak": "^2.0 || ^3.0",
-                "drupal/views_infinite_scroll": "^1.8"
+                "drupal/views_infinite_scroll": "^2.0",
+                "php": "^8.0"
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
@@ -4176,10 +4177,10 @@
             ],
             "description": "TPR integration",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/1.4.6",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/1.7.0",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/issues"
             },
-            "time": "2021-10-14T06:56:33+00:00"
+            "time": "2022-01-28T12:12:51+00:00"
         },
         {
             "name": "drupal/helfi_tunnistamo",
@@ -5765,26 +5766,26 @@
         },
         {
             "name": "drupal/views_infinite_scroll",
-            "version": "1.9.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/views_infinite_scroll.git",
-                "reference": "8.x-1.9"
+                "reference": "2.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_infinite_scroll-8.x-1.9.zip",
-                "reference": "8.x-1.9",
-                "shasum": "875d58d317d48036ed1d9ef538bc8a76bc3dcb5b"
+                "url": "https://ftp.drupal.org/files/projects/views_infinite_scroll-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "c57a2c63f00c53a9ee7e741c7f37df21eb9e76de"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^9.2 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.9",
-                    "datestamp": "1632421809",
+                    "version": "2.0.1",
+                    "datestamp": "1664716655",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7122,37 +7123,38 @@
         },
         {
             "name": "league/uri",
-            "version": "6.7.2",
+            "version": "6.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/uri.git",
-                "reference": "d3b50812dd51f3fbf176344cc2981db03d10fe06"
+                "reference": "a700b4656e4c54371b799ac61e300ab25a2d1d39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/uri/zipball/d3b50812dd51f3fbf176344cc2981db03d10fe06",
-                "reference": "d3b50812dd51f3fbf176344cc2981db03d10fe06",
+                "url": "https://api.github.com/repos/thephpleague/uri/zipball/a700b4656e4c54371b799ac61e300ab25a2d1d39",
+                "reference": "a700b4656e4c54371b799ac61e300ab25a2d1d39",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "league/uri-interfaces": "^2.3",
-                "php": "^7.4 || ^8.0",
-                "psr/http-message": "^1.0"
+                "php": "^8.1",
+                "psr/http-message": "^1.0.1"
             },
             "conflict": {
                 "league/uri-schemes": "^1.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^v3.3.2",
-                "nyholm/psr7": "^1.5",
-                "php-http/psr7-integration-tests": "^1.1",
-                "phpstan/phpstan": "^1.2.0",
+                "friendsofphp/php-cs-fixer": "^v3.9.5",
+                "nyholm/psr7": "^1.5.1",
+                "php-http/psr7-integration-tests": "^1.1.1",
+                "phpbench/phpbench": "^1.2.6",
+                "phpstan/phpstan": "^1.8.5",
                 "phpstan/phpstan-deprecation-rules": "^1.0",
-                "phpstan/phpstan-phpunit": "^1.0.0",
-                "phpstan/phpstan-strict-rules": "^1.1.0",
-                "phpunit/phpunit": "^9.5.10",
-                "psr/http-factory": "^1.0"
+                "phpstan/phpstan-phpunit": "^1.1.1",
+                "phpstan/phpstan-strict-rules": "^1.4.3",
+                "phpunit/phpunit": "^9.5.24",
+                "psr/http-factory": "^1.0.1"
             },
             "suggest": {
                 "ext-fileinfo": "Needed to create Data URI from a filepath",
@@ -7209,7 +7211,7 @@
                 "docs": "https://uri.thephpleague.com",
                 "forum": "https://thephpleague.slack.com",
                 "issues": "https://github.com/thephpleague/uri/issues",
-                "source": "https://github.com/thephpleague/uri/tree/6.7.2"
+                "source": "https://github.com/thephpleague/uri/tree/6.8.0"
             },
             "funding": [
                 {
@@ -7217,7 +7219,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-09-13T19:50:42+00:00"
+            "time": "2022-09-13T19:58:47+00:00"
         },
         {
             "name": "league/uri-interfaces",
