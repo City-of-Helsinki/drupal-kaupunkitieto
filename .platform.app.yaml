@@ -13,7 +13,7 @@ dependencies:
     php:
         composer/composer: '^2'
     nodejs:
-        npm: '^8.1'
+        npm: '^6.0'
         webpack: '^5.6.0'
 
 runtime:
@@ -24,8 +24,8 @@ runtime:
 variables:
     env:
         # Update these for your desired NVM and Node versions.
-        NVM_VERSION: v0.39.0
-        NODE_VERSION: v12.22.7
+        NVM_VERSION: v0.36.0
+        NODE_VERSION: v14.15.0
 
 # The relationships of the application with services or other applications.
 #
