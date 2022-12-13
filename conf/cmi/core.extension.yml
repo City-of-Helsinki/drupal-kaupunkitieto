@@ -28,12 +28,12 @@ module:
   easy_breadcrumb: 0
   editor: 0
   entity: 0
-  entity_usage: 0
   entity_reference_revisions: 0
+  entity_usage: 0
   facets: 0
   features: 0
-  field_group: 0
   field: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
@@ -60,7 +60,6 @@ module:
   kaupunkitieto_search: 0
   language: 0
   link: 0
-  linkit: 0
   locale: 0
   media: 0
   media_entity_soundcloud: 0
@@ -78,8 +77,8 @@ module:
   node: 0
   options: 0
   page_cache: 0
-  paragraphs_library: 0
   paragraphs_asymmetric_translation_widgets: 0
+  paragraphs_library: 0
   path: 0
   path_alias: 0
   redirect: 0
