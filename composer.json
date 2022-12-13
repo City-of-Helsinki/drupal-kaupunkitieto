@@ -16,7 +16,7 @@
         "drupal/core-recommended": "^9.1",
         "drupal/facets": "^2.0",
         "drupal/hdbt": "^1.0",
-        "drupal/hdbt_admin": "^1.0",
+        "drupal/hdbt_admin": "^1.8",
         "drupal/helfi_ahjo": "^1.0",
         "drupal/helfi_api_base": "^2.3",
         "drupal/helfi_hauki": "^1.0",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a0c192be75f1affe288578a1bc70ac76",
+    "content-hash": "3224f8e62c838bf36d68c83baac98a33",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3847,21 +3847,21 @@
         },
         {
             "name": "drupal/hdbt_admin",
-            "version": "1.8.3",
+            "version": "1.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt-admin.git",
-                "reference": "e63ea2c67b05dc3c4c7af3b6e416817c59c330ed"
+                "reference": "2f9581c2a7079c8eb2a05b6ef8987c105fcbc5f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/e63ea2c67b05dc3c4c7af3b6e416817c59c330ed",
-                "reference": "e63ea2c67b05dc3c4c7af3b6e416817c59c330ed",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt-admin/zipball/2f9581c2a7079c8eb2a05b6ef8987c105fcbc5f3",
+                "reference": "2f9581c2a7079c8eb2a05b6ef8987c105fcbc5f3",
                 "shasum": ""
             },
             "require": {
                 "drupal/admin_toolbar": "^2.3",
-                "drupal/gin": "^3.0"
+                "drupal/gin": "3.0.0-beta5"
             },
             "type": "drupal-theme",
             "license": [
@@ -3872,10 +3872,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/1.8.3",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/tree/1.8.4",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt-admin/issues"
             },
-            "time": "2022-11-23T09:18:44+00:00"
+            "time": "2022-11-30T09:55:26+00:00"
         },
         {
             "name": "drupal/helfi_ahjo",
@@ -15768,10 +15768,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "drupal/linkit": 10,
-        "drupal/menu_link_attributes": 5
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
