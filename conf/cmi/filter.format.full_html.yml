@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - editor
+    - linkit
     - media
     - token_filter
 _core:
@@ -40,6 +41,13 @@ filters:
     weight: -49
     settings:
       filter_url_length: 120
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: -48
+    settings:
+      title: true
   token_filter:
     id: token_filter
     provider: token_filter

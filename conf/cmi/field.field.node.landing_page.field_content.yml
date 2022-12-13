@@ -39,6 +39,10 @@ settings:
       content_liftup: content_liftup
       embed: embed
       infograph: infograph
+      event_list: event_list
+      phasing: phasing
+      popular_services: popular_services
+      target_group_links: target_group_links
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -71,6 +75,9 @@ settings:
       embed:
         weight: 32
         enabled: true
+      event_list:
+        weight: 30
+        enabled: true
       gallery:
         weight: -23
         enabled: false
@@ -101,12 +108,27 @@ settings:
       list_of_links_item:
         weight: -19
         enabled: false
+      phasing:
+        weight: 50
+        enabled: true
+      phasing_item:
+        weight: 30
+        enabled: false
+      popular_services:
+        weight: 42
+        enabled: true
       quick_links:
         weight: 42
         enabled: false
       quick_links_item:
         weight: 43
         enabled: false
+      target_group_link_item:
+        weight: 45
+        enabled: false
+      target_group_links:
+        weight: 24
+        enabled: true
       text:
         weight: -18
         enabled: false

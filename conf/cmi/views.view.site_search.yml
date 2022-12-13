@@ -604,7 +604,7 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
+        type: none
         options: {  }
       empty: {  }
       sorts:
@@ -678,7 +678,7 @@ display:
       row:
         type: fields
       query:
-        type: views_query
+        type: search_api_query
         options:
           bypass_access: false
           skip_access: false

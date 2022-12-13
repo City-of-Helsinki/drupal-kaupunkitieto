@@ -33,7 +33,6 @@ settings:
       text: text
       columns: columns
       image: image
-      gallery: gallery
       list_of_links: list_of_links
       content_cards: content_cards
       embed: embed
@@ -65,7 +64,7 @@ settings:
         enabled: true
       gallery:
         weight: -24
-        enabled: true
+        enabled: false
       gallery_slide:
         weight: -19
         enabled: false

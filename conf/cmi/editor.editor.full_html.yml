@@ -34,8 +34,7 @@ settings:
         -
           name: Media
           items:
-            - highlight
-            - quote
+            1: quote
         -
           name: Links
           items:
@@ -52,16 +51,8 @@ settings:
             - PasteFromWord
             - SpecialChar
             - Source
-  plugins:
-    drupallink:
-      linkit_enabled: true
-      linkit_profile: helfi
-    language:
-      language_list: un
-    stylescombo:
-      styles: ''
-    tokenbrowser:
-      token_types: {  }
+            - language_selector
+  plugins: {  }
 image_upload:
   status: false
   scheme: public

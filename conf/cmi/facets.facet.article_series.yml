@@ -11,6 +11,8 @@ id: article_series
 name: 'Article series'
 weight: 0
 min_count: 1
+missing: false
+missing_label: others
 url_alias: article_series
 facet_source_id: 'search_api:views_page__site_search__page_1'
 field_identifier: field_article_series
