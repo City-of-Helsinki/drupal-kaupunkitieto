@@ -5,14 +5,20 @@ features:
   favicon: 1
 favicon:
   use_default: 1
-enable_darkmode: 0
+enable_darkmode: '0'
 preset_accent_color: light_blue
 accent_color: ''
 preset_focus_color: gin
 focus_color: ''
 high_contrast_mode: 0
-classic_toolbar: horizontal
+classic_toolbar: vertical
 icon_default: 1
 icon_upload: ''
 _core:
   default_config_hash: WMetmjQwIi1pjKuESDGJxM52cshpFeIifaq7NsDxw3Y
+logo:
+  use_default: 1
+secondary_toolbar_frontend: 0
+layout_density: ''
+show_description_toggle: 0
+show_user_theme_settings: 0

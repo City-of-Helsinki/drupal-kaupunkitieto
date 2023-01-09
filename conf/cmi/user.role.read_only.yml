@@ -1,8 +1,12 @@
+uuid: null
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraphs
+    - toolbar
 id: read_only
-label: 'Read only'
+label: Lukija
 weight: 2
 is_admin: null
 permissions:

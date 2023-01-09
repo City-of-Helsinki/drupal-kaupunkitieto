@@ -1,16 +1,22 @@
 uuid: 1835b7ce-fcd2-4fe4-b4ba-96309888f338
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - eu_cookie_compliance
+    - helfi_api_base
+    - media
+    - system
+    - toolbar
 _core:
   default_config_hash: 83Nuup-6oYkkdAsvg3nrR2pBOgtTXEV1JrzpCCLkYLM
 id: authenticated
-label: 'Authenticated user'
+label: 'Sisäänkirjautunut käyttäjä'
 weight: 1
 is_admin: false
 permissions:
   - 'access content'
+  - 'access toolbar'
   - 'display eu cookie compliance popup'
   - 'view media'
   - 'view remote entities'
-  - 'access toolbar'

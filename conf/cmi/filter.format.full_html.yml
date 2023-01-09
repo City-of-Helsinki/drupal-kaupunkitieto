@@ -25,7 +25,7 @@ filters:
     status: true
     weight: -50
     settings:
-      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <p class><footer class><br> <div class><span class aria-hidden> <img src alt height width data-entity-type data-entity-uuid data-align data-caption data-responsive-image-style> <a href hreflang !href accesskey id rel target title class> <pre> <iframe allowfullscreen frameborder height mozallowfullscreen src webkitallowfullscreen width id> <s> <sup> <sub> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr>'
+      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <p class> <footer class> <br> <div class> <span aria-hidden class> <img src alt data-entity-type data-entity-uuid data-align data-caption data-responsive-image-style width height> <a href hreflang !href accesskey id rel target title class> <pre> <iframe allowfullscreen mozallowfullscreen src webkitallowfullscreen id width height frameborder> <s> <sup> <sub> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_htmlcorrector:
@@ -41,13 +41,6 @@ filters:
     weight: -49
     settings:
       filter_url_length: 120
-  linkit:
-    id: linkit
-    provider: linkit
-    status: true
-    weight: -48
-    settings:
-      title: true
   token_filter:
     id: token_filter
     provider: token_filter
@@ -94,3 +87,10 @@ filters:
     status: false
     weight: -40
     settings: {  }
+  linkit:
+    id: linkit
+    provider: linkit
+    status: false
+    weight: -48
+    settings:
+      title: true

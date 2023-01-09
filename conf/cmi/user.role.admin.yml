@@ -2,16 +2,52 @@ uuid: cb881489-bac3-4408-aeb0-92cb23927986
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.full_html
+    - media.type.file
+    - media.type.image
+    - media.type.remote_video
+    - media.type.soundcloud
+    - node.type.article
+    - node.type.landing_page
+    - node.type.page
+    - taxonomy.vocabulary.article_series
+    - taxonomy.vocabulary.author
+    - taxonomy.vocabulary.keywords
   module:
+    - block
+    - config_translation
     - content_lock
+    - content_translation
+    - eu_cookie_compliance
+    - file
+    - filter
+    - helfi_api_base
+    - locale
+    - media
+    - menu_link_attributes
+    - menu_link_content
+    - node
+    - paragraphs
+    - paragraphs_library
+    - path
+    - pathauto
+    - redirect
+    - role_delegation
+    - scheduler
+    - simple_sitemap
+    - system
+    - taxonomy
+    - toolbar
 _core:
   default_config_hash: wJWcExCcstsjfohW4IUVRm742x2vKz6nOlZpa3OG7yQ
 id: admin
-label: Administrator
+label: Pääkäyttäjä
 weight: 5
 is_admin: null
 permissions:
   - 'access administration pages'
+  - 'access content'
   - 'access content overview'
   - 'access files overview'
   - 'access media overview'
@@ -23,13 +59,20 @@ permissions:
   - 'administer blocks'
   - 'administer eu cookie compliance categories'
   - 'administer eu cookie compliance popup'
+  - 'administer hotjar settings'
   - 'administer menu'
   - 'administer nodes'
+  - 'administer paragraphs library'
   - 'administer pathauto'
   - 'administer redirects'
   - 'administer sitemap settings'
   - 'administer url aliases'
   - 'administer users'
+  - 'assign admin role'
+  - 'assign content_producer role'
+  - 'assign editor role'
+  - 'assign read_only role'
+  - 'break content lock'
   - 'cancel account'
   - 'change own username'
   - 'create article content'
@@ -39,6 +82,7 @@ permissions:
   - 'create landing_page content'
   - 'create media'
   - 'create page content'
+  - 'create paragraph library item'
   - 'create remote entities'
   - 'create remote_video media'
   - 'create soundcloud media'
@@ -85,6 +129,7 @@ permissions:
   - 'edit own page content'
   - 'edit own remote_video media'
   - 'edit own soundcloud media'
+  - 'edit paragraph library item'
   - 'edit remote entities'
   - 'edit terms in article_series'
   - 'edit terms in author'
@@ -94,8 +139,11 @@ permissions:
   - 'revert landing_page revisions'
   - 'revert page revisions'
   - 'schedule publishing of nodes'
+  - 'set landing_page published on date'
+  - 'set page published on date'
   - 'translate any entity'
   - 'translate article node'
+  - 'translate configuration'
   - 'translate editable entities'
   - 'translate file media'
   - 'translate hauki_resource'
@@ -112,10 +160,17 @@ permissions:
   - 'update any media'
   - 'update content translations'
   - 'update media'
+  - 'use menu link attributes'
+  - 'use text format full_html'
+  - 'use text format full_html'
+  - 'use text format minimal'
+  - 'use text format minimal'
   - 'view all media revisions'
   - 'view all revisions'
+  - 'view any unpublished content'
   - 'view article revisions'
   - 'view landing_page revisions'
+  - 'view media'
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view page revisions'
@@ -123,23 +178,3 @@ permissions:
   - 'view scheduled content'
   - 'view the administration theme'
   - 'view unpublished paragraphs'
-  - 'access content'
-  - 'administer hotjar settings'
-  - 'administer paragraphs library'
-  - 'assign admin role'
-  - 'assign content_producer role'
-  - 'assign editor role'
-  - 'assign read_only role'
-  - 'create paragraph library item'
-  - 'edit paragraph library item'
-  - 'set landing_page published on date'
-  - 'set page published on date'
-  - 'translate configuration'
-  - 'use menu link attributes'
-  - 'use text format full_html'
-  - 'use text format minimal'
-  - 'view any unpublished content'
-  - 'view media'
-  - 'use text format full_html'
-  - 'use text format minimal'
-  - 'break content lock'
