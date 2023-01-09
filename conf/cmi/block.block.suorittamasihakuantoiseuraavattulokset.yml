@@ -12,7 +12,7 @@ dependencies:
 id: suorittamasihakuantoiseuraavattulokset
 theme: kaupunkitieto
 region: content
-weight: -7
+weight: -8
 provider: null
 plugin: 'block_content:ee7f7285-520d-4be6-bfb1-7d409e6c3173'
 settings:
