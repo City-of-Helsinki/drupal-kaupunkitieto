@@ -1,13 +1,22 @@
 $item_spacing: $spacing-triple;
 
+
 .content-liftup {
   background: $color-silver-light;
+  border: 0;
   margin-top: $spacing-double;
 
   @include breakpoint($breakpoint-l) {
     margin-top: $spacing-quadruple;
   }
+
+  .hds-koros {
+    position: absolute;
+    bottom: 0;
+  }
 }
+
+
 
 .content-liftup__content {
   display: flex;
