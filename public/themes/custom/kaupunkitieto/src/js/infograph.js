@@ -41,8 +41,8 @@
 
         function reSlick() {
           $('.paragraph--type--infograph-group').slick({
-            prevArrow: '.arrow-left-wrapper svg',
-            nextArrow: '.arrow-right-wrapper svg',
+            prevArrow: '.arrow-left-wrapper span',
+            nextArrow: '.arrow-right-wrapper span',
             autoplay: settings.infograph_group.autoplay,
             autoplaySpeed: settings.infograph_group.speed,
           });
