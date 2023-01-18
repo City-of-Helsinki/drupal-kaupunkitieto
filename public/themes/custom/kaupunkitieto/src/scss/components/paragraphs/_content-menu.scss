@@ -1,5 +1,16 @@
 $item_spacing: $spacing-triple;
 
+.content-menu {
+  &__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__navigation {
+    padding-left: 0;
+  }
+}
+
 .content-menu__content {
   display: flex;
   flex-direction: column;
