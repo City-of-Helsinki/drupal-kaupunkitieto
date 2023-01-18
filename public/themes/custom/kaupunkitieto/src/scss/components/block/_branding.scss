@@ -9,6 +9,7 @@
 
   .site-name {
     @include font-size(14px, 18px);
+    margin-left: 20px;
     width: 210px;
 
     @include breakpoint($breakpoint-m) {
