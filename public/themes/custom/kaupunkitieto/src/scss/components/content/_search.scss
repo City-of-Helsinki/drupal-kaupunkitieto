@@ -33,15 +33,22 @@
 
     &.spaced {
       justify-content: space-between;
+      align-items:center;
     }
   }
 
   header {
-    margin-top: $spacing;
-    margin-bottom: $spacing;
-
     h4 {
       margin-top: 0;
+    }
+  }
+
+  .form-item-items-per-page {
+    display: flex;
+    align-items: center;
+
+    label {
+      width: 250px;
     }
   }
 
@@ -74,6 +81,7 @@
     img {
       display: block;
       max-width: 100%;
+      height: auto !important;
     }
   }
 
