@@ -19,4 +19,19 @@
     },
   };
 
+  Drupal.behaviors.Burger = {
+    attach: function attach() {
+      // Header search form
+       const $trigger = $('.menu-hamburger__trigger');
+       const burger = $('.desktop-menu > .menu');
+       if ($trigger.length) {
+         $trigger.on('click', function(e) {
+           e.preventDefault();
+           $(burger).toggle();
+         });
+       }
+    },
+  };
+
+
 })(jQuery, Drupal);

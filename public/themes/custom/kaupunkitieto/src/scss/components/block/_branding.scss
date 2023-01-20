@@ -9,12 +9,13 @@
 
   .site-name {
     @include font-size(14px, 18px);
-    margin-left: 20px;
-    width: 210px;
+    margin-left: 10px;
+    width: 120px;
 
     @include breakpoint($breakpoint-m) {
       @include font-size(20px, 20px);
-      width: auto;
+      margin-left: 20px;
+      width: 210px;
     }
   }
 
