@@ -1,19 +1,17 @@
 #block-views-block-article-recent {
   margin: 0 auto;
   max-width: 1264px;
+  padding: 0 $spacing;
 
-  @include breakpoint($breakpoint-m) {
-    padding: $spacing-and-half $spacing-double 0;
+  @include breakpoint($breakpoint-l) {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   h2 {
     @include font-size(36px, 64px);
     font-weight: 400;
-    margin-bottom: $spacing-double;
-
-    @include breakpoint(0 ($breakpoint-m - 1px)) {
-      padding: 0 $spacing;
-    }
+    margin-bottom: $spacing;
 
     @include breakpoint($breakpoint-l) {
       @include font-size(48px, 64px);
@@ -23,7 +21,37 @@
 }
 
 .views--article.views--recent {
-  display: flex;
+
+  @include breakpoint($breakpoint-s) {
+    display: flex;
+    flex-wrap: wrap;
+
+    .views-row {
+      @include breakpoint($breakpoint-m ($breakpoint-l - 1px)) {
+        width: calc(100% / 2 - #{$spacing-quarter} - #{$spacing-half});
+
+        &:not(:nth-child(2n+2)) {
+          margin-right: $spacing-and-half;
+        }
+      }
+
+      @include breakpoint($breakpoint-l) {
+        width: calc(100% / 3 - #{$spacing});
+
+        &:not(:nth-child(3n+3)) {
+          margin-right: $spacing-and-half;
+        }
+      }
+    }
+
+    .content-card {
+      margin: 0;
+      width: auto;
+    }
+  }
+
+
+  /*
 
   @include breakpoint(0 ($breakpoint-m - 1px)) {
     flex-wrap: nowrap;
@@ -76,11 +104,12 @@
   .content-card {
     padding: 0;
     width: 100%;
+    margin-left: 0;
   }
 
   @include breakpoint(0 ($breakpoint-m - 1px)) {
     .pager {
       display: none;
     }
-  }
+  }*/
 }

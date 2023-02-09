@@ -36,6 +36,10 @@ $item_spacing: $spacing-triple;
 .content-liftup__container {
   overflow: hidden;
   padding-top: $spacing-double;
+
+  @include breakpoint($breakpoint-l) {
+    flex-grow: 1;
+  }
 }
 
 .content-liftup__title {
