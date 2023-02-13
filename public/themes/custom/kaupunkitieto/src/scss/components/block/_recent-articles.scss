@@ -1,11 +1,14 @@
 #block-views-block-article-recent {
-  margin: 0 auto;
-  max-width: 1264px;
   padding: 0 $spacing;
 
-  @include breakpoint($breakpoint-l) {
-    padding-left: 0;
-    padding-right: 0;
+  @include breakpoint($breakpoint-m) {
+    padding: 0 $spacing * 2;
+  }
+
+  > h2,
+  > div {
+    margin: 0 auto;
+    max-width: 1264px;
   }
 
   h2 {
