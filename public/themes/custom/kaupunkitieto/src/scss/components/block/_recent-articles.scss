@@ -46,73 +46,55 @@
         }
       }
     }
+  }
 
-    .content-card {
+
+  .views-field {
+    margin-bottom: 8px;
+  }
+
+  .views-field-title {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .views-field-field-liftup-image {
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  .views-field-created {
+    display: inline-block;
+    margin-right: 4px;
+  }
+
+  .views-field-field-author-1 {
+    display: inline-block;
+  }
+
+  .views-field-field-keywords{
+    ul {
       margin: 0;
-      width: auto;
-    }
-  }
-
-
-  /*
-
-  @include breakpoint(0 ($breakpoint-m - 1px)) {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding: $spacing-and-half 0 0 $spacing;
-  }
-
-  @include breakpoint($breakpoint-m) {
-    flex-wrap: wrap;
-  }
-
-  .views-row {
-    width: 100%;
-
-    @include breakpoint(0 ($breakpoint-s - 1px)) {
-      max-width: 288px;
+      padding: 0;
+      list-style: none;
     }
 
-    @include breakpoint($breakpoint-s ($breakpoint-m - 1px)) {
-      max-width: 306px;
-    }
+    li {
+      display: inline-block;
+      background: $color-black;
+      border-radius: $spacing;
+      padding: 0 $spacing;
+      margin-right: $spacing-half;
+      margin-bottom: $spacing-half;
+      @include font-size(14px, 30px);
 
-    @include breakpoint(0 ($breakpoint-m - 1px)) {
-      flex: 0 0 auto;
-      margin-right: $spacing;
-    }
-
-    @include breakpoint($breakpoint-m) {
-      margin-bottom: $spacing-triple;
-    }
-
-    @include breakpoint($breakpoint-m ($breakpoint-l - 1px)) {
-      width: calc(100% / 2 - #{$spacing-quarter} - #{$spacing-half});
-
-      &:not(:nth-child(2n+2)) {
-        margin-right: $spacing-and-half;
+      a {
+        color: $color-white;
+        text-decoration: none;
       }
     }
-
-    @include breakpoint($breakpoint-l) {
-      width: calc(100% / 3 - #{$spacing});
-
-      &:not(:nth-child(3n+3)) {
-        margin-right: $spacing-and-half;
-      }
-    }
-
   }
-
-  .content-card {
-    padding: 0;
-    width: 100%;
-    margin-left: 0;
-  }
-
-  @include breakpoint(0 ($breakpoint-m - 1px)) {
-    .pager {
-      display: none;
-    }
-  }*/
 }
