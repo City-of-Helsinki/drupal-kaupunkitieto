@@ -34,7 +34,6 @@ module:
   features: 0
   field: 0
   field_group: 0
-  field_ui: 0
   file: 0
   filter: 0
   focal_point: 0
@@ -107,10 +106,8 @@ module:
   toolbar: 0
   translatable_menu_link_uri: 0
   twig_tweak: 0
-  update: 0
   update_helper: 0
   user: 0
-  views_ui: 0
   pathauto: 1
   content_translation: 10
   views: 10
