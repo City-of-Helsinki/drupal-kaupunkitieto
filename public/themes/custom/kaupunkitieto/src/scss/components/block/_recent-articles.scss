@@ -1,4 +1,5 @@
 #block-views-block-article-recent {
+  margin-top: $spacing;
   padding: 0 $spacing;
 
   @include breakpoint($breakpoint-m) {
