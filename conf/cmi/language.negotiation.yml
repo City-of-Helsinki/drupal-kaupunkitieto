@@ -5,14 +5,8 @@ session:
 url:
   source: path_prefix
   prefixes:
-    en: en
     fi: fi
-    sv: sv
-    ru: ru
     '': null
   domains:
-    en: ''
     fi: ''
-    sv: ''
-    ru: ''
 selected_langcode: fi
