@@ -1,6 +1,14 @@
 $item_spacing: $spacing-triple;
 
 .content-menu {
+  padding-left: $spacing;
+  padding-right: $spacing;
+
+  @include breakpoint($breakpoint-m) {
+    padding-left: $spacing-double;
+    padding-right: $spacing-double;
+  }
+
   &__container {
     padding-left: 0;
     padding-right: 0;
