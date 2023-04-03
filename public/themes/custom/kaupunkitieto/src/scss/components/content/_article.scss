@@ -13,11 +13,32 @@
       }
     }
 
+    .article__series {
+      .views-element-container {
+        display: inline-block;
+        padding: 0;
+      }
+    }
+
+    .keywords {
+      a {
+        display: inline-block;
+      }
+    }
+
     .article__author {
       @include font-size(16px, 24px);
       color: $color-black;
       font-weight: $font-weight-regular;
       margin-bottom: $spacing-quarter;
+
+      &__label {
+        margin-right: $spacing-quarter;
+      }
+
+      .views-element-container {
+        padding: 0;
+      }
     }
 
     .social-media-sharing {

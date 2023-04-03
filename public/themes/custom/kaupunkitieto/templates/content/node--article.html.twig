@@ -92,7 +92,7 @@
 
       {% if content.field_author|render %}
         <div class="{{ node.bundle|clean_class }}__author">
-          {{ content.field_author }}
+          <span class="article__author__label">{{ 'Author'|trans }}:</span> {{ drupal_view('author_links','block_1', node.id) }}
         </div>
       {% endif %}
 
@@ -108,7 +108,7 @@
       <div class="article__bottom-wrapper">
         {% if content.field_article_series|render %}
           <div class="{{ node.bundle|clean_class }}__series">
-            <span class=="article__series__label">{{ 'Belongs to the series'|trans }}:</span> {{ content.field_article_series }}
+            <span class="article__series__label">{{ 'Belongs to the series'|trans }}:</span> {{ drupal_view('article_series_links','block_1', node.id) }}
           </div>
         {% endif %}
 
@@ -131,8 +131,8 @@
     <div class="{{ node.bundle|clean_class }}__keywords">
       {% embed "@hdbt/misc/container.twig" with {container_element: 'keywords'} %}
         {% block container_content %}
-          <div class="keywords__wrapper">
-            {{ content.field_keywords }}
+          <div class="keywords">
+            {{ drupal_view('keyword_links','block_1', node.id) }}
           </div>
         {% endblock container_content %}
       {% endembed %}
