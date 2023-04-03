@@ -1,0 +1,9 @@
+uuid: cd2ee369-35a5-490e-839f-1b10e8700e5e
+langcode: fi
+status: true
+dependencies: {  }
+id: en
+label: English
+direction: ltr
+weight: -9
+locked: false

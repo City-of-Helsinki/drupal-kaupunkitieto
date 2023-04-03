@@ -7,6 +7,10 @@ url:
   prefixes:
     fi: fi
     '': null
+    en: en
+    sv: sv
   domains:
     fi: ''
+    en: ''
+    sv: ''
 selected_langcode: fi
