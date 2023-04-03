@@ -6,6 +6,10 @@ dependencies:
     - field.storage.node.field_article_series
     - field.storage.node.field_author
     - field.storage.node.field_content
+    - field.storage.paragraph.field_contact_name
+    - field.storage.paragraph.field_text_for_screen_readers
+    - field.storage.paragraph.field_text
+    - field.storage.paragraph.field_service_title
     - field.storage.node.field_keywords
     - field.storage.node.field_lead
     - field.storage.node.field_liftup_image
@@ -13,6 +17,7 @@ dependencies:
     - search_api.server.site_search_db
   module:
     - node
+    - paragraphs
     - search_api
 id: site_search_index
 name: 'Site search index'
@@ -51,14 +56,17 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_author
-  field_content:
-    label: Content
+  field_contact_name:
+    label: 'Content » Paragraph » Name'
     datasource_id: 'entity:node'
-    property_path: field_content
-    type: text
+    property_path: 'field_content:entity:field_contact_name'
+    type: string
     dependencies:
       config:
         - field.storage.node.field_content
+        - field.storage.paragraph.field_contact_name
+      module:
+        - paragraphs
   field_keywords:
     label: Keywords
     datasource_id: 'entity:node'
@@ -91,6 +99,17 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_search_result_text
+  field_service_title:
+    label: 'Content » Paragraph » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_content:entity:field_service_title'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_content
+        - field.storage.paragraph.field_service_title
+      module:
+        - paragraphs
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants
@@ -98,6 +117,28 @@ field_settings:
     indexed_locked: true
     type_locked: true
     hidden: true
+  processed:
+    label: 'Content » Paragraph » Text » Processed text'
+    datasource_id: 'entity:node'
+    property_path: 'field_content:entity:field_text:processed'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_content
+        - field.storage.paragraph.field_text
+      module:
+        - paragraphs
+  processed_1:
+    label: 'Content » Paragraph » Text for screen readers » Processed text'
+    datasource_id: 'entity:node'
+    property_path: 'field_content:entity:field_text_for_screen_readers:processed'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_content
+        - field.storage.paragraph.field_text_for_screen_readers
+      module:
+        - paragraphs
   status:
     label: Published
     datasource_id: 'entity:node'
@@ -141,6 +182,7 @@ processor_settings:
     weights:
       preprocess_query: -30
   entity_status: {  }
+  entity_type: {  }
   ignorecase:
     weights:
       preprocess_index: -20
@@ -165,4 +207,5 @@ tracker_settings:
 options:
   cron_limit: 50
   index_directly: true
+  track_changes_in_references: true
 server: site_search_db
