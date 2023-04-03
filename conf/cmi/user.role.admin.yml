@@ -73,6 +73,7 @@ permissions:
   - 'assign editor role'
   - 'assign read_only role'
   - 'break content lock'
+  - 'bypass node access'
   - 'cancel account'
   - 'change own username'
   - 'create article content'
