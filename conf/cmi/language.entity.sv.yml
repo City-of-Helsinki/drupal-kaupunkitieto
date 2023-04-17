@@ -1,9 +1,9 @@
 uuid: 811d18c5-2630-4b2b-bae4-7f66d06e170c
-langcode: en
+langcode: sv
 status: true
 dependencies: {  }
 id: sv
-label: Swedish
+label: Svenska
 direction: ltr
-weight: -8
+weight: -9
 locked: false
