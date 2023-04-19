@@ -9,7 +9,7 @@ dependencies:
 id: kaupunkitietoheadersearch
 theme: kaupunkitieto
 region: header_top
-weight: 0
+weight: -7
 provider: null
 plugin: kaupunkitieto_search_header_search_block
 settings:
