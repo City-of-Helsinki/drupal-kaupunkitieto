@@ -91,6 +91,7 @@ $item_spacing: $spacing-triple;
   .content-liftup__item__title {
     @include font-size(18px);
     font-weight: 500;
+    --line-height: 1.1666666667;
     margin: 0 0 $spacing-double;
 
     @include breakpoint($breakpoint-m) {
