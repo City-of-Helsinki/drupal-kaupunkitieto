@@ -1,5 +1,6 @@
 _core:
   default_config_hash: kvKBKphg2fP_lgIMlf8VVQt3sY55xYEhs9UZeRqkZTE
+langcode: fi
 first_day: 1
 country:
   default: FI

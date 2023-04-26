@@ -6,9 +6,12 @@ dependencies:
     - field.storage.node.field_article_series
     - field.storage.node.field_author
     - field.storage.node.field_content
+    - field.storage.paragraph.field_contact_card
     - field.storage.paragraph.field_contact_name
-    - field.storage.paragraph.field_text_for_screen_readers
+    - field.storage.paragraph.field_embed_title
+    - field.storage.paragraph.field_hero_desc
     - field.storage.paragraph.field_text
+    - field.storage.paragraph.field_text_for_screen_readers
     - field.storage.paragraph.field_service_title
     - field.storage.node.field_keywords
     - field.storage.node.field_lead
@@ -57,14 +60,37 @@ field_settings:
       config:
         - field.storage.node.field_author
   field_contact_name:
-    label: 'Content » Paragraph » Name'
+    label: 'Content » Paragraph » Contact card » Paragraph » Contact card » Paragraph » Name'
     datasource_id: 'entity:node'
-    property_path: 'field_content:entity:field_contact_name'
+    property_path: 'field_content:entity:field_contact_card:entity:field_contact_card:entity:field_contact_name'
     type: string
     dependencies:
       config:
         - field.storage.node.field_content
+        - field.storage.paragraph.field_contact_card
         - field.storage.paragraph.field_contact_name
+      module:
+        - paragraphs
+  field_embed_title:
+    label: 'Content » Paragraph » Embed title'
+    datasource_id: 'entity:node'
+    property_path: 'field_content:entity:field_embed_title'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_content
+        - field.storage.paragraph.field_embed_title
+      module:
+        - paragraphs
+  field_hero_desc:
+    label: 'Content » Paragraph » Hero text'
+    datasource_id: 'entity:node'
+    property_path: 'field_content:entity:field_hero_desc'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_content
+        - field.storage.paragraph.field_hero_desc
       module:
         - paragraphs
   field_keywords:
@@ -103,11 +129,44 @@ field_settings:
     label: 'Content » Paragraph » Title'
     datasource_id: 'entity:node'
     property_path: 'field_content:entity:field_service_title'
-    type: string
+    type: text
     dependencies:
       config:
         - field.storage.node.field_content
         - field.storage.paragraph.field_service_title
+      module:
+        - paragraphs
+  field_text:
+    label: 'Content » Paragraph » Text'
+    datasource_id: 'entity:node'
+    property_path: 'field_content:entity:field_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_content
+        - field.storage.paragraph.field_text
+      module:
+        - paragraphs
+  field_text_1:
+    label: 'Content » Paragraph » Text'
+    datasource_id: 'entity:node'
+    property_path: 'field_content:entity:field_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_content
+        - field.storage.paragraph.field_text
+      module:
+        - paragraphs
+  field_text_for_screen_readers:
+    label: 'Content » Paragraph » Text for screen readers'
+    datasource_id: 'entity:node'
+    property_path: 'field_content:entity:field_text_for_screen_readers'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_content
+        - field.storage.paragraph.field_text_for_screen_readers
       module:
         - paragraphs
   node_grants:
@@ -117,28 +176,6 @@ field_settings:
     indexed_locked: true
     type_locked: true
     hidden: true
-  processed:
-    label: 'Content » Paragraph » Text » Processed text'
-    datasource_id: 'entity:node'
-    property_path: 'field_content:entity:field_text:processed'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_content
-        - field.storage.paragraph.field_text
-      module:
-        - paragraphs
-  processed_1:
-    label: 'Content » Paragraph » Text for screen readers » Processed text'
-    datasource_id: 'entity:node'
-    property_path: 'field_content:entity:field_text_for_screen_readers:processed'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_content
-        - field.storage.paragraph.field_text_for_screen_readers
-      module:
-        - paragraphs
   status:
     label: Published
     datasource_id: 'entity:node'

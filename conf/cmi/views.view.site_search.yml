@@ -650,8 +650,10 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
-              admin: '0'
+              read_only: '0'
               content_producer: '0'
+              editor: '0'
+              admin: '0'
             expose_fields: false
             placeholder: ''
             searched_fields_id: search_api_fulltext_searched_fields
@@ -670,8 +672,13 @@ display:
           parse_mode: terms
           min_length: 3
           fields:
-            - field_content
+            - field_hero_desc
             - field_lead
+            - field_search_result_text
+            - field_service_title
+            - field_text
+            - field_text_1
+            - field_text_for_screen_readers
             - title
       style:
         type: default
