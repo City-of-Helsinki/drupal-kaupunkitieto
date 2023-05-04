@@ -73,6 +73,7 @@ packages:
     drupal/facets: 2.0.6
     drupal/features: 3.12.0
     drupal/field_group: 3.4.0
+    drupal/file_delete: 2.0.0
     drupal/filelog: 2.1.1
     drupal/focal_point: 1.5.0
     drupal/gin: 3.0.0-beta5
