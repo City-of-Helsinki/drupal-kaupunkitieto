@@ -30,6 +30,10 @@
     display: flex;
     flex-wrap: wrap;
 
+    header {
+      width: 100%;
+    }
+
     .views-row {
       @include breakpoint($breakpoint-m ($breakpoint-l - 1px)) {
         width: calc(100% / 2 - #{$spacing-quarter} - #{$spacing-half});

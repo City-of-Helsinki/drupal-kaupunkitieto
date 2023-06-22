@@ -9,6 +9,11 @@ display:
             first: Ensimmäinen
             last: Viimeinen
       title: 'Uusimmat artikkelit'
+      header:
+        area:
+          content:
+            value: "<h2>Uusimmat artikkelit</h2>\r\n"
+            format: full_html
   recent:
     display_options:
       block_description: 'Uusimmat artikkelit'
