@@ -5,3 +5,16 @@ display:
         options:
           expose:
             items_per_page_label: 'Hakutulosta sivulla'
+          tags:
+            first: '« Ensimmäinen'
+            last: 'Viimeinen »'
+      exposed_form:
+        options:
+          submit_button: 'Hae uudelleen'
+      filters:
+        search_api_fulltext:
+          expose:
+            label: 'Hae sivuston sisällöstä'
+      header:
+        result:
+          content: '<h4>@total sivua</h4>'

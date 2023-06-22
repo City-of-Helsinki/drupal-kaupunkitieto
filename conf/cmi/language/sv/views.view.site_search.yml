@@ -1,0 +1,17 @@
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Resultat per sida'
+      exposed_form:
+        options:
+          submit_button: 'Sök igen'
+      filters:
+        search_api_fulltext:
+          expose:
+            label: 'Sök i webbplatsens innehåll'
+      header:
+        result:
+          content: '<h4>@total sidor</h4>'

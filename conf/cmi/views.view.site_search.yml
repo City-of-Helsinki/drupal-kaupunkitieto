@@ -582,7 +582,7 @@ display:
             last: 'Last »'
           expose:
             items_per_page: true
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Results per page'
             items_per_page_options: '8,16,32'
             items_per_page_options_all: false
             items_per_page_options_all_label: '- All -'
@@ -592,7 +592,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: 'Hae uudelleen'
+          submit_button: 'Start a new search'
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -637,7 +637,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: 'Hae sivuston sisällöstä'
+            label: 'Search the contents of this site'
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -701,7 +701,7 @@ display:
           admin_label: ''
           plugin_id: result
           empty: true
-          content: '<h4>@total sivua</h4>'
+          content: '<h4>@total pages</h4>'
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -731,7 +731,9 @@ display:
         cache: false
       exposed_block: false
       display_extenders:
-        metatag_display_extender: {  }
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
       path: haku
     cache_metadata:
       max-age: -1
