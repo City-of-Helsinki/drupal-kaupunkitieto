@@ -6,3 +6,8 @@ display:
           content:
             value: "<h2>Senaste artiklar</h2>\r\n"
             format: full_html
+      pager:
+        options:
+          tags:
+            next: Följande
+            previous: Föregående
