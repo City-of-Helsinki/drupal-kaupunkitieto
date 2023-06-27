@@ -17,7 +17,7 @@ provider: null
 plugin: 'facet_block:keywords'
 settings:
   id: 'facet_block:keywords'
-  label: 'Rajaa aiheen mukaan'
+  label: 'Filter by topic'
   label_display: visible
   provider: facets
   block_id: keywords

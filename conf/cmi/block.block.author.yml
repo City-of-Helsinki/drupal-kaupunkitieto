@@ -17,7 +17,7 @@ provider: null
 plugin: 'facet_block:author'
 settings:
   id: 'facet_block:author'
-  label: 'Rajaa kirjoittajan mukaan'
+  label: 'Filter by author'
   label_display: visible
   provider: facets
   block_id: author

@@ -1,6 +1,6 @@
 uuid: e2474224-1c7f-40d5-be2c-0c8d0e6f460b
 langcode: fi
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:basic_text:9eacc604-b550-4d5f-9367-3a281cf0db6f'
@@ -11,7 +11,7 @@ dependencies:
 id: customlanguagelinks
 theme: kaupunkitieto
 region: header_top
-weight: -9
+weight: -6
 provider: null
 plugin: 'block_content:9eacc604-b550-4d5f-9367-3a281cf0db6f'
 settings:
