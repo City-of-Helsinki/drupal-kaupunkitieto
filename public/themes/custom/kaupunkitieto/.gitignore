@@ -7,6 +7,3 @@ src/icons/hds
 
 # Other
 .DS_Store
-
-# Build files
-dist
