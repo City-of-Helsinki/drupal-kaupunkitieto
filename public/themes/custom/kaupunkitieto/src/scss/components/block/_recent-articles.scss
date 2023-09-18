@@ -38,7 +38,7 @@
       @include breakpoint($breakpoint-m ($breakpoint-l - 1px)) {
         width: calc(100% / 2 - #{$spacing-quarter} - #{$spacing-half});
 
-        &:not(:nth-child(2n+2)) {
+        &:not(:nth-child(2n+3)) {
           margin-right: $spacing-and-half;
         }
       }
@@ -46,7 +46,7 @@
       @include breakpoint($breakpoint-l) {
         width: calc(100% / 3 - #{$spacing});
 
-        &:not(:nth-child(3n+3)) {
+        &:not(:nth-child(3n+4)) {
           margin-right: $spacing-and-half;
         }
       }
