@@ -41,13 +41,6 @@ filters:
     weight: -49
     settings:
       filter_url_length: 120
-  token_filter:
-    id: token_filter
-    provider: token_filter
-    status: true
-    weight: -47
-    settings:
-      replace_empty: '1'
   media_embed:
     id: media_embed
     provider: media
@@ -94,3 +87,10 @@ filters:
     weight: -48
     settings:
       title: true
+  token_filter:
+    id: token_filter
+    provider: token_filter
+    status: true
+    weight: -47
+    settings:
+      replace_empty: '1'
