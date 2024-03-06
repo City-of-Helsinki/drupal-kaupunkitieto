@@ -16,6 +16,8 @@ public/sites/default/local.settings.php
 *.sql
 *.env.local
 
+public/modules/custom/helfi_*
+
 # Ignore OSX generated files
 ._*
 .DS_Store
