@@ -1,4 +1,4 @@
-uuid: null
+uuid: 56ce9470-ee47-4793-ae58-8372360ddd67
 langcode: fi
 status: true
 dependencies:
@@ -59,4 +59,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true
