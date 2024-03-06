@@ -20,6 +20,7 @@
         "drupal/hdbt_admin": "^1.8",
         "drupal/helfi_ahjo": "^1.0",
         "drupal/helfi_api_base": "^2.3",
+        "drupal/helfi_drupal_tools": "dev-drush-10",
         "drupal/helfi_hauki": "^1.0",
         "drupal/helfi_linkedevents": "^1.0",
         "drupal/helfi_platform_config": "^2.15",
@@ -93,7 +94,7 @@
             "public/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ],
-            "drush/{$name}": [
+            "drush/Commands/{$name}": [
                 "type:drupal-drush"
             ]
         },
