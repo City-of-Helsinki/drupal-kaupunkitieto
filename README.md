@@ -23,8 +23,8 @@ See `kaupunkitieto` theme's README for additional information about theme layer.
 Env | Branch | Drush alias | URL
 --- |--------| ----------- | ---
 local | *      | - | http://kaupunkitieto.docker.sh/
-dev | -|      |
-production   | main   | @site-aliases.eg4znbqjkciow.master | https://master-7rqtwti-eg4znbqjkciow.eu-5.platformsh.site/
+test   | -      |      | https://drupal-kaupunkitieto.test.hel.ninja/
+production   | main   | @site-aliases.eg4znbqjkciow.master | https://kaupunkitieto.hel.fi
 
 ## Requirements
 
