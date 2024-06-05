@@ -55,7 +55,8 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
-            "joachim-n/composer-manifest": true
+            "joachim-n/composer-manifest": true,
+            "php-http/discovery": true
         }
     },
     "extra": {
