@@ -1,5 +1,5 @@
 uuid: 3c823474-fea8-4ce0-99ce-4da4a52fdda1
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -14,5 +14,5 @@ _core:
 id: taxonomy_term.keywords
 target_entity_type_id: taxonomy_term
 target_bundle: keywords
-default_langcode: fi
+default_langcode: en
 language_alterable: true

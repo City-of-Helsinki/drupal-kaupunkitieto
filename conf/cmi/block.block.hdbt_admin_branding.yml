@@ -1,5 +1,5 @@
 uuid: 50f87e1b-ef2f-4948-8600-7ec83e1a1860
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
@@ -16,7 +16,7 @@ provider: null
 plugin: system_branding_block
 settings:
   id: system_branding_block
-  label: 'Sivuston brändäys'
+  label: 'Site branding'
   label_display: '0'
   provider: system
   use_site_logo: true
