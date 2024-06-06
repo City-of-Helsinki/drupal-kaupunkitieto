@@ -61,12 +61,6 @@ settings:
       embed:
         weight: 33
         enabled: false
-      gallery:
-        weight: 17
-        enabled: false
-      gallery_slide:
-        weight: 18
-        enabled: false
       hero:
         weight: -13
         enabled: false
