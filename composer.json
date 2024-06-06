@@ -19,8 +19,6 @@
         "drupal/helfi_ahjo": "^1.0",
         "drupal/helfi_api_base": "^2.3",
         "drupal/helfi_drupal_tools": "dev-drush-10",
-        "drupal/helfi_hauki": "^1.0",
-        "drupal/helfi_linkedevents": "^1.0",
         "drupal/helfi_platform_config": "^2.15",
         "drupal/helfi_tpr": "^2.1",
         "drupal/helfi_tunnistamo": "^2.2",
@@ -28,7 +26,6 @@
         "drupal/openid_connect": "^3.0",
         "drupal/stage_file_proxy": "^1.1",
         "drush/drush": "^10.4",
-        "joachim-n/composer-manifest": "^1.1",
         "platformsh/config-reader": "^2.4"
     },
     "require-dev": {
@@ -51,7 +48,6 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
-            "joachim-n/composer-manifest": true,
             "php-http/discovery": true
         }
     },
