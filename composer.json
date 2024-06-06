@@ -9,6 +9,7 @@
     "require": {
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.6.7",
+        "drupal/api_tools": "^1.0",
         "drupal/asset_injector": "^2.8",
         "drupal/core": "^9.5",
         "drupal/core-composer-scaffold": "^9.5",
