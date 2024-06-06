@@ -5,7 +5,6 @@ module:
   address: 0
   aet: 0
   allowed_formats: 0
-  api_tools: 0
   asset_injector: 0
   block: 0
   block_content: 0
