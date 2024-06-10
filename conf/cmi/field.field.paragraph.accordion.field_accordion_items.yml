@@ -2,6 +2,9 @@ uuid: a27633a5-936b-4f65-9b72-ccf59b455fc2
 langcode: en
 status: true
 dependencies:
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.accordion_item
   config:
     - field.storage.paragraph.field_accordion_items
     - paragraphs.paragraphs_type.accordion
