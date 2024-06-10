@@ -37,9 +37,17 @@ final class RemoveOrphanParagraphs extends DrushCommands {
   /**
    * Removes all orphaned infograph_row paragraphs.
    *
+   * @option limit
+   *   Limit the amount of orphaned paragraphs to remove in a single run.
+   * @option batch_size
+   *   How many orphaned paragraphs to remove in one batch run.
+   *
+   * @usage drush kaupunkitieto:remove-orphaned-paragraphs --limit=1000
+   *   Deletes 1000 orphaned paragraphs in a single run.
+   *
    * @command kaupunkitieto:remove-orphaned-paragraphs
    */
-  public function remove() : int {
+  public function remove(int $limit = 100000, int $batch_size = 100) : int {
 
     $entity_storage = $this->entityTypeManager->getStorage('paragraph');
 
@@ -58,7 +66,7 @@ final class RemoveOrphanParagraphs extends DrushCommands {
         ->notExists('parent_id')
         ->notExists('parent_type')
         ->notExists('parent_field_name')
-        ->range(0, 100000)
+        ->range(0, $limit)
         ->execute();
 
       $batch = (new BatchBuilder())
@@ -68,6 +76,7 @@ final class RemoveOrphanParagraphs extends DrushCommands {
         ->setErrorMessage($this->t('An error occurred during processing orphaned infograph_row paragraphs'))
         ->addOperation([$this, 'processBatch'], [
           $entity_ids,
+          $batch_size,
         ]);
 
       batch_set($batch->toArray());
@@ -84,15 +93,16 @@ final class RemoveOrphanParagraphs extends DrushCommands {
    */
   public function processBatch(
     array $entity_ids,
+    int $batch_size,
     &$context,
   ) : void {
-    $count = 100;
+
     // Check if the sandbox should be initialized.
     if (!isset($context['sandbox']['entities'])) {
       $context['sandbox']['entities'] = $entity_ids;
     }
 
-    $slice = array_slice($context['sandbox']['entities'], 0, $count, TRUE);
+    $slice = array_slice($context['sandbox']['entities'], 0, $batch_size, TRUE);
 
     try {
       $entities = $this->entityTypeManager
@@ -109,8 +119,8 @@ final class RemoveOrphanParagraphs extends DrushCommands {
         }
       }
 
-      $remaining = count($context['sandbox']['entities']) - $count >= 0
-        ? count($context['sandbox']['entities']) - $count
+      $remaining = count($context['sandbox']['entities']) - $batch_size >= 0
+        ? count($context['sandbox']['entities']) - $batch_size
         : count($context['sandbox']['entities']);
 
       $context['message'] = $this->t("@total orphaned infograph_row paragraphs remaining", [
