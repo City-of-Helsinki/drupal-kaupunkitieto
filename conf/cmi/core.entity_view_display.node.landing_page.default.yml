@@ -54,7 +54,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   links:
     settings: {  }
@@ -67,5 +67,6 @@ hidden:
   field_keywords: true
   field_liftup_image: true
   langcode: true
+  published_at: true
   search_api_excerpt: true
   toc_enabled: true
