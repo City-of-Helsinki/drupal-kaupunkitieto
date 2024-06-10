@@ -22,8 +22,16 @@ term_hierarchy: false
 use_site_title: false
 add_structured_data_json_ld: false
 capitalizator_mode: ucwords
-capitalizator_ignored_words: 'of and or de del y o a'
-capitalizator_forced_words: ''
+capitalizator_ignored_words:
+  - of
+  - and
+  - or
+  - de
+  - del
+  - 'y'
+  - o
+  - a
+capitalizator_forced_words: {  }
 capitalizator_forced_words_case_sensitivity: true
 capitalizator_forced_words_first_letter: false
 add_structured_data_jsonld: false
