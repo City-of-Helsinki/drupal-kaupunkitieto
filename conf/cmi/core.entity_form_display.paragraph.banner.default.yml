@@ -2,6 +2,9 @@ uuid: aa833fb3-de81-4e10-b7f1-b6874ad1d283
 langcode: en
 status: true
 dependencies:
+  enforced:
+    module:
+      - hdbt_admin_tools
   config:
     - field.field.paragraph.banner.field_banner_desc
     - field.field.paragraph.banner.field_banner_design
@@ -11,11 +14,8 @@ dependencies:
     - field.field.paragraph.banner.field_icon
     - paragraphs.paragraphs_type.banner
   module:
-    - hdbt_admin_editorial
-    - select2_icon
+    - hdbt_admin_tools
     - text
-_core:
-  default_config_hash: cUl5PG2elS-k5_0QkIjSKWmdrnqkv8IfEZC7PTqQWYc
 id: paragraph.banner.default
 targetEntityType: paragraph
 bundle: banner
@@ -36,13 +36,12 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_banner_link:
-    type: link_target_field_widget
+    type: link_target_icon_field_widget
     weight: 4
     region: content
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
-      link_target: ''
+      linkit_auto_link_text: false
+      linkit_profile: helfi
     third_party_settings: {  }
   field_banner_link_design:
     type: design_field_widget
@@ -59,7 +58,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_icon:
-    type: select2_icon_widget
+    type: select_icon_widget
     weight: 2
     region: content
     settings: {  }

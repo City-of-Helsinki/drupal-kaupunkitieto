@@ -2,6 +2,9 @@ uuid: e7314028-ba0c-4ade-8f8e-0ea20cb0ff4e
 langcode: en
 status: true
 dependencies:
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.contact_card
   module:
     - entity_reference_revisions
     - paragraphs
