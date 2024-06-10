@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Contains installation hooks for kaupunkitieto infograph module.
+ */
+
+/**
+ * UHF-9779: Remove gallery and gallery slide paragraphs.
+ */
+function kaupunkitieto_infograph_update_9001(): void {
+
+  // Remove gallery slide and gallery paragraphs as they've been removed from
+  // platform config support since 3.0.
+  foreach (['gallery_slide', 'gallery'] as $type) {
+    $paragraphs = \Drupal::entityTypeManager()
+      ->getStorage('paragraph')
+      ->loadByProperties(['type' => $type]);
+
+    if (empty($paragraphs)) {
+      continue;
+    }
+
+    foreach ($paragraphs as $paragraph) {
+      /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+      $paragraph->delete();
+    }
+  }
+}

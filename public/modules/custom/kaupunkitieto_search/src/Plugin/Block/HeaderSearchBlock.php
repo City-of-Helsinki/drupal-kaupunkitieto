@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\kaupunkitieto_search\Plugin\Block\HeaderSearchBlock.
- */
-
 declare(strict_types=1);
 
 namespace Drupal\kaupunkitieto_search\Plugin\Block;
