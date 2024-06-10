@@ -59,6 +59,11 @@ final class RemoveOrphanParagraphs extends DrushCommands {
       ->count()
       ->execute();
 
+    if ($orphaned_infographs === 0) {
+      $this->output()->writeln($this->t('No orphaned paragraphs found.'));
+      return DrushCommands::EXIT_SUCCESS;
+    }
+
     if ($orphaned_infographs > 0) {
       // Clean up orphaned paragraphs.
       $entity_ids = $entity_storage->getQuery()
@@ -69,9 +74,12 @@ final class RemoveOrphanParagraphs extends DrushCommands {
         ->range(0, $limit)
         ->execute();
 
+      $this->output()->writeln($this->t('Found @amount orphaned paragraphs. Starting to delete the next @limit orphaned paragraphs...', [
+        '@amount' => $orphaned_infographs,
+        '@limit' => $limit,
+      ]));
+
       $batch = (new BatchBuilder())
-        ->setTitle($this->t('Found @amount orphaned paragraphs. Deleting...', ['@amount' => $orphaned_infographs]))
-        ->setInitMessage($this->t('Starting to delete the orphaned infograph_row paragraphs'))
         ->setProgressMessage($this->t('Processed @current out of @total.'))
         ->setErrorMessage($this->t('An error occurred during processing orphaned infograph_row paragraphs'))
         ->addOperation([$this, 'processBatch'], [
