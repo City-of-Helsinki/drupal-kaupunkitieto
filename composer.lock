@@ -2955,8 +2955,9 @@
                 "shasum": "9327c3e71c6b1d83213c2bbc4f3e480daad3cdf0"
             },
             "require": {
-                "drupal/core": "^9.3 || ^10",
-                "mkalkbrenner/php-htmldiff-advanced": "~0.0.8"
+                "drupal/core": "^9.3 || ^10 || ^11",
+                "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
+                "php": "^8.1"
             },
             "require-dev": {
                 "jangregor/phpstan-prophecy": "dev-master",
@@ -4620,16 +4621,16 @@
         },
         {
             "name": "drupal/helfi_tpr",
-            "version": "2.3.6",
+            "version": "2.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr.git",
-                "reference": "44f69ad718b06aea6022fc9e66c4625525e056c4"
+                "reference": "b64f239e7b8379cbc97dfc28d35e8c3f2db80162"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/44f69ad718b06aea6022fc9e66c4625525e056c4",
-                "reference": "44f69ad718b06aea6022fc9e66c4625525e056c4",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/b64f239e7b8379cbc97dfc28d35e8c3f2db80162",
+                "reference": "b64f239e7b8379cbc97dfc28d35e8c3f2db80162",
                 "shasum": ""
             },
             "require": {
@@ -4641,7 +4642,7 @@
                 "php": "^8.0"
             },
             "conflict": {
-                "drupal/helfi_api_base": "<2.0"
+                "drupal/helfi_api_base": "<2.6.6"
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
@@ -4655,10 +4656,10 @@
             ],
             "description": "TPR integration",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/2.3.6",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/2.3.8",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/issues"
             },
-            "time": "2024-03-01T14:46:13+00:00"
+            "time": "2024-03-25T06:40:36+00:00"
         },
         {
             "name": "drupal/helfi_tunnistamo",
@@ -11163,7 +11164,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-iconv/tree/v1.29.0"
+                "source": "https://github.com/symfony/polyfill-iconv/tree/v1.27.0"
             },
             "funding": [
                 {
