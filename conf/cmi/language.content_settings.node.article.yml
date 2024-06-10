@@ -14,5 +14,5 @@ _core:
 id: node.article
 target_entity_type_id: node
 target_bundle: article
-default_langcode: en
+default_langcode: fi
 language_alterable: true
