@@ -1,4 +1,4 @@
-kaupunkitieto_infograph.settings_view::
+kaupunkitieto_infograph.settings_view:
   path: '/admin/config/kaupunkitieto_infograph'
   defaults:
     _form: '\Drupal\kaupunkitieto_infograph\Form\KaupunkiTietoSettingsForm'
