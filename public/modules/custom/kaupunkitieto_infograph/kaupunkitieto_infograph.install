@@ -29,6 +29,9 @@ function kaupunkitieto_infograph_update_9001(): void {
       $paragraph->delete();
     }
   }
+
+  // Rerun update for helfi_content_update_9033.
+  helfi_content_update_9033();
 }
 
 /**
