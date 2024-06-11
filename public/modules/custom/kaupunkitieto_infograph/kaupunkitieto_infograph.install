@@ -10,7 +10,6 @@ use Drupal\field\Entity\FieldStorageConfig;
 
 /**
  * UHF-9779: Remove gallery and gallery slide paragraphs.
- * @throws \Drupal\Core\Entity\EntityStorageException
  */
 function kaupunkitieto_infograph_update_9001(): void {
 
@@ -30,6 +29,12 @@ function kaupunkitieto_infograph_update_9001(): void {
       $paragraph->delete();
     }
   }
+}
+
+/**
+ * UHF-9779: Rerun paragraph updates.
+ */
+function kaupunkitieto_infograph_update_9002(): void {
 
   // Run the banner paragraph update again as it's needed
   // for the platform config v3 update.
