@@ -1,0 +1,5 @@
+name: 'Kaupunkitieto config'
+type: module
+core_version_requirement: ^9 || ^10
+dependencies:
+  - helfi_platform_config:helfi_platform_config

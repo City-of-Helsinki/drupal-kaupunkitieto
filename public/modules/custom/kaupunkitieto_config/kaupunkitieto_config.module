@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains alterations for config.
+ */
+
+declare(strict_types=1);
+
+use Drupal\config_rewrite\ConfigRewriterInterface;
+
+/**
+ * Implements hook_rewrite_config_update().
+ */
+function kaupunkitieto_config_rewrite_config_update(string $module, ConfigRewriterInterface $configRewriter): void {
+  $modules = [
+    'helfi_node_landing_page',
+    'helfi_node_page',
+  ];
+
+  if (in_array($module, $modules)) {
+    // Rewrite module configuration.
+    $configRewriter->rewriteModuleConfig('kaupunkitieto_config');
+  }
+}
