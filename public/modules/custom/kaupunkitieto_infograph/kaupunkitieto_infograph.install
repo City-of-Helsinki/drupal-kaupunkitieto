@@ -30,7 +30,15 @@ function kaupunkitieto_infograph_update_9001(): void {
     }
   }
 
-  // Rerun update for helfi_content_update_9033.
+  // Rerun updates helfi_content module.
+  \Drupal::moduleHandler()->loadInclude('helfi_content', 'install');
+
+  // This update will uninstall token_filter and aet modules as they were not
+  // properly uninstalled earlier.
+  helfi_content_update_9040();
+
+  // This update will create popular service and target group links paragraphs
+  // and adds it to landing page content. These were missing from the database.
   helfi_content_update_9033();
 }
 
