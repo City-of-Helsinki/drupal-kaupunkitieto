@@ -4,7 +4,7 @@ status: true
 dependencies:
   module:
     - paragraphs
-    - hdbt_admin_tools
+    - select2_icon
 id: paragraph.field_quick_links_item_icon
 field_name: field_quick_links_item_icon
 entity_type: paragraph
