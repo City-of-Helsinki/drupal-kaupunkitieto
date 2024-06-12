@@ -8,7 +8,7 @@ dependencies:
     - field.field.paragraph.quick_links.field_quick_links_title
     - paragraphs.paragraphs_type.quick_links
   module:
-    - hdbt_admin_tools
+    - hdbt_admin_editorial
     - paragraphs
 id: paragraph.quick_links.default
 targetEntityType: paragraph

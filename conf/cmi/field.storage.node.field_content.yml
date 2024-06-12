@@ -2,9 +2,6 @@ uuid: 1c859735-afbd-425c-abc9-829e156ab6ee
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - helfi_base_content
   module:
     - entity_reference_revisions
     - node

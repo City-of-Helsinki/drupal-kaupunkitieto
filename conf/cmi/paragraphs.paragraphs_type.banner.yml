@@ -1,12 +1,9 @@
 uuid: 6c6ea939-1925-4bd9-8b24-804c866cdbbe
 langcode: en
 status: true
-dependencies:
-  module:
-    - paragraphs_library
-third_party_settings:
-  paragraphs_library:
-    allow_library_conversion: true
+dependencies: {  }
+_core:
+  default_config_hash: zaZVGfy2puLJ985O9lxNqODW1qzpWSQ66LahLMxozow
 id: banner
 label: Banner
 icon_uuid: null

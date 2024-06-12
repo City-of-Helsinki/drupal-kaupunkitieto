@@ -1,12 +1,9 @@
 uuid: 22e80162-ef22-4258-8c05-0a82bc8c6e49
 langcode: en
 status: true
-dependencies:
-  module:
-    - paragraphs_library
-third_party_settings:
-  paragraphs_library:
-    allow_library_conversion: true
+dependencies: {  }
+_core:
+  default_config_hash: Nn_Zp4JFf_IEP4D-nySS6I0_Qe8-Ulyh67R4bIKx1zo
 id: text
 label: Text
 icon_uuid: null

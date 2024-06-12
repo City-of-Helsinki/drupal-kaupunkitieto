@@ -8,7 +8,8 @@ dependencies:
     - field.field.paragraph.quick_links_item.field_quick_links_item_link
     - paragraphs.paragraphs_type.quick_links_item
   module:
-    - hdbt_admin_tools
+    - hdbt_admin_editorial
+    - select2_icon
 id: paragraph.quick_links_item.default
 targetEntityType: paragraph
 bundle: quick_links_item
@@ -21,7 +22,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_quick_links_item_icon:
-    type: select_icon_widget
+    type: select2_icon_widget
     weight: 1
     region: content
     settings: {  }

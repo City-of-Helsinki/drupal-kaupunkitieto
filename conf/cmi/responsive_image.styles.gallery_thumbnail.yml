@@ -13,22 +13,22 @@ image_style_mappings:
   -
     image_mapping_type: image_style
     image_mapping: 1_1_thumbnail
-    breakpoint_id: helfi_image_styles.xs
+    breakpoint_id: hdbt.xs
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: 1_1_thumbnail_2x
-    breakpoint_id: helfi_image_styles.xs
+    breakpoint_id: hdbt.xs
     multiplier: 2x
   -
     image_mapping_type: image_style
     image_mapping: 1_1_thumbnail
-    breakpoint_id: helfi_image_styles.xxs
+    breakpoint_id: hdbt.xxs
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: 1_1_thumbnail_2x
-    breakpoint_id: helfi_image_styles.xxs
+    breakpoint_id: hdbt.xxs
     multiplier: 2x
-breakpoint_group: helfi_image_styles
+breakpoint_group: hdbt
 fallback_image_style: 1_1_thumbnail

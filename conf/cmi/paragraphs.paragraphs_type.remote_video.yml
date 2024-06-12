@@ -6,5 +6,5 @@ id: remote_video
 label: 'Remote video'
 icon_uuid: null
 icon_default: null
-description: 'Remote video paragraph that lets you add any video from video providers. Currently only YouTube.'
+description: ''
 behavior_plugins: {  }

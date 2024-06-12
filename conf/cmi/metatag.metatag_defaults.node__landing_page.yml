@@ -6,5 +6,4 @@ _core:
   default_config_hash: 4LnWqTxx8bp4ew1DS7XZOmhHzO_B-us0REW1efp3xRk
 id: node__landing_page
 label: 'Content: Landing page'
-tags:
-  description: '[node:field_hero:entity:field_hero_desc]'
+tags: {  }

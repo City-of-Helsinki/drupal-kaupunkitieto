@@ -2,9 +2,6 @@ uuid: f5a4273c-a12c-408d-9546-2498240d2dcb
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - paragraphs.paragraphs_type.phasing_item
   module:
     - entity_reference_revisions
     - paragraphs

@@ -34,7 +34,7 @@ settings:
         -
           name: Media
           items:
-            - quote
+            1: quote
         -
           name: Links
           items:
@@ -50,10 +50,17 @@ settings:
             - Paste
             - PasteFromWord
             - SpecialChar
-            - Table
-            - language_selector
             - Source
+            - language_selector
   plugins:
     drupallink:
-      linkit_enabled: true
-      linkit_profile: helfi
+      linkit_enabled: false
+      linkit_profile: ''
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

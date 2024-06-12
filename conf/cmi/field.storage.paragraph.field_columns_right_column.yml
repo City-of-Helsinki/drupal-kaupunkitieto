@@ -2,9 +2,6 @@ uuid: 2f46e4ee-c3a7-400d-9a86-1e0e362cb256
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - paragraphs.paragraphs_type.columns
   module:
     - entity_reference_revisions
     - paragraphs
@@ -18,7 +15,7 @@ settings:
   target_type: paragraph
 module: entity_reference_revisions
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

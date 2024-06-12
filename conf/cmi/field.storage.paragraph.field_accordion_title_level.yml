@@ -3,31 +3,16 @@ langcode: en
 status: true
 dependencies:
   module:
-    - options
     - paragraphs
 id: paragraph.field_accordion_title_level
 field_name: field_accordion_title_level
 entity_type: paragraph
-type: list_string
+type: string
 settings:
-  allowed_values:
-    -
-      value: '2'
-      label: h2
-    -
-      value: '3'
-      label: h3
-    -
-      value: '4'
-      label: h4
-    -
-      value: '5'
-      label: h5
-    -
-      value: '6'
-      label: h6
-  allowed_values_function: ''
-module: options
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

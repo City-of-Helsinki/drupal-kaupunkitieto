@@ -10,14 +10,14 @@ label: Helfi
 id: helfi
 description: 'A Linkit profile for Helfi.'
 matchers:
-  8ffea69f-853b-42d7-8171-80fbcb5a813c:
+  49b7eb26-ed0f-47be-8b6b-3c2ab7a70069:
     id: 'entity:node'
-    uuid: 8ffea69f-853b-42d7-8171-80fbcb5a813c
+    uuid: 49b7eb26-ed0f-47be-8b6b-3c2ab7a70069
     settings:
-      metadata: ''
+      metadata: 'by [node:author] | [node:created:medium]'
       bundles: {  }
       group_by_bundle: false
       substitution_type: canonical
-      limit: 20
+      limit: 100
       include_unpublished: false
     weight: 0

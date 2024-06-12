@@ -19,7 +19,7 @@ required: true
 translatable: false
 default_value:
   -
-    value: align-left
+    value: align-center
 default_value_callback: ''
 settings: {  }
 field_type: list_string

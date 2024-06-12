@@ -3,7 +3,7 @@ langcode: en
 status: false
 dependencies:
   module:
-    - hdbt_admin_tools
+    - hdbt_content
   theme:
     - kaupunkitieto
 _core:
@@ -18,5 +18,5 @@ settings:
   id: footer_top_block
   label: 'Footer top block'
   label_display: '0'
-  provider: hdbt_admin_tools
+  provider: hdbt_content
 visibility: {  }

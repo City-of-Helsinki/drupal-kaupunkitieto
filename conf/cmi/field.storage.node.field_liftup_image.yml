@@ -2,9 +2,6 @@ uuid: 1d4fdde5-8b54-4ad9-b93e-b54c2ca45240
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - helfi_base_content
   module:
     - media
     - node

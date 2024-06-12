@@ -2,9 +2,6 @@ uuid: 2193240e-21af-45f3-93e2-04e7201b79d5
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - helfi_base_content
   module:
     - node
 _core:

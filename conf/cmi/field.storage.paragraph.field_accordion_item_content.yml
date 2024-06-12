@@ -2,9 +2,6 @@ uuid: 7ffad352-6cba-4836-acfe-f574e792f527
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - paragraphs.paragraphs_type.accordion_item
   module:
     - entity_reference_revisions
     - paragraphs
