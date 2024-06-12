@@ -10,7 +10,6 @@ dependencies:
   module:
     - link
     - options
-    - select2_icon
 id: paragraph.quick_links_item.default
 targetEntityType: paragraph
 bundle: quick_links_item

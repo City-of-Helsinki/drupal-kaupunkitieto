@@ -9,7 +9,6 @@ dependencies:
     - paragraphs.paragraphs_type.quick_links_item
   module:
     - hdbt_admin_tools
-    - select2_icon
 id: paragraph.quick_links_item.default
 targetEntityType: paragraph
 bundle: quick_links_item
