@@ -31,7 +31,6 @@ module:
   entity: 0
   entity_reference_revisions: 0
   entity_usage: 0
-  external_entities: 0
   facets: 0
   features: 0
   field: 0
@@ -113,7 +112,6 @@ module:
   twig_tweak: 0
   update_helper: 0
   user: 0
-  view_unpublished: 0
   pathauto: 1
   content_translation: 10
   views: 10
