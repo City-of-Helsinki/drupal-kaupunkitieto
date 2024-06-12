@@ -9,35 +9,110 @@ use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
 
 /**
- * UHF-9779: Remove gallery and gallery slide paragraphs.
+ * UHF-9779: Rerun paragraph updates.
  */
-function kaupunkitieto_infograph_update_9001(): void {
+function kaupunkitieto_infograph_update_9002(): void {
 
-  // Remove gallery slide and gallery paragraphs as they've been removed from
-  // platform config support since 3.0.
-  foreach (['gallery_slide', 'gallery'] as $type) {
-    $paragraphs = \Drupal::entityTypeManager()
-      ->getStorage('paragraph')
-      ->loadByProperties(['type' => $type]);
+  // Run the banner paragraph update again as it's needed
+  // for the platform config v3 update.
+  \Drupal::moduleHandler()->loadInclude('helfi_paragraphs_banner', 'install');
+  helfi_paragraphs_banner_update_9001();
 
-    if (empty($paragraphs)) {
-      continue;
-    }
+  // Run the hero design paragraph update again as it's needed
+  // for the platform config v3 update.
+  \Drupal::moduleHandler()->loadInclude('helfi_paragraphs_hero', 'install');
+  helfi_paragraphs_hero_update_9003();
 
-    foreach ($paragraphs as $paragraph) {
-      /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
-      $paragraph->delete();
-    }
+  // For some reason a legacy field was added to the accordion paragraph type.
+  // Remove the field as it's not needed and replace it with the correct one.
+  _fix_accordion_title_level_field();
+}
+
+/**
+ * Fixes the accordion title level field.
+ *
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function _fix_accordion_title_level_field(): void {
+  $database = \Drupal::database();
+  $table = 'paragraph__field_accordion_heading_level';
+  $entity_type = 'paragraph';
+  $field_name = 'field_accordion_title_level';
+
+  $field_storage = FieldStorageConfig::loadByName($entity_type, $field_name);
+
+  if (is_null($field_storage)) {
+    return;
   }
 
-  // Rerun updates helfi_content module.
-  \Drupal::moduleHandler()->loadInclude('helfi_content', 'install');
+  $rows = NULL;
 
-  // This update will uninstall token_filter and aet modules as they were not
-  // properly uninstalled earlier.
-  helfi_content_update_9040();
+  // Load the old field table data to restore after the update is completed.
+  if ($database->schema()->tableExists($table)) {
+    $rows = $database->select($table, 'n')
+      ->fields('n')
+      ->execute()
+      ->fetchAll();
+  }
 
-  // This update will create popular service and target group links paragraphs
-  // and adds it to landing page content. These were missing from the database.
-  helfi_content_update_9033();
+  $new_fields = [];
+
+  // Use existing field config for new field.
+  foreach ($field_storage->getBundles() as $bundle => $label) {
+    $field = FieldConfig::loadByName($entity_type, $bundle, $field_name);
+    $new_field = $field->toArray();
+    $new_field['field_type'] = 'list_string';
+    $new_field['settings'] = [];
+    $new_field['default_value'][] = [
+      'value' => '2',
+    ];
+    $new_fields[] = $new_field;
+  }
+
+  // Deleting field storage which will also delete bundles(fields).
+  $new_field_storage = $field_storage->toArray();
+  $new_field_storage['type'] = 'list_string';
+  $new_field_storage['settings'] = [
+    'allowed_values' => [
+      '2' => 'h2',
+      '3' => 'h3',
+      '4' => 'h4',
+      '5' => 'h5',
+      '6' => 'h6',
+    ],
+    'allowed_values_function' => '',
+  ];
+
+  // Delete old field storage and fields + head
+  $field_storage->delete();
+  $heading_level_field_storage = FieldStorageConfig::loadByName($entity_type, 'field_accordion_heading_level');
+  $heading_level_field_storage->delete();
+
+
+  // Purge field data now to allow new field and field_storage with same name
+  // to be created. You may need to increase batch size.
+  field_purge_batch(10);
+
+  // Create new field storage.
+  $new_field_storage = FieldStorageConfig::create($new_field_storage);
+  $new_field_storage->save();
+
+  // Create new fields.
+  foreach ($new_fields as $new_field) {
+    $new_field = FieldConfig::create($new_field);
+    $new_field->save();
+  }
+
+  // Restore existing data in the same table.
+  if (!is_null($rows)) {
+    foreach ($rows as $row) {
+      $row->field_accordion_title_level_value = $row->field_accordion_heading_level_value;
+      unset($row->field_accordion_heading_level_value);
+      if ($database->schema()->tableExists('paragraph__field_accordion_title_level')) {
+        $database->insert('paragraph__field_accordion_title_level')
+          ->fields((array) $row)
+          ->execute();
+      }
+    }
+  }
 }
