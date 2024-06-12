@@ -12,16 +12,39 @@ use Drupal\field\Entity\FieldStorageConfig;
  * UHF-9779: Rerun paragraph updates.
  */
 function kaupunkitieto_infograph_update_9002(): void {
-  // Uninstall the log_stdout module.
   $module_installer = \Drupal::service('module_installer');
-  if (\Drupal::moduleHandler()->moduleExists('log_stdout')) {
-    $module_installer->uninstall(['log_stdout']);
+
+  $uninstalled_modules = [
+    'aet',
+    'config_update',
+    'features',
+    'hdbt_admin_editorial',
+    'hdbt_component_library',
+    'hdbt_content',
+    'hdbt_hyphenopoly',
+    'helfi_charts',
+    'helfi_contact_cards',
+    'helfi_content',
+    'helfi_events',
+    'helfi_example_content',
+    'helfi_gdpr_compliance',
+    'helfi_languages',
+    'select2_icon',
+    'token_filter',
+    'update_helper',
+  ];
+
+  foreach ($uninstalled_modules as $uninstalled_module) {
+    \Drupal::keyValue('system.schema')->delete($uninstalled_module);
   }
 
-  // Uninstall the token_filter module.
-  $module_installer = \Drupal::service('module_installer');
-  if (\Drupal::moduleHandler()->moduleExists('token_filter')) {
-    $module_installer->uninstall(['token_filter']);
+  // Before running the updates, clear the caches for modules.
+  \Drupal::service('extension.list.module')->reset();
+  \Drupal::moduleHandler()->invokeAll('rebuild');
+
+  // Uninstall the log_stdout module.
+  if (\Drupal::moduleHandler()->moduleExists('log_stdout')) {
+    $module_installer->uninstall(['log_stdout']);
   }
 
   // Create the minimal editor config.
