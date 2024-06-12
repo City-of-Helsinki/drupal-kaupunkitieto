@@ -2,6 +2,9 @@ config_rewrite: replace
 langcode: en
 status: true
 dependencies:
+  enforced:
+    module:
+      - helfi_base_content
   config:
     - field.field.paragraph.from_library.field_reusable_paragraph
     - paragraphs.paragraphs_type.from_library

@@ -12,16 +12,48 @@ use Drupal\field\Entity\FieldStorageConfig;
  * UHF-9779: Rerun paragraph updates.
  */
 function kaupunkitieto_infograph_update_9002(): void {
+  // Uninstall the log_stdout module.
+  $module_installer = \Drupal::service('module_installer');
+  if (\Drupal::moduleHandler()->moduleExists('log_stdout')) {
+    $module_installer->uninstall(['log_stdout']);
+  }
+
+  // Uninstall the token_filter module.
+  $module_installer = \Drupal::service('module_installer');
+  if (\Drupal::moduleHandler()->moduleExists('token_filter')) {
+    $module_installer->uninstall(['token_filter']);
+  }
+
+  // Create the minimal editor config.
+  $config = \Drupal::configFactory()->getEditable('editor.editor.minimal');
+  if (empty($config->getRawData())) {
+    $default = [
+      'editor' => 'ckeditor',
+      'format' => 'minimal',
+      'langcode' => 'en',
+      'status' => TRUE,
+    ];
+    $config->setData($default);
+    $config->save();
+    \Drupal::service('helfi_platform_config.config_update_helper')
+      ->update('helfi_ckeditor');
+  }
 
   // Run the banner paragraph update again as it's needed
   // for the platform config v3 update.
-  \Drupal::moduleHandler()->loadInclude('helfi_paragraphs_banner', 'install');
-  helfi_paragraphs_banner_update_9001();
+  if (!\Drupal::moduleHandler()->moduleExists('helfi_paragraphs_banner')) {
+    \Drupal::service('module_installer')->install(['helfi_paragraphs_banner']);
+    \Drupal::moduleHandler()->loadInclude('helfi_paragraphs_banner', 'install');
+    helfi_paragraphs_banner_update_9001();
+  }
 
   // Run the hero design paragraph update again as it's needed
   // for the platform config v3 update.
-  \Drupal::moduleHandler()->loadInclude('helfi_paragraphs_hero', 'install');
-  helfi_paragraphs_hero_update_9003();
+  if (!\Drupal::moduleHandler()->moduleExists('helfi_paragraphs_hero')) {
+    \Drupal::service('module_installer')->install(['helfi_paragraphs_hero']);
+    \Drupal::moduleHandler()->loadInclude('helfi_paragraphs_hero', 'install');
+    helfi_paragraphs_hero_update_9003();
+  }
 
   // For some reason a legacy field was added to the accordion paragraph type.
   // Remove the field as it's not needed and replace it with the correct one.
@@ -87,7 +119,6 @@ function _fix_accordion_title_level_field(): void {
   $field_storage->delete();
   $heading_level_field_storage = FieldStorageConfig::loadByName($entity_type, 'field_accordion_heading_level');
   $heading_level_field_storage->delete();
-
 
   // Purge field data now to allow new field and field_storage with same name
   // to be created. You may need to increase batch size.

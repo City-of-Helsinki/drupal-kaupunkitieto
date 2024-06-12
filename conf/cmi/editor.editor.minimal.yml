@@ -1,10 +1,11 @@
 langcode: en
 status: true
 dependencies:
-  config:
-    - filter.format.minimal
-  module:
-    - ckeditor
+  enforced:
+    module:
+      - ckeditor
+    config:
+      - filter.format.minimal
 format: minimal
 editor: ckeditor
 settings:
