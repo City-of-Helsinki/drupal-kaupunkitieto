@@ -66,4 +66,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_display_search_field: true
+  field_hero_bg_color: true
   status: true

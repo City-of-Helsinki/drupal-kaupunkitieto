@@ -1,3 +1,4 @@
+uuid: 0448848b-79cb-4fc8-bd92-4bd854e07818
 langcode: en
 status: true
 dependencies:
@@ -26,6 +27,11 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  list:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
     region: content
 hidden:
   search_api_excerpt: true

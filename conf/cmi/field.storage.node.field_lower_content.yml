@@ -1,13 +1,14 @@
+uuid: 4d2011c4-4b58-4d6f-a7b9-8aabd68e5a79
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - helfi_base_content
   module:
     - entity_reference_revisions
     - node
     - paragraphs
+  enforced:
+    module:
+      - helfi_base_content
 id: node.field_lower_content
 field_name: field_lower_content
 entity_type: node

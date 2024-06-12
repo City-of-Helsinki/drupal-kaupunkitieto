@@ -32,12 +32,14 @@ content:
     weight: 0
     region: content
 hidden:
+  field_author: true
   field_content: true
   field_has_hero: true
   field_hero: true
   field_lead_in: true
   field_lower_content: true
   field_metatags: true
+  field_search_result_text: true
   field_sidebar_content: true
   langcode: true
   links: true

@@ -2,9 +2,6 @@ uuid: aa833fb3-de81-4e10-b7f1-b6874ad1d283
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - hdbt_admin_tools
   config:
     - field.field.paragraph.banner.field_banner_desc
     - field.field.paragraph.banner.field_banner_design
@@ -40,8 +37,8 @@ content:
     weight: 4
     region: content
     settings:
-      linkit_auto_link_text: false
       linkit_profile: helfi
+      linkit_auto_link_text: false
     third_party_settings: {  }
   field_banner_link_design:
     type: design_field_widget

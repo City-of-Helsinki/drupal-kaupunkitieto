@@ -1,3 +1,4 @@
+uuid: bf5f5082-4501-43c1-a51e-af79bc521533
 langcode: en
 status: true
 dependencies:
@@ -41,4 +42,5 @@ hidden:
   field_announcement_unit_pages: true
   langcode: true
   published_at: true
+  search_api_excerpt: true
   toc_enabled: true

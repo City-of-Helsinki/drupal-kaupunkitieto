@@ -2,12 +2,12 @@ uuid: d14f0319-0001-481c-b821-6a143e766947
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - paragraphs.paragraphs_type.target_group_links
   module:
     - entity_reference_revisions
     - paragraphs
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.target_group_links
 id: paragraph.field_target_group_item
 field_name: field_target_group_item
 entity_type: paragraph

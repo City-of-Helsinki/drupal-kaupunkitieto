@@ -1,3 +1,4 @@
+uuid: c583dda9-57e1-4e2c-9ef4-800145ac6ece
 langcode: en
 status: true
 dependencies: {  }
@@ -5,8 +6,8 @@ id: helfi_hearings
 label: 'Helfi: Hearing'
 label_plural: 'Helfi: Hearing'
 description: 'Helfi hearings from hearing api.'
-generate_aliases: false
 read_only: true
+generate_aliases: false
 field_mapper_id: jsonpath
 field_mapper_config:
   field_mappings:

@@ -1,3 +1,4 @@
+uuid: 88196d78-8598-41a5-89f0-9c0fa9e2c749
 langcode: en
 status: true
 dependencies:
@@ -36,6 +37,22 @@ content:
     weight: 0
     region: content
   created_at:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  existing_translations:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  langcode:
     type: string
     label: hidden
     settings:
@@ -100,21 +117,6 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  langcode:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: { }
-    weight: 0
-    region: content
-  existing_translations:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: { }
-    weight: 0
-    region: content
 hidden:
   abstract: true
+  search_api_excerpt: true

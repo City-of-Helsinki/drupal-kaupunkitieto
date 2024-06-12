@@ -1,15 +1,13 @@
-config_rewrite: replace
+uuid: 0c3b6280-efd1-4237-8d8d-e9d435992ed9
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - helfi_base_content
   config:
     - field.field.paragraph.from_library.field_reusable_paragraph
     - paragraphs.paragraphs_type.from_library
   module:
     - select2
+    - helfi_base_content
 id: paragraph.from_library.default
 targetEntityType: paragraph
 bundle: from_library

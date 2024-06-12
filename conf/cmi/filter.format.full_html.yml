@@ -38,13 +38,6 @@ filters:
     weight: -49
     settings:
       filter_url_length: 120
-  linkit:
-    id: linkit
-    provider: linkit
-    status: true
-    weight: -48
-    settings:
-      title: true
   editor_file_reference:
     id: editor_file_reference
     provider: editor
@@ -75,6 +68,13 @@ filters:
     status: false
     weight: -40
     settings: {  }
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: -48
+    settings:
+      title: true
   helfi_link_converter:
     id: helfi_link_converter
     provider: helfi_api_base

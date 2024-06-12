@@ -2,12 +2,12 @@ uuid: e7269a79-354e-4109-b5dd-bd22cccb510f
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - paragraphs.paragraphs_type.accordion
   module:
     - entity_reference_revisions
     - paragraphs
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.accordion
 _core:
   default_config_hash: g_FpLSJDhwMM7MM43g4h68iakgCZmt38zt7aKTy65-o
 id: paragraph.field_accordion_items
