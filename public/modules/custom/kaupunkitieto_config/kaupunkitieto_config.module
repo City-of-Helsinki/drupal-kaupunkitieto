@@ -23,3 +23,11 @@ function kaupunkitieto_config_rewrite_config_update(string $module, ConfigRewrit
     $configRewriter->rewriteModuleConfig('kaupunkitieto_config');
   }
 }
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function kaupunkitieto_config_form_node_form_alter(array &$form) {
+  // Attach content liftup library to node forms.
+  $form['#attached']['library'][] = 'kaupunkitieto_config/admin-content-liftup';
+}
