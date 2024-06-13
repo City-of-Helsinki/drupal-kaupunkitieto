@@ -7,9 +7,9 @@ dependencies:
   module:
     - menu_block_current_language
   theme:
-    - kaupunkitieto
+    - hdbt_subtheme
 id: topbar
-theme: kaupunkitieto
+theme: hdbt_subtheme
 region: header_top
 weight: -8
 provider: null

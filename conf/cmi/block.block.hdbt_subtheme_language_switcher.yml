@@ -1,15 +1,15 @@
-uuid: 0a376eb1-c245-4239-be2f-fa8d3bbe765d
+uuid: 3645807e-94eb-4039-9602-ae57cdc3fe35
 langcode: en
 status: true
 dependencies:
   module:
     - language
   theme:
-    - hdbt
+    - hdbt_subtheme
 _core:
   default_config_hash: jDpKvB-ZNjf7l-dHk_CINYgToXHW1HAv6Yf9ZBphRYQ
-id: language_switcher
-theme: hdbt
+id: hdbt_subtheme_language_switcher
+theme: hdbt_subtheme
 region: header_branding
 weight: 0
 provider: null

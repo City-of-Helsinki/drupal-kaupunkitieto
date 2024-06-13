@@ -5,9 +5,9 @@ dependencies:
   module:
     - kaupunkitieto_search
   theme:
-    - kaupunkitieto
+    - hdbt_subtheme
 id: kaupunkitietoheadersearch
-theme: kaupunkitieto
+theme: hdbt_subtheme
 region: header_top
 weight: -7
 provider: null

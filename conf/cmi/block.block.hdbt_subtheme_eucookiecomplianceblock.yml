@@ -1,4 +1,4 @@
-uuid: c1789c7a-9077-42d8-9fcd-f39617d23e52
+uuid: ce13978c-4e75-45ce-8ac2-cd730586f1cf
 langcode: en
 status: true
 dependencies:
@@ -6,11 +6,11 @@ dependencies:
     - eu_cookie_compliance
     - system
   theme:
-    - hdbt
+    - hdbt_subtheme
 _core:
   default_config_hash: Ofp5Nv8E3DryORBw9DXtbN860LdYomjt-klGkC0fCHs
-id: eucookiecomplianceblock
-theme: hdbt
+id: hdbt_subtheme_eucookiecomplianceblock
+theme: hdbt_subtheme
 region: after_content
 weight: -10
 provider: null

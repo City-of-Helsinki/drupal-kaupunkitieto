@@ -8,9 +8,9 @@ dependencies:
     - block_content
     - system
   theme:
-    - kaupunkitieto
+    - hdbt_subtheme
 id: suorittamasihakuantoiseuraavattulokset
-theme: kaupunkitieto
+theme: hdbt_subtheme
 region: content
 weight: -8
 provider: null

@@ -1,15 +1,15 @@
-uuid: e5684635-d61d-41c7-9dc8-e5e6b7c29c69
+uuid: c3e4a0ed-54f2-403d-a4c0-5869763e78ca
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - hdbt
+    - hdbt_subtheme
 _core:
   default_config_hash: ZzdJcSkjBoQgZejw_QMj17rr48OGJ1nrMTff0Ll9Hhw
-id: sitebranding
-theme: hdbt
+id: hdbt_subtheme_sitebranding
+theme: hdbt_subtheme
 region: header_branding
 weight: 1
 provider: null

@@ -82,7 +82,6 @@ module:
   image_style_quality: 0
   imagecache_external: 0
   imagemagick: 0
-  kaupunkitieto_admin: 0
   kaupunkitieto_config: 0
   kaupunkitieto_infograph: 0
   kaupunkitieto_search: 0
@@ -142,11 +141,10 @@ module:
   minimal: 1000
   eu_cookie_compliance: 1001
 theme:
-  stark: 0
-  stable9: 0
   claro: 0
+  stable9: 0
   hdbt: 0
   gin: 0
   hdbt_admin: 0
-  kaupunkitieto: 0
+  hdbt_subtheme: 0
 profile: minimal
