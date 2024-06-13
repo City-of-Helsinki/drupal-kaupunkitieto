@@ -1,10 +1,10 @@
 .hero {
   &__search-box {
+    @include font('special.quote');
     max-width: 500px;
     margin: $spacing-double 0;
     padding-bottom: 10px;
     border-bottom: 2px solid currentColor;
-    // @include font-size(30px, $lineheight-l);
 
     form {
       display: flex;
@@ -36,12 +36,10 @@
   }
 
   &__search-submit {
+    @include pseudo-icon('search', $spacing-double, $color-white, flex);
     text-indent: -9999px;
     width: 50px;
     overflow: hidden;
     cursor: pointer;
-
-    //background: transparent url('../icons/hds/ui/search.svg') no-repeat;
-    filter: invert(100%) sepia(9%) saturate(273%) hue-rotate(303deg) brightness(117%) contrast(100%);
   }
 }

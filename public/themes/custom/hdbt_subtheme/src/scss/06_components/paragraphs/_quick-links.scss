@@ -47,16 +47,12 @@
 }
 
 .quick-links__title {
-  // @include font-size(24px);
+  @include font('h3');
   display: flex;
   font-weight: 700;
   margin-bottom: $spacing;
   margin-top: 0;
   width: 100%;
-
-  @include breakpoint($breakpoint-l) {
-    // @include font-size(24px);
-  }
 
   &__link {
     display: none;
@@ -140,7 +136,7 @@
   }
 
   .quick-links__item__title {
-    // @include font-size(16px);
+    @include font('button');
     color: $color-white;
     font-weight: 500;
   }
