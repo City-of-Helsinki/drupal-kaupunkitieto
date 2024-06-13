@@ -27,9 +27,8 @@
     }
 
     .article__author {
-      // @include font-size(16px, 24px);
+      @include font('small');
       color: $color-black;
-      font-weight: $font-weight-regular;
       margin-bottom: $spacing-quarter;
 
       &__label {

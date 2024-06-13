@@ -89,39 +89,20 @@ $item_spacing: $spacing-triple;
   }
 
   .content-liftup__item__title {
-    // @include font-size(18px);
-    font-weight: 500;
-    --line-height: 1.1666666667;
+    @include font('h4');
     margin: 0 0 $spacing-double;
-
-    @include breakpoint($breakpoint-m) {
-      // @include font-size(20px);
-    }
-    @include breakpoint($breakpoint-l) {
-      // @include font-size(24px);
-    }
   }
   .content-liftup__item__meta {
-    // @include font-size(16px);
-    font-weight: 400;
+    @include font('small');
     text-transform: uppercase;
-
-    @include breakpoint($breakpoint-m) {
-      // @include font-size(18px);
-    }
     @include breakpoint($breakpoint-l) {
-      // @include font-size(20px);
+      @include font('body');
     }
   }
-
 }
 
 .content-liftup__title {
   @include font('h2');
   margin-top: 0;
   width: 100%;
-
-  @include breakpoint($breakpoint-l) {
-    // @include font-size(48px);
-  }
 }

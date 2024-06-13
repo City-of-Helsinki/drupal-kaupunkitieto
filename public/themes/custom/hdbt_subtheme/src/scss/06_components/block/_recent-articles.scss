@@ -1,58 +1,28 @@
-#block-views-block-article-recent {
-  margin-top: $spacing;
-  padding: 0 $spacing;
-
-  @include breakpoint($breakpoint-m) {
-    padding: 0 $spacing * 2;
-  }
-
-  //> h2,
-  //> div {
-  //  margin: 0 auto;
-  //  max-width: 1264px;
-  //}
-
-  //h2 {
-  //  // @include font-size(36px, 64px);
-  //  font-weight: 400;
-  //  margin-bottom: $spacing;
-  //
-  //  @include breakpoint($breakpoint-l) {
-  //    // @include font-size(48px, 64px);
-  //  }
-  //
-  //}
-}
-
 .views--article.views--recent {
+  display: flex;
+  flex-wrap: wrap;
 
-  @include breakpoint($breakpoint-s) {
-    display: flex;
-    flex-wrap: wrap;
+  header {
+    width: 100%;
+  }
 
-    header {
-      width: 100%;
+  .views-row {
+    @include breakpoint($breakpoint-m ($breakpoint-l - 1px)) {
+      width: calc(100% / 2 - #{$spacing-quarter} - #{$spacing-half});
+
+      &:not(:nth-child(2n+3)) {
+        margin-right: $spacing-and-half;
+      }
     }
 
-    .views-row {
-      @include breakpoint($breakpoint-m ($breakpoint-l - 1px)) {
-        width: calc(100% / 2 - #{$spacing-quarter} - #{$spacing-half});
+    @include breakpoint($breakpoint-l) {
+      width: calc(100% / 3 - #{$spacing});
 
-        &:not(:nth-child(2n+3)) {
-          margin-right: $spacing-and-half;
-        }
-      }
-
-      @include breakpoint($breakpoint-l) {
-        width: calc(100% / 3 - #{$spacing});
-
-        &:not(:nth-child(3n+4)) {
-          margin-right: $spacing-and-half;
-        }
+      &:not(:nth-child(3n+4)) {
+        margin-right: $spacing-and-half;
       }
     }
   }
-
 
   .views-field {
     margin-bottom: 8px;
@@ -67,8 +37,8 @@
   .views-field-field-liftup-image {
     img {
       display: block;
-      max-width: 100%;
       height: auto !important;
+      max-width: 100%;
     }
   }
 
@@ -77,25 +47,25 @@
     margin-right: 4px;
   }
 
-  .views-field-field-author-1 {
+  .views-field-field-author-1 {
     display: inline-block;
   }
 
-  .views-field-field-keywords{
+  .views-field-field-keywords {
     ul {
+      list-style: none;
       margin: 0;
       padding: 0;
-      list-style: none;
     }
 
     li {
-      display: inline-block;
+      @include font('small');
       background: $color-black;
       border-radius: $spacing;
-      padding: 0 $spacing;
-      margin-right: $spacing-half;
+      display: inline-block;
       margin-bottom: $spacing-half;
-      @include font('small');
+      margin-right: $spacing-half;
+      padding: 0 $spacing;
 
       a {
         color: $color-white;

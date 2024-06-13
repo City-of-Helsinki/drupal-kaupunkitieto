@@ -6,27 +6,29 @@ $infograph-light-green: #e1eadc;
   text-align: left;
 
   .infograph__value {
-    // @include font-size(55px, 56px);
+    font-size: remify(55px);
 
     @include breakpoint($breakpoint-m ($breakpoint-l - 1)) {
-      // @include font-size(110px, 112px);
+      font-size: remify(110px);
     }
 
     @include breakpoint($breakpoint-m) {
-      // @include font-size(220px, 224px);
+      font-size: remify(220px);
     }
   }
 }
 
 %small-row {
   .infograph__value {
-    // @include font-size(32px, 36px);
+    font-size: remify(32px);
 
     @include breakpoint($breakpoint-m ($breakpoint-l - 1)) {
+      font-size: remify(54px);
       // @include font-size(54px, 58px);
     }
 
     @include breakpoint($breakpoint-m) {
+      font-size: remify(65px);
       // @include font-size(65px, 65px);
     }
   }
@@ -36,13 +38,16 @@ $infograph-light-green: #e1eadc;
   flex: 1 0 44%;
 
   .infograph__value {
+    font-size: remify(32px);
     // @include font-size(32px, 36px);
 
     @include breakpoint($breakpoint-m ($breakpoint-l - 1)) {
+      font-size: remify(58px);
       // @include font-size(58px, 60px);
     }
 
     @include breakpoint($breakpoint-m) {
+      font-size: remify(110px);
       // @include font-size(110px, 116px);
     }
   }
@@ -52,13 +57,16 @@ $infograph-light-green: #e1eadc;
   flex-basis: 44%;
 
   .infograph__value {
+    font-size: remify(32px);
     // @include font-size(32px, 36px);
 
     @include breakpoint($breakpoint-m ($breakpoint-l - 1)) {
+      font-size: remify(65px);
       // @include font-size(65px, 72px);
     }
 
     @include breakpoint($breakpoint-m) {
+      font-size: remify(180px);
       // @include font-size(180px, 185px);
     }
   }

@@ -32,9 +32,8 @@
     }
 
     h2 {
-      // @include font-size(16px, 24px);
+      @include font('small');
       margin: 4px 0;
-      font-weight: $font-weight-medium;
     }
   }
 }
