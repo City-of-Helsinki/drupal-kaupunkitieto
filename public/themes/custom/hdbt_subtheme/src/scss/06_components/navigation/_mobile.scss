@@ -1,0 +1,118 @@
+#menu-hamburger {
+  margin-right: $spacing;
+
+  @include breakpoint($breakpoint-l) {
+    display: none;
+  }
+
+  .icon {
+    background-color: $color-black;
+    background-size: contain;
+    content: "";
+    display: flex;
+    //mask-image: url('../icons/hds/ui/menu-hamburger.svg');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 28px;
+    width: 24px;
+  }
+
+}
+
+.header-bottom .menu {
+
+  // Mobile styles for main menu.
+  @include breakpoint(0 ($breakpoint-l - 1)) {
+
+    .menu--level-1 {
+      border-left: 0;
+      border-right: 0;
+    }
+
+    &#menu--level-0 {
+      border-bottom: 1px solid $color-black-5;
+      padding: $spacing-half 0;
+
+      &.menu--open {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .menu__item {
+        margin: 0 $spacing;
+
+        &--open {
+          > .menu {
+            border: none;
+            display: flex;
+            flex-direction: column;
+            left: auto;
+            position: relative;
+            width: auto;
+          }
+        }
+
+        &.menu__item--open,
+        &.menu__item--hover,
+        &.menu__item--active-trail {
+          > .menu__link-wrapper {
+            > a {
+              &:before {
+                height: 100%;
+                right: auto;
+                width: 4px;
+              }
+            }
+          }
+        }
+
+      }
+
+      .menu__link-wrapper {
+        margin-bottom: $spacing-quarter;
+
+        a {
+          padding: $spacing-half $spacing;
+
+          &:focus {
+            &:after {
+              left: $spacing-half;
+            }
+          }
+
+          &:before {
+            right: auto;
+          }
+
+          &:hover {
+            &:before {
+              height: 100%;
+              width: 4px;
+            }
+          }
+
+        }
+      }
+
+    }
+
+    &#menu--level-1 {
+      padding: 0 $spacing-half;
+      .menu__item {
+        max-width: none;
+        width: auto;
+      }
+
+      .menu__link-wrapper {
+        a {
+          padding: $spacing-half $spacing;
+        }
+      }
+    }
+
+    &#menu--level-2 {
+      padding: 0 $spacing-half;
+    }
+
+  }
+}

@@ -1,0 +1,19 @@
+.header-top {
+  @include font('small');
+  padding: 6px;
+  align-items: center;
+  background-color: $color-white;
+  border-bottom: 1px solid $color-black-5;
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  @include breakpoint($breakpoint-m) {
+    gap: 50px;
+    padding: 14px $spacing-and-half; // Specific pixel size for top and bottom padding from layout.
+  }
+
+  @include breakpoint($breakpoint-l) {
+    background-color: $color-black-5;
+  }
+
+}
