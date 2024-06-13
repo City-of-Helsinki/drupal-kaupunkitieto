@@ -4,13 +4,12 @@ status: true
 dependencies:
   module:
     - helfi_platform_config
-    - system
   theme:
     - hdbt_subtheme
 id: hdbt_subtheme_reactandshare
 theme: hdbt_subtheme
 region: after_content
-weight: -9
+weight: -8
 provider: null
 plugin: react_and_share
 settings:

@@ -12,7 +12,7 @@ dependencies:
 id: views_block__article_recent
 theme: hdbt_subtheme
 region: after_content
-weight: -6
+weight: -9
 provider: null
 plugin: 'views_block:article-recent'
 settings:

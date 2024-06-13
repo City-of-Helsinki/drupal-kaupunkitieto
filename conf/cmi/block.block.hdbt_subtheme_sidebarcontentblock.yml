@@ -3,8 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - hdbt_admin_tools
-    - node
+    - helfi_platform_config
   theme:
     - hdbt_subtheme
 id: hdbt_subtheme_sidebarcontentblock

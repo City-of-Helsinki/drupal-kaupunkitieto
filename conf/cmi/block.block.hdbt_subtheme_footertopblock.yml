@@ -2,8 +2,6 @@ uuid: b96e2d9b-3353-4f8c-9d33-348f908a26b7
 langcode: en
 status: false
 dependencies:
-  module:
-    - hdbt_admin_tools
   theme:
     - hdbt_subtheme
 _core:
