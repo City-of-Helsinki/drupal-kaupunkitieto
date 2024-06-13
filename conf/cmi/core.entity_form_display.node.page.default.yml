@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.page.field_author
     - field.field.node.page.field_content
     - field.field.node.page.field_has_hero
     - field.field.node.page.field_hero
@@ -10,6 +11,7 @@ dependencies:
     - field.field.node.page.field_liftup_image
     - field.field.node.page.field_lower_content
     - field.field.node.page.field_metatags
+    - field.field.node.page.field_search_result_text
     - field.field.node.page.field_sidebar_content
     - node.type.page
   module:
@@ -20,6 +22,8 @@ dependencies:
     - path
     - publication_date
     - scheduler
+_core:
+  default_config_hash: _RX52hwdyz48o4MBqyRPUVkop-Unt1rcPuPanpQ7ksk
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -90,24 +94,6 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
-  field_author:
-    type: entity_reference_autocomplete
-    weight: 52
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_search_result_text:
-    type: string_textarea
-    weight: 53
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
     third_party_settings: {  }
   field_lower_content:
     type: paragraphs
@@ -251,5 +237,23 @@ content:
     weight: 19
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_author:
+    type: entity_reference_autocomplete
+    weight: 52
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_search_result_text:
+    type: string_textarea
+    weight: 53
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
 hidden: {  }

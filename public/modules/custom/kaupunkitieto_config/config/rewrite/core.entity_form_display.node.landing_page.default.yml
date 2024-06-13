@@ -1,5 +1,5 @@
 config_rewrite:
-  replace: ['dependencies']
+  replace: ['dependencies', 'hidden']
 dependencies:
   config:
     - field.field.node.landing_page.field_author
@@ -47,3 +47,5 @@ content:
       match_operator: CONTAINS
       match_limit: 10
     third_party_settings: {  }
+hidden:
+  hide_sidebar_navigation: true
