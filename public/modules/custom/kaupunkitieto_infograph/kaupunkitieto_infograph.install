@@ -5,11 +5,6 @@
  * Contains installation hooks for kaupunkitieto infograph module.
  */
 
-use Drupal\field\Entity\FieldConfig;
-use Drupal\field\Entity\FieldStorageConfig;
-use Drupal\paragraphs\Entity\Paragraph;
-use Drupal\paragraphs\ParagraphInterface;
-
 /**
  * UHF-9779: Rerun paragraph updates.
  */
@@ -20,7 +15,7 @@ function kaupunkitieto_infograph_update_9002(): void {
     ->getEditable('filter.format.full_html');
   $raw_data = $full_format->getRawData();
 
-  if (($key = array_search('token_filter', $raw_data['dependencies']['module'])) !== false) {
+  if (($key = array_search('token_filter', $raw_data['dependencies']['module'])) !== FALSE) {
     unset($raw_data['dependencies']['module'][$key]);
   }
 
@@ -31,7 +26,7 @@ function kaupunkitieto_infograph_update_9002(): void {
   $full_format->save();
 
   // Properly remove the listed modules.
-  /** @var  $module_installer \Drupal\Core\Extension\ModuleInstallerInterface $*/
+  /** @var \Drupal\Core\Extension\ModuleInstallerInterface $module_installer */
   $module_installer = \Drupal::service('module_installer');
 
   // Uninstall the log_stdout module.
