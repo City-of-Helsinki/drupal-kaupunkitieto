@@ -34,7 +34,7 @@ settings:
         weight: 11
         enabled: false
       accordion_item:
-        weight: 13
+        weight: 0
         enabled: true
       columns:
         weight: 12

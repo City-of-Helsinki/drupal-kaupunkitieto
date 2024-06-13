@@ -31,6 +31,7 @@ module:
   entity_reference_revisions: 0
   entity_usage: 0
   external_entities: 0
+  external_entities_pathauto: 0
   facets: 0
   field: 0
   field_group: 0
@@ -45,6 +46,7 @@ module:
   helfi_base_content: 0
   helfi_ckeditor: 0
   helfi_eu_cookie_compliance: 0
+  helfi_global_announcement: 0
   helfi_image_styles: 0
   helfi_media: 0
   helfi_media_chart: 0
@@ -81,6 +83,7 @@ module:
   imagecache_external: 0
   imagemagick: 0
   kaupunkitieto_admin: 0
+  kaupunkitieto_config: 0
   kaupunkitieto_infograph: 0
   kaupunkitieto_search: 0
   language: 0

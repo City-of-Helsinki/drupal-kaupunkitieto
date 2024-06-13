@@ -2,6 +2,8 @@ uuid: 51f0498b-1811-447d-ba92-506ad2a27045
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: rsRMvfjE4RJRH-cspbt6Ronen4Pdm0voQF6QiZaoNA0
 id: target_group_links
 label: 'Target group links'
 icon_uuid: null

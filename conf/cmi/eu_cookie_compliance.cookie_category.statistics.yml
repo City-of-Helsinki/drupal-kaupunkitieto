@@ -2,6 +2,8 @@ uuid: 9bfc00c0-6f18-4530-beff-a56491ce7160
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: KE94aKL1mb_W5FdLIATbr09dWpldobitqdVQlR_gjYU
 id: statistics
 label: Statistics
 description:

@@ -6,17 +6,26 @@ dependencies:
     - field.storage.node.field_content
     - node.type.landing_page
     - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.chart
     - paragraphs.paragraphs_type.columns
     - paragraphs.paragraphs_type.content_cards
     - paragraphs.paragraphs_type.content_liftup
     - paragraphs.paragraphs_type.embed
+    - paragraphs.paragraphs_type.event_list
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.hearings
     - paragraphs.paragraphs_type.infograph
     - paragraphs.paragraphs_type.liftup_with_image
     - paragraphs.paragraphs_type.list_of_links
+    - paragraphs.paragraphs_type.map
+    - paragraphs.paragraphs_type.phasing
+    - paragraphs.paragraphs_type.popular_services
+    - paragraphs.paragraphs_type.remote_video
+    - paragraphs.paragraphs_type.target_group_links
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: VuuTI6N8J827CZsvm_RrLmPzFcwY5kjDh9oF94YecsI
+  default_config_hash: zEXoDFJnyArUOiL2ZrtDuq4YDWKyn6ung9JndPk_Ntg
 id: node.landing_page.field_content
 field_name: field_content
 entity_type: node
@@ -32,98 +41,73 @@ settings:
   handler_settings:
     target_bundles:
       columns: columns
-      banner: banner
       list_of_links: list_of_links
-      liftup_with_image: liftup_with_image
       content_cards: content_cards
       content_liftup: content_liftup
-      embed: embed
-      infograph: infograph
+      banner: banner
+      liftup_with_image: liftup_with_image
+      from_library: from_library
+      chart: chart
+      remote_video: remote_video
+      map: map
       event_list: event_list
       phasing: phasing
       popular_services: popular_services
       target_group_links: target_group_links
+      hearings: hearings
+      infograph: infograph
+      embed: embed
     negate: 0
     target_bundles_drag_drop:
-      accordion:
-        weight: -25
-        enabled: false
-      accordion_item:
-        weight: -24
-        enabled: false
       banner:
-        weight: -30
+        weight: 0
+        enabled: true
+      chart:
+        weight: 0
         enabled: true
       columns:
-        weight: -31
+        weight: 0
         enabled: true
       content_cards:
-        weight: -27
+        weight: 0
         enabled: true
       content_liftup:
-        weight: -26
+        weight: 0
         enabled: true
-      content_liftup_item:
-        weight: -17
-        enabled: false
-      content_menu:
-        weight: 30
-        enabled: false
-      content_menu_item:
-        weight: 31
-        enabled: false
       embed:
-        weight: 32
+        weight: 16
         enabled: true
       event_list:
-        weight: 30
+        weight: 0
         enabled: true
-      hero:
-        weight: -21
-        enabled: false
-      image:
-        weight: -20
-        enabled: false
+      from_library:
+        weight: 0
+        enabled: true
+      hearings:
+        weight: 0
+        enabled: true
       infograph:
-        weight: 37
+        weight: 15
         enabled: true
-      infograph_group:
-        weight: 39
-        enabled: false
-      infograph_row:
-        weight: 38
-        enabled: false
       liftup_with_image:
-        weight: -28
+        weight: 0
         enabled: true
       list_of_links:
-        weight: -29
+        weight: 0
         enabled: true
-      list_of_links_item:
-        weight: -19
-        enabled: false
+      map:
+        weight: 0
+        enabled: true
       phasing:
-        weight: 50
+        weight: 0
         enabled: true
-      phasing_item:
-        weight: 30
-        enabled: false
       popular_services:
-        weight: 42
+        weight: 0
         enabled: true
-      quick_links:
-        weight: 42
-        enabled: false
-      quick_links_item:
-        weight: 43
-        enabled: false
-      target_group_link_item:
-        weight: 45
-        enabled: false
+      remote_video:
+        weight: 0
+        enabled: true
       target_group_links:
-        weight: 24
+        weight: 0
         enabled: true
-      text:
-        weight: -18
-        enabled: false
 field_type: entity_reference_revisions

@@ -65,13 +65,13 @@ settings:
         weight: -13
         enabled: false
       image:
-        weight: -12
+        weight: 0
         enabled: true
       infograph:
         weight: 38
         enabled: false
       infograph_group:
-        weight: 39
+        weight: 3
         enabled: true
       infograph_row:
         weight: 40
@@ -92,6 +92,6 @@ settings:
         weight: 18
         enabled: false
       text:
-        weight: -11
+        weight: 0
         enabled: true
 field_type: entity_reference_revisions

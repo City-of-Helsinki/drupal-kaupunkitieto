@@ -2,13 +2,11 @@ uuid: 69d9246f-ea98-4e2c-a92a-40c98cecd41b
 langcode: en
 status: true
 dependencies:
-  enforced:
-    config:
-      - paragraphs.paragraphs_type.accordion_item
   config:
     - field.field.paragraph.accordion_item.field_accordion_item_content
     - field.field.paragraph.accordion_item.field_accordion_item_heading
     - field.field.paragraph.accordion_item.field_icon
+    - paragraphs.paragraphs_type.accordion_item
   module:
     - paragraphs
     - hdbt_admin_tools
