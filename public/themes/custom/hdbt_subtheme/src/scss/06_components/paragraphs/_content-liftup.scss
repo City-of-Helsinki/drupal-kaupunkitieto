@@ -1,6 +1,5 @@
 $item_spacing: $spacing-triple;
 
-
 .content-liftup {
   background: $color-silver-light;
   border: 0;
@@ -15,8 +14,6 @@ $item_spacing: $spacing-triple;
     bottom: 0;
   }
 }
-
-
 
 .content-liftup__content {
   display: flex;
@@ -49,7 +46,6 @@ $item_spacing: $spacing-triple;
     margin-top: $spacing-double;
   }
 }
-
 
 .content-liftup__item {
   margin-bottom: $spacing-double;

@@ -56,7 +56,7 @@
     width: 100%;
     margin-bottom: $spacing * 2;
 
-    @include breakpoint($breakpoint-m ($breakpoint-l - 1)) {
+    @include breakpoint($breakpoint-m) {
       width: 48%;
       margin-left: 4%;
 
@@ -65,7 +65,7 @@
       }
     }
 
-    @include breakpoint($breakpoint-m) {
+    @include breakpoint($breakpoint-l) {
       width: 24%;
       margin-left: 1.33%;
 
@@ -106,19 +106,21 @@
 
   .views-field-field-keywords{
     ul {
-      margin: 0;
-      padding: 0;
       list-style: none;
+      margin: $spacing 0 0 0;
+      padding: 0;
     }
 
     li {
-      display: inline-block;
       background: $color-black;
       border-radius: $spacing;
-      padding: 0 $spacing;
-      margin-right: $spacing-half;
+      display: inline-block;
+      font-size: remify(14px);
+      line-height: 2.2;
+      margin-top: 0;
       margin-bottom: $spacing-half;
-      @include font('small');
+      margin-right: $spacing-half;
+      padding: 0 $spacing;
 
       a {
         color: $color-white;

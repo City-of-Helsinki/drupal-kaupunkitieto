@@ -7,12 +7,13 @@ $infograph-light-green: #e1eadc;
 
   .infograph__value {
     font-size: remify(55px);
+    line-height: 1.01;
 
-    @include breakpoint($breakpoint-m ($breakpoint-l - 1)) {
+    @include breakpoint($breakpoint-m) {
       font-size: remify(110px);
     }
 
-    @include breakpoint($breakpoint-m) {
+    @include breakpoint($breakpoint-l) {
       font-size: remify(220px);
     }
   }
@@ -21,15 +22,16 @@ $infograph-light-green: #e1eadc;
 %small-row {
   .infograph__value {
     font-size: remify(32px);
-
-    @include breakpoint($breakpoint-m ($breakpoint-l - 1)) {
-      font-size: remify(54px);
-      // @include font-size(54px, 58px);
-    }
+    line-height: 1.125;
 
     @include breakpoint($breakpoint-m) {
+      font-size: remify(54px);
+      line-height: 1.08;
+    }
+
+    @include breakpoint($breakpoint-l) {
       font-size: remify(65px);
-      // @include font-size(65px, 65px);
+      line-height: 1;
     }
   }
 }
@@ -39,16 +41,16 @@ $infograph-light-green: #e1eadc;
 
   .infograph__value {
     font-size: remify(32px);
-    // @include font-size(32px, 36px);
-
-    @include breakpoint($breakpoint-m ($breakpoint-l - 1)) {
-      font-size: remify(58px);
-      // @include font-size(58px, 60px);
-    }
+    line-height: 1.125;
 
     @include breakpoint($breakpoint-m) {
+      font-size: remify(58px);
+      line-height: 1.03;
+    }
+
+    @include breakpoint($breakpoint-l) {
       font-size: remify(110px);
-      // @include font-size(110px, 116px);
+      line-height: 1.05;
     }
   }
 }
@@ -58,16 +60,16 @@ $infograph-light-green: #e1eadc;
 
   .infograph__value {
     font-size: remify(32px);
-    // @include font-size(32px, 36px);
-
-    @include breakpoint($breakpoint-m ($breakpoint-l - 1)) {
-      font-size: remify(65px);
-      // @include font-size(65px, 72px);
-    }
+    line-height: 1.125;
 
     @include breakpoint($breakpoint-m) {
+      font-size: remify(65px);
+      line-height: 1.11;
+    }
+
+    @include breakpoint($breakpoint-l) {
       font-size: remify(180px);
-      // @include font-size(180px, 185px);
+      line-height: 1.03;
     }
   }
 }
@@ -120,7 +122,7 @@ $infograph-light-green: #e1eadc;
   background-color: $infograph-light-green;
   color: $color-tram;
 
-  a {
+  a {
     color: $color-tram;
   }
 }
@@ -158,10 +160,13 @@ $infograph-light-green: #e1eadc;
   &__label {
     // @include font-size(22px, 24px);
     color: $color-black;
+    font-size: remify(22px);
+    line-height: 1.1;
     margin-bottom: 1rem;
 
     @include breakpoint($breakpoint-m) {
-      // @include font-size(26px, 30px);
+      font-size: remify(26px);
+      line-height: 1.15;
     }
   }
 
@@ -293,13 +298,14 @@ $infograph-light-green: #e1eadc;
   }
 
   .small-char {
-    // @include font-size(32px, 36px);
+    font-size: remify(32px);
+    line-height: 1.125;
 
     @include breakpoint($breakpoint-m) {
-      // @include font-size(50px, 50px);
+      font-size: remify(50px);
+      line-height: 1;
     }
   }
-
 }
 
 .paragraph--type--infograph-group {
@@ -311,7 +317,7 @@ $infograph-light-green: #e1eadc;
 
   /* make slides equal height. */
   .slick-track {
-      display: flex;
+    display: flex;
   }
 
   .infograph {
@@ -320,11 +326,12 @@ $infograph-light-green: #e1eadc;
 }
 
 .infograph-group-nav {
-  width: 100%;
   display: flex;
+  font-size: remify(26px);
   justify-content: flex-end;
+  line-height: 1.5;
   margin: 1rem 0;
-  // @include font-size(26px, 40px);
+  width: 100%;
 
   .pagingInfo {
     margin: 0 1rem;
