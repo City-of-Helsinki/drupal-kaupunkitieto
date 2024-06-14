@@ -20,6 +20,7 @@ settings:
   label: 'Filter by topic'
   label_display: visible
   provider: facets
+  context_mapping: {  }
   block_id: keywords
 visibility:
   request_path:
