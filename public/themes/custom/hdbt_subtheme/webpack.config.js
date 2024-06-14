@@ -4,7 +4,7 @@ const glob = require('glob');
 const FriendlyErrorsWebpackPlugin = require('@nuxt/friendly-errors-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
-const SvgToSprite = require('./webpack.svgToSprite');
+const CopyPlugin = require('copy-webpack-plugin');
 const { merge } = require('webpack-merge');
 
 // Handle entry points.
@@ -115,7 +115,20 @@ module.exports = (env, argv) => {
       new RemoveEmptyScriptsPlugin(),
       new MiniCssExtractPlugin({
         filename: 'css/[name].min.css',
-      })
+      }),
+      new CopyPlugin({
+        'patterns': [
+          {
+            'from': 'node_modules/slick-carousel/slick/slick.css',
+            'to': path.resolve(__dirname, 'dist') + '/css/',
+            'force': true,
+          }, {
+            'from': 'node_modules/slick-carousel/slick/slick.min.js',
+            'to': path.resolve(__dirname, 'dist') + '/js/',
+            'force': true,
+          }
+        ]
+      }),
     ],
     watchOptions: {
       aggregateTimeout: 300,
