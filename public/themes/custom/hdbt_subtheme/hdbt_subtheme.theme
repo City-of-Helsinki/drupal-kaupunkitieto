@@ -14,6 +14,13 @@ function hdbt_subtheme_preprocess_block(array &$variables): void {
   if (isset($variables['elements']['#id'])) {
     $variables['content']['#attributes']['block_id'] = $variables['elements']['#id'];
   }
+
+  if (
+    $variables['base_plugin_id'] === 'menu_block_current_language' &&
+    str_contains($variables['elements']['#id'], 'main_navigation_level_2')
+  ) {
+    $variables['#attached']['library'][] = 'hdbt/sidebar-menu-toggle';
+  }
 }
 
 /**
@@ -29,7 +36,7 @@ function hdbt_subtheme_theme_suggestions_block_alter(array &$suggestions): void 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-function hdbt_subtheme_theme_suggestions_menu_alter(array &$suggestions, array $variables): void {
+function hdbt_subtheme_theme_suggestions_menu_alter(&$suggestions, $variables) {
   if (isset($variables['attributes']['block_id'])) {
     $block_id = str_replace('hdbt_subtheme_', '', $variables['attributes']['block_id']);
 
@@ -37,8 +44,16 @@ function hdbt_subtheme_theme_suggestions_menu_alter(array &$suggestions, array $
       'mobile_navigation' => 'menu__mobile',
       'mainnavigation' => 'menu__main__desktop',
       'main_navigation_level_2' => 'menu__main__sidebar',
+      'brandingnavigation' => 'menu__main__branding',
       default => 'menu__' . $variables['attributes']['block_id'],
     };
+  }
+
+  if (
+    !empty($variables['menu_block_configuration']['custom_suggestion']) &&
+    $variables['menu_block_configuration']['custom_suggestion'] === 'block__menu_block__main__desktop'
+  ) {
+    $suggestions[] = 'menu__main__desktop';
   }
 }
 

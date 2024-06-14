@@ -1,21 +1,21 @@
-// Third level menu not supported by the main theme.
-.header-bottom .menu {
-  ul ul {
-    display: block;
-    @include breakpoint($breakpoint-l) {
-      margin-left: $spacing;
-    }
-  }
-
-  .menu--level-2 {
-    .menu__link {
-      padding-top: 0;
-    }
-  }
-}
-
-#block-hdbt-subtheme-main-navigation {
-  .site-name__container {
-    display: none;
-  }
-}
+//// Third level menu not supported by the main theme.
+//.header-bottom .menu {
+//  ul ul {
+//    display: block;
+//    @include breakpoint($breakpoint-l) {
+//      margin-left: $spacing;
+//    }
+//  }
+//
+//  .menu--level-2 {
+//    .menu__link {
+//      padding-top: 0;
+//    }
+//  }
+//}
+//
+//#block-hdbt-subtheme-main-navigation {
+//  .site-name__container {
+//    display: none;
+//  }
+//}
