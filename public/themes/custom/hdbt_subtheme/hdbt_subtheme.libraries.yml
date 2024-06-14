@@ -4,10 +4,10 @@ global-styling:
     theme:
       dist/css/styles.min.css: {}
 
-global-scripting:
-  version: 1.x
+search-toggle:
+  version: 1.0
   js:
-    dist/js/common.min.js: {}
+    dist/js/searchToggle.min.js: {}
   dependencies:
     - core/drupal
 
