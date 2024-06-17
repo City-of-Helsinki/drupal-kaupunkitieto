@@ -4,11 +4,13 @@ declare(strict_types=1);
 
 namespace Drupal\kaupunkitieto_infograph\Commands;
 
+use Drupal\Core\Batch\BatchBuilder;
 use Drupal\Core\Database\Connection;
 use Drupal\Core\DependencyInjection\DependencySerializationTrait;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Entity\Exception\FieldStorageDefinitionUpdateForbiddenException;
 use Drupal\Core\Extension\ModuleHandlerInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
 use Drupal\paragraphs\Entity\Paragraph;
@@ -21,6 +23,7 @@ use Drush\Commands\DrushCommands;
 final class FixKaupunkitietoPlatformUpdate extends DrushCommands {
 
   use DependencySerializationTrait;
+  use StringTranslationTrait;
 
   /**
    * Constructs a new instance.
@@ -190,7 +193,87 @@ final class FixKaupunkitietoPlatformUpdate extends DrushCommands {
       }
     }
 
+    // Get all hero paragraphs and update their color palettes based on
+    // the ancient hero bg color field value.
+    $hero_paragraph_query = $this->entityTypeManager
+      ->getStorage('paragraph')
+      ->getQuery()
+      ->condition('type', 'hero');
+    $heros = $hero_paragraph_query->execute();
+
+    if (count($heros) > 0) {
+      $this->output()->writeln($this->t('Found @amount hero paragraphs, which need to be migrated to use color_palette field. This will be run via batch.', [
+        '@amount' => count($heros),
+      ]));
+
+      $batch = (new BatchBuilder())
+        ->setProgressMessage($this->t('Processed @current out of @total.'))
+        ->setErrorMessage($this->t('An error occurred during processing orphaned infograph_row paragraphs'))
+        ->addOperation([$this, 'processBatch'], [
+          $heros,
+        ]);
+
+      batch_set($batch->toArray());
+      drush_backend_batch_process();
+    }
     return DrushCommands::EXIT_SUCCESS;
   }
 
+  /**
+   * Processes a batch operation.
+   */
+  public function processBatch(
+    array $entities,
+    &$context,
+  ) : void {
+
+    // Check if the sandbox should be initialized.
+    if (!isset($context['sandbox']['entities'])) {
+      $context['sandbox']['entities'] = $entities;
+    }
+
+    $slice = array_slice($context['sandbox']['entities'], 0, 20, TRUE);
+
+    try {
+      /** @var \Drupal\paragraphs\ParagraphInterface $hero */
+      foreach ($this->entityTypeManager
+        ->getStorage('paragraph')
+        ->loadMultiple($slice) as $hero) {
+
+        // Remove the entity from the sandbox list.
+        $key = array_search($hero->id(), $context['sandbox']['entities']);
+        if ($key !== FALSE) {
+          unset($context['sandbox']['entities'][$key]);
+        }
+
+        if (
+          !$hero->hasField('field_hero_bg_color') ||
+          $hero->get('field_hero_bg_color')->isEmpty()
+        ) {
+          continue;
+        }
+
+        $color = $hero->get('field_hero_bg_color')->value;
+        $parent = $hero->getParentEntity();
+
+        if ($parent->hasField('color_palette')) {
+          $parent->set('color_palette', $color);
+          $parent->save();
+        }
+      }
+
+      // Once the hero paragraphs have been updated we can delete the old field.
+      $field_hero_bg_color = FieldConfig::loadByName('paragraph', 'hero', 'field_hero_bg_color');
+      if (!empty($field_hero_bg_color)) {
+        $field_hero_bg_color->delete();
+      }
+
+      // Everything has been processed?
+      $context['finished'] = count($context['sandbox']['entities']) === 0;
+    }
+    catch (\Exception $e) {
+      $context['message'] = $this->t('An error occurred during processing: @message', ['@message' => $e->getMessage()]);
+      $context['finished'] = 1;
+    }
+  }
 }
