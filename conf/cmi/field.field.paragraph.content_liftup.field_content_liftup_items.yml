@@ -46,12 +46,6 @@ settings:
       content_liftup_item:
         weight: 22
         enabled: true
-      gallery:
-        weight: 23
-        enabled: false
-      gallery_slide:
-        weight: 24
-        enabled: false
       hero:
         weight: 25
         enabled: false

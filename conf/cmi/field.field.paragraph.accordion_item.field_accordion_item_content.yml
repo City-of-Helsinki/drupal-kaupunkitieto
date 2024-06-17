@@ -1,5 +1,5 @@
 uuid: 42793c8e-2d30-43b6-9249-468f33646174
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -51,12 +51,6 @@ settings:
         enabled: false
       from_library:
         weight: 27
-        enabled: false
-      gallery:
-        weight: 15
-        enabled: false
-      gallery_slide:
-        weight: 16
         enabled: false
       hero:
         weight: 17

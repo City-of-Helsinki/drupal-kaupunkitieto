@@ -1,5 +1,5 @@
 uuid: 2d4e122e-b7e6-4b9c-9a7a-d0a3bb02ca14
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -42,3 +42,4 @@ hidden:
   langcode: true
   links: true
   search_api_excerpt: true
+  toc_enabled: true
