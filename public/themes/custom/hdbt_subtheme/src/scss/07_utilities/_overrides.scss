@@ -13,3 +13,8 @@
   display: inline;
   position: relative;
 }
+
+// Hide the decorative hero arrow.
+#block-hdbt-subtheme-heroblock .hero__arrow {
+  display: none;
+}
