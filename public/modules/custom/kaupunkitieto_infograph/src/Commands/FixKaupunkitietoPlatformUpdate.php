@@ -262,12 +262,6 @@ final class FixKaupunkitietoPlatformUpdate extends DrushCommands {
         }
       }
 
-      // Once the hero paragraphs have been updated we can delete the old field.
-      $field_hero_bg_color = FieldConfig::loadByName('paragraph', 'hero', 'field_hero_bg_color');
-      if (!empty($field_hero_bg_color)) {
-        $field_hero_bg_color->delete();
-      }
-
       // Everything has been processed?
       $context['finished'] = count($context['sandbox']['entities']) === 0;
     }
