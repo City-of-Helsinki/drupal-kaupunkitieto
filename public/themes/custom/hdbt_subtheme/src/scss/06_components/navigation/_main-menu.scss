@@ -1,5 +1,17 @@
-//// Third level menu not supported by the main theme.
-//.header-bottom .menu {
+// Custom styles for supporting third menu level on desktop navigation.
+.header-bottom .menu--level-2 {
+  display: inline;
+}
+
+.header-bottom .menu--level-2 .menu__link {
+  padding: $spacing-half $spacing-and-half;
+  margin-left: $spacing-and-half;
+
+  &:focus {
+    margin-left: $spacing-and-half;
+  }
+}
+
 //  ul ul {
 //    display: block;
 //    @include breakpoint($breakpoint-l) {

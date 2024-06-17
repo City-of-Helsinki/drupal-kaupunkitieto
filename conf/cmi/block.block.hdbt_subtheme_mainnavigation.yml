@@ -23,7 +23,7 @@ settings:
   provider: menu_block_current_language
   level: 1
   expand_all_items: true
-  depth: 2
+  depth: 3
   translation_providers:
     views: views
     menu_link_content: menu_link_content
