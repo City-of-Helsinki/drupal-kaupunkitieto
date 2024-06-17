@@ -1,6 +1,6 @@
 _core:
   default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
-langcode: fi
+langcode: en
 uuid: a64e52b8-8a13-4a4d-a0cd-0b7f05a3582c
 name: 'Research and statistics about Helsinki'
 mail: admin@example.com
@@ -11,4 +11,4 @@ page:
   front: /node/16
 admin_compact_mode: false
 weight_select_max: 100
-default_langcode: fi
+default_langcode: en

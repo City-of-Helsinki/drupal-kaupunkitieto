@@ -1,5 +1,5 @@
 uuid: a27633a5-936b-4f65-9b72-ccf59b455fc2
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -35,12 +35,6 @@ settings:
         enabled: true
       columns:
         weight: 12
-        enabled: false
-      gallery:
-        weight: 13
-        enabled: false
-      gallery_slide:
-        weight: 14
         enabled: false
       hero:
         weight: 15
