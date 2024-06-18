@@ -1,7 +1,9 @@
+
+
 .header-search {
   display: none;
   position: absolute;
-  top: 70px;
+  top: 30px;
   left: 0;
   width: 100%;
   z-index: 999;
@@ -11,8 +13,8 @@
   border-top: 1px solid var(--color-black-90);
   border-bottom: 1px solid var(--color-black-90);
 
-  .hds-text-input--search {
-    max-width: 600px;
+  .helfi-search__form {
+    max-width: 370px;
     margin: 0 auto;
   }
 }

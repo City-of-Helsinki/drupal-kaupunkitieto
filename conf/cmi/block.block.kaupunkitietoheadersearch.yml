@@ -1,0 +1,20 @@
+uuid: e74054ce-56cc-4731-9b20-5956fe9c064b
+langcode: en
+status: true
+dependencies:
+  module:
+    - kaupunkitieto_search
+  theme:
+    - hdbt_subtheme
+id: kaupunkitietoheadersearch
+theme: hdbt_subtheme
+region: header_top
+weight: 0
+provider: null
+plugin: kaupunkitieto_search_header_search_block
+settings:
+  id: kaupunkitieto_search_header_search_block
+  label: 'Kaupunkitieto Header Search'
+  label_display: '0'
+  provider: kaupunkitieto_search
+visibility: {  }
