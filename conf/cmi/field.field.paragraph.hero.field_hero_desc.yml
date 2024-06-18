@@ -1,14 +1,16 @@
 uuid: 04978525-0095-45d6-8380-ac086763e753
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_hero_desc
     - paragraphs.paragraphs_type.hero
   module:
+    - allowed_formats
     - text
-_core:
-  default_config_hash: GnZymgGfpVTqsKATa5zkIXdscsZxW3ZkKMGmL9mDy8g
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
 id: paragraph.hero.field_hero_desc
 field_name: field_hero_desc
 entity_type: paragraph

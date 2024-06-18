@@ -1,9 +1,11 @@
 uuid: de9ca386-8c41-4a5d-8ed2-fe9dd34ca229
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
     - content_lock
+_core:
+  default_config_hash: Qdwi5SKrcqXnCPQ0YyJ25Mu3RwND-GXfnSpxJbKAeyw
 id: taxonomy_term_break_lock_action
 label: 'Break lock taxonomy_term'
 type: taxonomy_term

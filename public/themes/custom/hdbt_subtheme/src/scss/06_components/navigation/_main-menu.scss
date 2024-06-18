@@ -1,0 +1,13 @@
+// Custom styles for supporting third menu level on desktop navigation.
+.header-bottom .menu--level-2 {
+  display: inline;
+}
+
+.header-bottom .menu--level-2 .menu__link {
+  padding: $spacing-half $spacing-and-half;
+  margin-left: $spacing-and-half;
+
+  &:focus {
+    margin-left: $spacing-and-half;
+  }
+}

@@ -1,5 +1,5 @@
 uuid: e9b13843-0877-4daf-a9b3-fa582a2f05fb
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -25,5 +25,5 @@ settings:
   file_directory: ''
   file_extensions: 'txt doc docx pdf xls xlsx'
   max_filesize: ''
-  description_field: true
+  description_field: false
 field_type: file
