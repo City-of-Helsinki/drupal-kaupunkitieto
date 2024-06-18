@@ -158,3 +158,10 @@
     border: 0;
   }
 }
+
+.components--search-title {
+  h1 {
+    @include font('h2');
+    margin-bottom: $spacing-and-half;
+  }
+}
