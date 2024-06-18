@@ -21,6 +21,14 @@ function hdbt_subtheme_preprocess_block(array &$variables): void {
   ) {
     $variables['#attached']['library'][] = 'hdbt/sidebar-menu-toggle';
   }
+
+  // Hide page title block if we are on the search page.
+  if (
+    $variables['plugin_id'] === 'page_title_block' &&
+    str_contains(\Drupal::routeMatch()->getRouteName(), 'site_search')
+  ) {
+    $variables['hide_block'] = TRUE;
+  }
 }
 
 /**
