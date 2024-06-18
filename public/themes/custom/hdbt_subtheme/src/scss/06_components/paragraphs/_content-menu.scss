@@ -1,21 +1,31 @@
-$item_spacing: $spacing-triple;
-
-.content-menu {
-  padding-left: $spacing;
-  padding-right: $spacing;
+.content-menu__navigation {
+  display: none;
+  list-style: none;
+  margin-top: 0;
+  margin-right: $spacing;
+  padding-left: 0;
 
   @include breakpoint($breakpoint-m) {
-    padding-left: $spacing-double;
-    padding-right: $spacing-double;
+    display: block;
+    width: 200px;
+    margin-right: $spacing;
   }
 
-  &__container {
-    padding-left: 0;
-    padding-right: 0;
+  &-item {
+    border-bottom: 1px solid $color-black-30;
   }
 
-  &__navigation {
-    padding-left: 0;
+  &-link {
+    font-size: remify(20px);
+    line-height: 1.2;
+    cursor: pointer;
+    display: block;
+    padding: $spacing 0;
+
+    &.active {
+      font-weight: 700;
+    }
+
   }
 }
 
@@ -43,39 +53,13 @@ $item_spacing: $spacing-triple;
   }
 }
 
-.content-menu__navigation {
-  display: none;
-  list-style: none;
-  margin: 0;
-
-  @include breakpoint($breakpoint-m) {
-    display: block;
-    width: 30%;
-  }
-
-  &-item {
-    border-bottom: 1px solid $color-black-30;
-  }
-
-  &-link {
-    // @include font-size(20px, 24px);
-    cursor: pointer;
-    display: block;
-    padding: $spacing 0;
-
-    &.active {
-      font-weight: 700;
-    }
-
-  }
-}
-
 .content-menu__items {
+  margin-top: $spacing;
 
   @include breakpoint($breakpoint-m) {
+    margin: 0;
     width: 70%;
   }
-
 }
 
 .content-menu__item {
@@ -91,7 +75,6 @@ $item_spacing: $spacing-triple;
   .text__text-content {
     padding: 0;
   }
-
 }
 
 .content-menu__title {
