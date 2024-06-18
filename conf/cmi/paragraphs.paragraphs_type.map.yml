@@ -1,0 +1,15 @@
+uuid: 0468dfeb-3207-4f96-bd7a-82a08e7a6bba
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: map
+label: Map
+icon_uuid: null
+icon_default: null
+description: 'With map paragraph content producer can add an embedded map from https://kartta.hel.fi and https://palvelukartta.hel.fi.'
+behavior_plugins: {  }

@@ -1,5 +1,5 @@
 uuid: 1f3c2a80-fb81-48e7-af02-ac80a0d2cda9
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ field_name: field_api_url
 entity_type: paragraph
 bundle: event_list
 label: 'Api URL'
-description: 'Add URL from tapahtumat.hel.fi to form a list of events'
+description: 'Add URL from tapahtumat.hel.fi to form a list of events. Example URL: https://tapahtumat.hel.fi/fi/events?categories=museum'
 required: false
 translatable: false
 default_value: {  }

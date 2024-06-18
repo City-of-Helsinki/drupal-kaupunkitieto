@@ -1,10 +1,11 @@
-uuid: null
-langcode: fi
+uuid: 56ce9470-ee47-4793-ae58-8372360ddd67
+langcode: en
 status: true
 dependencies:
   config:
     - field.field.paragraph.phasing.field_description
     - field.field.paragraph.phasing.field_phasing_item
+    - field.field.paragraph.phasing.field_phasing_item_title_level
     - field.field.paragraph.phasing.field_phasing_title_level
     - field.field.paragraph.phasing.field_show_phase_numbers
     - field.field.paragraph.phasing.field_title
@@ -13,6 +14,8 @@ dependencies:
     - entity_reference_revisions
     - options
     - text
+_core:
+  default_config_hash: mgNYL_uSHyyBus-Qsph-BAk7A9FIHczbgABVI9e9taM
 id: paragraph.phasing.default
 targetEntityType: paragraph
 bundle: phasing
@@ -59,4 +62,6 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_phasing_item_title_level: true
+  search_api_excerpt: true

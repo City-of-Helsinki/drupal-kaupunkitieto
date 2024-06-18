@@ -1,5 +1,5 @@
 uuid: 6cf1af54-d31e-4069-be88-156df8580cba
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
@@ -19,6 +19,12 @@ settings:
     -
       value: image-on-left
       label: 'Image on left'
+    -
+      value: image-on-right-secondary
+      label: 'Image on right, secondary color'
+    -
+      value: image-on-left-secondary
+      label: 'Image on left, secondary color'
     -
       value: background-text-on-right
       label: 'Background image, text on right'

@@ -1,0 +1,166 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the HDBT Subtheme.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function hdbt_subtheme_preprocess_block(array &$variables): void {
+  if (isset($variables['elements']['#id'])) {
+    $variables['content']['#attributes']['block_id'] = $variables['elements']['#id'];
+  }
+
+  if (
+    $variables['base_plugin_id'] === 'menu_block_current_language' &&
+    str_contains($variables['elements']['#id'], 'main_navigation_level_2')
+  ) {
+    $variables['#attached']['library'][] = 'hdbt/sidebar-menu-toggle';
+  }
+
+  // Hide page title block if we are on the search page.
+  if (
+    $variables['plugin_id'] === 'page_title_block' &&
+    str_contains(\Drupal::routeMatch()->getRouteName(), 'site_search')
+  ) {
+    $variables['hide_block'] = TRUE;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function hdbt_subtheme_theme_suggestions_block_alter(array &$suggestions): void {
+  // Load theme suggestions for blocks from parent theme.
+  foreach ($suggestions as &$suggestion) {
+    $suggestion = str_replace('hdbt_subtheme_', '', $suggestion);
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function hdbt_subtheme_theme_suggestions_menu_alter(&$suggestions, $variables) {
+  if (isset($variables['attributes']['block_id'])) {
+    $block_id = str_replace('hdbt_subtheme_', '', $variables['attributes']['block_id']);
+
+    $suggestions[] = match ($block_id) {
+      'mobile_navigation' => 'menu__mobile',
+      'mainnavigation' => 'menu__main__desktop',
+      'main_navigation_level_2' => 'menu__main__sidebar',
+      'brandingnavigation' => 'menu__main__branding',
+      default => 'menu__' . $variables['attributes']['block_id'],
+    };
+  }
+
+  if (
+    !empty($variables['menu_block_configuration']['custom_suggestion']) &&
+    $variables['menu_block_configuration']['custom_suggestion'] === 'block__menu_block__main__desktop'
+  ) {
+    $suggestions[] = 'menu__main__desktop';
+  }
+}
+
+/**
+ * Implements hook_preprocess_html().
+ *
+ * Add body class when in Search page.
+ */
+function hdbt_subtheme_preprocess_html(&$vars) {
+  // See if we are in a site search view.
+  $current_route_name = \Drupal::service('current_route_match')->getRouteName();
+
+  if ($current_route_name == 'view.site_search.page_1') {
+    $vars['attributes']['class'][] = 'site-search';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_input_alter().
+ */
+function hdbt_subtheme_theme_suggestions_input_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'input__' . str_replace('-', '_', $variables['element']['#id']);
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function hdbt_subtheme_theme_suggestions_views_view_field_alter(array &$suggestions, array &$variables, $hook) {
+  if ($variables['view']->id() && $variables['view']->current_display) {
+    $suggestions[] = $hook . '__' . $variables['view']->id() . '__' . $variables['view']->current_display . '__' . $variables['field']->field;
+  }
+}
+
+/**
+ * Implements template_preprocess_paragraph().
+ */
+function hdbt_subtheme_preprocess_paragraph(array &$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $paragraph_type = $paragraph->getType();
+
+  // In case we need to do alter embedding URL, e.g. for YouTube links.
+  if ($paragraph_type == 'embed') {
+    if (isset($paragraph->get('field_embed_link')->getValue()[0])) {
+      $embed_url = $paragraph->get('field_embed_link')->getValue()[0]['uri'];
+      $variables['embed_url'] = $embed_url;
+    }
+  }
+
+  if ($paragraph_type == 'hero') {
+    if ($paragraph->hasField('field_display_search_field')) {
+      $variables['show_search'] = $paragraph->get('field_display_search_field')->value;
+    }
+  }
+
+  // Get titles for content menu items to be displayed in left-hand navigation.
+  if ($paragraph_type == 'content_menu') {
+    $items = $paragraph->get('field_content_menu_items');
+
+    foreach ($items as $item) {
+      $item_entity = $item->entity;
+      $title = $item_entity->get('field_content_menu_item_title')->first()->getValue();
+      $variables['menu_links'][$item_entity->id()]['title'] = $title;
+      $variables['menu_links'][$item_entity->id()]['title']['aria'] = str_replace(' ', '-', strtolower($title['value']));
+    }
+
+  }
+
+  if ($paragraph_type == 'content_menu_item') {
+    // Add delta value to variable to define first active item.
+    $parent = $variables['paragraph']->getParentEntity();
+    if ($parent->hasField('field_content_menu_items')) {
+      foreach ($parent->get('field_content_menu_items')->getValue() as $key => $item) {
+        if ($item['target_id'] === $variables['paragraph']->id()) {
+          $variables['delta'] = $key;
+        }
+      }
+    }
+  }
+
+  if ($paragraph_type == 'infograph_group') {
+
+    $speed = 0;
+    $autoplay = FALSE;
+
+    if ($paragraph->hasField('field_slider_speed')) {
+      if ($speed = $paragraph->get('field_slider_speed')->value) {
+        $autoplay = TRUE;
+      }
+    }
+
+    // Send variables to Javascript (Slick).
+    $variables['#attached'] = [
+      'drupalSettings' => [
+        'infograph_group' => [
+          'autoplay' => $autoplay,
+          'speed' => $speed,
+        ],
+      ],
+    ];
+  }
+}

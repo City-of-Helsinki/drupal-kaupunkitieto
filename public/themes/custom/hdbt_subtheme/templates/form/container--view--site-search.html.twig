@@ -1,0 +1,15 @@
+{%
+  set classes = [
+    has_parent ? 'js-form-wrapper',
+    has_parent ? 'form-wrapper',
+    'components',
+    'components--site-search-view'
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {% embed "@hdbt/misc/container.twig" with {container_element: 'site-search'} %}
+    {% block container_content %}
+      {{ children }}
+    {% endblock container_content %}
+  {% endembed %}
+</div>

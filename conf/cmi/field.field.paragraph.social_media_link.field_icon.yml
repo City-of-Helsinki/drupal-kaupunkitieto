@@ -1,14 +1,14 @@
 uuid: 2886d3a3-8bdd-41c3-88a8-1eefe7bdc0e1
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_icon
     - paragraphs.paragraphs_type.social_media_link
   module:
-    - select2_icon
+    - hdbt_admin_tools
 _core:
-  default_config_hash: lvgcvPv34Bw-DXlz67PyI8wVfAGk6FiOnp-u0Ql35GU
+  default_config_hash: wqE_Zq3v_7AaVAV9KOkhWdkkT_SJTl-Z7wNW6DxFaXI
 id: paragraph.social_media_link.field_icon
 field_name: field_icon
 entity_type: paragraph
