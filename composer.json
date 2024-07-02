@@ -95,6 +95,9 @@
         "patches": {
             "drupal/core": {
                 "Cannot use relationship for rendered entity on Views — Issue #2457999": "https://www.drupal.org/files/issues/2021-05-13/9.1.x-2457999-267-views-relationship-rendered-entity.patch"
+            },
+            "drupal/entity_usage": {
+                "Fix for entity_usage_update_8206 (https://drupal.org/i/3340004#comment-15290564)": "patches/entity_usage_update_8206_sql_require_primary_key_3340004.patch"
             }
         }
     },
