@@ -1,5 +1,5 @@
 uuid: 1835b7ce-fcd2-4fe4-b4ba-96309888f338
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
@@ -11,7 +11,7 @@ dependencies:
 _core:
   default_config_hash: 83Nuup-6oYkkdAsvg3nrR2pBOgtTXEV1JrzpCCLkYLM
 id: authenticated
-label: 'Sisäänkirjautunut käyttäjä'
+label: Authenticated
 weight: 1
 is_admin: false
 permissions:

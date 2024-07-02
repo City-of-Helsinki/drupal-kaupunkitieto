@@ -1,5 +1,5 @@
 uuid: cb881489-bac3-4408-aeb0-92cb23927986
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -42,7 +42,7 @@ dependencies:
 _core:
   default_config_hash: wJWcExCcstsjfohW4IUVRm742x2vKz6nOlZpa3OG7yQ
 id: admin
-label: Pääkäyttäjä
+label: Admin
 weight: 5
 is_admin: null
 permissions:
