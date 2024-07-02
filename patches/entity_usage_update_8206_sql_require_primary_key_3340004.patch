@@ -1,12 +1,35 @@
 diff --git a/entity_usage.install b/entity_usage.install
-index fb52e1a..b0d47fa 100644
+index fb52e1a..a30ff98 100644
 --- a/entity_usage.install
 +++ b/entity_usage.install
-@@ -290,6 +290,7 @@ function entity_usage_update_8206(): void {
-   // nullable. We will update the column definition to NOT NULL, so make sure no
-   // NULL values are present.
-   $database = \Drupal::database();
-+  $database->query('SET SESSION sql_require_primary_key=0;');
-   $database->update('entity_usage')
-     ->fields(['target_id_string' => ''])
-     ->condition('target_id_string', NULL, 'IS NULL')
+@@ -297,6 +297,13 @@ function entity_usage_update_8206(): void {
+ 
+   // Drop all indices involving columns we want to change.
+   $schema = $database->schema();
++
++  // Ensure the table has a temporary primary key during modifications.
++  if (!$schema->fieldExists('entity_usage', 'temp_id')) {
++    $schema->addField('entity_usage', 'temp_id', 'serial', array('not null' => TRUE));
++    $schema->addPrimaryKey('entity_usage', ['temp_id']);
++  }
++
+   $schema->dropPrimaryKey('entity_usage');
+   $schema->dropIndex('entity_usage', 'target_entity_string');
+   $schema->dropIndex('entity_usage', 'source_entity_string');
+@@ -335,6 +342,10 @@ function entity_usage_update_8206(): void {
+     'field_name',
+   ]);
+ 
++  // Remove the temporary primary key and column.
++  $schema->dropPrimaryKey('entity_usage');
++  $schema->dropField('entity_usage', 'temp_id');
++
+   // Add back the removed indexes.
+   $schema->addIndex('entity_usage', 'target_entity_string', [
+     'target_type',
+@@ -383,4 +394,5 @@ function entity_usage_update_8206(): void {
+       'source_entity_string' => ['source_type', 'source_id_string'],
+     ],
+   ]);
++
+ }
