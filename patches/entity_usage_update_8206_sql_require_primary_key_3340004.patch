@@ -1,0 +1,12 @@
+diff --git a/entity_usage.install b/entity_usage.install
+index fb52e1a..b0d47fa 100644
+--- a/entity_usage.install
++++ b/entity_usage.install
+@@ -290,6 +290,7 @@ function entity_usage_update_8206(): void {
+   // nullable. We will update the column definition to NOT NULL, so make sure no
+   // NULL values are present.
+   $database = \Drupal::database();
++  $database->query('SET SESSION sql_require_primary_key=0;');
+   $database->update('entity_usage')
+     ->fields(['target_id_string' => ''])
+     ->condition('target_id_string', NULL, 'IS NULL')
