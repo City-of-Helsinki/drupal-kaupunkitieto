@@ -89,6 +89,6 @@ social_media:
     drupalSettings: ''
     library: ''
     img: ''
-langcode: fi
+langcode: en
 _core:
   default_config_hash: AyqoIo0GS3jnXfsBkJZCiVA4WsqNkQItXRfQMmg91jI
