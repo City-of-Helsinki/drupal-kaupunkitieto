@@ -17,7 +17,7 @@ echo "Starting cron: $(date)"
 # @endcode
 
 # Uncomment to enable infograph -query cron.
-# exec "/crons/infograph.sh" &
+exec "/crons/infograph.sh" &
 # Uncomment this to enable TPR migration cron
 #exec "/crons/migrate-tpr.sh" &
 # Uncomment this to enable Varnish purge cron
