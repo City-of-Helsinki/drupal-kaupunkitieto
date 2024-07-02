@@ -10,18 +10,14 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drush\Commands\DrushCommands;
-use GuzzleHttp\Exception\GuzzleException;
-use Psr\Log\LoggerAwareInterface;
-use Psr\Log\LoggerAwareTrait;
 
 /**
  * Infograph query command.
  */
-final class Infograph extends DrushCommands implements LoggerAwareInterface {
+final class Infograph extends DrushCommands {
 
   use StringTranslationTrait;
   use DependencySerializationTrait;
-  use LoggerAwareTrait;
 
   /**
    * Constructs a new instance.
@@ -41,28 +37,27 @@ final class Infograph extends DrushCommands implements LoggerAwareInterface {
   /**
    * Execute infograph query.
    *
-   *
    * @usage drush kaupunkitieto:infograph-query
    *   Updata infograph values.
    *
    * @command kaupunkitieto:infograph-query
    */
   public function infographQuery(): void {
-    $graph_field_name = 'field_graph_id';
-    $graph_type_field_name = 'field_type_infograph';
+    $graphIdFieldName = 'field_graph_id';
+    $graphTypeFieldName = 'field_type_infograph';
 
     foreach ($this->get_graphs() as $paragraph) {
-      if (!$paragraph->hasField($graph_field_name)) {
+      if (!$paragraph->hasField($graphIdFieldName)) {
         continue;
       }
 
-      if (!$rows = $this->fetch_data($paragraph->get($graph_field_name)->value)) {
+      if (!$rows = $this->fetch_data($paragraph->get($graphIdFieldName)->value)) {
         $this->logger()
-          ->warning("No rows found for Graph Id: {$paragraph->get($graph_field_name)->value}");
+          ->warning("No rows found for Graph Id: {$paragraph->get($graphIdFieldName)->value}");
         continue;
       }
 
-      $paragraph->set($graph_type_field_name, $rows->graphType);
+      $paragraph->set($graphTypeFieldName, $rows->graphType);
 
       $new_set = [];
       foreach ($rows->graphParts as $value) {
