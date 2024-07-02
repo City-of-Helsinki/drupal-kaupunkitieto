@@ -1,5 +1,5 @@
 uuid: 6128f353-d062-448c-a145-248972af9c45
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -47,8 +47,8 @@ content:
     weight: 13
     region: content
     settings:
-      title: Lohko
-      title_plural: Lohkot
+      title: Paragraph
+      title_plural: Paragraphs
       edit_mode: open
       closed_mode: summary
       autocollapse: none
@@ -73,8 +73,8 @@ content:
     weight: 5
     region: content
     settings:
-      title: Lohko
-      title_plural: Lohkot
+      title: Paragraph
+      title_plural: Paragraphs
       edit_mode: closed_expand_nested
       closed_mode: summary
       autocollapse: none

@@ -1,5 +1,5 @@
 uuid: fac3792a-76ea-433c-9607-2a267b6eb825
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
