@@ -1,5 +1,5 @@
 uuid: 0740bdb6-c35b-408a-9c28-3ea0e526629e
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -14,5 +14,5 @@ _core:
 id: node.landing_page
 target_entity_type_id: node
 target_bundle: landing_page
-default_langcode: fi
+default_langcode: en
 language_alterable: true

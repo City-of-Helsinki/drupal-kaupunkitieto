@@ -1,5 +1,5 @@
 uuid: 9f8b396e-247b-4a9a-8e3e-0d09a3b6c872
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -78,12 +78,6 @@ settings:
       event_list:
         weight: 30
         enabled: true
-      gallery:
-        weight: -23
-        enabled: false
-      gallery_slide:
-        weight: -22
-        enabled: false
       hero:
         weight: -21
         enabled: false

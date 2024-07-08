@@ -1,5 +1,5 @@
 uuid: dfda5126-d9b8-4f10-aca3-8c8bbb328ed1
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:

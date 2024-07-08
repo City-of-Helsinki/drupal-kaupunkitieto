@@ -1,5 +1,5 @@
 uuid: bea0a326-8bb8-4c00-8b92-e53c0565d9c1
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -51,12 +51,6 @@ settings:
         enabled: false
       content_liftup_item:
         weight: 25
-        enabled: false
-      gallery:
-        weight: 17
-        enabled: false
-      gallery_slide:
-        weight: 18
         enabled: false
       hero:
         weight: -13
