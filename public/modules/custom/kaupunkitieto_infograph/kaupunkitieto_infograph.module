@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * @file
+ * Contains alterations for infograph paragraphs.
+ */
+
+declare(strict_types=1);
+
+use Drupal\helfi_platform_config\DTO\ParagraphTypeCollection;
+
+/**
+ * Implements hook_helfi_paragraph_types().
+ */
+function kaupunkitieto_infograph_helfi_paragraph_types() : array {
+  $entities = [
+    'node' => [
+      'landing_page' => [
+        'field_content' => [
+          'infograph' => 15,
+          'embed' => 16,
+        ],
+      ],
+      'page' => [
+        'field_content' => [
+          'embed' => 15,
+          'content_menu' => 16,
+        ],
+      ],
+    ],
+    'paragraph' => [
+      'content_liftup' => [
+        'field_content_liftup_items' => [
+          'content_liftup_item' => 0,
+        ],
+      ],
+      'content_menu' => [
+        'field_content_menu_items' => [
+          'content_menu_item' => 0,
+        ],
+      ],
+      'infograph_group' => [
+        'field_rows' => [
+          'infograph' => 0,
+        ],
+      ],
+      'infograph' => [
+        'field_rows' => [
+          'infograph_row' => 0,
+        ],
+      ],
+      'quick_links' => [
+        'field_quick_links_links' => [
+          'quick_links_item' => 0,
+        ],
+      ],
+      'columns' => [
+        'field_columns_left_column' => [
+          'infograph_group' => 3,
+        ],
+        'field_columns_right_column' => [
+          'quick_links' => 3,
+        ],
+      ],
+    ],
+  ];
+
+  $enabled = [];
+  foreach ($entities as $entityTypeId => $bundles) {
+    foreach ($bundles as $bundle => $fields) {
+      foreach ($fields as $field => $paragraphTypes) {
+        foreach ($paragraphTypes as $paragraphType => $weight) {
+          $enabled[] = new ParagraphTypeCollection($entityTypeId, $bundle, $field, $paragraphType, $weight);
+        }
+      }
+    }
+  }
+  return $enabled;
+}

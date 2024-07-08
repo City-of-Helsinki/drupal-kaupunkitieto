@@ -1,7 +1,9 @@
 uuid: e6ef90d0-659f-40e0-865d-14997ff2be4a
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - crop
 third_party_settings:
   crop:
     image_field: null

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.full_html
+    - filter.format.minimal
     - media.type.file
     - media.type.image
     - media.type.remote_video
@@ -13,18 +14,22 @@ dependencies:
     - taxonomy.vocabulary.keywords
   module:
     - content_translation
+    - entity_usage
     - file
     - filter
     - helfi_api_base
     - media
+    - menu_link_content
     - node
     - paragraphs
     - paragraphs_library
     - path
+    - publication_date
     - scheduler
     - system
     - taxonomy
     - toolbar
+    - view_unpublished
 _core:
   default_config_hash: XhNzDGDspXeMyW4TAki8MB6z-vzBwmtP_efemgX6-HI
 id: content_producer
@@ -33,6 +38,7 @@ weight: 3
 is_admin: null
 permissions:
   - 'access content overview'
+  - 'access entity usage statistics'
   - 'access files overview'
   - 'access media overview'
   - 'access remote entities overview'
@@ -80,6 +86,7 @@ permissions:
   - 'set landing_page published on date'
   - 'set page published on date'
   - 'translate editable entities'
+  - 'translate menu_link_content'
   - 'update media'
   - 'use text format full_html'
   - 'use text format full_html'

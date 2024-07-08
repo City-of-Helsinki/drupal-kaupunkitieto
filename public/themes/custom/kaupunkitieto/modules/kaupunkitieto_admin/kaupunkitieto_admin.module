@@ -1,9 +1,0 @@
-<?php
-
-/**
- * Implements hook_form_BASE_FORM_ID_alter() for node form.
- */
-function kaupunkitieto_admin_form_node_form_alter(&$form, &$form_state, $form_id) {
-  // Attach content liftup library to node forms.
-  $form['#attached']['library'][] = 'kaupunkitieto/admin-content-liftup';
-}

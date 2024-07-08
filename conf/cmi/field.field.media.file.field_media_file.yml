@@ -25,5 +25,5 @@ settings:
   file_directory: ''
   file_extensions: 'txt doc docx pdf xls xlsx'
   max_filesize: ''
-  description_field: true
+  description_field: false
 field_type: file

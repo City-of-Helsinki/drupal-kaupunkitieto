@@ -1,0 +1,125 @@
+.hdbt--select-wrapper--multiple .select2-container {
+  .selection {
+    --border-width: 2px;
+    --focus-outline-color: #{$color-black};
+    --input-background-default: var(--color-white);
+    --input-border-color-default: var(--color-black-50);
+    --input-color-default: var(--color-black-90);
+    --outline-width: 3px;
+
+    align-items: center;
+    appearance: none;
+    background-color: var(--input-background-default);
+    border: var(--border-width) solid var(--input-border-color-default);
+    box-sizing: border-box;
+    color: var(--input-color-default);
+    cursor: pointer;
+    display: block;
+    grid-template-areas: 'select';
+    min-width: 15ch;
+    padding: 10px 12px 12px 12px; // Center the text vertically
+    position: relative;
+    width: 100%;
+
+    &:focus-within {
+      box-shadow: none; // remove hds outline as it causes false positives in accessibility tools
+      outline: var(--outline-width, 3px) solid var(--focus-outline-color); // add a regular outline around checkbox
+      outline-offset: var(--outline-gutter, 2px); // Add some offset to handle black border vs black outline contrast
+    }
+  }
+
+  .select2-selection,
+  .select2-selection--multiple {
+    background: none;
+    border: 0 none;
+    padding: 0;
+  }
+
+  .select2-results__option--highlighted[aria-selected] {
+    background-color: var(--color-black) !important;
+    color: var(--color-white);
+}
+
+  .select2-selection--multiple .select2-selection__choice {
+    background-color: var(--color-black-5) !important;
+    border-radius: 0;
+    border: 0;
+    color: var(--color-black);
+    font-size: remify(18px);
+    font-weight: normal;
+    padding: 2px;
+  }
+  .select2-selection--multiple .select2-selection__choice__display {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .select2-selection--multiple .select2-selection__choice__remove {
+    padding-right: 5px;
+  }
+
+  .select2-selection--multiple .select2-search textarea {
+    margin-left: 10px;
+    margin-bottom: 6px;
+    margin-top: 8px;
+  }
+}
+
+.site-search .select2-container--default .select2-results__option {
+  font-size: remify(18px);
+  padding: calc(0.75rem - 1px) calc(1rem - 1px);
+  margin: $spacing-quarter 0;
+
+  &--highlighted[aria-selected] {
+    background-color: $color-black;
+  }
+}
+
+.block-facet--select2 {
+  padding-top: $spacing;
+  @include components-container-max-width;
+  @include component-side-padding;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  @include breakpoint($breakpoint-l) {
+    float: left;
+    width: 30%;
+    padding-top: $spacing * 2;
+
+    &:first-of-type {
+      padding-right: 0;
+    }
+
+    &:nth-child(3) {
+      margin-left: 5%;
+    }
+
+    &:nth-child(4) {
+      float: right;
+    }
+  }
+
+  h2 {
+    font-size: remify(16px);
+    line-height: 1.5;
+    font-weight: 500;
+    margin: 4px 0;
+  }
+}
+
+@include breakpoint($breakpoint-l) {
+  #block-keywords {
+    padding-right: 0;
+  }
+
+  #block-articleseries {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #block-author {
+    padding-left: 0;
+  }
+}

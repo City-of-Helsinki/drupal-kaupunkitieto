@@ -62,7 +62,7 @@ settings:
         weight: 38
         enabled: false
       infograph:
-        weight: 39
+        weight: 0
         enabled: true
       infograph_group:
         weight: 24

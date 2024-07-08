@@ -1,0 +1,3 @@
+name: 'helfi_content - dummy module'
+type: module
+core_version_requirement: ^9 || ^10

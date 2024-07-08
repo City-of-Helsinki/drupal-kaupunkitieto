@@ -1,0 +1,50 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      dist/css/styles.min.css: {}
+
+search-toggle:
+  version: 1.0
+  js:
+    dist/js/searchToggle.min.js: {}
+  dependencies:
+    - core/drupal
+
+admin-content-liftup:
+  js:
+    dist/js/contentLiftup.min.js: {}
+  version: 1.x
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+main-menu:
+  version: 1.x
+  js:
+    dist/js/mainMenu.min.js: {}
+
+infograph:
+  version: 1.x
+  js:
+    dist/js/infograph.min.js: {}
+    dist/js/slick.min.js: {}
+  css:
+    component:
+      dist/css/slick.css: { preprocess: false }
+
+content-menu:
+  js:
+    dist/js/contentMenu.min.js: {}
+  version: 1.x
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - select2/select2.min
+
+language-switcher:
+  js:
+    dist/js/languageSwitcher.min.js: {}
+  version: 1.x
+  dependencies:
+    - core/drupal

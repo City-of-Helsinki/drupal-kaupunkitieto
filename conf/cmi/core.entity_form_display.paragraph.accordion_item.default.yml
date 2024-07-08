@@ -9,9 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.accordion_item
   module:
     - paragraphs
-    - select2_icon
-_core:
-  default_config_hash: xQxl3DJdyXGfIMoF68zkvPXCgW-oWKdsAFKm2mhn7PM
+    - hdbt_admin_tools
 id: paragraph.accordion_item.default
 targetEntityType: paragraph
 bundle: accordion_item
@@ -45,7 +43,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_icon:
-    type: select2_icon_widget
+    type: select_icon_widget
     weight: 1
     region: content
     settings: {  }

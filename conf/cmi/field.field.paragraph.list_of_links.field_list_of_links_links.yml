@@ -37,7 +37,7 @@ settings:
         weight: 8
         enabled: false
       list_of_links_item:
-        weight: 9
+        weight: 0
         enabled: true
       text:
         weight: 10

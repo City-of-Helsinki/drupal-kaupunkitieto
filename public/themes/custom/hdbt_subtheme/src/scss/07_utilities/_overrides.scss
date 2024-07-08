@@ -1,0 +1,20 @@
+.column--30 {
+  .quick-links {
+    width: 100%;
+  }
+}
+
+.hds-pagination-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  display: inline;
+  position: relative;
+}
+
+// Hide the decorative hero arrow.
+#block-hdbt-subtheme-heroblock .hero__arrow {
+  display: none;
+}

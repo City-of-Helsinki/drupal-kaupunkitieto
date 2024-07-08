@@ -65,7 +65,7 @@ settings:
         weight: 33
         enabled: false
       quick_links_item:
-        weight: 18
+        weight: 0
         enabled: true
       text:
         weight: 34

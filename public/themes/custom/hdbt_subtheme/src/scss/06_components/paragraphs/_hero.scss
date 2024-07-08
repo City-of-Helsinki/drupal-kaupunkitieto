@@ -1,0 +1,45 @@
+.hero {
+  &__search-box {
+    @include font('special.quote');
+    max-width: 500px;
+    margin: $spacing-double 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--hdbt-color-palette-text--primary);
+
+    form {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    input {
+      border: 0;
+      color: var(--hdbt-color-palette-text--primary);
+      outline: none;
+
+      &::placeholder {
+        color: var(--hdbt-color-palette-text--primary);
+      }
+    }
+
+    input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: var(--hdbt-color-palette-text--primary);
+    }
+
+    input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: var(--hdbt-color-palette-text--primary);
+    }
+  }
+
+  &__search-field {
+    background: transparent;
+    flex-grow: 1;
+  }
+
+  &__search-submit {
+    @include pseudo-icon('search', $spacing-double, var(--hdbt-color-palette-text--primary), flex);
+    text-indent: -9999px;
+    width: 50px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+}

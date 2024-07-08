@@ -1,0 +1,64 @@
+
+
+{%
+  set classes = [
+    'content-menu',
+    view_mode ? 'content-menu--' ~ view_mode|clean_class,
+  ]
+%}
+
+{{ attach_library('hdbt_subtheme/content-menu') }}
+
+{% block paragraph %}
+  {% embed "@hdbt/misc/component.twig" with
+    {
+      component_classes: [ 'component--content-menu' ],
+      component_title: content.field_title,
+      component_description: content.field_description,
+      component_content_class: 'content-menu',
+    }
+  %}
+    {% block component_content %}
+
+      <div class="content-menu__content">
+        <ul class="content-menu__navigation" role="tablist">
+          {% for key, link in menu_links %}
+            {% set linkAttributes = create_attribute() %}
+            {%
+              set linkClasses = [
+              'content-menu__navigation-link',
+              loop.first ? 'active',
+            ]
+            %}
+            {% if loop.first %}
+              {% set linkAttributes = linkAttributes.setAttribute('aria-selected', 'true') %}
+            {% else %}
+              {% set linkAttributes = linkAttributes.setAttribute('aria-selected', 'false') %}
+            {% endif %}
+            <li class="content-menu__navigation-item" role="tab">
+              <a id="{{ link.title.aria }}" {{ linkAttributes.addClass(linkClasses) }} data-id="{{ key }}" tabindex="0" aria-controls="{{ link.title.aria }}-tab">{{ link.title.value }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <select class="hds-select content-menu__navigation-select">
+          {% for key, link in menu_links %}
+            {% set optionAttributes = create_attribute() %}
+            {%
+              set optionClasses = [
+              'content-menu__navigation-link',
+              loop.first ? 'active',
+            ]
+            %}
+            <option {{ optionAttributes.addClass(optionClasses) }} class="content-menu__navigation-item" data-id="{{ key }}" value="{{ key }}" tabindex="0">
+              {{ link.title.value }}
+            </option>
+          {% endfor %}
+        </select>
+        <div class="content-menu__items">
+          {{ content }}
+        </div>
+      </div>
+
+    {% endblock component_content %}
+  {% endembed %}
+{% endblock paragraph %}

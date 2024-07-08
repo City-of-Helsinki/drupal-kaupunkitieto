@@ -1,0 +1,86 @@
+.content-menu__navigation {
+  display: none;
+  list-style: none;
+  margin-top: 0;
+  margin-right: $spacing;
+  padding-left: 0;
+
+  @include breakpoint($breakpoint-m) {
+    display: block;
+    width: 200px;
+    margin-right: $spacing;
+  }
+
+  &-item {
+    border-bottom: 1px solid $color-black-30;
+  }
+
+  &-link {
+    font-size: remify(20px);
+    line-height: 1.2;
+    cursor: pointer;
+    display: block;
+    padding: $spacing 0;
+
+    &.active {
+      font-weight: 700;
+    }
+
+  }
+}
+
+.content-menu__content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $spacing-double;
+  margin-top: $spacing-double;
+
+  @include breakpoint($breakpoint-s) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: $spacing-quadruple;
+  }
+
+  .select2 {
+    display: block;
+    width: 100% !important;
+    @include breakpoint($breakpoint-s) {
+      width: auto;
+    }
+    @include breakpoint($breakpoint-m) {
+      display: none;
+    }
+  }
+}
+
+.content-menu__items {
+  margin-top: $spacing;
+
+  @include breakpoint($breakpoint-m) {
+    margin: 0;
+    width: 70%;
+  }
+}
+
+.content-menu__item {
+  @include breakpoint($breakpoint-m) {
+    margin-top: $spacing;
+    padding-left: $spacing-double;
+  }
+
+  &:not(.active) {
+    display: none;
+  }
+
+  .text__text-content {
+    padding: 0;
+  }
+}
+
+.content-menu__title {
+  margin-top: 0;
+
+  @include breakpoint($breakpoint-s) {
+    margin-top: $spacing-double;
+  }
+}
