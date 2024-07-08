@@ -69,3 +69,4 @@ hidden:
   field_search_result_text: true
   langcode: true
   search_api_excerpt: true
+  toc_enabled: true

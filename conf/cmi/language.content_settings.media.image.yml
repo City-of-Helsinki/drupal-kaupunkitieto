@@ -1,5 +1,5 @@
 uuid: 0b468c93-c361-4aad-bbc1-f4002d07d1b2
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -14,5 +14,5 @@ _core:
 id: media.image
 target_entity_type_id: media
 target_bundle: image
-default_langcode: fi
+default_langcode: en
 language_alterable: true

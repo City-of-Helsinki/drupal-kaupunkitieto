@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source /init.sh
+
 echo "Starting cron: $(date)"
 
 # You can add any additional cron "daemons" here:
@@ -16,8 +18,12 @@ echo "Starting cron: $(date)"
 # done
 # @endcode
 
+# Uncomment to enable infograph -query cron.
+exec "/crons/infograph.sh" &
 # Uncomment this to enable TPR migration cron
 #exec "/crons/migrate-tpr.sh" &
+# Uncomment this to enable linked events migrations cron
+#exec "/crons/linked-events.sh" &
 # Uncomment this to enable Varnish purge cron
 #exec "/crons/purge-queue.sh" &
 # Uncomment this to enable automatic translation updates.

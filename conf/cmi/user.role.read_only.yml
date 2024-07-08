@@ -1,12 +1,12 @@
-uuid: null
-langcode: fi
+uuid: 72a2102e-f1d0-4ec8-94b1-d4c552989c35
+langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
     - toolbar
 id: read_only
-label: Lukija
+label: 'Read only'
 weight: 2
 is_admin: null
 permissions:

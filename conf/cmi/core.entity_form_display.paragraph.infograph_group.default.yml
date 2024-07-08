@@ -1,5 +1,5 @@
 uuid: cac77317-25d0-4d7e-a769-006e6204a462
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -18,8 +18,8 @@ content:
     weight: 0
     region: content
     settings:
-      title: Lohko
-      title_plural: Lohkot
+      title: Paragraph
+      title_plural: Paragraphs
       edit_mode: open
       add_mode: select
       form_display_mode: default
