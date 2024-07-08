@@ -1,4 +1,9 @@
 services:
+  kaupunkitieto_infograph.infograph:
+    class: \Drupal\kaupunkitieto_infograph\Commands\Infograph
+    arguments: ['@entity_type.manager', '@database']
+    tags:
+      - { name: drush.command }
   kaupunkitieto_infograph.orphan_paragraphs:
     class: \Drupal\kaupunkitieto_infograph\Commands\RemoveOrphanParagraphs
     arguments: ['@entity_type.manager', '@database']
