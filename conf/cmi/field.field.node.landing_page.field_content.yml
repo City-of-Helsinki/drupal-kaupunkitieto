@@ -78,12 +78,6 @@ settings:
       event_list:
         weight: 30
         enabled: true
-      gallery:
-        weight: -23
-        enabled: false
-      gallery_slide:
-        weight: -22
-        enabled: false
       hero:
         weight: -21
         enabled: false

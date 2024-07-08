@@ -8,11 +8,11 @@ dependencies:
     - field.field.paragraph.accordion.field_accordion_heading_level
     - field.field.paragraph.accordion.field_accordion_items
     - field.field.paragraph.accordion.field_accordion_title
-    - field.field.paragraph.accordion.field_accordion_title_level
     - paragraphs.paragraphs_type.accordion
   module:
     - hdbt_admin_editorial
     - paragraphs
+    - text
 _core:
   default_config_hash: tZ6NtHmnjneasCaF7pacBXWuaSGMMI-LdkayZNerXro
 id: paragraph.accordion.default
@@ -66,12 +66,6 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  field_accordion_title_level:
-    type: options_select
-    weight: 1
-    region: content
-    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true

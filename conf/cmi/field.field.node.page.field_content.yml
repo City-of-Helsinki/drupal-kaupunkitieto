@@ -11,7 +11,6 @@ dependencies:
     - paragraphs.paragraphs_type.content_liftup
     - paragraphs.paragraphs_type.content_menu
     - paragraphs.paragraphs_type.embed
-    - paragraphs.paragraphs_type.gallery
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.list_of_links
     - paragraphs.paragraphs_type.text
@@ -86,12 +85,6 @@ settings:
       event_list:
         weight: 30
         enabled: true
-      gallery:
-        weight: -33
-        enabled: false
-      gallery_slide:
-        weight: -28
-        enabled: false
       hero:
         weight: -27
         enabled: false
