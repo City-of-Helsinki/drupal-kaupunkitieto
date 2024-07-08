@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Contains installation hooks for kaupunkitieto infograph module.
+ */
+
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+
+/**
+ * UHF-9779: Remove gallery and gallery slide paragraphs.
+ */
+function kaupunkitieto_infograph_update_9001(): void {
+
+  // Remove gallery slide and gallery paragraphs as they've been removed from
+  // platform config support since 3.0.
+  foreach (['gallery_slide', 'gallery'] as $type) {
+    $paragraphs = \Drupal::entityTypeManager()
+      ->getStorage('paragraph')
+      ->loadByProperties(['type' => $type]);
+
+    if (empty($paragraphs)) {
+      continue;
+    }
+
+    foreach ($paragraphs as $paragraph) {
+      /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+      $paragraph->delete();
+    }
+  }
+
+  // Rerun updates helfi_content module.
+  \Drupal::moduleHandler()->loadInclude('helfi_content', 'install');
+
+  // This update will uninstall token_filter and aet modules as they were not
+  // properly uninstalled earlier.
+  helfi_content_update_9040();
+
+  // This update will create popular service and target group links paragraphs
+  // and adds it to landing page content. These were missing from the database.
+  helfi_content_update_9033();
+}
