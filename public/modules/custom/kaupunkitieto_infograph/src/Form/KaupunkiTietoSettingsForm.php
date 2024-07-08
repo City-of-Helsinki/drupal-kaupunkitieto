@@ -1,12 +1,44 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Drupal\kaupunkitieto_infograph\Form;
 
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
-class KaupunkiTietoSettingsForm extends FormBase
-{
+/**
+ * Settings form for kaupunkitieto infograph.
+ */
+class KaupunkiTietoSettingsForm extends FormBase {
+
+  /**
+   * The configuration factory.
+   *
+   * @var \Drupal\Core\Config\ConfigFactoryInterface
+   */
+  protected $configFactory;
+
+  /**
+   * Constructs a database object.
+   *
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
+   *   The config factory.
+   */
+  public function __construct(ConfigFactoryInterface $config_factory) {
+    $this->configFactory = $config_factory;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('config.factory'),
+    );
+  }
 
   /**
    * {@inheritdoc}
@@ -30,7 +62,7 @@ class KaupunkiTietoSettingsForm extends FormBase
     ];
 
     $form['actions']['#type'] = 'actions';
-      $form['actions']['submit'] = [
+    $form['actions']['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Submit'),
       '#button_type' => 'primary',
@@ -39,10 +71,10 @@ class KaupunkiTietoSettingsForm extends FormBase
   }
 
   /**
-    * {@inheritdoc}
-    */
+   * {@inheritdoc}
+   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $config = \Drupal::getContainer()->get('config.factory')->getEditable('kaupunkitieto_infograph.settings');
+    $config = $this->configFactory->getEditable('kaupunkitieto_infograph.settings');
     $config->set('url', $form_state->getValue('url'));
     $config->save();
   }
@@ -55,4 +87,5 @@ class KaupunkiTietoSettingsForm extends FormBase
       'kaupunkitieto_infograph.settings',
     ];
   }
+
 }
