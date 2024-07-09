@@ -1,0 +1,37 @@
+_core:
+  default_config_hash: 9MOe6lZuXoDG7Nom5WQ0m69r-osBAqXdfxn17fmscXY
+client_key: ''
+environment: ''
+release: ''
+fatal_error_handler: true
+fatal_error_handler_memory: 2560
+log_levels:
+  1: 1
+  2: 2
+  3: 3
+  4: 4
+  5: 0
+  6: 0
+  7: 0
+  8: 0
+drush_error_handler: true
+stack: true
+timeout: 2
+message_limit: 2048
+trace: false
+javascript_error_handler: true
+public_dsn: ''
+ssl: verify_ssl
+ca_cert: ''
+ignored_channels: {  }
+ignored_messages: {  }
+send_user_data: false
+rate_limit: 0
+send_request_body: false
+request_tracing: true
+traces_sample_rate: 0.2
+browser_traces_sample_rate: null
+database_tracing: true
+twig_tracing: true
+auto_session_tracking: false
+http_compression: true
