@@ -1,11 +1,9 @@
-uuid: a23c9f15-577c-4852-98aa-44fc6fd8cb26
+uuid: dd534dfc-c424-4635-801d-fc486274449d
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic_text:6bded9bd-9bfd-49c4-88c5-1027bdec6760'
   module:
-    - block_content
+    - kaupunkitieto_config
     - language
   theme:
     - hdbt_subtheme
@@ -14,15 +12,12 @@ theme: hdbt_subtheme
 region: header_bottom
 weight: 0
 provider: null
-plugin: 'block_content:6bded9bd-9bfd-49c4-88c5-1027bdec6760'
+plugin: site_title_block
 settings:
-  id: 'block_content:6bded9bd-9bfd-49c4-88c5-1027bdec6760'
+  id: site_title_block
   label: 'Site title'
   label_display: '0'
-  provider: block_content
-  status: true
-  info: ''
-  view_mode: full
+  provider: kaupunkitieto_config
 visibility:
   language:
     id: language
