@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Theme override for a custom site title block.
+ *
+ * This is a template for custom block which will only add site name to
+ * English and Swedish versions of the site as there is no menu links in these
+ * translation versions.
+ */
+#}
+<nav role="navigation" class="desktop-menu">
+  {% set link_title %}
+    <span class="site-name">{{ site_name }}</span>
+  {% endset %}
+  {% set link_attributes = {
+    'class': [
+      'site-name__link',
+    ],
+    'rel': 'home',
+  } %}
+  <div class="site-name__container site-name__container--empty">
+    {{ link(link_title, site_front_url, link_attributes) }}
+  </div>
+</nav>
