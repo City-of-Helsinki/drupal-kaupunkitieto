@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-declare(strict_types=1);
-
 namespace Drupal\kaupunkitieto_search\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
