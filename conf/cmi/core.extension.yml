@@ -12,7 +12,6 @@ module:
   breakpoint: 0
   ckeditor: 0
   config: 0
-  config_filter: 0
   config_ignore: 0
   config_rewrite: 0
   config_translation: 0
@@ -111,8 +110,8 @@ module:
   paragraphs_library: 0
   path: 0
   path_alias: 0
-  publication_date: 0
   raven: 0
+  readonly_field_widget: 0
   redirect: 0
   responsive_image: 0
   role_delegation: 0
@@ -140,6 +139,7 @@ module:
   content_translation: 10
   views: 10
   paragraphs: 11
+  publication_date: 99
   minimal: 1000
   eu_cookie_compliance: 1001
 theme:
