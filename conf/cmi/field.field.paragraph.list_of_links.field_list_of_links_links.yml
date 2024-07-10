@@ -9,7 +9,7 @@ dependencies:
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: jtaF2CwemKcuajhKx2LIBb_l2W1135sdeoFEXbxl5uc
+  default_config_hash: oOfxEBSvc2N2zKV1BVDz4BZ7j2yihN98aqTj7DaTkLw
 id: paragraph.list_of_links.field_list_of_links_links
 field_name: field_list_of_links_links
 entity_type: paragraph
@@ -27,19 +27,7 @@ settings:
       list_of_links_item: list_of_links_item
     negate: 0
     target_bundles_drag_drop:
-      hero:
-        weight: 6
-        enabled: false
-      link:
-        weight: 7
-        enabled: false
-      list_of_links:
-        weight: 8
-        enabled: false
       list_of_links_item:
         weight: 0
         enabled: true
-      text:
-        weight: 10
-        enabled: false
 field_type: entity_reference_revisions

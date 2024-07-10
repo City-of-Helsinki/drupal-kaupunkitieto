@@ -6,3 +6,4 @@ name: 'Article series'
 vid: article_series
 description: 'Categorisation for article type content.'
 weight: 0
+new_revision: false

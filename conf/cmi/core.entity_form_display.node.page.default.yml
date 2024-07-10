@@ -23,7 +23,7 @@ dependencies:
     - publication_date
     - scheduler
 _core:
-  default_config_hash: _RX52hwdyz48o4MBqyRPUVkop-Unt1rcPuPanpQ7ksk
+  default_config_hash: 1c66UJvkqgUlwTKKPGactcR0FjaLLXJZq9ZHP_M24ao
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -34,16 +34,6 @@ content:
     weight: 7
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_author:
-    type: entity_reference_autocomplete
-    weight: 52
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   field_content:
     type: paragraphs
@@ -91,10 +81,12 @@ content:
         duplicate: '0'
     third_party_settings: {  }
   field_lead_in:
-    type: string_textarea
+    type: textarea_character_counter
     weight: 13
     region: content
     settings:
+      counter_step: 160
+      counter_total: 200
       rows: 3
       placeholder: ''
     third_party_settings: {  }
@@ -131,14 +123,6 @@ content:
     settings:
       sidebar: false
       use_details: true
-    third_party_settings: {  }
-  field_search_result_text:
-    type: string_textarea
-    weight: 53
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
     third_party_settings: {  }
   field_sidebar_content:
     type: paragraphs
@@ -223,10 +207,12 @@ content:
       display_label: true
     third_party_settings: {  }
   title:
-    type: string_textfield
+    type: textfield_character_counter
     weight: 1
     region: content
     settings:
+      counter_step: 0
+      counter_total: 55
       size: 60
       placeholder: ''
     third_party_settings: {  }
@@ -255,5 +241,23 @@ content:
     weight: 19
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_author:
+    type: entity_reference_autocomplete
+    weight: 52
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_search_result_text:
+    type: string_textarea
+    weight: 53
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
 hidden: {  }
