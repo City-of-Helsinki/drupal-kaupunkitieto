@@ -270,4 +270,5 @@ final class FixKaupunkitietoPlatformUpdate extends DrushCommands {
       $context['finished'] = 1;
     }
   }
+
 }

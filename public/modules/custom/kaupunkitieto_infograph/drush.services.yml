@@ -1,7 +1,7 @@
 services:
   kaupunkitieto_infograph.infograph:
     class: \Drupal\kaupunkitieto_infograph\Commands\Infograph
-    arguments: ['@entity_type.manager', '@database']
+    arguments: ['@entity_type.manager', '@database', '@http_client', '@config.factory']
     tags:
       - { name: drush.command }
   kaupunkitieto_infograph.orphan_paragraphs:
@@ -11,6 +11,6 @@ services:
       - { name: drush.command }
   kaupunkitieto_infograph.update_helper:
     class: \Drupal\kaupunkitieto_infograph\Commands\FixKaupunkitietoPlatformUpdate
-    arguments: ['@module_handler','@entity_type.manager', '@database']
+    arguments: ['@module_handler', '@entity_type.manager', '@database']
     tags:
       - { name: drush.command }

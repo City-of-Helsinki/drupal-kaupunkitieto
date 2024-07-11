@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace Drupal\kaupunkitieto_infograph\Commands;
 
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Database\Connection;
 use Drupal\Core\DependencyInjection\DependencySerializationTrait;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drush\Commands\DrushCommands;
+use GuzzleHttp\ClientInterface;
 
 /**
  * Infograph query command.
@@ -26,10 +28,16 @@ final class Infograph extends DrushCommands {
    *   The entity type manager.
    * @param \Drupal\Core\Database\Connection $connection
    *   The database connection.
+   * @param \GuzzleHttp\ClientInterface $httpClient
+   *   The http client.
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $configFactory
+   *   The config factory service.
    */
   public function __construct(
     private readonly EntityTypeManagerInterface $entityTypeManager,
     private readonly Connection $connection,
+    protected ClientInterface $httpClient,
+    private readonly ConfigFactoryInterface $configFactory,
   ) {
     parent::__construct();
   }
@@ -38,7 +46,7 @@ final class Infograph extends DrushCommands {
    * Execute infograph query.
    *
    * @usage drush kaupunkitieto:infograph-query
-   *   Updata infograph values.
+   *   Update infograph values.
    *
    * @command kaupunkitieto:infograph-query
    */
@@ -46,12 +54,12 @@ final class Infograph extends DrushCommands {
     $graphIdFieldName = 'field_graph_id';
     $graphTypeFieldName = 'field_type_infograph';
 
-    foreach ($this->get_graphs() as $paragraph) {
+    foreach ($this->getGraphs() as $paragraph) {
       if (!$paragraph->hasField($graphIdFieldName)) {
         continue;
       }
 
-      if (!$rows = $this->fetch_data($paragraph->get($graphIdFieldName)->value)) {
+      if (!$rows = $this->fetchData($paragraph->get($graphIdFieldName)->value)) {
         $this->logger()
           ->warning("No rows found for Graph Id: {$paragraph->get($graphIdFieldName)->value}");
         continue;
@@ -84,10 +92,19 @@ final class Infograph extends DrushCommands {
 
   /**
    * Get the paragraphs.
+   *
+   * @return array
+   *   Returns array of paragraphs.
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
-  function get_graphs(): array {
+  public function getGraphs(): array {
     $storage = $this->entityTypeManager->getStorage('paragraph');
-    $paragraphIds = $storage->getQuery()->condition('type', 'infograph')->execute();
+    $paragraphIds = $storage->getQuery()
+      ->accessCheck(FALSE)
+      ->condition('type', 'infograph')
+      ->execute();
 
     return $storage->loadMultiple($paragraphIds);
   }
@@ -95,19 +112,24 @@ final class Infograph extends DrushCommands {
   /**
    * Query data from external interface.
    *
-   * https://infographic-api.herokuapp.com/docs
+   * See: https://infographic-api.herokuapp.com/docs.
    *
+   * @param string $id
+   *   Infograph id.
+   *
+   * @return mixed
+   *   Returns the decoded request contents or empty array.
+   *
+   * @throws \GuzzleHttp\Exception\GuzzleException
    */
-  function fetch_data($id): mixed {
-    $client = \Drupal::httpClient();
-
-    $config = \Drupal::config('kaupunkitieto_infograph.settings');
-    if(trim($config->get('url')) == '') {
+  public function fetchData(string $id): mixed {
+    $config = $this->configFactory->get('kaupunkitieto_infograph.settings');
+    if (trim($config->get('url')) == '') {
       return [];
     }
 
     try {
-      $request = $client->get($config->get('url').$id);
+      $request = $this->httpClient->get($config->get('url') . $id);
       return json_decode($request->getBody()->getContents());
     }
     catch (\Exception $e) {
@@ -115,4 +137,5 @@ final class Infograph extends DrushCommands {
       return [];
     }
   }
+
 }
