@@ -1,7 +1,7 @@
 .hero {
-  &__search-box {
+  .hero__search-box {
     @include font('special.quote');
-    max-width: 500px;
+    max-width: 550px;
     margin: $spacing-double 0;
     padding-bottom: 10px;
     border-bottom: 2px solid var(--hdbt-color-palette-text--primary);
@@ -30,12 +30,12 @@
     }
   }
 
-  &__search-field {
+  .hero__search-field {
     background: transparent;
     flex-grow: 1;
   }
 
-  &__search-submit {
+  .hero__search-submit {
     @include pseudo-icon('search', $spacing-double, var(--hdbt-color-palette-text--primary), flex);
     text-indent: -9999px;
     width: 50px;
