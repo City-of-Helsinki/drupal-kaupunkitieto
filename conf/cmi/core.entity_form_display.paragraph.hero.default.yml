@@ -74,7 +74,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_display_search_field:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
 hidden:
   created: true
-  field_display_search_field: true
   status: true
