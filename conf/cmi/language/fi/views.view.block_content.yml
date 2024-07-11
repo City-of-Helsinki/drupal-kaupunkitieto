@@ -1,15 +1,18 @@
-label: Sanasto
 display:
   default:
     display_title: Oletus
     display_options:
       fields:
-        title:
-          label: Otsikko
-        name:
-          label: Kirjoittaja
+        info:
+          label: 'Block description'
+          separator: ', '
+        type:
+          label: 'Block type'
+          separator: ', '
         changed:
-          label: 'Viimeksi päivitetty'
+          label: Päivitetty
+        operations:
+          label: Toimenpiteet
       pager:
         options:
           tags:
@@ -21,15 +24,20 @@ display:
             offset_label: Offset
       exposed_form:
         options:
-          submit_button: Käytä
+          submit_button: Apply
           reset_button_label: Palauta
           exposed_sorts_label: Lajittele
           sort_asc_label: Nousevasti
           sort_desc_label: Laskevasti
-  attachment_1:
-    display_title: Liite
+      filters:
+        info:
+          expose:
+            label: 'Block description'
+        type:
+          expose:
+            label: 'Block type'
   page_1:
     display_title: Sivu
     display_options:
       menu:
-        title: Sanasto
+        title: Lohkot

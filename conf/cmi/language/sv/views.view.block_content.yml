@@ -34,7 +34,7 @@ display:
           sort_desc_label: Fallande
       empty:
         area_text_custom:
-          content: 'Det finns inga anpassade block tillgängliga.'
+          content: 'Det finns inga tillgängliga innehållsblock.'
       filters:
         info:
           expose:
@@ -46,4 +46,4 @@ display:
     display_title: Sida
     display_options:
       menu:
-        title: 'Bibliotek med anpassade block'
+        title: Block
