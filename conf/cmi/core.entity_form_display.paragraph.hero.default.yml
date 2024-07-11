@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.hero.field_display_search_field
-    - field.field.paragraph.hero.field_hero_bg_color
     - field.field.paragraph.hero.field_hero_desc
     - field.field.paragraph.hero.field_hero_design
     - field.field.paragraph.hero.field_hero_image
@@ -78,5 +77,4 @@ content:
 hidden:
   created: true
   field_display_search_field: true
-  field_hero_bg_color: true
   status: true
