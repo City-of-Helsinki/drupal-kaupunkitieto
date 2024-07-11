@@ -1,6 +1,6 @@
 $item_spacing: $spacing-triple;
 
-.content-liftup {
+.layout-content .content-liftup {
   background: $color-silver-light;
   border: 0;
   margin-top: $spacing-double;
@@ -15,7 +15,7 @@ $item_spacing: $spacing-triple;
   }
 }
 
-.content-liftup__content {
+.layout-content .content-liftup__content {
   display: flex;
   flex-direction: column;
   margin-bottom: $spacing-double;
@@ -30,7 +30,7 @@ $item_spacing: $spacing-triple;
   }
 }
 
-.content-liftup__container {
+.layout-content .content-liftup__container {
   overflow: hidden;
   padding-top: $spacing-double;
 
@@ -39,15 +39,17 @@ $item_spacing: $spacing-triple;
   }
 }
 
-.content-liftup__title {
+.layout-content .content-liftup__title {
+  @include font('h2');
   margin-top: 0;
+  width: 100%;
 
   @include breakpoint($breakpoint-s) {
     margin-top: $spacing-double;
   }
 }
 
-.content-liftup__item {
+.layout-content .content-liftup__item {
   margin-bottom: $spacing-double;
   width: 100%;
 
@@ -95,10 +97,4 @@ $item_spacing: $spacing-triple;
       @include font('body');
     }
   }
-}
-
-.content-liftup__title {
-  @include font('h2');
-  margin-top: 0;
-  width: 100%;
 }
