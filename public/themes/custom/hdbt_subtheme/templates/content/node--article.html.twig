@@ -103,7 +103,8 @@
         </div>
       {% endif %}
 
-      {{ drupal_block('hdbt_content_social_sharing_block') }}
+      <h2 class="social-media__title">{{ 'Share'|t }}</h2>
+      {{ drupal_block('helfi_platform_config_social_sharing_block') }}
 
       <div class="article__bottom-wrapper">
         {% if content.field_article_series|render %}

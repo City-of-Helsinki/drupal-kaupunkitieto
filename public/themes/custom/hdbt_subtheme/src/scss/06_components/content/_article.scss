@@ -64,3 +64,12 @@
     }
   }
 }
+
+.node--type-article.node--view-mode-teaser {
+  // Remove paddings and add minus margin to fix the position of
+  // social media items icons.
+  .social-media__items {
+    padding-left: 0;
+    margin-left: -8px;
+  }
+}
