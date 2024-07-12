@@ -8,6 +8,7 @@
 declare(strict_types=1);
 
 use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -181,5 +182,33 @@ function hdbt_subtheme_preprocess_paragraph(array &$variables) {
         ],
       ],
     ];
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function hdbt_subtheme_views_pre_render(ViewExecutable $view): void {
+  if (
+    !isset($view->element['#name']) ||
+    $view->element['#name'] !== 'site_search'
+  ) {
+    return;
+  }
+
+  // Fix the "implicit conversion from float to int loses precision" -error,
+  // when handling the exposed form widget position changes via
+  // the views-view--site_search.html.twig template.
+  foreach ($view->exposed_widgets as $key => &$item) {
+    if (!is_array($item) || str_starts_with($key, '#')) {
+      continue;
+    }
+
+    if (
+      array_key_exists('#weight', $item) &&
+      is_float($item['#weight'])
+    ) {
+      $item['#weight'] = (int) $item['#weight'];
+    }
   }
 }
