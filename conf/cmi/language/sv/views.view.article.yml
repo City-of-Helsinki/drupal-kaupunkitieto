@@ -9,5 +9,5 @@ display:
       pager:
         options:
           tags:
-            next: Följande
-            previous: Föregående
+            next: nästa
+            previous: föregående

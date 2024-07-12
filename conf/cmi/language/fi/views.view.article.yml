@@ -4,10 +4,10 @@ display:
       pager:
         options:
           tags:
-            next: Seuraava
-            previous: Edellinen
-            first: Ensimmäinen
-            last: Viimeinen
+            next: seuraava
+            previous: edellinen
+            first: ensimmäinen
+            last: viimeinen
       title: 'Uusimmat artikkelit'
       header:
         area:

@@ -585,8 +585,8 @@ display:
           tags:
             next: ››
             previous: ‹‹
-            first: '« First'
-            last: 'Last »'
+            first: first
+            last: last
           expose:
             items_per_page: true
             items_per_page_label: 'Results per page'

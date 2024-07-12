@@ -13,10 +13,10 @@ display:
       pager:
         options:
           tags:
-            previous: '‹ föregående'
-            next: 'nästa ›'
-            first: '« första'
-            last: 'sista »'
+            previous: föregående
+            next: nästa
+            first: första
+            last: sista
       fields:
         node_bulk_form:
           action_title: Åtgärd
