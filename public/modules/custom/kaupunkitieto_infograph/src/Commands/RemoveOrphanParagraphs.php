@@ -52,6 +52,7 @@ final class RemoveOrphanParagraphs extends DrushCommands {
     $entity_storage = $this->entityTypeManager->getStorage('paragraph');
 
     $orphaned_infographs = $entity_storage->getQuery()
+      ->accessCheck(FALSE)
       ->condition('type', 'infograph_row')
       ->notExists('parent_id')
       ->notExists('parent_type')
@@ -67,6 +68,7 @@ final class RemoveOrphanParagraphs extends DrushCommands {
     if ($orphaned_infographs > 0) {
       // Clean up orphaned paragraphs.
       $entity_ids = $entity_storage->getQuery()
+        ->accessCheck(FALSE)
         ->condition('type', 'infograph_row')
         ->notExists('parent_id')
         ->notExists('parent_type')

@@ -129,7 +129,7 @@ final class Infograph extends DrushCommands {
     }
 
     try {
-      $request = $this->httpClient->get($config->get('url') . $id);
+      $request = $this->httpClient->request('GET', $config->get('url') . $id);
       return json_decode($request->getBody()->getContents());
     }
     catch (\Exception $e) {
