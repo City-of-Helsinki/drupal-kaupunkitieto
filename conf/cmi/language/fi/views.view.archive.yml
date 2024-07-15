@@ -21,6 +21,8 @@ display:
           tags:
             previous: Edellinen
             next: Seuraava
+            first: Ensimmäinen
+            last: Viimeinen
   block_1:
     display_title: Lohko
   page_1:
