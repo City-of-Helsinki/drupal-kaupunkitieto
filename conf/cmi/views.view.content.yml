@@ -318,10 +318,10 @@ display:
           pagination_heading_level: h4
           items_per_page: 50
           tags:
-            next: next
-            previous: previous
-            first: first
-            last: last
+            next: Next
+            previous: Previous
+            first: First
+            last: Last
       exposed_form:
         type: basic
         options:

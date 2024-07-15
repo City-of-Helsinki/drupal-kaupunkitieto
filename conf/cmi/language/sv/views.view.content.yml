@@ -28,10 +28,10 @@ display:
       pager:
         options:
           tags:
-            next: nästa
-            previous: föregående
-            first: första
-            last: sista
+            next: Nästa
+            previous: Föregående
+            first: Första
+            last: Sista
       exposed_form:
         options:
           submit_button: Filtrera

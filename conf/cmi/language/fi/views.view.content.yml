@@ -25,10 +25,10 @@ display:
       pager:
         options:
           tags:
-            next: seuraava
-            previous: edellinen
-            first: ensimmäinen
-            last: viimeinen
+            next: Seuraava
+            previous: Edellinen
+            first: Ensimmäinen
+            last: Viimeinen
       exposed_form:
         options:
           submit_button: Suodata

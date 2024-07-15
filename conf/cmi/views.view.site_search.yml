@@ -583,10 +583,10 @@ display:
           total_pages: null
           id: 0
           tags:
-            next: ››
-            previous: ‹‹
-            first: first
-            last: last
+            next: Next
+            previous: Previous
+            first: First
+            last: Last
           expose:
             items_per_page: true
             items_per_page_label: 'Results per page'
