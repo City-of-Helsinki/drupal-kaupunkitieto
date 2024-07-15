@@ -1,34 +1,53 @@
 .page-type--article {
   .node--type-article {
-    .article-header__container {
-      .article__bottom-wrapper {
-        align-items: flex-end;
-        display: flex;
-        justify-content: space-between;
-        max-width: none;
-      }
+    .article--info__container {
+      display: grid;
+      grid-template-rows: auto auto auto 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+	'article-date'
+	'article-author'
+	'article-series'
+	'article-attachment';
+      gap: 0;
 
-      > div {
-        padding-left: 0;
+      @include breakpoint(620px) {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+	'article-date article-attachment'
+	'article-author article-attachment'
+	'article-series article-attachment';
       }
     }
 
     .article__series {
+      grid-area: article-series;
+      margin-bottom: $spacing;
+
+      @include breakpoint(620px) {
+        margin-bottom: 0;
+      }
+
       .views-element-container {
         display: inline-block;
         padding: 0;
       }
     }
 
-    .keywords {
-      a {
-        display: inline-block;
-      }
+    .article__date.content-date {
+      grid-area: article-date;
+      margin-bottom: $spacing-quarter;
+      margin-left: 0;
+      margin-right: 0;
     }
 
     .article__author {
       @include font('small');
       color: $color-black;
+      display: flex;
+      grid-area: article-author;
       margin-bottom: $spacing-quarter;
 
       &__label {
@@ -40,11 +59,13 @@
       }
     }
 
-    .social-media-sharing {
-      margin-bottom: $spacing-half;
-    }
-
     .article__attachment {
+      grid-area: article-attachment;
+
+      @include breakpoint(620px) {
+        justify-self: flex-end;
+      }
+
       &__link {
         background-color: $color-black;
         color: $color-white;
@@ -62,14 +83,41 @@
         }
       }
     }
+
+    .social-media-sharing {
+      margin-bottom: $spacing-half;
+    }
   }
 }
 
-.node--type-article.node--view-mode-teaser {
+.node--type-article {
+  // Revert the left and right paddings for the following elements.
+  .social-media__items,
+  .content-date {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   // Remove paddings and add minus margin to fix the position of
   // social media items icons.
   .social-media__items {
-    padding-left: 0;
     margin-left: -8px;
+  }
+}
+
+// This might be useless and should be removed as the teaser is only used on
+// one page (node/114).
+.article.article--teaser {
+  .lead-in .component__content {
+    @include font('small');
+    margin-bottom: $spacing;
+  }
+
+  .keywords__container {
+    margin-left: $spacing-and-half;
+
+    .views-element-container {
+      padding-top: 0;
+    }
   }
 }

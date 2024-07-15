@@ -1,17 +1,14 @@
-{% extends '@hdbt/content/node.html.twig' %}
-
-{% block main_content %}
-
+<div class="article article--teaser">
   {# Lead-in text, if any #}
-  {{ content.field_lead }}
+  {% if content.field_lead|render %}
+    {{ content.field_lead }}
+  {% endif %}
 
-  {# Page divider, normally it comes from table of contents, but news does not have that #}
-  <div class="page-divider"></div>
+  {% set created_date = node.createdtime %}
 
-  {% embed "@hdbt/misc/container.twig" with {container_element: 'article__info'} %}
-    {% block container_content %}
+  {% if created_date|render or content.field_author|render or content.field_article_series|render %}
+    <div class="article__info">
       {# Created date and modified date #}
-      {% set created_date = node.createdtime %}
       {% if created_date|render %}
         <div class="content-date article__date" {{ alternative_language ? create_attribute(({ 'lang': lang_attributes.fallback_lang, 'dir': lang_attributes.fallback_dir })) }}>
           {% set html_created_date = created_date|format_date('custom', 'Y-m-d') ~ 'T' ~ created_date|format_date('custom', 'H:i') %}
@@ -44,34 +41,11 @@
           <span class="article__series__label">{{ 'Belongs to the series'|trans }}:</span> {{ drupal_view('article_series_links','block_1', node.id) }}
         </div>
       {% endif %}
-
-      {% if content.field_attachment|render %}
-        <div class="article__attachment">
-          {{ content.field_attachment }}
-        </div>
-      {% endif %}
-
-    {% endblock container_content %}
-  {% endembed %}
-
-  {# Content region #}
-  {% if content.field_content|render|striptags|trim is not empty %}
-    {{ content.field_content }}
+    </div>
   {% endif %}
 
-  {# Social media links #}
-  {% embed "@hdbt/misc/container.twig" with {container_element: 'social-media'} %}
-    {% block container_content %}
-      <h2 class="social-media__title">{{ 'Share'|t }}</h2>
-      {{ drupal_block('helfi_platform_config_social_sharing_block') }}
-    {% endblock container_content %}
-  {% endembed %}
-
-
   {# Tags #}
-  {% embed "@hdbt/misc/container.twig" with {container_element: 'keywords'} %}
-    {% block container_content %}
-      {{ drupal_view('keyword_links','block_1', node.id) }}
-    {% endblock container_content %}
-  {% endembed %}
-{% endblock main_content %}
+  <div class="keywords__container">
+    {{ drupal_view('keyword_links','block_1', node.id) }}
+  </div>
+</div>

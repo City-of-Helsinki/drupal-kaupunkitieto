@@ -34,6 +34,6 @@
 {% set file_uri = media.field_media_file.entity.uri.value %}
 
 <a href="{{ file_url(file_uri) }}" class="article__attachment__link hds-button" rel="bookmark" target="_blank">
-  <span aria-hidden="true" class="hds-icon hds-icon--download"></span>
+  {% include '@hdbt/misc/icon.twig' ignore missing with {icon: 'download'} %}
   <span class="hds-button__label">{{ 'Download the whole report here'|trans }} ({{ file_name|split('.')|last }})</span>
 </a>
