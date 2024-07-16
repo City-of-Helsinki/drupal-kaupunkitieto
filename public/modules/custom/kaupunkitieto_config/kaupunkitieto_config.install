@@ -18,6 +18,7 @@ function kaupunkitieto_config_update_9001(): void {
   }
 
   $permissions = [
+    'assign admin role',
     'administer hotjar settings',
     'translate hauki_resource',
     'translate tpr_service',
