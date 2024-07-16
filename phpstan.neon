@@ -1,0 +1,13 @@
+parameters:
+  fileExtensions:
+      - php
+      - module
+      - install
+      - theme
+  paths:
+    - ./public/modules/custom
+    - ./public/themes/custom
+  excludePaths:
+    - vendor
+  level: 3
+  treatPhpDocTypesAsCertain: false
