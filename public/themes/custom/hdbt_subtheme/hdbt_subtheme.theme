@@ -142,12 +142,14 @@ function hdbt_subtheme_preprocess_paragraph(array &$variables) {
     $items = $paragraph->get('field_content_menu_items');
 
     foreach ($items as $item) {
-      $item_entity = $item->entity;
-      $title = $item_entity->get('field_content_menu_item_title')->first()->getValue();
-      $variables['menu_links'][$item_entity->id()]['title'] = $title;
-      $variables['menu_links'][$item_entity->id()]['title']['aria'] = str_replace(' ', '-', strtolower($title['value']));
+      /** @var \Drupal\entity_reference_revisions\Plugin\DataType\EntityReferenceRevisions $current_entity */
+      $current_entity = $item->get('entity');
+      /** @var \Drupal\paragraphs\ParagraphInterface $content_menu_item */
+      $content_menu_item = $current_entity->getTarget()->getValue();
+      $title = $content_menu_item->get('field_content_menu_item_title')->first()->getValue();
+      $variables['menu_links'][$content_menu_item->id()]['title'] = $title;
+      $variables['menu_links'][$content_menu_item->id()]['title']['aria'] = str_replace(' ', '-', strtolower($title['value']));
     }
-
   }
 
   if ($paragraph_type == 'content_menu_item') {
