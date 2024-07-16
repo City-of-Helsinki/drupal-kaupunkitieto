@@ -6,7 +6,7 @@ display:
     display_options:
       fields:
         title:
-          label: Title
+          label: Titel
         name:
           label: Författare
         changed:
@@ -14,8 +14,8 @@ display:
       pager:
         options:
           tags:
-            next: ››
-            previous: ‹‹
+            next: Nästa
+            previous: Föregående
           expose:
             items_per_page_label: 'Inlägg per sida'
             items_per_page_options_all_label: '- Alla -'

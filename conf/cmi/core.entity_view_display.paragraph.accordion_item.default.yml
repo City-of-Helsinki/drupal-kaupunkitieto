@@ -10,6 +10,8 @@ dependencies:
   module:
     - entity_reference_revisions
     - hdbt_admin_tools
+_core:
+  default_config_hash: nEdDaeghKYX4hYMccTAO5M0h4TLAiNAsYf2ouXYD2Sc
 id: paragraph.accordion_item.default
 targetEntityType: paragraph
 bundle: accordion_item

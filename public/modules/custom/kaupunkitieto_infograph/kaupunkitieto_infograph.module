@@ -19,12 +19,17 @@ function kaupunkitieto_infograph_helfi_paragraph_types() : array {
         'field_content' => [
           'infograph' => 15,
           'embed' => 16,
+          'content_liftup' => 17,
         ],
       ],
       'page' => [
         'field_content' => [
           'embed' => 15,
           'content_menu' => 16,
+          'content_liftup' => 17,
+        ],
+        'field_lower_content' => [
+          'content_liftup' => 16,
         ],
       ],
     ],

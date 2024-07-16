@@ -9,7 +9,7 @@ dependencies:
     config:
       - paragraphs.paragraphs_type.accordion_item
 _core:
-  default_config_hash: mOG-smkX52eEQrZjVtUaqeOYVqQIIYHjfMk5GQmdYHs
+  default_config_hash: O3jtnsTTTr_DF5PCVSyfomvx9U5KhscOD2pcVnv9jRo
 id: paragraph.field_accordion_item_content
 field_name: field_accordion_item_content
 entity_type: paragraph

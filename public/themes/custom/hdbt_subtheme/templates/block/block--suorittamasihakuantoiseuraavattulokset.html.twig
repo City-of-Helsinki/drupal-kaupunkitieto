@@ -1,9 +1,7 @@
-<div class="components components--search-title">
-  {% if label %}
-    {% embed "@hdbt/misc/container.twig" with {container_element: 'search-title'} %}
-      {% block container_content %}
-        <h1{{ title_attributes }}>{{ label }}</h1>
-      {% endblock container_content %}
-    {% endembed %}
-  {% endif %}
-</div>
+{% if label %}
+  {% embed "@hdbt/misc/container.twig" with {container_element: 'search-title'} %}
+    {% block container_content %}
+      <h1{{ title_attributes }}>{{ label }}</h1>
+    {% endblock container_content %}
+  {% endembed %}
+{% endif %}

@@ -7,6 +7,9 @@
 
 declare(strict_types=1);
 
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\views\ViewExecutable;
+
 /**
  * Implements hook_preprocess_HOOK().
  */
@@ -87,6 +90,23 @@ function hdbt_subtheme_theme_suggestions_input_alter(array &$suggestions, array 
 }
 
 /**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function hdbt_subtheme_theme_suggestions_paragraph_alter(array &$suggestions, array $variables) {
+  if (
+    !isset($variables['elements']['#paragraph']) ||
+    !$variables['elements']['#paragraph'] instanceof Paragraph ||
+    $variables['elements']['#paragraph']->getType() !== 'hero'
+  ) {
+    return;
+  }
+  $custom_search = $variables['elements']['#paragraph']->get('field_display_search_field')->value;
+  if ($custom_search) {
+    $suggestions[] = 'paragraph__hero__with_search';
+  }
+}
+
+/**
  * Implements hook_theme_suggestions_HOOK().
  */
 function hdbt_subtheme_theme_suggestions_views_view_field_alter(array &$suggestions, array &$variables, $hook) {
@@ -122,12 +142,14 @@ function hdbt_subtheme_preprocess_paragraph(array &$variables) {
     $items = $paragraph->get('field_content_menu_items');
 
     foreach ($items as $item) {
-      $item_entity = $item->entity;
-      $title = $item_entity->get('field_content_menu_item_title')->first()->getValue();
-      $variables['menu_links'][$item_entity->id()]['title'] = $title;
-      $variables['menu_links'][$item_entity->id()]['title']['aria'] = str_replace(' ', '-', strtolower($title['value']));
+      /** @var \Drupal\entity_reference_revisions\Plugin\DataType\EntityReferenceRevisions $current_entity */
+      $current_entity = $item->get('entity');
+      /** @var \Drupal\paragraphs\ParagraphInterface $content_menu_item */
+      $content_menu_item = $current_entity->getTarget()->getValue();
+      $title = $content_menu_item->get('field_content_menu_item_title')->first()->getValue();
+      $variables['menu_links'][$content_menu_item->id()]['title'] = $title;
+      $variables['menu_links'][$content_menu_item->id()]['title']['aria'] = str_replace(' ', '-', strtolower($title['value']));
     }
-
   }
 
   if ($paragraph_type == 'content_menu_item') {
@@ -162,5 +184,33 @@ function hdbt_subtheme_preprocess_paragraph(array &$variables) {
         ],
       ],
     ];
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function hdbt_subtheme_views_pre_render(ViewExecutable $view): void {
+  if (
+    !isset($view->element['#name']) ||
+    $view->element['#name'] !== 'site_search'
+  ) {
+    return;
+  }
+
+  // Fix the "implicit conversion from float to int loses precision" -error,
+  // when handling the exposed form widget position changes via
+  // the views-view--site_search.html.twig template.
+  foreach ($view->exposed_widgets as $key => &$item) {
+    if (!is_array($item) || str_starts_with($key, '#')) {
+      continue;
+    }
+
+    if (
+      array_key_exists('#weight', $item) &&
+      is_float($item['#weight'])
+    ) {
+      $item['#weight'] = (int) $item['#weight'];
+    }
   }
 }

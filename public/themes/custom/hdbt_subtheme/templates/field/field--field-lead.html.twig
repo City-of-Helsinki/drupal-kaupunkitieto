@@ -1,0 +1,7 @@
+{% set content %}
+  {% for item in items %}
+    {{ item.content }}
+  {% endfor %}
+{% endset %}
+
+{% embed "@hdbt/misc/lead-in.twig" with { content: content } %}{% endembed %}

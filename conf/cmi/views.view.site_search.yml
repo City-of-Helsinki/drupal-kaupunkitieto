@@ -234,6 +234,15 @@ display:
             date_format: custom
             custom_date_format: j.n.Y
             timezone: ''
+            tooltip:
+              date_format: ''
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -569,14 +578,15 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 8
           total_pages: null
           id: 0
           tags:
-            next: ››
-            previous: ‹‹
-            first: '« First'
-            last: 'Last »'
+            next: Next
+            previous: Previous
+            first: First
+            last: Last
           expose:
             items_per_page: true
             items_per_page_label: 'Results per page'
@@ -601,7 +611,7 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: none
+        type: search_api_none
         options: {  }
       empty: {  }
       sorts:
@@ -756,6 +766,7 @@ display:
         - 'config:field.storage.node.field_liftup_image'
         - 'config:field.storage.node.field_search_result_text'
         - 'config:search_api.index.site_search_index'
+        - 'search_api_list:site_search_index'
   page_1:
     id: page_1
     display_title: Page
@@ -763,7 +774,7 @@ display:
     position: 1
     display_options:
       cache:
-        type: none
+        type: search_api_none
       defaults:
         cache: false
       exposed_block: false
@@ -787,3 +798,4 @@ display:
         - 'config:field.storage.node.field_liftup_image'
         - 'config:field.storage.node.field_search_result_text'
         - 'config:search_api.index.site_search_index'
+        - 'search_api_list:site_search_index'

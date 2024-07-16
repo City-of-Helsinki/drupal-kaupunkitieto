@@ -19,8 +19,8 @@ display:
       pager:
         options:
           tags:
-            next: 'Nästa ›'
-            previous: '‹ Föregående'
+            next: Nästa
+            previous: Föregående
           expose:
             items_per_page_label: 'Inlägg per sida'
             items_per_page_options_all_label: '- Alla -'
@@ -34,7 +34,7 @@ display:
           sort_desc_label: Fallande
       empty:
         area_text_custom:
-          content: 'Det finns inga anpassade block tillgängliga.'
+          content: 'Det finns inga tillgängliga innehållsblock.'
       filters:
         info:
           expose:
@@ -46,4 +46,4 @@ display:
     display_title: Sida
     display_options:
       menu:
-        title: 'Bibliotek med anpassade block'
+        title: Block

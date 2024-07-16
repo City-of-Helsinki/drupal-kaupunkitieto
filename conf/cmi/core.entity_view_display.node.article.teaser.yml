@@ -56,5 +56,6 @@ hidden:
   field_search_result_text: true
   langcode: true
   links: true
+  published_at: true
   search_api_excerpt: true
   toc_enabled: true

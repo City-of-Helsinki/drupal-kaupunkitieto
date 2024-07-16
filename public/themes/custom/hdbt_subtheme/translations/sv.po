@@ -1,3 +1,6 @@
 # Swedish translations
 msgid ""
 msgstr ""
+
+msgid "Share"
+msgstr "Dela"

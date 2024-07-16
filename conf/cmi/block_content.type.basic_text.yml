@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: basic_text
 label: 'Basic text'
-revision: 0
+revision: false
 description: ''

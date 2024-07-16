@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 /**
  * Settings form for kaupunkitieto infograph.
  */
-class KaupunkiTietoSettingsForm extends FormBase {
+final class KaupunkiTietoSettingsForm extends FormBase {
 
   /**
    * The configuration factory.

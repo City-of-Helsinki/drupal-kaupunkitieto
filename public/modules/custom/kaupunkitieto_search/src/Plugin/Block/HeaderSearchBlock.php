@@ -17,7 +17,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   admin_label = @Translation("Kaupunkitieto Header Search"),
  * )
  */
-class HeaderSearchBlock extends BlockBase implements ContainerFactoryPluginInterface {
+final class HeaderSearchBlock extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
    * The language manager.
@@ -42,7 +42,7 @@ class HeaderSearchBlock extends BlockBase implements ContainerFactoryPluginInter
     array $configuration,
     $plugin_id,
     $plugin_definition,
-    LanguageManagerInterface $language_manager
+    LanguageManagerInterface $language_manager,
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->languageManager = $language_manager;

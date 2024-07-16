@@ -8,7 +8,7 @@ display:
         node_bulk_form:
           action_title: Åtgärd
         title:
-          label: Title
+          label: Titel
           separator: ', '
         type:
           label: Innehållstyp
@@ -21,10 +21,10 @@ display:
       pager:
         options:
           tags:
-            next: ››
-            previous: ‹‹
-            first: '« Första'
-            last: 'Sista »'
+            next: Nästa
+            previous: Föregående
+            first: Första
+            last: Sista
           expose:
             items_per_page_label: 'Inlägg per sida'
             items_per_page_options_all_label: '- Alla -'
@@ -50,7 +50,7 @@ display:
             label: Innehållstyp
         title:
           expose:
-            label: Title
+            label: Titel
   page_1:
     display_title: Sida
     display_options:
