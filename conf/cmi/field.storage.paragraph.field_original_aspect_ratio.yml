@@ -1,11 +1,11 @@
 uuid: 7e9cb9ab-11c1-4811-8c34-00caa7910d77
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
 _core:
-  default_config_hash: z0hQ7or4c4fxhd2s376NL06XFKMUWvkZr2t8oN2xwP8
+  default_config_hash: tGfd4vmvsPZVSBXLP9lhbTGPn-HF1rBObr88RqELxgw
 id: paragraph.field_original_aspect_ratio
 field_name: field_original_aspect_ratio
 entity_type: paragraph

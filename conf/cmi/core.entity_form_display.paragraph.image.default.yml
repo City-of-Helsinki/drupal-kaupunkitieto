@@ -1,5 +1,5 @@
 uuid: 02e7d542-47ec-4713-8599-b3ec526fb6b3
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ dependencies:
   module:
     - media_library
 _core:
-  default_config_hash: O8iGrVUXLpTDbk7UIkhPgVIPzm04oWVf3vbj83CIISc
+  default_config_hash: tl5Ri26OIY_IzF68qH0Vn6ZoTnjVJbcext4B8RKFiLA
 id: paragraph.image.default
 targetEntityType: paragraph
 bundle: image

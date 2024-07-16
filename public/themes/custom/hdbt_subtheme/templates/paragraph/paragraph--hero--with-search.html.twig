@@ -1,0 +1,46 @@
+{% set design = "with-image-right" %}
+{% set design_class = "hero--with-image-right" %}
+{% set title = content.field_hero_title %}
+{% set image = content.field_hero_image %}
+{% set description = content.field_hero_desc %}
+{{ attach_library('hdbt_subtheme/search-toggle') }}
+
+{% set hero_wrapper_attributes = {
+  'class': [
+    'hero',
+    design_class ? design_class,
+  ]
+} %}
+
+<div{{ create_attribute(hero_wrapper_attributes) }}>
+  {% embed "@hdbt/misc/container.twig" with {container_element: 'hero'} %}
+    {% block container_content %}
+      <div class="hero__text-content">
+        {# Hyphenate the visible title, but share to screen readers unhyphenated version as for example NVDA reads hyphenated text poorly #}
+        <h1 class="hero__title hyphenate" aria-labelledby="page_title">{{ title }}</h1>
+        <span class="is-hidden" id="page_title">{{ title }}</span>
+
+        {% if description|render|striptags|trim is not empty %}
+          <div class="hero__description user-edited-content">
+            {{ description }}
+          </div>
+        {% endif %}
+
+        <div class="hero__search-box">
+          <form action="/{{ current_langcode }}/haku" method="get" accept-charset="UTF-8">
+            <input data-drupal-selector="edit-search_api_fulltext" type="search" class="hero__search-field" id="edit-search_api_fulltext" name="search_api_fulltext" value="" size="15" placeholder="{{ 'What do you want to know today?'|trans }}" maxlength="128" />
+            <input value="{{ 'Search'|trans }}" type="submit" class="hero__search-submit">
+          </form>
+        </div>
+      </div>
+    {% endblock %}
+  {% endembed %}
+
+  {% if image|render %}
+    <div class="hero__image-container">
+      {% include '@hdbt/misc/koro.twig' with {koro: koro, flip: true } %}
+      {{ image }}
+    </div>
+  {% endif %}
+  {% include '@hdbt/misc/koro.twig' with {koro: koro, flip: false } %}
+</div>

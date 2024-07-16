@@ -1,12 +1,15 @@
 uuid: 1c645bbf-badf-4482-84da-a41d5b91e54a
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
     - entity_reference_revisions
     - paragraphs
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.columns
 _core:
-  default_config_hash: 2ltVYjn6epl4lpmh_AI6gI_WCUR9oDl1wtOVc335s1Y
+  default_config_hash: waCegyjjP5C3Po7Tx0QE5n0eQWqCSElpBRPxkWixtF8
 id: paragraph.field_columns_left_column
 field_name: field_columns_left_column
 entity_type: paragraph
@@ -15,7 +18,7 @@ settings:
   target_type: paragraph
 module: entity_reference_revisions
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

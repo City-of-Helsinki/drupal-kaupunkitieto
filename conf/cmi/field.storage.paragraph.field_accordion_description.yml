@@ -1,10 +1,12 @@
 uuid: 0d6e008e-a3bb-46b1-bf79-93ba5b0b3e7d
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
     - text
+_core:
+  default_config_hash: f39f_iSoIe3v72Vw4gZbmZ1rK31zxu8nziCvipMdnfk
 id: paragraph.field_accordion_description
 field_name: field_accordion_description
 entity_type: paragraph

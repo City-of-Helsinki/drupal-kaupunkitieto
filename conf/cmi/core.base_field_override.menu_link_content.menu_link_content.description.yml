@@ -1,11 +1,11 @@
 uuid: 142b2f37-b52b-4bd6-96b3-16471cf188fe
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
     - menu_link_content
 _core:
-  default_config_hash: P8cJkUXUk4w08Db1MO10LmaFAPSWqQ6cPXybeQUIJvg
+  default_config_hash: I1PmvCDgcDrAB8KEZTiPmImhJZk32GoODOeP-vOClG0
 id: menu_link_content.menu_link_content.description
 field_name: description
 entity_type: menu_link_content

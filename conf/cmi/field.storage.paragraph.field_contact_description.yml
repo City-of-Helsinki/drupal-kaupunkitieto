@@ -1,11 +1,11 @@
 uuid: dee2f389-a435-420b-9d82-d1a0d58b0f9a
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
 _core:
-  default_config_hash: h8k3-JFE3HxS1yyyweppUr448WgNYGgkn-ostZDPY28
+  default_config_hash: SPmm6kbu-b4d9kpczR9qmbPCDyGdhlC35cLqKxL1jzQ
 id: paragraph.field_contact_description
 field_name: field_contact_description
 entity_type: paragraph

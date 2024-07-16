@@ -1,29 +1,36 @@
 uuid: 59e7ef4b-ea70-4094-b301-5b3543b6f6c7
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_content
     - node.type.page
     - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.chart
     - paragraphs.paragraphs_type.columns
+    - paragraphs.paragraphs_type.contact_card_listing
     - paragraphs.paragraphs_type.content_cards
     - paragraphs.paragraphs_type.content_liftup
     - paragraphs.paragraphs_type.content_menu
     - paragraphs.paragraphs_type.embed
-    - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.event_list
+    - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.list_of_links
+    - paragraphs.paragraphs_type.map
+    - paragraphs.paragraphs_type.phasing
+    - paragraphs.paragraphs_type.remote_video
     - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: OAszLBpmZFYzCk6m40IBOPGFaX9s5i1DcOQXojCVnZU
+  default_config_hash: 6ObVx71DtZm2Bwbo4phVPA-nauJ8lld2GdbvT9iFIcw
 id: node.page.field_content
 field_name: field_content
 entity_type: node
 bundle: page
-label: Content
+label: 'Upper content region'
 description: ''
 required: false
 translatable: true
@@ -34,104 +41,73 @@ settings:
   handler_settings:
     target_bundles:
       text: text
-      columns: columns
       accordion: accordion
+      banner: banner
       image: image
       list_of_links: list_of_links
       content_cards: content_cards
-      content_liftup: content_liftup
-      embed: embed
-      content_menu: content_menu
+      columns: columns
+      phasing: phasing
+      from_library: from_library
+      map: map
+      remote_video: remote_video
+      chart: chart
       event_list: event_list
       contact_card_listing: contact_card_listing
-      phasing: phasing
+      embed: embed
+      content_menu: content_menu
+      content_liftup: content_liftup
     negate: 0
     target_bundles_drag_drop:
       accordion:
-        weight: -35
+        weight: 1
         enabled: true
-      accordion_item:
-        weight: -29
-        enabled: false
       banner:
-        weight: -25
-        enabled: false
-      columns:
-        weight: -36
+        weight: 2
         enabled: true
-      contact_card:
-        weight: 30
-        enabled: false
+      chart:
+        weight: 11
+        enabled: true
+      columns:
+        weight: 6
+        enabled: true
       contact_card_listing:
-        weight: 31
+        weight: 14
         enabled: true
       content_cards:
-        weight: -31
+        weight: 5
         enabled: true
       content_liftup:
-        weight: -30
+        weight: 17
         enabled: true
-      content_liftup_item:
-        weight: -22
-        enabled: false
       content_menu:
-        weight: 29
+        weight: 16
         enabled: true
-      content_menu_item:
-        weight: 21
-        enabled: false
       embed:
-        weight: -23
+        weight: 15
         enabled: true
       event_list:
-        weight: 30
+        weight: 13
         enabled: true
-      gallery:
-        weight: -33
-        enabled: false
-      gallery_slide:
-        weight: -28
-        enabled: false
-      hero:
-        weight: -27
-        enabled: false
+      from_library:
+        weight: 8
+        enabled: true
       image:
-        weight: -34
+        weight: 3
         enabled: true
-      infograph:
-        weight: 38
-        enabled: false
-      infograph_group:
-        weight: 39
-        enabled: false
-      infograph_row:
-        weight: 40
-        enabled: false
-      liftup_with_image:
-        weight: -24
-        enabled: false
       list_of_links:
-        weight: -32
+        weight: 4
         enabled: true
-      list_of_links_item:
-        weight: -26
-        enabled: false
+      map:
+        weight: 9
+        enabled: true
       phasing:
-        weight: 50
+        weight: 7
         enabled: true
-      phasing_item:
-        weight: 30
-        enabled: false
-      quick_links:
-        weight: -21
-        enabled: false
-      quick_links_item:
-        weight: -20
-        enabled: false
-      social_media_link:
-        weight: 46
-        enabled: false
+      remote_video:
+        weight: 10
+        enabled: true
       text:
-        weight: -37
+        weight: 0
         enabled: true
 field_type: entity_reference_revisions

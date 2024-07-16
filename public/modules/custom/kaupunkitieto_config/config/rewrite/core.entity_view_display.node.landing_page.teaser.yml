@@ -1,0 +1,29 @@
+config_rewrite:
+  replace: ['hidden','dependencies']
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing_page.field_author
+    - field.field.node.landing_page.field_content
+    - field.field.node.landing_page.field_has_hero
+    - field.field.node.landing_page.field_hero
+    - field.field.node.landing_page.field_is_category
+    - field.field.node.landing_page.field_keywords
+    - field.field.node.landing_page.field_liftup_image
+    - field.field.node.landing_page.field_metatags
+    - node.type.landing_page
+  module:
+    - user
+hidden:
+  field_author: true
+  field_content: true
+  field_has_hero: true
+  field_hero: true
+  field_is_category: true
+  field_keywords: true
+  field_metatags: true
+  langcode: true
+  links: true
+  published_at: true
+  search_api_excerpt: true
+  toc_enabled: true

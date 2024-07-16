@@ -1,5 +1,5 @@
 uuid: a76c9f35-41d1-4431-a0d0-997895cac5c1
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
@@ -226,14 +226,15 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 50
           total_pages: null
           id: 0
           tags:
-            next: 'next ›'
-            previous: '‹ previous'
-            first: '« first'
-            last: 'last »'
+            next: Next
+            previous: Previous
+            first: First
+            last: Last
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -247,7 +248,7 @@ display:
         type: basic
         options:
           submit_button: Filter
-          reset_button: false
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true

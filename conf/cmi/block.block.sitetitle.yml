@@ -1,0 +1,29 @@
+uuid: dd534dfc-c424-4635-801d-fc486274449d
+langcode: en
+status: true
+dependencies:
+  module:
+    - kaupunkitieto_config
+    - language
+  theme:
+    - hdbt_subtheme
+id: sitetitle
+theme: hdbt_subtheme
+region: header_bottom
+weight: 0
+provider: null
+plugin: site_title_block
+settings:
+  id: site_title_block
+  label: 'Site title'
+  label_display: '0'
+  provider: kaupunkitieto_config
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_content'
+    langcodes:
+      sv: sv
+      en: en

@@ -1,12 +1,13 @@
 uuid: 9ac98189-35f9-49cd-9f4e-fb9e7c2444f0
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
     - media
 _core:
-  default_config_hash: _B3q0O_xZZoTEPGo67JMyvbBEstnyqiAJjk8to3c1QM
+  default_config_hash: fm7kOYQYCjzy2sY8BwQlNpRIKaGrNIoSbQqU9UJh2tk
 id: media.image
 label: Image
+description: ''
 targetEntityType: media
 cache: true

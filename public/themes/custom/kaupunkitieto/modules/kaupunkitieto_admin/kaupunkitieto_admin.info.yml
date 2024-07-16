@@ -1,5 +1,0 @@
-name: 'Kaupunkitieto Admin'
-description: 'Extend HDBT Admin functionalities for Kaupunkitieto website.'
-package: 'Kaupunkitieto'
-core_version_requirement: ^8 || ^9
-type: module

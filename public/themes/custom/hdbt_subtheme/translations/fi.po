@@ -1,0 +1,6 @@
+# Finnish translations
+msgid ""
+msgstr ""
+
+msgid "Share"
+msgstr "Jaa"

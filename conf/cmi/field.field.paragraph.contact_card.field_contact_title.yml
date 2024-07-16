@@ -1,17 +1,17 @@
 uuid: fc32146d-6f21-48a8-8807-9e20d2ceff07
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_contact_title
     - paragraphs.paragraphs_type.contact_card
 _core:
-  default_config_hash: 3_-eiSIFayhR_hbFNjQDMu1oq8JCPYQ1v1lpVExyWOo
+  default_config_hash: '-SasDGw5s3qiyeFZ_Wllzxaxka2ql_gOWkf7YHr4tZk'
 id: paragraph.contact_card.field_contact_title
 field_name: field_contact_title
 entity_type: paragraph
 bundle: contact_card
-label: Title
+label: 'Job title'
 description: ''
 required: false
 translatable: false

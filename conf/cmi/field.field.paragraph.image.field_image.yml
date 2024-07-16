@@ -1,5 +1,5 @@
 uuid: 89dbde67-766c-4fda-9e06-5fa4cc2d2bad
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -7,7 +7,7 @@ dependencies:
     - media.type.image
     - paragraphs.paragraphs_type.image
 _core:
-  default_config_hash: meaMV_qPGF22aso0YhkvF-ExQTMF3kVMQpiAAWGHPLw
+  default_config_hash: y32s_Iqxh-gmgJAspBxRZXPDgKgB_4t6YqhsQowmJlM
 id: paragraph.image.field_image
 field_name: field_image
 entity_type: paragraph

@@ -1,5 +1,5 @@
 uuid: 4328947e-0c5c-4a9a-b7c8-8e91877efbc7
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ third_party_settings:
   content_translation:
     enabled: true
 _core:
-  default_config_hash: gmtmgLpPQOcKE9BA_eKfrCXtoWVO63kmcfythbJiz5Q
+  default_config_hash: NuKCYRhchzV5oFaVmTQHc64apY1USi-6PazrucpcR34
 id: node.page
 target_entity_type_id: node
 target_bundle: page

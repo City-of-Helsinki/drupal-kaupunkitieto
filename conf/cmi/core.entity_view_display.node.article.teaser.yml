@@ -1,5 +1,5 @@
 uuid: cbb2bdf6-dfe1-4d78-a5dd-6de120afb52b
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -56,4 +56,6 @@ hidden:
   field_search_result_text: true
   langcode: true
   links: true
+  published_at: true
   search_api_excerpt: true
+  toc_enabled: true

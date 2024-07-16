@@ -1,5 +1,5 @@
 uuid: bea0a326-8bb8-4c00-8b92-e53c0565d9c1
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ dependencies:
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: jwPtQLPo8wWcMabnbNz-98N7x36gzjfbKw5utoTOf8A
+  default_config_hash: kvFXzEmsT1Beyn0HuFdCwyKhRh1qn7Js1vEgNMJtIHg
 id: paragraph.columns.field_columns_right_column
 field_name: field_columns_right_column
 entity_type: paragraph
@@ -26,60 +26,18 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      image: image
       text: text
+      image: image
       quick_links: quick_links
     negate: 0
     target_bundles_drag_drop:
-      accordion:
-        weight: 14
-        enabled: false
-      accordion_item:
-        weight: 15
-        enabled: false
-      banner:
-        weight: 16
-        enabled: false
-      columns:
-        weight: -14
-        enabled: false
-      content_cards:
-        weight: 23
-        enabled: false
-      content_liftup:
-        weight: 24
-        enabled: false
-      content_liftup_item:
-        weight: 25
-        enabled: false
-      gallery:
-        weight: 17
-        enabled: false
-      gallery_slide:
-        weight: 18
-        enabled: false
-      hero:
-        weight: -13
-        enabled: false
       image:
-        weight: -12
+        weight: 0
         enabled: true
-      liftup_with_image:
-        weight: 21
-        enabled: false
-      list_of_links:
-        weight: -10
-        enabled: false
-      list_of_links_item:
-        weight: -8
-        enabled: false
       quick_links:
-        weight: 33
+        weight: 3
         enabled: true
-      quick_links_item:
-        weight: 18
-        enabled: false
       text:
-        weight: -11
+        weight: 0
         enabled: true
 field_type: entity_reference_revisions

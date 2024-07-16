@@ -1,12 +1,12 @@
 uuid: 0f93844b-eeac-4de9-8699-85f07f6c2bed
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_contact_description
     - paragraphs.paragraphs_type.contact_card
 _core:
-  default_config_hash: xLCMITRNRMNPkfQQHfzDz85KEhPfgtx7zP-BD44H87c
+  default_config_hash: Dh0gGBY-nP4YdaYyh__GfTfnX8mm8EA5L9L7Qi8G7cc
 id: paragraph.contact_card.field_contact_description
 field_name: field_contact_description
 entity_type: paragraph

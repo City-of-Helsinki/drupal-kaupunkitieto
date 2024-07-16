@@ -1,8 +1,11 @@
-langcode: fi
+uuid: 34e5b8e0-64ef-41c7-9ef3-e693b57eb932
+langcode: en
 status: true
 dependencies:
   module:
     - content_lock
+_core:
+  default_config_hash: Rq-wiwnbjz-4hM7sipXKqSLkCIzM7zKUVbp2916bztc
 id: paragraphs_library_item_break_lock_action
 label: 'Break lock paragraphs_library_item'
 type: paragraphs_library_item
