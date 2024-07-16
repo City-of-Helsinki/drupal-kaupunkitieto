@@ -1,5 +1,5 @@
 uuid: 36d26110-3ff3-4911-9d99-3b588488887f
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -12,6 +12,8 @@ third_party_settings:
   allowed_formats:
     allowed_formats:
       - minimal
+_core:
+  default_config_hash: yaQCIyGcgu2Tqe21GcXwcnBdE_hkxj_zuqFvF25JrQc
 id: paragraph.phasing_item.field_description
 field_name: field_description
 entity_type: paragraph

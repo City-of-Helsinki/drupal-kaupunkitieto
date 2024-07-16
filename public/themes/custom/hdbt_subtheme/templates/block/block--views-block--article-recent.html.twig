@@ -1,0 +1,9 @@
+{% if content %}
+  {% embed "@hdbt/misc/container.twig" with {container_element: 'recent-articles'} %}
+    {% block container_content %}
+      <div{{ attributes.addClass(region|clean_class) }}>
+        {{ content }}
+      </div>
+    {% endblock container_content %}
+  {% endembed %}
+{% endif %}

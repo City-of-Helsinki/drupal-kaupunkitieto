@@ -50,16 +50,10 @@ settings:
         weight: 20
         enabled: false
       content_menu_item:
-        weight: 21
+        weight: 0
         enabled: true
       embed:
         weight: 28
-        enabled: false
-      gallery:
-        weight: 29
-        enabled: false
-      gallery_slide:
-        weight: 30
         enabled: false
       hero:
         weight: 31

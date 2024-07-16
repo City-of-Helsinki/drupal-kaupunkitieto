@@ -1,5 +1,5 @@
 uuid: 36765cfc-51f1-4d1d-83ce-02e5b2cb137e
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -37,7 +37,7 @@ settings:
         weight: 8
         enabled: false
       list_of_links_item:
-        weight: 9
+        weight: 0
         enabled: true
       text:
         weight: 10

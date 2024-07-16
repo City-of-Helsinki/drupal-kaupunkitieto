@@ -1,6 +1,6 @@
 _core:
   default_config_hash: oibvYU2UvepNHproOrLsIQCZhU4MTQyg7d4rGW4jdu4
-langcode: fi
+langcode: en
 imagecache_directory: externals
 imagecache_default_extension: .jpg
 imagecache_external_batch_flush_limit: 1000

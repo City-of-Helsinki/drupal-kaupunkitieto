@@ -1,0 +1,7 @@
+admin-content-liftup:
+  js:
+    assets/js/contentLiftup.js: {}
+  version: 1.x
+  dependencies:
+    - core/drupal
+    - core/jquery

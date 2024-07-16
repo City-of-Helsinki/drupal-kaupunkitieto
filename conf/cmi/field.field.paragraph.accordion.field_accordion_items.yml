@@ -1,5 +1,5 @@
 uuid: a27633a5-936b-4f65-9b72-ccf59b455fc2
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,6 +8,9 @@ dependencies:
     - paragraphs.paragraphs_type.accordion_item
   module:
     - entity_reference_revisions
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.accordion_item
 _core:
   default_config_hash: 6jGzXC9zJqAL1xeKgkuQaMMrGnMToFYwto9Ut-rFgvE
 id: paragraph.accordion.field_accordion_items
@@ -31,16 +34,10 @@ settings:
         weight: 11
         enabled: false
       accordion_item:
-        weight: 13
+        weight: 0
         enabled: true
       columns:
         weight: 12
-        enabled: false
-      gallery:
-        weight: 13
-        enabled: false
-      gallery_slide:
-        weight: 14
         enabled: false
       hero:
         weight: 15

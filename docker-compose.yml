@@ -20,10 +20,12 @@ services:
       # Optionally, you can add this to your default environments variables to enable or disable
       # xdebug by default (like /etc/environments, ~/.bashrc, or ~/.zshrc).
       XDEBUG_ENABLE: "${XDEBUG_ENABLE:-false}"
+      XDEBUG_CONFIG: "${XDEBUG_CONFIG:-}"
+      PHP_IDE_CONFIG: "${PHP_IDE_CONFIG:-serverName=${DRUPAL_HOSTNAME}}"
       # DOCKERHOST: host.docker.internal
-      # Use drush server to run functional tests so we don't have to care about
-      # permission issues.
-      SIMPLETEST_BASE_URL: "http://127.0.0.1:8888"
+      # Use drush server to run functional tests, so we don't have to care about
+      # permission or SSL issues.
+      SIMPLETEST_BASE_URL: "http://app:8888"
       SIMPLETEST_DB: "mysql://drupal:drupal@db:3306/drupal"
       BROWSERTEST_OUTPUT_BASE_URL: "https://${DRUPAL_HOSTNAME}"
       DRUPAL_VARNISH_HOST: "${COMPOSE_PROJECT_NAME}-varnish"
@@ -51,9 +53,19 @@ services:
       - internal
   db:
     container_name: "${COMPOSE_PROJECT_NAME}-db"
-    image: druidfi/mariadb:10.9-drupal
+    image: mysql:8
+    command:
+      - --max_allowed_packet=512M
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_swedish_ci
+    environment:
+      MYSQL_DATABASE: drupal
+      MYSQL_USER: drupal
+      MYSQL_PASSWORD: drupal
+      MYSQL_INITDB_SKIP_TZINFO: 1
+      MYSQL_RANDOM_ROOT_PASSWORD: 1
     volumes:
-      - db_data:/var/lib/mysql
+      - db_volume:/var/lib/mysql
     ports:
       - 3306
     networks:
@@ -63,6 +75,7 @@ services:
     image: druidfi/varnish:6-drupal
     environment:
       VARNISH_BACKEND_HOST: "${COMPOSE_PROJECT_NAME}-app"
+      VARNISH_CACHE_STATIC_FILES: "1"
     depends_on:
       - app
     networks:
@@ -75,22 +88,25 @@ services:
       - "traefik.http.routers.${COMPOSE_PROJECT_NAME}-varnish.tls=true"
       - "traefik.http.services.${COMPOSE_PROJECT_NAME}-varnish.loadbalancer.server.port=6081"
       - "traefik.docker.network=stonehenge-network"
-  robo:
-    image: ghcr.io/city-of-helsinki/drupal-robo:latest
-    shm_size: '2gb'
-    tty: true
-    volumes:
-      - .:/app:delegated
-    networks:
-      - internal
-      - stonehenge-network
+  artemis:
+    container_name: "${COMPOSE_PROJECT_NAME}-artemis"
+    image: quay.io/artemiscloud/activemq-artemis-broker
+    environment:
+      AMQ_EXTRA_ARGS: "--user admin --password admin"
     depends_on:
       - app
+    networks:
+      - internal
+    profiles:
+      - queue
+  chromium:
+    # @todo Update this to newer version once minkphp supports Selenium 4.
+    # @see https://github.com/minkphp/MinkSelenium2Driver/pull/372
+    image: selenium/standalone-chrome:106.0
+    networks:
+      - internal
     profiles:
       - testing
-    extra_hosts:
-      - "${DRUPAL_HOSTNAME}:host-gateway"
-      - "varnish-${DRUPAL_HOSTNAME}:host-gateway"
 networks:
   internal:
     external: false
@@ -98,7 +114,7 @@ networks:
     external: true
 
 volumes:
-  db_data:
+  db_volume:
   ssh:
     name: stonehenge-ssh
     external: true

@@ -1,0 +1,167 @@
+.site-search {
+  .main-content {
+    margin: 0 auto;
+    max-width: 1264px;
+  }
+}
+
+.views-element-container {
+  clear: both;
+  padding-top: $spacing;
+
+  @include breakpoint($breakpoint-l) {
+    padding-top: $spacing * 2;
+  }
+}
+
+.views--site-search {
+  .form-select {
+    border: 0;
+    background: var(--color-black-10);
+    padding: $spacing-half;
+  }
+
+  .form-item-search-api-fulltext {
+    display: inline-block;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    justify-content: flex-start;
+
+    &.spaced {
+      justify-content: space-between;
+      align-items:center;
+    }
+  }
+
+  header {
+    h4 {
+      margin-top: 0;
+    }
+  }
+
+  .form-item-items-per-page {
+    display: flex;
+    align-items: center;
+
+    label {
+      width: 250px;
+    }
+  }
+
+  .views-row {
+    width: 100%;
+    margin-bottom: $spacing * 2;
+
+    @include breakpoint($breakpoint-m) {
+      width: 48%;
+      margin-left: 4%;
+
+      &:nth-child(odd) {
+        margin-left: 0;
+      }
+    }
+
+    @include breakpoint($breakpoint-l) {
+      width: 24%;
+      margin-left: 1.33%;
+
+      &:nth-child(4n-7) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .views-field {
+    margin-bottom: $spacing-half;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto !important;
+    }
+  }
+
+  .views-field-title {
+    margin-top: $spacing;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .views-field-nid {
+    svg {
+      width: 53px;
+      height: 53px;
+    }
+  }
+
+  .views-field-field-search-result-text {
+    color: var(--color-black-80);
+  }
+
+  .views-field-field-keywords{
+    ul {
+      list-style: none;
+      margin: $spacing 0 0 0;
+      padding: 0;
+    }
+
+    li {
+      background: $color-black;
+      border-radius: $spacing;
+      display: inline-block;
+      font-size: remify(14px);
+      line-height: 2.2;
+      margin-top: 0;
+      margin-bottom: $spacing-half;
+      margin-right: $spacing-half;
+      padding: 0 $spacing;
+
+      a {
+        color: $color-white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .form-actions {
+    display: inline-block;
+
+    .form-submit {
+      background: var(--color-black-90);
+      border: 0;
+    }
+  }
+}
+
+#views-exposed-form-site-search-page-1 {
+  display: flex;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+  justify-content: flex-start;
+  align-items: center;
+
+  .form-actions {
+    @include breakpoint($breakpoint-s) {
+      margin-bottom: -11px; // Flex align offsetting.
+      margin-left: $spacing;
+    }
+  }
+
+  #edit-items-per-page {
+    background-color: var(--hdbt-color-coat-of-arms--secondary);
+    border: 0;
+  }
+}
+
+.components--search-title {
+  h1 {
+    @include font('h2');
+    margin-bottom: $spacing-and-half;
+  }
+}

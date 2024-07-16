@@ -1,5 +1,5 @@
 uuid: fd9de785-cf59-4637-a432-491272eaf8c5
-langcode: fi
+langcode: en
 status: true
 dependencies:
   content:
@@ -8,9 +8,9 @@ dependencies:
     - block_content
     - system
   theme:
-    - kaupunkitieto
+    - hdbt_subtheme
 id: suorittamasihakuantoiseuraavattulokset
-theme: kaupunkitieto
+theme: hdbt_subtheme
 region: content
 weight: -8
 provider: null
