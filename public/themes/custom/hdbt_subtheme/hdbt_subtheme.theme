@@ -47,7 +47,7 @@ function hdbt_subtheme_theme_suggestions_block_alter(array &$suggestions): void 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-function hdbt_subtheme_theme_suggestions_menu_alter(&$suggestions, $variables) {
+function hdbt_subtheme_theme_suggestions_menu_alter(array &$suggestions, array $variables): void {
   if (isset($variables['attributes']['block_id'])) {
     $block_id = str_replace('hdbt_subtheme_', '', $variables['attributes']['block_id']);
 
@@ -87,14 +87,14 @@ function hdbt_subtheme_preprocess_html(array &$variables): void {
 /**
  * Implements hook_theme_suggestions_input_alter().
  */
-function hdbt_subtheme_theme_suggestions_input_alter(array &$suggestions, array $variables) {
+function hdbt_subtheme_theme_suggestions_input_alter(array &$suggestions, array $variables): void {
   $suggestions[] = 'input__' . str_replace('-', '_', $variables['element']['#id']);
 }
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-function hdbt_subtheme_theme_suggestions_paragraph_alter(array &$suggestions, array $variables) {
+function hdbt_subtheme_theme_suggestions_paragraph_alter(array &$suggestions, array $variables): void {
   if (
     !isset($variables['elements']['#paragraph']) ||
     !$variables['elements']['#paragraph'] instanceof Paragraph ||
@@ -111,7 +111,7 @@ function hdbt_subtheme_theme_suggestions_paragraph_alter(array &$suggestions, ar
 /**
  * Implements hook_theme_suggestions_HOOK().
  */
-function hdbt_subtheme_theme_suggestions_views_view_field_alter(array &$suggestions, array &$variables, $hook) {
+function hdbt_subtheme_theme_suggestions_views_view_field_alter(array &$suggestions, array $variables, $hook): void {
   if ($variables['view']->id() && $variables['view']->current_display) {
     $suggestions[] = $hook . '__' . $variables['view']->id() . '__' . $variables['view']->current_display . '__' . $variables['field']->field;
   }
@@ -120,7 +120,7 @@ function hdbt_subtheme_theme_suggestions_views_view_field_alter(array &$suggesti
 /**
  * Implements template_preprocess_paragraph().
  */
-function hdbt_subtheme_preprocess_paragraph(array &$variables) {
+function hdbt_subtheme_preprocess_paragraph(array &$variables): void {
   /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
   $paragraph = $variables['paragraph'];
   $paragraph_type = $paragraph->getType();
