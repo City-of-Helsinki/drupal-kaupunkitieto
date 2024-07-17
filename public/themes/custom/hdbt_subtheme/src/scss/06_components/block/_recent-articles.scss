@@ -3,8 +3,8 @@
   flex-wrap: wrap;
 
   header {
-    width: 100%;
     margin-bottom: $spacing;
+    width: 100%;
 
     @include breakpoint($breakpoint-m) {
       margin-bottom: $spacing-double;
@@ -12,8 +12,8 @@
   }
 
   .views-row {
-    max-width: 100%;
     margin-right: $spacing-and-half;
+    max-width: 100%;
 
     @include breakpoint($breakpoint-m) {
       width: calc(100% / 2 - #{$spacing-and-half});
@@ -57,30 +57,5 @@
 
   .views-field-field-author-1 {
     display: inline-block;
-  }
-
-  .views-field-field-keywords {
-    ul {
-      list-style: none;
-      margin: $spacing 0 0 0;
-      padding: 0;
-    }
-
-    li {
-      background: $color-black;
-      border-radius: $spacing;
-      display: inline-block;
-      font-size: remify(14px);
-      line-height: 2.2;
-      margin-top: 0;
-      margin-bottom: $spacing-half;
-      margin-right: $spacing-half;
-      padding: 0 $spacing;
-
-      a {
-        color: $color-white;
-        text-decoration: none;
-      }
-    }
   }
 }

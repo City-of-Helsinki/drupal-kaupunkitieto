@@ -23,8 +23,8 @@
 
 .views--site-search {
   .form-select {
-    border: 0;
     background: var(--color-black-10);
+    border: 0;
     padding: $spacing-half;
   }
 
@@ -50,8 +50,8 @@
   }
 
   .form-item-items-per-page {
-    display: flex;
     align-items: center;
+    display: flex;
 
     label {
       width: 250px;
@@ -59,8 +59,8 @@
   }
 
   .views-row {
-    width: 100%;
     margin-bottom: $spacing * 2;
+    width: 100%;
 
     @include breakpoint($breakpoint-m) {
       width: 48%;
@@ -76,8 +76,8 @@
 
     img {
       display: block;
-      max-width: 100%;
       height: auto !important;
+      max-width: 100%;
     }
   }
 
@@ -91,38 +91,13 @@
 
   .views-field-nid {
     svg {
-      width: 53px;
       height: 53px;
+      width: 53px;
     }
   }
 
   .views-field-field-search-result-text {
     color: var(--color-black-80);
-  }
-
-  .views-field-field-keywords{
-    ul {
-      list-style: none;
-      margin: $spacing 0 0 0;
-      padding: 0;
-    }
-
-    li {
-      background: $color-black;
-      border-radius: $spacing;
-      display: inline-block;
-      font-size: remify(14px);
-      line-height: 2.2;
-      margin-top: 0;
-      margin-bottom: $spacing-half;
-      margin-right: $spacing-half;
-      padding: 0 $spacing;
-
-      a {
-        color: $color-white;
-        text-decoration: none;
-      }
-    }
   }
 
   .form-actions {
