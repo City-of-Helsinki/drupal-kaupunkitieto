@@ -4,7 +4,7 @@
 
   @include breakpoint($breakpoint-s) {
     margin-bottom: $spacing-and-half;
-    width: calc(50% - (#{$spacing} / 2));
+    width: calc(50% - (#{$spacing}  / 2));
   }
 
   @include breakpoint($breakpoint-m) {
@@ -14,19 +14,18 @@
   @include breakpoint($breakpoint-l) {
     margin-bottom: $spacing-triple;
   }
+}
 
-  &__read-more {
-    .quick-links__title {
-      @include breakpoint($breakpoint-l) {
-        display: none;
-      }
+.quick-links__read-more {
+  .quick-links__title {
+    @include breakpoint($breakpoint-l) {
+      display: none;
+    }
+  }
 
-      &__link {
-        @include breakpoint($breakpoint-l) {
-          display: flex;
-        }
-      }
-
+  .quick-links__title__link {
+    @include breakpoint($breakpoint-l) {
+      display: flex;
     }
   }
 }
@@ -53,19 +52,20 @@
   margin-bottom: $spacing;
   margin-top: 0;
   width: 100%;
+}
 
-  &__link {
-    display: none;
-    justify-content: space-between;
-    text-decoration: none;
+.quick-links__title__link {
+  align-items: center;
+  display: none;
+  justify-content: space-between;
+  text-decoration: none;
 
-    @include breakpoint($breakpoint-l) {
-      display: flex;
-    }
+  @include breakpoint($breakpoint-l) {
+    display: flex;
+  }
 
-    &:hover {
-      text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
   }
 }
 
@@ -83,13 +83,13 @@
     display: none;
   }
 
-  &__arrow {
-    margin-left: $spacing;
-  }
-
   &:hover {
     text-decoration: underline;
   }
+}
+
+.quick-links__link__arrow {
+  margin-left: $spacing;
 }
 
 .quick-links__item {
@@ -139,8 +139,8 @@
     @include font('button');
     color: $color-white;
     font-weight: 500;
+    word-break: break-word;
   }
-
 }
 
 // Quick-links__item colors
@@ -148,6 +148,7 @@
   &--bus {
     background-color: $color-bus-dark;
   }
+
   &--tram {
     background-color: $color-tram;
   }

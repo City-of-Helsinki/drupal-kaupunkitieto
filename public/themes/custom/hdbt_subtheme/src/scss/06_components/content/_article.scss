@@ -1,92 +1,90 @@
-.page-type--article {
-  .node--type-article {
-    .article--info__container {
+.page-type--article .node--type-article {
+  .article--info__container {
+    display: grid;
+    gap: 0;
+    grid-template-areas:
+  'article-date'
+  'article-author'
+  'article-series'
+  'article-attachment';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 1fr;
+
+    @include breakpoint(620px) {
       display: grid;
-      grid-template-rows: auto auto auto 1fr;
-      grid-template-columns: 1fr;
       grid-template-areas:
-	'article-date'
-	'article-author'
-	'article-series'
-	'article-attachment';
-      gap: 0;
+  'article-date article-attachment'
+  'article-author article-attachment'
+  'article-series article-attachment';
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+  }
 
-      @include breakpoint(620px) {
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-	'article-date article-attachment'
-	'article-author article-attachment'
-	'article-series article-attachment';
-      }
+  .article__series {
+    grid-area: article-series;
+    margin-bottom: $spacing;
+
+    @include breakpoint(620px) {
+      margin-bottom: 0;
     }
 
-    .article__series {
-      grid-area: article-series;
-      margin-bottom: $spacing;
+    .views-element-container {
+      display: inline-block;
+      padding: 0;
+    }
+  }
 
-      @include breakpoint(620px) {
-        margin-bottom: 0;
-      }
+  .article__date.content-date {
+    grid-area: article-date;
+    margin-bottom: $spacing-quarter;
+    margin-left: 0;
+    margin-right: 0;
+  }
 
-      .views-element-container {
-        display: inline-block;
-        padding: 0;
-      }
+  .article__author {
+    @include font('small');
+    color: $color-black;
+    display: flex;
+    grid-area: article-author;
+    margin-bottom: $spacing-quarter;
+
+    .views-element-container {
+      padding: 0;
+    }
+  }
+
+  .article__author__label {
+    margin-right: $spacing-quarter;
+  }
+
+  .article__attachment {
+    grid-area: article-attachment;
+
+    @include breakpoint(620px) {
+      justify-self: flex-end;
+    }
+  }
+
+  .article__attachment__link {
+    background-color: $color-black;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-black-80;
     }
 
-    .article__date.content-date {
-      grid-area: article-date;
-      margin-bottom: $spacing-quarter;
-      margin-left: 0;
-      margin-right: 0;
-    }
+    &:focus {
+      color: $color-white;
 
-    .article__author {
-      @include font('small');
-      color: $color-black;
-      display: flex;
-      grid-area: article-author;
-      margin-bottom: $spacing-quarter;
-
-      &__label {
-        margin-right: $spacing-quarter;
-      }
-
-      .views-element-container {
-        padding: 0;
+      &::after {
+        border-color: $color-black-80;
       }
     }
+  }
 
-    .article__attachment {
-      grid-area: article-attachment;
-
-      @include breakpoint(620px) {
-        justify-self: flex-end;
-      }
-
-      &__link {
-        background-color: $color-black;
-        color: $color-white;
-
-        &:hover {
-          background-color: $color-black-80;
-        }
-
-        &:focus {
-          color: $color-white;
-
-          &::after {
-            border-color: $color-black-80;
-          }
-        }
-      }
-    }
-
-    .social-media-sharing {
-      margin-bottom: $spacing-half;
-    }
+  .social-media-sharing {
+    margin-bottom: $spacing-half;
   }
 }
 

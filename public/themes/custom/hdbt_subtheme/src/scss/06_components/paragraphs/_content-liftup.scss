@@ -1,4 +1,4 @@
-$item_spacing: $spacing-triple;
+$item-spacing: $spacing-triple;
 
 .layout-content .content-liftup {
   background: $color-silver-light;
@@ -10,8 +10,8 @@ $item_spacing: $spacing-triple;
   }
 
   .hds-koros {
-    position: absolute;
     bottom: 0;
+    position: absolute;
   }
 }
 
@@ -25,8 +25,8 @@ $item_spacing: $spacing-triple;
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: $spacing-quadruple;
-    margin-left: -$item_spacing;
-    width: calc(100% + #{$item_spacing});
+    margin-left: -$item-spacing;
+    width: calc(100% + #{$item-spacing});
   }
 }
 
@@ -54,9 +54,10 @@ $item_spacing: $spacing-triple;
   width: 100%;
 
   @include breakpoint($breakpoint-s) {
-    padding-left: $item_spacing;
+    padding-left: $item-spacing;
     width: 50%;
   }
+
   @include breakpoint($breakpoint-l) {
     margin-bottom: $spacing-triple;
   }
@@ -90,9 +91,11 @@ $item_spacing: $spacing-triple;
     @include font('h4');
     margin: 0 0 $spacing-double;
   }
+
   .content-liftup__item__meta {
     @include font('small');
     text-transform: uppercase;
+
     @include breakpoint($breakpoint-l) {
       @include font('body');
     }
