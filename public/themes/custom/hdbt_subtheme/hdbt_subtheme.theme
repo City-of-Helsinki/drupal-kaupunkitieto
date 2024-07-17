@@ -73,13 +73,15 @@ function hdbt_subtheme_theme_suggestions_menu_alter(&$suggestions, $variables) {
  *
  * Add body class when in Search page.
  */
-function hdbt_subtheme_preprocess_html(&$vars) {
+function hdbt_subtheme_preprocess_html(array &$variables): void {
   // See if we are in a site search view.
   $current_route_name = \Drupal::service('current_route_match')->getRouteName();
 
   if ($current_route_name == 'view.site_search.page_1') {
-    $vars['attributes']['class'][] = 'site-search';
+    $variables['attributes']['class'][] = 'site-search';
   }
+  // Attach header search toggle to each page.
+  $variables['#attached']['library'][] = 'hdbt_subtheme/search-toggle';
 }
 
 /**
