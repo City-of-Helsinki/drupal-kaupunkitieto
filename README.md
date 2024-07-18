@@ -62,6 +62,10 @@ _Hero with search_ is a custom design for the Hero paragraph. It is used on the 
 
 The _Content menu_ paragraph creates a sidebar menu from text paragraphs selected by the content producer. One text paragraph can be visible at a time, and the logic is handled by [custom JavaScript](https://github.com/City-of-Helsinki/drupal-kaupunkitieto/blob/dcb98476f49cd7ebf0578fd5529a4976fa5da283/public/themes/custom/hdbt_subtheme/src/js/contentMenu.js).
 
+#### Embed (embed)
+
+Wit _Embed_ paragraph a content producer can add an embedded infographic to the page. It is similar to [Helfi media chart](https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/main/modules/helfi_media_chart) but instead of Powerbi it uses (Infogram)[https://infogram.com/].
+
 #### Quick links (quick_links)
 
 The _Quick links_ paragraph lists a curated and visually prominent list of links on a page.

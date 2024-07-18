@@ -20,6 +20,8 @@
     }
   }
 
+  // By default Webkit browsers uses blue cancel button for search input fields.
+  // This is a hack to make the cancel button color suitable for hero search.
   input[type="search"]::-webkit-search-cancel-button {
     // stylelint-disable-next-line property-no-vendor-prefix
     -webkit-appearance: none;
