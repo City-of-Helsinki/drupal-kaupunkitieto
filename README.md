@@ -64,7 +64,7 @@ The _Content menu_ paragraph creates a sidebar menu from text paragraphs selecte
 
 #### Embed (embed)
 
-Wit _Embed_ paragraph a content producer can add an embedded infographic to the page. It is similar to [Helfi media chart](https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/main/modules/helfi_media_chart) but instead of Powerbi it uses (Infogram)[https://infogram.com/].
+With _Embed_ paragraph a content producer can add an embedded infographic to the page. It is similar to [Helfi media chart](https://github.com/City-of-Helsinki/drupal-helfi-platform-config/tree/main/modules/helfi_media_chart) but instead of Powerbi it uses (Infogram)[https://infogram.com/].
 
 #### Quick links (quick_links)
 
