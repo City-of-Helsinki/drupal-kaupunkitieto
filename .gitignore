@@ -8,15 +8,18 @@ public/modules/contrib
 public/themes/contrib
 public/sites/default/files
 vendor
-public/sites/default/local.settings.php
+public/sites/simpletest/
+public/sites/backstop/
 
 # Ignore the folder created by PhpStorm
 .idea/*
 
+# Ignore local settings
+public/sites/default/local.settings.php
+public/sites/default/local.services.yml
+
 *.sql
 *.env.local
-
-public/modules/custom/helfi_*
 
 # Ignore OSX generated files
 ._*
@@ -25,11 +28,3 @@ public/modules/custom/helfi_*
 !*.gitkeep
 !*.keepme
 .phpunit.*
-
-# Ignore mounts
-tmp
-private
-.drush
-drush-backups
-.console
-/.editorconfig
