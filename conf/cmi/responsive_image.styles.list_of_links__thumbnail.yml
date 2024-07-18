@@ -1,5 +1,5 @@
 uuid: bcd60faa-c26a-4be8-b76d-7dd95097b127
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -7,6 +7,8 @@ dependencies:
     - image.style.1_1_s_2x
     - image.style.1_1_xs
     - image.style.1_1_xs_2x
+  module:
+    - helfi_image_styles
 _core:
   default_config_hash: NuriQB70Hu9_irYO0uyCTx6ChH38pAdEoZn48rmtfqo
 id: list_of_links__thumbnail
@@ -15,32 +17,32 @@ image_style_mappings:
   -
     image_mapping_type: image_style
     image_mapping: 1_1_s
-    breakpoint_id: hdbt.s
+    breakpoint_id: helfi_image_styles.s
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: 1_1_s_2x
-    breakpoint_id: hdbt.s
+    breakpoint_id: helfi_image_styles.s
     multiplier: 2x
   -
     image_mapping_type: image_style
     image_mapping: 1_1_xs
-    breakpoint_id: hdbt.xs
+    breakpoint_id: helfi_image_styles.xs
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: 1_1_xs_2x
-    breakpoint_id: hdbt.xs
-    multiplier: 2x
-  -
-    image_mapping_type: image_style
-    image_mapping: 1_1_xs_2x
-    breakpoint_id: hdbt.xxs
+    breakpoint_id: helfi_image_styles.xxs
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: 1_1_xs_2x
-    breakpoint_id: hdbt.xxs
+    breakpoint_id: helfi_image_styles.xs
     multiplier: 2x
-breakpoint_group: hdbt
+  -
+    image_mapping_type: image_style
+    image_mapping: 1_1_xs_2x
+    breakpoint_id: helfi_image_styles.xxs
+    multiplier: 2x
+breakpoint_group: helfi_image_styles
 fallback_image_style: 1_1_s

@@ -1,18 +1,18 @@
 uuid: e7f84c59-1b73-4930-875e-c2da70d5ab23
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_hero_title
     - paragraphs.paragraphs_type.hero
 _core:
-  default_config_hash: n_OKgQXffc54WxA_XpM58sFr43glNXiQ1Gjz8HunLkM
+  default_config_hash: M_9WbyHp-nRmfEt8Xwa1wU-HGs89Sb8wO08PQzhRhdo
 id: paragraph.hero.field_hero_title
 field_name: field_hero_title
 entity_type: paragraph
 bundle: hero
 label: 'Hero heading'
-description: 'If a hero is used on the page, this heading will be used as the page''s main heading.'
+description: "If a hero is used on the page, this heading will be used as the page's main heading."
 required: true
 translatable: false
 default_value: {  }

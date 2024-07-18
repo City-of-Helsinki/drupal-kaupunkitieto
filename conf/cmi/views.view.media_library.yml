@@ -1,5 +1,5 @@
 uuid: a1bd539c-3912-4975-bb34-6c41e59e6924
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -139,12 +139,13 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 24
           total_pages: null
           id: 0
           tags:
-            next: ››
-            previous: ‹‹
+            next: Next
+            previous: Previous
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -482,6 +483,7 @@ display:
         - 'url.query_args:sort_by'
         - user
         - user.permissions
+        - 'languages:language_content'
       tags: {  }
   page:
     id: page
@@ -1027,7 +1029,7 @@ display:
           group_type: group
           admin_label: ''
           entity_type: media
-          plugin_id: helfi_media_entity_link_edit
+          plugin_id: entity_link_edit
           label: ''
           exclude: false
           alter:
@@ -1040,7 +1042,7 @@ display:
             replace_spaces: false
             path_case: none
             trim_whitespace: false
-            alt: 'Edit {{ name }}. {{ ''Opens in a new tab''|t }}'
+            alt: "Edit {{ name }}. {{ 'Opens in a new tab'|t }}"
             rel: ''
             link_class: ''
             prefix: ''
@@ -1070,20 +1072,21 @@ display:
           empty_zero: false
           hide_alter_empty: true
           text: Edit
-          output_url_as_text: 0
-          absolute: 0
+          output_url_as_text: false
+          absolute: false
       pager:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 24
           total_pages: null
           id: 0
           tags:
-            next: ››
-            previous: ‹‹
-            first: '« First'
-            last: 'Last »'
+            next: Next
+            previous: Previous
+            first: First
+            last: Last
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -1118,7 +1121,6 @@ display:
           default_argument_type: fixed
           default_argument_options:
             argument: ''
-          default_argument_skip_url: false
           summary_options:
             base_path: ''
             count: true
@@ -1336,7 +1338,7 @@ display:
             image_link: ''
             image_style: media_library
             image_loading:
-              attribute: lazy
+              attribute: eager
         name:
           id: name
           table: media_field_data
@@ -1372,9 +1374,18 @@ display:
           label: Updated
           type: timestamp
           settings:
-            date_format: short
+            date_format: long
             custom_date_format: ''
             timezone: ''
+            tooltip:
+              date_format: long
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
       access:
         type: perm
         options:
@@ -1400,7 +1411,6 @@ display:
           default_argument_type: fixed
           default_argument_options:
             argument: ''
-          default_argument_skip_url: false
           summary_options:
             base_path: ''
             count: true

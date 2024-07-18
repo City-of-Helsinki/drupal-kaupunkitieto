@@ -1,6 +1,9 @@
-langcode: fi
+uuid: 52d51f0b-1cea-409d-bfc2-85fb12782df6
+langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: aixTW0IQXgEhIBAe4jRY6oJl5YFBMi7tNCNQtoOWge4
 id: target_group_link_item
 label: 'Target group link item'
 icon_uuid: null

@@ -1,0 +1,21 @@
+.component--paragraph-embed .component__content {
+  .embed__iframe,
+  .embed__code {
+    max-width: $content-width-max;
+    position: relative;
+  }
+
+  .embed__iframe {
+    border: 0;
+    padding-bottom: 40%;
+
+    iframe {
+      height: 100%;
+      left: 0;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+}

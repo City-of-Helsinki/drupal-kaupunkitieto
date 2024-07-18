@@ -8,11 +8,11 @@ dependencies:
     - node
     - views
   theme:
-    - kaupunkitieto
+    - hdbt_subtheme
 id: views_block__article_recent
-theme: kaupunkitieto
+theme: hdbt_subtheme
 region: after_content
-weight: -6
+weight: -9
 provider: null
 plugin: 'views_block:article-recent'
 settings:
@@ -24,8 +24,8 @@ settings:
   views_label: ''
   items_per_page: none
 visibility:
-  node_type:
-    id: node_type
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'

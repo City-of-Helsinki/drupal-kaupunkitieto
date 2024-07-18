@@ -1,5 +1,5 @@
 uuid: 2cfee647-05df-44ff-90bd-55354ad1bd58
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ dependencies:
   module:
     - link
 _core:
-  default_config_hash: 04qg0QHcXrIqw55BS3FAPondrmO2wrVEBeS2x9RD-fg
+  default_config_hash: cHnhuoJ9IKcN1FCOib1bKIWHH172J3Qn07P6Q9IorCw
 id: paragraph.banner.field_banner_link
 field_name: field_banner_link
 entity_type: paragraph

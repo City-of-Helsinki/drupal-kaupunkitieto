@@ -1,12 +1,12 @@
 uuid: e73bd057-e6ff-42ef-b133-dccb7ab1cc24
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
     - text
 _core:
-  default_config_hash: edGUBG1QEid6aYr_X2dfEvLYsBH6UvdvAYTfZXsi5RA
+  default_config_hash: Wf5cCiVDWBfcgDHsx8JLjsKD4yD1l1SyP8cgx5tExBA
 id: paragraph.field_banner_desc
 field_name: field_banner_desc
 entity_type: paragraph

@@ -6,8 +6,10 @@ display:
           expose:
             items_per_page_label: 'Hakutulosta sivulla'
           tags:
-            first: '« Ensimmäinen'
-            last: 'Viimeinen »'
+            previous: Edellinen
+            next: Seuraava
+            first: Ensimmäinen
+            last: Viimeinen
       exposed_form:
         options:
           submit_button: 'Hae uudelleen'

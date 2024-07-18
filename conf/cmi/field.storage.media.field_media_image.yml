@@ -1,5 +1,5 @@
 uuid: 55b1173d-5fe2-477b-aaf8-36073a2fe730
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
     - image
     - media
 _core:
-  default_config_hash: 24BCckkDO8WPYuWP-5Hz6VjlxJN_Bd6mvrTQrZiRxbs
+  default_config_hash: bQ13V9KXKLkXXJUpAkV0ifOj5OVjGVPxggR9AJDZAog
 id: media.field_media_image
 field_name: field_media_image
 entity_type: media

@@ -1,16 +1,26 @@
-langcode: fi
+uuid: fdcf083d-8088-4897-ba73-adfde50747f7
+langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: lAatlgWI8urSMlM-wvNsFE3cwVWq9Y7cA6WIH6q5o5Y
 id: icareus_suite
 label: 'Icareus Suite'
 provider_url: 'https://www.helsinkikanava.fi'
 endpoints:
   -
     schemes:
+      - 'https://www.helsinkikanava.fi/*/web/helsinkikanava/player/embed/vod?assetId=*'
+      - 'https://helsinkikanava.fi/*/web/helsinkikanava/player/embed/vod?assetId=*'
+    url: 'https://suite.icareus.com/api/oembed'
+    discovery: false
+    formats:
+      json: true
+      xml: false
+  -
+    schemes:
       - 'https://www.helsinkikanava.fi/*/web/helsinkikanava/player/vod?assetId=*'
-      - 'http://www.helsinkikanava.fi/*/web/helsinkikanava/player/vod?assetId=*'
       - 'https://helsinkikanava.fi/*/web/helsinkikanava/player/vod?assetId=*'
-      - 'http://helsinkikanava.fi/*/web/helsinkikanava/player/vod?assetId=*'
     url: 'https://suite.icareus.com/api/oembed'
     discovery: false
     formats:
@@ -19,9 +29,7 @@ endpoints:
   -
     schemes:
       - 'https://www.helsinkikanava.fi/*/web/helsinkikanava/player/event/view?*assetId=*'
-      - 'http://www.helsinkikanava.fi/*/web/helsinkikanava/player/event/view?*assetId=*'
       - 'https://helsinkikanava.fi/*/web/helsinkikanava/player/event/view?*assetId=*'
-      - 'http://helsinkikanava.fi/*/web/helsinkikanava/player/event/view?*assetId=*'
     url: 'https://suite.icareus.com/api/oembed'
     discovery: false
     formats:
@@ -30,9 +38,7 @@ endpoints:
   -
     schemes:
       - 'https://www.helsinkikanava.fi/*/webcast?*assetId=*'
-      - 'http://www.helsinkikanava.fi/*/webcast?*assetId=*'
       - 'https://helsinkikanava.fi/*/webcast?*assetId=*'
-      - 'http://helsinkikanava.fi/*/webcast?*assetId=*'
     url: 'https://suite.icareus.com/api/oembed'
     discovery: false
     formats:

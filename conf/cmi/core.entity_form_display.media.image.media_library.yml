@@ -1,5 +1,5 @@
 uuid: fbb13583-692e-462c-984a-140745cc9462
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ dependencies:
   module:
     - focal_point
 _core:
-  default_config_hash: _WTCyWUZlB2FyBSgpuey9Y9okHz6R8gcAWQ3DUiyNuA
+  default_config_hash: sBZSklr6VL62q9muMdA81sfI53ReprPQkcd9IGCGEtI
 id: media.image.media_library
 targetEntityType: media
 bundle: image
@@ -52,5 +52,6 @@ hidden:
   created: true
   langcode: true
   path: true
+  replace_file: true
   status: true
   uid: true

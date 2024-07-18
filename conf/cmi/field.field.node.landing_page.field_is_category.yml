@@ -10,7 +10,7 @@ field_name: field_is_category
 entity_type: node
 bundle: landing_page
 label: Category
-description: 'Check this box for a category page. Category page will include a listing of recent articles related to the selected category and hero''s background color will automatically defined by menu level.'
+description: "Check this box for a category page. Category page will include a listing of recent articles related to the selected category and hero's background color will automatically defined by menu level."
 required: false
 translatable: false
 default_value:

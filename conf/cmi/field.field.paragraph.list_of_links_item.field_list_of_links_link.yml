@@ -1,5 +1,5 @@
 uuid: 9e31cecb-e6bf-41c2-add1-b9e1e566c78a
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ dependencies:
   module:
     - link
 _core:
-  default_config_hash: LWLk0KxA0y2Eltz3wlXjS5oNDkUr3doJvhX6VwIw-EE
+  default_config_hash: rYZjg_vaqxvNzOT6Q4ykiuJrYLL7rtBedjH3c-tQg-s
 id: paragraph.list_of_links_item.field_list_of_links_link
 field_name: field_list_of_links_link
 entity_type: paragraph

@@ -1,5 +1,5 @@
-uuid: null
-langcode: fi
+uuid: f8466ac6-3b24-488a-ac44-db5a6156a46d
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,6 +8,8 @@ dependencies:
     - paragraphs.paragraphs_type.phasing_item
   module:
     - text
+_core:
+  default_config_hash: jU7hguSF1_19oKxbI7_tNH6SlAfjXqX0FwyJvsqNAc4
 id: paragraph.phasing_item.default
 targetEntityType: paragraph
 bundle: phasing_item

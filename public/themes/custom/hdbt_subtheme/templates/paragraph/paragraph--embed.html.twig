@@ -1,0 +1,36 @@
+{% set title = content.field_embed_title.0 %}
+{% set url = embed_url ?: content.field_embed_link.0 %}
+
+{% block paragraph %}
+  {% embed "@hdbt/misc/component.twig" with {
+    component_classes: [ 'component--paragraph-embed' ],
+    component_content_class: [ 'user-edited-content' ],
+  } %}
+    {% block component_content %}
+
+      {% if url %}
+        <div class="embed__iframe" role="figure" aria-label="{{ title }}">
+          <iframe src="{{ url }}" title="{{ title }}"></iframe>
+        </div>
+      {% endif %}
+
+      {% if content.field_embed_code %}
+        <div class="embed__code" role="figure">
+          <script id="{{ content.field_embed_code_id.0 }}" src="{{ content.field_embed_code.0 }}" type="text/javascript">
+          </script>
+        </div>
+      {% endif %}
+
+      {% if content.field_embed_code %}
+        <div class="embed__video">
+          {{ content.field_embed_video }}
+        </div>
+      {% endif %}
+
+      <div class="visually-hidden">
+        {{ content.field_text_for_screen_readers }}
+      </div>
+
+    {% endblock component_content %}
+  {% endembed %}
+{% endblock paragraph %}

@@ -1,5 +1,5 @@
 uuid: edeace39-9e26-4899-8058-06f37f7d4287
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ dependencies:
   module:
     - link
 _core:
-  default_config_hash: DOik0FFgb6rq9pXcXg05RFp5ZOMu0igzbeinzXnN3mw
+  default_config_hash: S5GBy8AwPiqgEgiZ9oWCjcgRojOalISJi8-TTJB7MOg
 id: paragraph.social_media_link.field_social_media_link
 field_name: field_social_media_link
 entity_type: paragraph

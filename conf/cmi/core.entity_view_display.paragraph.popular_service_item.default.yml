@@ -1,5 +1,5 @@
-uuid: null
-langcode: fi
+uuid: b4ce303a-4123-41b4-8638-7107bd7bd518
+langcode: en
 status: true
 dependencies:
   config:
@@ -9,7 +9,7 @@ dependencies:
   module:
     - link
 _core:
-  default_config_hash: YxHYX90hf2fi4r4X4a0GttjwLRbpjSUsYZYx5H9-iG0
+  default_config_hash: th1OgRqnkY3Yfr3Y4e7S4TbSzMM5o6EQlFC2VOw6yes
 id: paragraph.popular_service_item.default
 targetEntityType: paragraph
 bundle: popular_service_item

@@ -1,0 +1,51 @@
+config_rewrite:
+  replace: ['dependencies', 'hidden']
+dependencies:
+  config:
+    - field.field.node.landing_page.field_author
+    - field.field.node.landing_page.field_content
+    - field.field.node.landing_page.field_has_hero
+    - field.field.node.landing_page.field_hero
+    - field.field.node.landing_page.field_is_category
+    - field.field.node.landing_page.field_keywords
+    - field.field.node.landing_page.field_liftup_image
+    - field.field.node.landing_page.field_metatags
+    - node.type.landing_page
+  module:
+    - hdbt_admin_tools
+    - media_library
+    - metatag
+    - paragraphs
+    - path
+    - publication_date
+    - scheduler
+content:
+  field_author:
+    type: entity_reference_autocomplete
+    weight: 52
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: { }
+  field_is_category:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_keywords:
+    type: select2_entity_reference
+    weight: 14
+    region: content
+    settings:
+      width: 100%
+      autocomplete: true
+      match_operator: CONTAINS
+      match_limit: 10
+    third_party_settings: {  }
+hidden:
+  hide_sidebar_navigation: true

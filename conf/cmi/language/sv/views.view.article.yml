@@ -9,5 +9,7 @@ display:
       pager:
         options:
           tags:
-            next: Följande
             previous: Föregående
+            next: Nästa
+            first: Första
+            last: Sista

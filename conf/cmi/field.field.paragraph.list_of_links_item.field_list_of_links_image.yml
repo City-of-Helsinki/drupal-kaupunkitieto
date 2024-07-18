@@ -1,5 +1,5 @@
 uuid: 3c9bb337-1bbf-4c2e-9c3b-06ab704600be
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -7,7 +7,7 @@ dependencies:
     - media.type.image
     - paragraphs.paragraphs_type.list_of_links_item
 _core:
-  default_config_hash: 6umZK-3svYFTdzbSrh-E5Oin5Sdi9z7oT50YV-ibT0w
+  default_config_hash: Y499OFxQexhgLkLfJqielclT2asSIIxN5W97yGOCw-w
 id: paragraph.list_of_links_item.field_list_of_links_image
 field_name: field_list_of_links_image
 entity_type: paragraph

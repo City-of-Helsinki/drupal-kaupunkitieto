@@ -1,18 +1,35 @@
 uuid: e550c234-1538-4cf4-ba86-325692e22901
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
+    - options
     - paragraphs
+_core:
+  default_config_hash: ghbbLn8LXQXBdNN5Orxnui-CcjfosUl_0edQETrBWXI
 id: paragraph.field_accordion_title_level
 field_name: field_accordion_title_level
 entity_type: paragraph
-type: string
+type: list_string
 settings:
-  max_length: 255
-  case_sensitive: false
-  is_ascii: false
-module: core
+  allowed_values:
+    -
+      value: '2'
+      label: h2
+    -
+      value: '3'
+      label: h3
+    -
+      value: '4'
+      label: h4
+    -
+      value: '5'
+      label: h5
+    -
+      value: '6'
+      label: h6
+  allowed_values_function: ''
+module: options
 locked: false
 cardinality: 1
 translatable: true

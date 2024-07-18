@@ -1,11 +1,11 @@
 uuid: 0250ceba-6742-462b-b504-52b2878ae626
-langcode: fi
+langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
 _core:
-  default_config_hash: wH9j0RJnfdNOEzdjEltVOVetWDDW6JTgR_cMyFcD8YY
+  default_config_hash: 76XUNX8CNC1fRG7IdYnWrq_0iMEDAaTYC7d-ruvQS9w
 id: paragraph.field_email
 field_name: field_email
 entity_type: paragraph

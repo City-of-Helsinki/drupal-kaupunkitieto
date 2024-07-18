@@ -1,5 +1,5 @@
 uuid: 69d9246f-ea98-4e2c-a92a-40c98cecd41b
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,10 +8,13 @@ dependencies:
     - field.field.paragraph.accordion_item.field_icon
     - paragraphs.paragraphs_type.accordion_item
   module:
+    - hdbt_admin_tools
     - paragraphs
-    - select2_icon
+  enforced:
+    config:
+      - paragraphs.paragraphs_type.accordion_item
 _core:
-  default_config_hash: xQxl3DJdyXGfIMoF68zkvPXCgW-oWKdsAFKm2mhn7PM
+  default_config_hash: 51mHm2O7Corvv_lfh2IeFdXy3zf8Uj5dgxtkmWy39yI
 id: paragraph.accordion_item.default
 targetEntityType: paragraph
 bundle: accordion_item
@@ -45,7 +48,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_icon:
-    type: select2_icon_widget
+    type: select_icon_widget
     weight: 1
     region: content
     settings: {  }

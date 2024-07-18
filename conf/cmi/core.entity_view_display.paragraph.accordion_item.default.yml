@@ -1,5 +1,5 @@
 uuid: 5265fdb5-6d8f-4723-8679-a3d1357aa0d2
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -9,9 +9,9 @@ dependencies:
     - paragraphs.paragraphs_type.accordion_item
   module:
     - entity_reference_revisions
-    - select2_icon
+    - hdbt_admin_tools
 _core:
-  default_config_hash: XybQXQQX7zzw5YLuADlWTj9gM_FVrS-YSJyNmj75N00
+  default_config_hash: nEdDaeghKYX4hYMccTAO5M0h4TLAiNAsYf2ouXYD2Sc
 id: paragraph.accordion_item.default
 targetEntityType: paragraph
 bundle: accordion_item
@@ -35,7 +35,7 @@ content:
     weight: 0
     region: content
   field_icon:
-    type: select2_icon_formatter
+    type: select_icon_formatter
     label: hidden
     settings: {  }
     third_party_settings: {  }
