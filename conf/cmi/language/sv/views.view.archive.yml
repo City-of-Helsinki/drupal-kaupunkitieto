@@ -8,8 +8,8 @@ display:
       pager:
         options:
           tags:
-            previous: Föregående
-            next: Nästa
+            previous: ‹‹
+            next: ››
             first: Första
             last: Sista
           expose:
