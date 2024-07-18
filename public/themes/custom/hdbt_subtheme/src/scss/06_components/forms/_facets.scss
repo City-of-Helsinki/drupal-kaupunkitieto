@@ -6,7 +6,6 @@
     --input-border-color-default: var(--color-black-50);
     --input-color-default: var(--color-black-90);
     --outline-width: 3px;
-
     align-items: center;
     appearance: none;
     background-color: var(--input-background-default);
@@ -17,7 +16,7 @@
     display: block;
     grid-template-areas: 'select';
     min-width: 15ch;
-    padding: 10px 12px 12px 12px; // Center the text vertically
+    padding: 10px 12px 12px; // Center the text vertically
     position: relative;
     width: 100%;
 
@@ -42,13 +41,14 @@
 
   .select2-selection--multiple .select2-selection__choice {
     background-color: var(--color-black-5) !important;
-    border-radius: 0;
     border: 0;
+    border-radius: 0;
     color: var(--color-black);
     font-size: remify(18px);
     font-weight: normal;
     padding: 2px;
   }
+
   .select2-selection--multiple .select2-selection__choice__display {
     padding-left: 5px;
     padding-right: 5px;
@@ -59,16 +59,16 @@
   }
 
   .select2-selection--multiple .select2-search textarea {
-    margin-left: 10px;
     margin-bottom: 6px;
+    margin-left: 10px;
     margin-top: 8px;
   }
 }
 
 .site-search .select2-container--default .select2-results__option {
   font-size: remify(18px);
-  padding: calc(0.75rem - 1px) calc(1rem - 1px);
   margin: $spacing-quarter 0;
+  padding: calc(0.75rem - 1px) calc(1rem - 1px);
 
   &--highlighted[aria-selected] {
     background-color: $color-black;
@@ -76,17 +76,18 @@
 }
 
 .block-facet--select2 {
-  padding-top: $spacing;
-  @include components-container-max-width;
-  @include component-side-padding;
   margin-left: auto;
   margin-right: auto;
+  padding-top: $spacing;
+
+  @include components-container-max-width;
+  @include component-side-padding;
 
 
   @include breakpoint($breakpoint-l) {
     float: left;
-    width: 30%;
     padding-top: $spacing * 2;
+    width: 30%;
 
     &:first-of-type {
       padding-right: 0;
@@ -103,8 +104,8 @@
 
   h2 {
     font-size: remify(16px);
-    line-height: 1.5;
     font-weight: 500;
+    line-height: 1.5;
     margin: 4px 0;
   }
 }

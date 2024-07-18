@@ -2,12 +2,38 @@
   @include tag('base');
   @include tag('interactive');
   @include font('special.helper_text');
+
   --line-height: 1.5;
-  line-height: var(--line-height);
-  background-color: #000;
+  background-color: $color-black;
   border-radius: 24px;
-  color: #fff;
+  color: $color-white;
+  line-height: var(--line-height);
   margin: 4px;
   padding: 8px 32px;
   text-decoration: none;
+}
+
+.views-field-field-keywords {
+  ul {
+    list-style: none;
+    margin: $spacing 0 0 0;
+    padding: 0;
+  }
+
+  li {
+    background: $color-black;
+    border-radius: $spacing;
+    display: inline-block;
+    font-size: remify(14px);
+    line-height: 2.2;
+    margin-bottom: $spacing-half;
+    margin-right: $spacing-half;
+    margin-top: 0;
+    padding: 0 $spacing;
+  }
+
+  li a {
+    color: $color-white;
+    text-decoration: none;
+  }
 }

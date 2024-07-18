@@ -5,7 +5,7 @@ global-styling:
       dist/css/styles.min.css: {}
 
 search-toggle:
-  version: 1.0
+  version: 1.1
   js:
     dist/js/searchToggle.min.js: {}
   dependencies:
@@ -14,18 +14,13 @@ search-toggle:
 admin-content-liftup:
   js:
     dist/js/contentLiftup.min.js: {}
-  version: 1.x
+  version: 1.0
   dependencies:
     - core/drupal
     - core/jquery
 
-main-menu:
-  version: 1.x
-  js:
-    dist/js/mainMenu.min.js: {}
-
 infograph:
-  version: 1.x
+  version: 1.0
   js:
     dist/js/infograph.min.js: {}
     dist/js/slick.min.js: {}
@@ -36,15 +31,18 @@ infograph:
 content-menu:
   js:
     dist/js/contentMenu.min.js: {}
-  version: 1.x
+  version: 1.0
   dependencies:
     - core/drupal
     - core/jquery
     - select2/select2.min
 
-language-switcher:
+matomo:
+  version: 1.0
   js:
-    dist/js/languageSwitcher.min.js: {}
-  version: 1.x
-  dependencies:
-    - core/drupal
+    dist/js/matomo.min.js: {
+      attributes: {
+        defer: true,
+        preprocess: false
+      }
+    }
