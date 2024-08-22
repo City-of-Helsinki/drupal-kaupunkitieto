@@ -11,12 +11,11 @@ $additionalEnvVars = [
   'AZURE_BLOB_STORAGE_CONTAINER',
   'DRUPAL_VARNISH_HOST',
   'DRUPAL_VARNISH_PORT',
-  'PROJECT_NAME',
-  'DRUPAL_API_ACCOUNTS',
-  'DRUPAL_VAULT_ACCOUNTS',
   'REDIS_HOST',
   'REDIS_PORT',
   'REDIS_PASSWORD',
+  'SENTRY_DSN',
+  'SENTRY_ENVIRONMENT',
 ];
 foreach ($additionalEnvVars as $var) {
   $preflight_checks['environmentVariables'][] = $var;
