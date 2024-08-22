@@ -1,4 +1,5 @@
-langcode: fi
+uuid: fdcf083d-8088-4897-ba73-adfde50747f7
+langcode: en
 status: true
 dependencies: {  }
 id: icareus_suite

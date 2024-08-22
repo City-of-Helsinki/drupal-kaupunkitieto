@@ -1,5 +1,5 @@
 uuid: efc9563b-f569-4544-b92a-04a6965f924b
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -14,5 +14,5 @@ _core:
 id: media.soundcloud
 target_entity_type_id: media
 target_bundle: soundcloud
-default_langcode: fi
+default_langcode: en
 language_alterable: true

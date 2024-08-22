@@ -1,5 +1,5 @@
-uuid: null
-langcode: fi
+uuid: 25181395-4935-404d-9b16-43ff8ddea066
+langcode: en
 status: true
 dependencies:
   config:
@@ -30,7 +30,7 @@ dependencies:
     - taxonomy
     - toolbar
 id: editor
-label: 'Sisällöntuottaja laaja'
+label: Editor
 weight: 4
 is_admin: null
 permissions:

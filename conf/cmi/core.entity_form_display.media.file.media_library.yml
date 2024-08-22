@@ -1,5 +1,5 @@
 uuid: 20a720a0-dda1-4767-ad48-9e7e0e749c9c
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -31,5 +31,6 @@ hidden:
   field_media_file: true
   langcode: true
   path: true
+  replace_file: true
   status: true
   uid: true

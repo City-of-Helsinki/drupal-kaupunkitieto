@@ -1,5 +1,5 @@
 uuid: 9b805cde-12af-49d3-89ea-95cc7ef358b2
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -68,3 +68,4 @@ hidden:
   field_liftup_image: true
   langcode: true
   search_api_excerpt: true
+  toc_enabled: true
