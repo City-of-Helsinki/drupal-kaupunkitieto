@@ -1,0 +1,9 @@
+// Hide the artificial site-name block if menu links have been added to Swedish
+// or English versions.
+.desktop-menu ~ .site-name__block {
+  display: none;
+}
+
+.site-name__container--empty {
+  margin-bottom: $spacing-and-half;
+}

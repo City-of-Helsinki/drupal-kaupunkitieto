@@ -1,0 +1,118 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set background_color = content.field_hero_bg_color[0]['#markup'] %}
+{% set design = content.field_hero_design[0]['#markup'] %}
+{% set description = content.field_hero_desc %}
+
+{% if title is empty %}
+  {% set title = content.field_hero_title %}
+{% endif %}
+
+{% if image is empty %}
+  {% set image = content.field_hero_image %}
+{% endif %}
+
+{% if show_search %}
+  {% set design_class = "hero--with-search" %}
+  {% set design = "with-image-right" %}
+  {{ attach_library('hdbt_subtheme/search-toggle') }}
+{% endif %}
+
+{%
+  set classes = [
+    'hero',
+    view_mode ? 'hero--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'hero--unpublished',
+    design ? 'hero--' ~ design,
+    background_color ? 'hero--bg-color--' ~ background_color
+  ]
+%}
+
+{% block paragraph %}
+  {% if design == "background-image" %}
+    {% set design_class = "hero--with-image-bottom" %}
+  {% elseif design == "diagonal" %}
+    {% set design_class = "hero--diagonal" %}
+  {% elseif design == "with-image-bottom" %}
+    {% set design_class = "hero--with-image-bottom" %}
+  {% elseif design == "with-image-left" %}
+    {% set design_class = "hero--with-image-left" %}
+  {% elseif design == "with-image-right" %}
+    {% set design_class = "hero--with-image-right" %}
+  {% elseif design == "without-image-center" %}
+    {% set design_class = "hero--without-image-left" %}
+  {% elseif design == "without-image-left" %}
+    {% set design_class = "hero--without-image-left" %}
+  {% elseif design == "with-search" %}
+    {% set design_class = "hero--with-image-right" %}
+  {% endif %}
+
+  {% set hero_wrapper_attributes = {
+    'class': [
+      'hero',
+      design_class ? design_class,
+    ]
+  } %}
+
+  <div{{ create_attribute(hero_wrapper_attributes) }}>
+    {% embed "@hdbt/misc/container.twig" with {container_element: 'hero'} %}
+      {% block container_content %}
+        <div class="hero__text-content">
+          {# Hyphenate the visible title, but share to screen readers unhyphenated version as for example NVDA reads hyphenated text poorly #}
+          <h1 class="hero__title hyphenate" aria-labelledby="page_title">{{ title }}</h1>
+          <span class="is-hidden" id="page_title">{{ title }}</span>
+
+          {% if description|render|striptags|trim is not empty %}
+            {% if
+              design == "without-image-left" or
+              design == "without-image-center" or
+              design == "with-image-right" or
+              design == "with-image-left" or
+              design == "with-image-bottom" or
+              design == "diagonal"
+            %}
+              <div class="hero__description user-edited-content">
+                {{ description }}
+              </div>
+            {% endif %}
+          {% endif %}
+
+          {% if show_search %}
+            <div class="hero__search-box">
+              <form action="/haku" method="get" accept-charset="UTF-8">
+                <input data-drupal-selector="edit-search_api_fulltext" type="search" class="hero__search-field" id="edit-search_api_fulltext" name="search_api_fulltext" value="" size="15" placeholder="{{ 'What do you want to know today?'|trans }}" maxlength="128" />
+                <input value="{{ 'Search'|trans }}" type="submit" class="hero__search-submit">
+              </form>
+            </div>
+          {% endif %}
+        </div>
+        <span class="hero__arrow" aria-hidden="true"></span>
+      {% endblock %}
+    {% endembed %}
+
+    {% if
+      design == "with-image-right" or
+      design == "with-image-left" or
+      design == "with-image-bottom" or
+      design == "diagonal" or
+      design == "with-search"
+    %}
+      {% if image|render %}
+        <div class="hero__image-container">
+          {% include '@hdbt/misc/koro.twig' with {koro: koro, flip: true } %}
+          {{ image }}
+        </div>
+      {% endif %}
+    {% endif %}
+    {% include '@hdbt/misc/koro.twig' with {koro: koro, flip: false } %}
+  </div>
+{% endblock paragraph %}

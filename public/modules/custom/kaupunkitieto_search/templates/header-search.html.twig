@@ -1,15 +1,17 @@
 <div class="header-search dropdown dropdown--search">
   <div class="header-search__form-wrapper">
-    <form role="search" action={{ search_page_path }} method="GET">
-      <div class="hds-text-input hds-text-input--search ">
-        <label for="edit-search_api_fulltext" class="hds-text-input__label hiddenFromScreen"></label>
+    <form class="helfi-search__form" action="{{ search_page_path }}" method="GET" role="search">
+      <div class="form-item hds-text-input">
+        {% if label %}
+          <label class="hds-text-input__label" for="search-form-kaupunkitieto">{{ label }}</label>
+        {% endif %}
         <div class="hds-text-input__input-wrapper">
-          <input placeholder="{{ 'What are you looking for?'|t }}" data-drupal-selector="edit-search_api_fulltext"  class="form-text hds-text-input__input ui-autocomplete-input" type="text" id="edit-search_api_fulltext" name="search_api_fulltext" value="" size="30" maxlength="128" autocomplete="off">
-          <button type="submit" class="hds-button hds-button--supplementary hds-button--theme-black" aria-label="{{ 'Search'|t }}">
-            <span aria-hidden="true" class="hds-icon hds-icon--search hds-icon--size-m"></span>
-          </button>
+          <input type="search" id="search-form-kaupunkitieto" name="q" value="" size="30" maxlength="128" class="form-text hds-text-input__input" placeholder="{{ 'What are you looking for?'|t }}">
         </div>
       </div>
+      <button class="hds-button hds-button--primary helfi-search__submit-button" type="submit" value="Submit">
+        <span class="hds-button__label">{{ 'Search'|t({}, {'context': 'Helfi search button'}) }}</span>
+      </button>
     </form>
   </div>
 </div>

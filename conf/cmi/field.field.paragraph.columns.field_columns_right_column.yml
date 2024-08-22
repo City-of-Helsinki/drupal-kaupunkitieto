@@ -56,7 +56,7 @@ settings:
         weight: -13
         enabled: false
       image:
-        weight: -12
+        weight: 0
         enabled: true
       liftup_with_image:
         weight: 21
@@ -68,12 +68,12 @@ settings:
         weight: -8
         enabled: false
       quick_links:
-        weight: 33
+        weight: 3
         enabled: true
       quick_links_item:
         weight: 18
         enabled: false
       text:
-        weight: -11
+        weight: 0
         enabled: true
 field_type: entity_reference_revisions

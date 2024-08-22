@@ -1,0 +1,9 @@
+uuid: be6b3806-d0eb-4bca-8a14-72c395ab8468
+langcode: en
+status: true
+dependencies: {  }
+id: super_administrator
+label: 'Super administrator'
+weight: 7
+is_admin: true
+permissions: {  }

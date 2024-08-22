@@ -2,9 +2,14 @@ uuid: 72a2102e-f1d0-4ec8-94b1-d4c552989c35
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.landing_page
+    - node.type.page
   module:
+    - node
     - paragraphs
     - toolbar
+    - view_unpublished
 id: read_only
 label: 'Read only'
 weight: 2
@@ -13,4 +18,5 @@ permissions:
   - 'access toolbar'
   - 'view any unpublished landing_page content'
   - 'view any unpublished page content'
+  - 'view own unpublished content'
   - 'view unpublished paragraphs'

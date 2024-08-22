@@ -44,7 +44,7 @@ settings:
         weight: 21
         enabled: false
       content_liftup_item:
-        weight: 22
+        weight: 0
         enabled: true
       hero:
         weight: 25

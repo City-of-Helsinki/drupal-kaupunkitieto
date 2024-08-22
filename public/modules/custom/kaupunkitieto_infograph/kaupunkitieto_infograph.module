@@ -7,92 +7,73 @@
 
 declare(strict_types=1);
 
-use Drupal\paragraphs\Entity\Paragraph;
-use GuzzleHttp\Exception\GuzzleException;
+use Drupal\helfi_platform_config\DTO\ParagraphTypeCollection;
 
 /**
- * Update infograph values during cron run.
+ * Implements hook_helfi_paragraph_types().
  */
-function kaupunkitieto_infograph_cron(): void {
-  // Go through all Infographs.
-  foreach (_kaupunkitieto_infograph_get_graphs() as $paragraph) {
-    if ($paragraph->hasField('field_graph_id')) {
-      $rows = _kaupunkitieto_infograph_fetch_data($paragraph->get('field_graph_id')->value);
+function kaupunkitieto_infograph_helfi_paragraph_types() : array {
+  $entities = [
+    'node' => [
+      'landing_page' => [
+        'field_content' => [
+          'infograph' => 15,
+          'embed' => 16,
+        ],
+      ],
+      'page' => [
+        'field_content' => [
+          'embed' => 15,
+          'content_menu' => 16,
+        ],
+      ],
+    ],
+    'paragraph' => [
+      'content_liftup' => [
+        'field_content_liftup_items' => [
+          'content_liftup_item' => 0,
+        ],
+      ],
+      'content_menu' => [
+        'field_content_menu_items' => [
+          'content_menu_item' => 0,
+        ],
+      ],
+      'infograph_group' => [
+        'field_rows' => [
+          'infograph' => 0,
+        ],
+      ],
+      'infograph' => [
+        'field_rows' => [
+          'infograph_row' => 0,
+        ],
+      ],
+      'quick_links' => [
+        'field_quick_links_links' => [
+          'quick_links_item' => 0,
+        ],
+      ],
+      'columns' => [
+        'field_columns_left_column' => [
+          'infograph_group' => 3,
+        ],
+        'field_columns_right_column' => [
+          'quick_links' => 3,
+        ],
+      ],
+    ],
+  ];
 
-      if ($rows) {
-        $paragraph->set('field_type_infograph', $rows['graphType']);
-
-        $new_set = [];
-
-        foreach ($rows['graphParts'] as $value) {
-          $subParagraph = Paragraph::create(['type' => 'infograph_row']);
-          $subParagraph->set('field_data', $value['data'][1]);
-          $subParagraph->set('field_label', $value['data'][0]);
-          $subParagraph->set('field_url', $value['url']);
-          $subParagraph->isNew();
-          $subParagraph->save();
-
-          $new_set[] = [
-            'target_id' => $subParagraph->id(),
-            'target_revision_id' => $subParagraph->getRevisionId(),
-          ];
+  $enabled = [];
+  foreach ($entities as $entityTypeId => $bundles) {
+    foreach ($bundles as $bundle => $fields) {
+      foreach ($fields as $field => $paragraphTypes) {
+        foreach ($paragraphTypes as $paragraphType => $weight) {
+          $enabled[] = new ParagraphTypeCollection($entityTypeId, $bundle, $field, $paragraphType, $weight);
         }
-
-        foreach ($paragraph->get('field_rows')->referencedEntities() as $paragraphEntity) {
-          $paragraphEntity->delete();
-        }
-
-        $paragraph->set('field_rows', $new_set);
-        $paragraph->save();
-      }
-      else {
-        \Drupal::logger('kaupunkitieto_infograph')->warning('No rows found for Graph Id: ' . $paragraph->get('field_graph_id')->value);
       }
     }
   }
-}
-
-/**
- * Get all paragraphs of type infograph.
- *
- * @return array
- *   Returns all paragraphs of type infograph or empty array.
- *
- * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
- * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
- */
-function _kaupunkitieto_infograph_get_graphs(): array {
-  $paragraphStorage = \Drupal::entityTypeManager()->getStorage('paragraph');
-  $paragraphQuery = $paragraphStorage->getQuery()->condition('type', 'infograph');
-  $paragraphIds = $paragraphQuery->execute();
-
-  // Fetch rows.
-  return $paragraphStorage->loadMultiple($paragraphIds);
-}
-
-/**
- * Query data from external interface.
- *
- * @param string $id
- *   The ID to fetch data from.
- *
- * @return mixed|null
- *   Returns either decoded data or NULL.
- */
-function _kaupunkitieto_infograph_fetch_data(string $id): mixed {
-  $client = \Drupal::httpClient();
-  $config = \Drupal::config('kaupunkitieto_infograph.settings');
-
-  // Not that good of a check, but it's something.
-  if (trim($config->get('url')) == '') {
-    return NULL;
-  }
-
-  try {
-    $response = $client->request('GET', $config->get('url') . $id);
-    return json_decode($response->getBody()->getContents(), TRUE);
-  }
-  catch (GuzzleException $e) {
-    return NULL;
-  }
+  return $enabled;
 }

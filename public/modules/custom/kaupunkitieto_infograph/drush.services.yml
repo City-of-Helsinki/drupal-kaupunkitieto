@@ -9,3 +9,8 @@ services:
     arguments: ['@entity_type.manager', '@database']
     tags:
       - { name: drush.command }
+  kaupunkitieto_infograph.update_helper:
+    class: \Drupal\kaupunkitieto_infograph\Commands\FixKaupunkitietoPlatformUpdate
+    arguments: ['@module_handler','@entity_type.manager', '@database']
+    tags:
+      - { name: drush.command }

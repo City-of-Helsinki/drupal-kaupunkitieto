@@ -50,7 +50,7 @@ settings:
         weight: 20
         enabled: false
       content_menu_item:
-        weight: 21
+        weight: 0
         enabled: true
       embed:
         weight: 28

@@ -1,0 +1,8 @@
+content:
+  field_search_result_text:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content

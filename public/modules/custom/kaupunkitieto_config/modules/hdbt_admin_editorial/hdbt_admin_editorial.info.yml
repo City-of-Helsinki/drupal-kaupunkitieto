@@ -1,0 +1,3 @@
+name: 'hdbt_admin_editorial - dummy module'
+type: module
+core_version_requirement: ^9 || ^10

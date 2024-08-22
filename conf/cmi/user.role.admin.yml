@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.full_html
+    - filter.format.minimal
     - media.type.file
     - media.type.image
     - media.type.remote_video
@@ -18,6 +19,7 @@ dependencies:
     - config_translation
     - content_lock
     - content_translation
+    - entity_usage
     - eu_cookie_compliance
     - file
     - filter
@@ -31,6 +33,7 @@ dependencies:
     - paragraphs_library
     - path
     - pathauto
+    - publication_date
     - redirect
     - role_delegation
     - scheduler
@@ -38,6 +41,7 @@ dependencies:
     - system
     - taxonomy
     - toolbar
+    - view_unpublished
 _core:
   default_config_hash: wJWcExCcstsjfohW4IUVRm742x2vKz6nOlZpa3OG7yQ
 id: admin
@@ -48,6 +52,7 @@ permissions:
   - 'access administration pages'
   - 'access content'
   - 'access content overview'
+  - 'access entity usage statistics'
   - 'access files overview'
   - 'access media overview'
   - 'access remote entities overview'

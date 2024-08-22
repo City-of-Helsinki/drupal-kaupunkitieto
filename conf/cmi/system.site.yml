@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: a64e52b8-8a13-4a4d-a0cd-0b7f05a3582c
 name: 'Research and statistics about Helsinki'
-mail: admin@example.com
+mail: drupal@hel.fi
 slogan: ''
 page:
   403: ''

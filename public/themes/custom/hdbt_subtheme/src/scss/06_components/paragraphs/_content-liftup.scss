@@ -1,0 +1,104 @@
+$item_spacing: $spacing-triple;
+
+.content-liftup {
+  background: $color-silver-light;
+  border: 0;
+  margin-top: $spacing-double;
+
+  @include breakpoint($breakpoint-l) {
+    margin-top: $spacing-quadruple;
+  }
+
+  .hds-koros {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.content-liftup__content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $spacing-double;
+  margin-top: $spacing-triple;
+
+  @include breakpoint($breakpoint-s) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: $spacing-quadruple;
+    margin-left: -$item_spacing;
+    width: calc(100% + #{$item_spacing});
+  }
+}
+
+.content-liftup__container {
+  overflow: hidden;
+  padding-top: $spacing-double;
+
+  @include breakpoint($breakpoint-l) {
+    flex-grow: 1;
+  }
+}
+
+.content-liftup__title {
+  margin-top: 0;
+
+  @include breakpoint($breakpoint-s) {
+    margin-top: $spacing-double;
+  }
+}
+
+.content-liftup__item {
+  margin-bottom: $spacing-double;
+  width: 100%;
+
+  @include breakpoint($breakpoint-s) {
+    padding-left: $item_spacing;
+    width: 50%;
+  }
+  @include breakpoint($breakpoint-l) {
+    margin-bottom: $spacing-triple;
+  }
+
+  > * {
+    height: 100%;
+  }
+
+  .content-liftup__item__link {
+    align-items: flex-start;
+    border-left: 4px solid $color-tram;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0 0 0 $spacing-and-half;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+
+    &:hover {
+      .content-liftup__item__title {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .content-liftup__item__title {
+    @include font('h4');
+    margin: 0 0 $spacing-double;
+  }
+  .content-liftup__item__meta {
+    @include font('small');
+    text-transform: uppercase;
+    @include breakpoint($breakpoint-l) {
+      @include font('body');
+    }
+  }
+}
+
+.content-liftup__title {
+  @include font('h2');
+  margin-top: 0;
+  width: 100%;
+}
