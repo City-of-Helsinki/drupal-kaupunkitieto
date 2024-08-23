@@ -28,11 +28,12 @@ display:
           label: 'Används i'
           alter:
             path: 'admin/content/files/usage/{{ fid }}'
+          format_plural_string: !!binary MSBwbGF0cwNAY291bnQgcGxhdHNlcg==
       pager:
         options:
           tags:
-            next: 'Nästa ›'
-            previous: '‹ Föregående'
+            next: Nästa
+            previous: Föregående
           expose:
             items_per_page_label: 'Inlägg per sida'
             items_per_page_options_all_label: '- Alla -'
@@ -75,11 +76,12 @@ display:
           label: 'Registrerar modul'
         count:
           label: 'Antal använd'
+          format_plural_string: !!binary MQNAY291bnQ=
       pager:
         options:
           tags:
-            next: 'Nästa ›'
-            previous: '‹ Föregående'
+            next: Nästa
+            previous: Föregående
           expose:
             items_per_page_label: 'Inlägg per sida'
             items_per_page_options_all_label: '- Alla -'

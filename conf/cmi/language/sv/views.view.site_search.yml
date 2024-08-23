@@ -5,6 +5,11 @@ display:
         options:
           expose:
             items_per_page_label: 'Resultat per sida'
+          tags:
+            previous: Föregående
+            next: Nästa
+            first: Första
+            last: Sista
       exposed_form:
         options:
           submit_button: 'Sök igen'

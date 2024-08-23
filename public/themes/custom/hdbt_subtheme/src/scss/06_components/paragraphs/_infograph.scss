@@ -140,6 +140,10 @@ $infograph-light-green: #e1eadc;
   }
 }
 
+.paragraph--type--infograph-group {
+  margin-top: calc($spacing-double * -1);
+}
+
 .infograph {
   display: flex !important; // sometimes infograph is in slick slider so make sure it is a flex.
   flex-wrap: wrap;

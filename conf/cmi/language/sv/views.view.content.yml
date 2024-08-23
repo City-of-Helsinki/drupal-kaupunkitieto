@@ -7,7 +7,7 @@ display:
       title: Innehåll
       fields:
         title:
-          label: Title
+          label: Titel
         type:
           label: Innehållstyp
           separator: ', '
@@ -22,13 +22,16 @@ display:
           label: Uppdaterad
         operations:
           label: Funktioner
+        langcode:
+          label: Språk
+          separator: ', '
       pager:
         options:
           tags:
-            next: 'Nästa ›'
-            previous: '‹ Föregående'
-            first: '« Första'
-            last: 'Sista »'
+            next: Nästa
+            previous: Föregående
+            first: Första
+            last: Sista
       exposed_form:
         options:
           submit_button: Filtrera
@@ -42,7 +45,7 @@ display:
       filters:
         title:
           expose:
-            label: Title
+            label: Titel
         type:
           expose:
             label: Innehållstyp
@@ -54,8 +57,6 @@ display:
             group_items:
               1:
                 title: Publicerad
-              2:
-                title: 'Ej publicerad'
         langcode:
           expose:
             label: Språk

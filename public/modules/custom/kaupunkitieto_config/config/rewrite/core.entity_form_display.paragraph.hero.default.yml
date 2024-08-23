@@ -1,0 +1,27 @@
+config_rewrite:
+  replace: ['dependencies', 'hidden']
+dependencies:
+  config:
+    - field.field.paragraph.hero.field_display_search_field
+    - field.field.paragraph.hero.field_hero_desc
+    - field.field.paragraph.hero.field_hero_design
+    - field.field.paragraph.hero.field_hero_image
+    - field.field.paragraph.hero.field_hero_link
+    - field.field.paragraph.hero.field_hero_link_design
+    - field.field.paragraph.hero.field_hero_title
+    - paragraphs.paragraphs_type.hero
+  module:
+    - allowed_formats
+    - hdbt_admin_tools
+    - media_library
+content:
+  field_display_search_field:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

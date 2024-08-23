@@ -122,7 +122,7 @@ final class FixKaupunkitietoPlatformUpdate extends DrushCommands {
           $this->connection
             ->upsert('paragraph__field_accordion_title_level')
             ->fields((array) $row)
-            ->key('entity_id', $row->entity_id)
+            ->key('entity_id')
             ->execute();
         }
       }
@@ -153,7 +153,8 @@ final class FixKaupunkitietoPlatformUpdate extends DrushCommands {
 
       // Get all banner paragraphs and update their design.
       $banner_paragraphs = $this->entityTypeManager->getStorage('paragraph')
-        ->getQuery('AND')
+        ->getQuery()
+        ->accessCheck(FALSE)
         ->condition('type', 'banner')
         ->condition('field_banner_design', [
           'align-center',
@@ -198,6 +199,7 @@ final class FixKaupunkitietoPlatformUpdate extends DrushCommands {
     $hero_paragraph_query = $this->entityTypeManager
       ->getStorage('paragraph')
       ->getQuery()
+      ->accessCheck(FALSE)
       ->condition('type', 'hero');
     $heros = $hero_paragraph_query->execute();
 
@@ -270,4 +272,5 @@ final class FixKaupunkitietoPlatformUpdate extends DrushCommands {
       $context['finished'] = 1;
     }
   }
+
 }

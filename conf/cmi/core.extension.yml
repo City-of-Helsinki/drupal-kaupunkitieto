@@ -1,6 +1,5 @@
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
-langcode: en
 module:
   address: 0
   admin_toolbar: 0
@@ -10,7 +9,8 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
-  ckeditor: 0
+  ckeditor5: 0
+  ckeditor5_paste_filter: 0
   config: 0
   config_ignore: 0
   config_rewrite: 0
@@ -33,6 +33,7 @@ module:
   facets: 0
   field: 0
   field_group: 0
+  field_ui: 0
   file: 0
   file_delete: 0
   file_mdm: 0
@@ -77,6 +78,7 @@ module:
   helfi_react_search: 0
   helfi_toc: 0
   helfi_user_roles: 0
+  help: 0
   image: 0
   image_style_quality: 0
   imagecache_external: 0
@@ -100,6 +102,7 @@ module:
   metatag_twitter_cards: 0
   metatag_views: 0
   migrate: 0
+  monolog: 0
   mysql: 0
   node: 0
   oembed_providers: 0
@@ -109,6 +112,7 @@ module:
   paragraphs_library: 0
   path: 0
   path_alias: 0
+  phpass: 0
   raven: 0
   readonly_field_widget: 0
   redirect: 0
@@ -134,6 +138,7 @@ module:
   twig_tweak: 0
   user: 0
   view_unpublished: 0
+  views_ui: 0
   pathauto: 1
   content_translation: 10
   views: 10

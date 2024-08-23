@@ -7,9 +7,5 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  {% embed "@hdbt/misc/container.twig" with {container_element: 'site-search'} %}
-    {% block container_content %}
-      {{ children }}
-    {% endblock container_content %}
-  {% endembed %}
+  {{ children }}
 </div>
