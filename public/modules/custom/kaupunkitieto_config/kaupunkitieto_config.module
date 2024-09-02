@@ -17,6 +17,7 @@ function kaupunkitieto_config_rewrite_config_update(string $module, ConfigRewrit
     'helfi_node_landing_page',
     'helfi_node_page',
     'helfi_paragraphs_content_cards',
+    'helfi_paragraphs_hero',
   ];
 
   if (in_array($module, $modules)) {
