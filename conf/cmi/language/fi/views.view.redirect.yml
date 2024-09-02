@@ -5,32 +5,18 @@ display:
         status_code:
           group_info:
             group_items:
-              15:
-                title: '300 Useita valintoja'
-              16:
-                title: '301 Pysyvästi siirretty'
-              17:
-                title: '302 Löydetty'
-              18:
-                title: '303 Kts. toinen'
-              19:
-                title: '304 Muuttamaton'
-              20:
-                title: '305 Käytä proxyä'
-              7:
-                title: '300 Multiple Choices'
               1:
-                title: '300 Multiple Choices'
+                title: '300 Useita valintoja'
               2:
-                title: '301 Moved Permanently'
+                title: '301 Pysyvästi siirretty'
               3:
-                title: '302 Found'
+                title: '302 Löydetty'
               4:
-                title: '303 See Other'
+                title: '303 Kts. toinen'
               5:
-                title: '304 Not Modified'
+                title: '304 Muuttamaton'
               6:
-                title: '305 Use Proxy'
+                title: '305 Käytä proxyä'
             label: Tilakoodi
           expose:
             label: Tilakoodi
