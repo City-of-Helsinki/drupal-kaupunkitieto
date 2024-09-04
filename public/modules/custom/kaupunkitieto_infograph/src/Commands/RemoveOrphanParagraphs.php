@@ -76,10 +76,7 @@ final class RemoveOrphanParagraphs extends DrushCommands {
         ->range(0, $limit)
         ->execute();
 
-      $this->output()->writeln($this->t('Found @amount orphaned paragraphs. Starting to delete the next @limit orphaned paragraphs...', [
-        '@amount' => $orphaned_infographs,
-        '@limit' => $limit,
-      ]));
+      $this->output()->writeln("Found {$orphaned_infographs} orphaned paragraphs. Starting to delete the next {$limit} orphaned paragraphs...");
 
       $batch = (new BatchBuilder())
         ->setProgressMessage($this->t('Processed @current out of @total.'))

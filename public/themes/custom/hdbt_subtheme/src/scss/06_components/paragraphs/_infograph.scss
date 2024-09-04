@@ -142,177 +142,6 @@ $infograph-light-green: #e1eadc;
 
 .paragraph--type--infograph-group {
   margin-top: calc($spacing-double * -1);
-}
-
-.infograph {
-  display: flex !important; // sometimes infograph is in slick slider so make sure it is a flex.
-  flex-wrap: wrap;
-  gap: 6px;
-
-  a {
-    text-decoration: none;
-  }
-
-  &__item {
-    flex: 1;
-    padding: 1.35rem;
-    font-weight: $font-weight-bold;
-    text-align: center;
-    cursor: pointer;
-  }
-
-  &__label {
-    // @include font-size(22px, 24px);
-    color: $color-black;
-    font-size: remify(22px);
-    line-height: 1.1;
-    margin-bottom: 1rem;
-
-    @include breakpoint($breakpoint-m) {
-      font-size: remify(26px);
-      line-height: 1.15;
-    }
-  }
-
-  &__type-one {
-    .infograph__item {
-      &:first-child {
-        @extend %full-row;
-        @extend %row-light-blue;
-      }
-
-      &:nth-child(2) {
-        @extend %small-row;
-        @extend %row-light-green;
-      }
-
-      &:nth-child(3) {
-        @extend %small-row;
-        @extend %row-medium-blue;
-      }
-
-      &:nth-child(4) {
-        @extend %small-row;
-        @extend %row-light-green;
-      }
-    }
-  }
-
-  &__type-two {
-    .infograph__item {
-      &:first-child {
-        @extend %full-row;
-        @extend %row-light-green;
-      }
-
-      &:nth-child(2) {
-        @extend %half-row;
-        @extend %row-dark-blue;
-      }
-
-      &:nth-child(3) {
-        @extend %half-row;
-        @extend %row-medium-blue;
-      }
-    }
-  }
-
-  &__type-three {
-    .infograph__item {
-      &:first-child {
-        @extend %half-row-large;
-        @extend %row-light-blue;
-      }
-
-      &:nth-child(2) {
-        @extend %half-row-large;
-        @extend %row-medium-blue;
-      }
-
-      &:nth-child(3) {
-        @extend %half-row;
-        @extend %row-second-medium-blue;
-      }
-
-      &:nth-child(4) {
-        @extend %half-row;
-        @extend %row-dark-green;
-      }
-    }
-  }
-
-  &__type-four {
-    .infograph__item {
-      &:first-child {
-        @extend %half-row-large;
-        @extend %row-medium-blue;
-      }
-
-      &:nth-child(2) {
-        @extend %half-row-large;
-        @extend %row-dark-blue;
-      }
-
-      &:nth-child(3) {
-        @extend %row-dark-green;
-        @extend %small-row;
-      }
-
-      &:nth-child(4) {
-        @extend %row-medium-blue;
-        @extend %small-row;
-      }
-
-      &:nth-child(5) {
-        @extend %row-dark-green;
-        @extend %small-row;
-      }
-    }
-  }
-
-  &__type-five {
-    .infograph__item {
-      &:first-child {
-        @extend %half-row-large;
-        @extend %row-medium-blue;
-
-        .infograph__label {
-          color: var(--color-bus);
-        }
-      }
-
-      &:nth-child(2) {
-        @extend %half-row-large;
-        @extend %row-dark-green;
-      }
-
-      &:last-child {
-        @extend %full-row;
-        background: var(--color-bus);
-
-        a {
-          color: $color-white;
-        }
-
-        .infograph__label {
-          color: $color-white;
-        }
-      }
-    }
-  }
-
-  .small-char {
-    font-size: remify(32px);
-    line-height: 1.125;
-
-    @include breakpoint($breakpoint-m) {
-      font-size: remify(50px);
-      line-height: 1;
-    }
-  }
-}
-
-.paragraph--type--infograph-group {
   max-width: 100%;
 
   .paragraph--type--infograph {
@@ -329,6 +158,173 @@ $infograph-light-green: #e1eadc;
   }
 }
 
+.infograph {
+  display: flex !important; // sometimes infograph is in slick slider so make sure it is a flex.
+  flex-wrap: wrap;
+  gap: 6px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.infograph__item {
+  cursor: pointer;
+  flex: 1;
+  font-weight: $font-weight-bold;
+  padding: 1.35rem;
+  text-align: center;
+}
+
+.infograph__label {
+  color: $color-black;
+  font-size: remify(22px);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+
+  @include breakpoint($breakpoint-m) {
+    font-size: remify(26px);
+    line-height: 1.15;
+  }
+}
+
+.infograph__type-one {
+  .infograph__item {
+    &:first-child {
+      @extend %full-row;
+      @extend %row-light-blue;
+    }
+
+    &:nth-child(2) {
+      @extend %small-row;
+      @extend %row-light-green;
+    }
+
+    &:nth-child(3) {
+      @extend %small-row;
+      @extend %row-medium-blue;
+    }
+
+    &:nth-child(4) {
+      @extend %small-row;
+      @extend %row-light-green;
+    }
+  }
+}
+
+.infograph__type-two {
+  .infograph__item {
+    &:first-child {
+      @extend %full-row;
+      @extend %row-light-green;
+    }
+
+    &:nth-child(2) {
+      @extend %half-row;
+      @extend %row-dark-blue;
+    }
+
+    &:nth-child(3) {
+      @extend %half-row;
+      @extend %row-medium-blue;
+    }
+  }
+}
+
+.infograph__type-three {
+  .infograph__item {
+    &:first-child {
+      @extend %half-row-large;
+      @extend %row-light-blue;
+    }
+
+    &:nth-child(2) {
+      @extend %half-row-large;
+      @extend %row-medium-blue;
+    }
+
+    &:nth-child(3) {
+      @extend %half-row;
+      @extend %row-second-medium-blue;
+    }
+
+    &:nth-child(4) {
+      @extend %half-row;
+      @extend %row-dark-green;
+    }
+  }
+}
+
+.infograph__type-four {
+  .infograph__item {
+    &:first-child {
+      @extend %half-row-large;
+      @extend %row-medium-blue;
+    }
+
+    &:nth-child(2) {
+      @extend %half-row-large;
+      @extend %row-dark-blue;
+    }
+
+    &:nth-child(3) {
+      @extend %row-dark-green;
+      @extend %small-row;
+    }
+
+    &:nth-child(4) {
+      @extend %row-medium-blue;
+      @extend %small-row;
+    }
+
+    &:nth-child(5) {
+      @extend %row-dark-green;
+      @extend %small-row;
+    }
+  }
+}
+
+.infograph__type-five {
+  .infograph__item {
+    &:first-child {
+      @extend %half-row-large;
+      @extend %row-medium-blue;
+
+      .infograph__label {
+        color: var(--color-bus);
+      }
+    }
+
+    &:nth-child(2) {
+      @extend %half-row-large;
+      @extend %row-dark-green;
+    }
+
+    &:last-child {
+      @extend %full-row;
+      background: var(--color-bus);
+
+      a {
+        color: $color-white;
+      }
+
+      .infograph__label {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.small-char {
+  font-size: remify(32px);
+  line-height: 1.125;
+
+  @include breakpoint($breakpoint-m) {
+    font-size: remify(50px);
+    line-height: 1;
+  }
+}
+
 .infograph-group-nav {
   display: flex;
   font-size: remify(26px);
@@ -342,7 +338,7 @@ $infograph-light-green: #e1eadc;
   }
 
   svg {
-    width: 40px;
     height: 40px;
+    width: 40px;
   }
 }

@@ -1,18 +1,36 @@
 .header-search {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-black-90);
+  border-top: 1px solid var(--color-black-90);
   display: none;
+  left: 0;
+  margin-top: 15px;
+  padding: 26px 32px;
   position: absolute;
   top: 30px;
-  left: 0;
   width: 100%;
   z-index: 999;
-  background-color: var(--color-white);
-  padding: 26px 32px;
-  margin-top: 15px;
-  border-top: 1px solid var(--color-black-90);
-  border-bottom: 1px solid var(--color-black-90);
 
   .helfi-search__form {
-    max-width: 370px;
+    align-items: center;
     margin: 0 auto;
+    max-width: 370px;
+  }
+
+  .header_search_form__close {
+    background: transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: $spacing-double;
+    padding: 0;
+    position: absolute;
+    right: $spacing-double;
+    width: $spacing-double;
+
+    &::after {
+      --icon-size: #{$spacing-double};
+
+      @include pseudo-icon('cross');
+    }
   }
 }

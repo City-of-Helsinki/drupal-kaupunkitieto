@@ -1,14 +1,14 @@
 .content-menu__navigation {
   display: none;
   list-style: none;
-  margin-top: 0;
   margin-right: $spacing;
+  margin-top: 0;
   padding-left: 0;
 
   @include breakpoint($breakpoint-m) {
     display: block;
-    width: 200px;
     margin-right: $spacing;
+    width: 200px;
   }
 
   &-item {
@@ -16,10 +16,10 @@
   }
 
   &-link {
-    font-size: remify(20px);
-    line-height: 1.2;
     cursor: pointer;
     display: block;
+    font-size: remify(20px);
+    line-height: 1.2;
     padding: $spacing 0;
 
     &.active {
@@ -44,9 +44,11 @@
   .select2 {
     display: block;
     width: 100% !important;
+
     @include breakpoint($breakpoint-s) {
       width: auto;
     }
+
     @include breakpoint($breakpoint-m) {
       display: none;
     }

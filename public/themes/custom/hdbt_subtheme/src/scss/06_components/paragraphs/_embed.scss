@@ -1,31 +1,21 @@
-$content-width-max: 790px;
-
-.embed {
-  margin-top: $spacing-double;
-
-  @include breakpoint($breakpoint-l) {
-    margin-top: $spacing-triple;
+.component--paragraph-embed .component__content {
+  .embed__iframe,
+  .embed__code {
+    max-width: $content-width-max;
+    position: relative;
   }
 
-  .embed {
-    &__iframe,
-    &__code {
-      position: relative;
-      max-width: $content-width-max;
-    }
+  .embed__iframe {
+    border: 0;
+    padding-bottom: 40%;
 
-    &__iframe {
-      padding-bottom: 40%;
-
-      iframe {
-        position  : absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-      }
+    iframe {
+      height: 100%;
+      left: 0;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
     }
   }
-
 }

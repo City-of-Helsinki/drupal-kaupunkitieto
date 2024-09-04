@@ -5,6 +5,8 @@
  * Contains installation hooks for kaupunkitieto infograph module.
  */
 
+declare(strict_types=1);
+
 /**
  * UHF-9779: Rerun paragraph updates.
  */
