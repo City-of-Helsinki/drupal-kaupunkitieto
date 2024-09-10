@@ -22,9 +22,10 @@
         "drupal/helfi_platform_config": "^4.0",
         "drupal/helfi_tpr": "^2.0",
         "drupal/helfi_tunnistamo": "^3.0",
+        "drupal/purge": "^3.6",
         "drupal/raven": "^5.0",
         "drupal/redis": "^1.5",
-        "drupal/stage_file_proxy": "^2.0",
+        "drupal/varnish_purge": "^2.2",
         "drush/drush": "^12"
     },
     "require-dev": {
