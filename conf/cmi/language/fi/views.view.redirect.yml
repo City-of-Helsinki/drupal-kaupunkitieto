@@ -17,6 +17,8 @@ display:
                 title: '304 Muuttamaton'
               6:
                 title: '305 Käytä proxyä'
+              7:
+                title: '307 Temporary Redirect'
             label: Tilakoodi
           expose:
             label: Tilakoodi
