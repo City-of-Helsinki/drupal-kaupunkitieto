@@ -22,7 +22,6 @@ permissions:
   - 'access toolbar'
   - 'delete own files'
   - 'display eu cookie compliance popup'
-  - 'view helfi_announcements external entity'
   - 'view media'
   - 'view remote entities'
   - 'view unpublished paragraphs'
