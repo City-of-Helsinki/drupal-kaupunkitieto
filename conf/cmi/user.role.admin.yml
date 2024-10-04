@@ -41,6 +41,7 @@ dependencies:
     - simple_sitemap
     - system
     - taxonomy
+    - tfa
     - toolbar
     - view_unpublished
 _core:
@@ -120,6 +121,7 @@ permissions:
   - 'delete terms in article_series'
   - 'delete terms in author'
   - 'delete terms in keywords'
+  - 'disable own tfa'
   - 'edit any article content'
   - 'edit any file media'
   - 'edit any image media'
@@ -144,6 +146,7 @@ permissions:
   - 'schedule publishing of nodes'
   - 'set landing_page published on date'
   - 'set page published on date'
+  - 'setup own tfa'
   - 'translate any entity'
   - 'translate article node'
   - 'translate configuration'
