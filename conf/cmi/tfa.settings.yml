@@ -8,6 +8,8 @@ required_roles:
   admin: admin
   super_administrator: super_administrator
   survey_editor: survey_editor
+  authenticated: '0'
+  read_only: '0'
 send_plugins: {  }
 login_plugins: {  }
 login_plugin_settings:
