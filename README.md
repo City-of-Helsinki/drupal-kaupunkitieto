@@ -8,7 +8,7 @@ Env | Branch   | URL
 --- |----------| ----------- 
 dev | *        |  https://kaupunkitieto.docker.sh/
 test | dev      |  https://drupal-kaupunkitieto.test.hel.ninja/
-staging | dev      |  https://drupal-kaupunkitieto.stage.hel.ninja/
+staging | main    |  https://drupal-kaupunkitieto.stage.hel.ninja/
 production | main | https://kaupunkitieto.hel.fi/
 
 ## Requirements
