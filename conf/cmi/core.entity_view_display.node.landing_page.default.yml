@@ -23,6 +23,14 @@ targetEntityType: node
 bundle: landing_page
 mode: default
 content:
+  field_author:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
   field_content:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -43,14 +51,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
-    region: content
-  field_author:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 4
     region: content
 hidden:
   field_has_hero: true
