@@ -10,6 +10,7 @@ dependencies:
     - paragraphs.paragraphs_type.columns
     - paragraphs.paragraphs_type.content_cards
     - paragraphs.paragraphs_type.content_liftup
+    - paragraphs.paragraphs_type.curated_event_list
     - paragraphs.paragraphs_type.embed
     - paragraphs.paragraphs_type.event_list
     - paragraphs.paragraphs_type.from_library
@@ -57,6 +58,7 @@ settings:
       infograph: infograph
       embed: embed
       content_liftup: content_liftup
+      curated_event_list: curated_event_list
     negate: 0
     target_bundles_drag_drop:
       banner:
@@ -73,6 +75,9 @@ settings:
         enabled: true
       content_liftup:
         weight: 17
+        enabled: true
+      curated_event_list:
+        weight: 15
         enabled: true
       embed:
         weight: 16
