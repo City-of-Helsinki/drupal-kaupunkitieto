@@ -23,7 +23,6 @@
         "drupal/helfi_tpr": "^2.0",
         "drupal/helfi_tunnistamo": "^3.0",
         "drupal/purge": "^3.6",
-        "drupal/raven": "^5.0",
         "drupal/redis": "^1.5",
         "drupal/varnish_purge": "^2.2",
         "drush/drush": "^12"
