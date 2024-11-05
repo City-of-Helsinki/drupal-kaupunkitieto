@@ -26,6 +26,7 @@ dependencies:
     - paragraphs_library
     - path
     - publication_date
+    - raven
     - redirect
     - scheduler
     - system
@@ -100,6 +101,7 @@ permissions:
   - 'revert landing_page revisions'
   - 'revert page revisions'
   - 'schedule publishing of nodes'
+  - 'send performance traces to sentry'
   - 'set landing_page published on date'
   - 'set page published on date'
   - 'setup own tfa'
