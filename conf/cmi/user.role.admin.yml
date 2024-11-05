@@ -35,6 +35,7 @@ dependencies:
     - path
     - pathauto
     - publication_date
+    - raven
     - redirect
     - role_delegation
     - scheduler
@@ -144,6 +145,7 @@ permissions:
   - 'revert landing_page revisions'
   - 'revert page revisions'
   - 'schedule publishing of nodes'
+  - 'send performance traces to sentry'
   - 'set landing_page published on date'
   - 'set page published on date'
   - 'setup own tfa'
