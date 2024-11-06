@@ -23,6 +23,7 @@ permissions:
   - 'delete own files'
   - 'display eu cookie compliance popup'
   - 'send javascript errors to sentry'
+  - 'send performance traces to sentry'
   - 'view media'
   - 'view remote entities'
   - 'view unpublished paragraphs'
