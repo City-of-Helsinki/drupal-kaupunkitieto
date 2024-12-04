@@ -6,22 +6,22 @@ dependencies:
     - field.storage.node.field_article_series
     - field.storage.node.field_author
     - field.storage.node.field_content
-    - field.storage.paragraph.field_contact_card
-    - field.storage.paragraph.field_contact_name
-    - field.storage.paragraph.field_embed_title
-    - field.storage.paragraph.field_hero_desc
-    - field.storage.paragraph.field_text
-    - field.storage.paragraph.field_text_for_screen_readers
-    - field.storage.paragraph.field_service_title
     - field.storage.node.field_keywords
     - field.storage.node.field_lead
     - field.storage.node.field_liftup_image
     - field.storage.node.field_search_result_text
+    - field.storage.paragraph.field_contact_card
+    - field.storage.paragraph.field_contact_name
+    - field.storage.paragraph.field_embed_title
+    - field.storage.paragraph.field_hero_desc
+    - field.storage.paragraph.field_service_title
+    - field.storage.paragraph.field_text
+    - field.storage.paragraph.field_text_for_screen_readers
     - search_api.server.site_search_db
   module:
+    - helfi_react_search
     - node
     - paragraphs
-    - search_api
 id: site_search_index
 name: 'Site search index'
 description: ''
