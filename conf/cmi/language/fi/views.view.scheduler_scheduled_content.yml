@@ -13,10 +13,10 @@ display:
       pager:
         options:
           tags:
-            previous: Edellinen
-            next: Seuraava
-            first: Ensimmäinen
-            last: Viimeinen
+            previous: '‹ previous'
+            next: 'next ›'
+            first: '« first'
+            last: 'last »'
       fields:
         node_bulk_form:
           action_title: Toiminto
