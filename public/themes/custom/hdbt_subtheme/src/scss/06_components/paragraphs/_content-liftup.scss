@@ -3,7 +3,6 @@ $item-spacing: $spacing-triple;
 .layout-content .content-liftup {
   background: $color-silver-light;
   border: 0;
-  margin-top: $spacing-double;
   position: relative;
 
   @include breakpoint($breakpoint-l) {
