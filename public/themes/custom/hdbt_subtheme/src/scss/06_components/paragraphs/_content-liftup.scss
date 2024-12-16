@@ -3,7 +3,7 @@ $item-spacing: $spacing-triple;
 .layout-content .content-liftup {
   background: $color-silver-light;
   border: 0;
-  margin-top: $spacing-double;
+  position: relative;
 
   @include breakpoint($breakpoint-l) {
     margin-top: $spacing-quadruple;
@@ -11,6 +11,8 @@ $item-spacing: $spacing-triple;
 
   .hds-koros {
     bottom: 0;
+    left: 0;
+    right: 0;
     position: absolute;
   }
 }
@@ -73,7 +75,6 @@ $item-spacing: $spacing-triple;
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: space-between;
     overflow: hidden;
     padding: 0 0 0 $spacing-and-half;
     position: relative;
@@ -89,7 +90,7 @@ $item-spacing: $spacing-triple;
 
   .content-liftup__item__title {
     @include font('h4');
-    margin: 0 0 $spacing-double;
+    margin: 0 0 $spacing-and-half;
   }
 
   .content-liftup__item__meta {
