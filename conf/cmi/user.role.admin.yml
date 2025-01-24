@@ -23,6 +23,7 @@ dependencies:
     - entity_usage
     - file
     - filter
+    - hdbt_cookie_banner
     - helfi_api_base
     - locale
     - media
@@ -66,6 +67,7 @@ permissions:
   - 'administer block content'
   - 'administer block types'
   - 'administer blocks'
+  - 'administer hdbt_cookie_banner'
   - 'administer menu'
   - 'administer nodes'
   - 'administer paragraphs library'
