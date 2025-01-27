@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - eu_cookie_compliance
     - file
     - helfi_api_base
     - media
@@ -21,7 +20,6 @@ permissions:
   - 'access content'
   - 'access toolbar'
   - 'delete own files'
-  - 'display eu cookie compliance popup'
   - 'send javascript errors to sentry'
   - 'send performance traces to sentry'
   - 'view media'
