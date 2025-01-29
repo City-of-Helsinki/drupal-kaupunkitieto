@@ -1,0 +1,6 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  Drupal\kaupunkitieto_config\EventSubscriber\TunnistamoRedirectUrlSubscriber: ~
