@@ -1,7 +1,7 @@
 $item-spacing: $spacing-triple;
 
 .layout-content .content-liftup {
-  background: $color-black-5;
+  background: $color-silver-light;
   border: 0;
   position: relative;
 
@@ -12,8 +12,8 @@ $item-spacing: $spacing-triple;
   .hds-koros {
     bottom: 0;
     left: 0;
-    right: 0;
     position: absolute;
+    right: 0;
   }
 }
 
