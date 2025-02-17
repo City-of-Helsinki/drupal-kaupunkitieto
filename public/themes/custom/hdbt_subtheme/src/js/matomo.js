@@ -1,5 +1,4 @@
-// eslint-disable-next-line func-names
-(function ($, Drupal) {
+(($, Drupal) => {
 
   const loadMatomoAnalytics = () => {
     // Load Matomo only if statistics cookies are allowed.
@@ -7,7 +6,7 @@
       // Matomo Tag Manager
       // eslint-disable-next-line no-multi-assign
       const _paq = window._paq = window._paq || [];
-      _paq.push(['setDomains', ['*.kaupunkitieto.hel.fi','*.kaupunkitieto.hel.fi']]);
+      _paq.push(['setDomains', ['*.kaupunkitieto.hel.fi', '*.kaupunkitieto.hel.fi']]);
       _paq.push(['trackPageView']);
       _paq.push(['enableLinkTracking']);
       const u='//webanalytics.digiaiiris.com/js/';
