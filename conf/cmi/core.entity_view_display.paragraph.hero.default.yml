@@ -22,16 +22,6 @@ targetEntityType: paragraph
 bundle: hero
 mode: default
 content:
-  field_display_search_field:
-    type: boolean
-    label: hidden
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 7
-    region: content
   field_hero_desc:
     type: text_default
     label: hidden
@@ -81,6 +71,16 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_display_search_field:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 7
     region: content
 hidden:
   search_api_excerpt: true

@@ -22,13 +22,6 @@ targetEntityType: paragraph
 bundle: hero
 mode: default
 content:
-  field_display_search_field:
-    type: boolean_checkbox
-    weight: 7
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   field_hero_desc:
     type: formatted_text_character_counter
     weight: 3
@@ -80,6 +73,13 @@ content:
       counter_total: 55
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_display_search_field:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
 hidden:
   created: true

@@ -53,8 +53,8 @@ settings:
       chart: chart
       event_list: event_list
       contact_card_listing: contact_card_listing
-      content_liftup: content_liftup
       image_gallery: image_gallery
+      content_liftup: content_liftup
     negate: 0
     target_bundles_drag_drop:
       accordion:
