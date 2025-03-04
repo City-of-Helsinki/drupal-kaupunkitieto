@@ -7,24 +7,6 @@
 
 declare(strict_types=1);
 
-use Drupal\config_rewrite\ConfigRewriterInterface;
-
-/**
- * Implements hook_rewrite_config_update().
- */
-function kaupunkitieto_config_rewrite_config_update(string $module, ConfigRewriterInterface $configRewriter): void {
-  $modules = [
-    'helfi_node_landing_page',
-    'helfi_node_page',
-    'helfi_paragraphs_content_cards',
-  ];
-
-  if (in_array($module, $modules)) {
-    // Rewrite module configuration.
-    $configRewriter->rewriteModuleConfig('kaupunkitieto_config');
-  }
-}
-
 /**
  * Implements hook_form_BASE_FORM_ID_alter().
  */
