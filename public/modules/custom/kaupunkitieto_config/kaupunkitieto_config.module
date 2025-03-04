@@ -7,10 +7,29 @@
 
 declare(strict_types=1);
 
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\kaupunkitieto_config\Plugin\Validation\Constraint\EmbedConstraints;
+
 /**
  * Implements hook_form_BASE_FORM_ID_alter().
  */
-function kaupunkitieto_config_form_node_form_alter(array &$form) {
+function kaupunkitieto_config_form_node_form_alter(array &$form): void {
   // Attach content liftup library to node forms.
   $form['#attached']['library'][] = 'kaupunkitieto_config/admin-content-liftup';
+}
+
+/**
+ * Implements hook_entity_bundle_field_info_alter().
+ */
+function kaupunkitieto_config_entity_bundle_field_info_alter(&$fields, EntityTypeInterface $entity_type, $bundle): void {
+  if ($entity_type->id() !== 'paragraph' || $bundle !== 'embed') {
+    return;
+  }
+
+  // Add constraints to embed paragraph fields.
+  foreach ($fields as $name => $field) {
+    if (in_array($name, EmbedConstraints::EMBED_FIELDS)) {
+      $field->addConstraint('EmbedConstraints', []);
+    }
+  }
 }
