@@ -10,7 +10,7 @@ field_name: field_embed_code_id
 entity_type: paragraph
 bundle: embed
 label: 'Embed code ID'
-description: 'Script may require ID tag to work properly'
+description: 'The embed code ID should be in format: infogram_0_f0e0c3b7-2752-4ce0-b2ff-720f573d9d2f'
 required: false
 translatable: false
 default_value: {  }

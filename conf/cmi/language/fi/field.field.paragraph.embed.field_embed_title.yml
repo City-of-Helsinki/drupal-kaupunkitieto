@@ -1,0 +1,2 @@
+label: 'Upotuksen otsikko'
+description: 'Upotuksen otsikko liitetään Iframe title attribuuttiin kun upotuksen URL kenttä on täytetty. Saavutettavuuden kannalta otsikon täyttäminen on suositeltua.'

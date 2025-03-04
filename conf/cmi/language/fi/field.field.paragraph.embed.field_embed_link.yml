@@ -1,0 +1,2 @@
+label: 'Upotuksen URL'
+description: 'Upotuksen URL:ia voidaan käyttää kun upotuskoodi ja upotuskoodin tunnusu kenttiä ei ole saatavilla. Upotuksen URL kenttään voi lisätä vain infogramin URL-osoitteita ja niiden tulee olla muotoa: https://infogram.com/name-for-the-infogram'
