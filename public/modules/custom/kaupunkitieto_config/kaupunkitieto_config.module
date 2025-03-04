@@ -28,7 +28,7 @@ function kaupunkitieto_config_entity_bundle_field_info_alter(&$fields, EntityTyp
 
   // Add constraints to embed paragraph fields.
   foreach ($fields as $name => $field) {
-    if (in_array($name, EmbedConstraints::EMBED_FIELDS)) {
+    if (in_array($name, array_keys(EmbedConstraints::EMBED_FIELDS))) {
       $field->addConstraint('EmbedConstraints', []);
     }
   }
