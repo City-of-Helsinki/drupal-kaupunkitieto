@@ -1,0 +1,11 @@
+msgid ""
+msgstr ""
+
+msgid "The embed code must be as follows: %value"
+msgstr "Inbäddningskoden måste ha följande format: %value"
+
+msgid "The embed code ID must be as follows: %value"
+msgstr "Inbäddningskodens ID måste ha följande format: %value"
+
+msgid "The embed link must start with %value. For example: %value/abc123"
+msgstr "Inbäddningslänken måste börja med %value. Exempel: %value/abc123"

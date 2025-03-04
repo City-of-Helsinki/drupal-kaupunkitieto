@@ -1,0 +1,11 @@
+msgid ""
+msgstr ""
+
+msgid "The embed code must be as follows: %value"
+msgstr "Upotuskoodin tulee olla muotoa: %value"
+
+msgid "The embed code ID must be as follows: %value"
+msgstr "Upotoskoodin tunnus tulee olla muotoa: %value"
+
+msgid "The embed link must start with %value. For example: %value/abc123"
+msgstr "Upotuksen URL pitää alkaa %value. Esimerkiksi: %value/abc123"

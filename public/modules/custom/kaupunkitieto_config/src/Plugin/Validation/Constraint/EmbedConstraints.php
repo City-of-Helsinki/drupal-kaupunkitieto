@@ -28,6 +28,17 @@ class EmbedConstraints extends Constraint {
   ];
 
   /**
+   * Embed fields and corresponding error message keys.
+   *
+   * @var string[]
+   */
+  public const VALID_VALUES = [
+    'field_embed_code' => 'https://e.infogram.com/js/dist/embed.js?abc123',
+    'field_embed_code_id' => 'infogram_0_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
+    'field_embed_link' => 'https://infogram.com',
+  ];
+
+  /**
    * Validation patterns for each embed field.
    *
    * @var string[]
@@ -43,20 +54,20 @@ class EmbedConstraints extends Constraint {
    *
    * @var string
    */
-  public string $embedCodeNotValid = 'The embed code must be as follows: https://e.infogram.com/js/dist/embed.js?abc123';
+  public string $embedCodeNotValid = 'The embed code must be as follows: %value';
 
   /**
    * Message for the embed code.
    *
    * @var string
    */
-  public string $embedCodeIdNotValid = 'The embed code ID must be as follows: infogram_0_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx';
+  public string $embedCodeIdNotValid = 'The embed code ID must be as follows: %value';
 
   /**
    * Message for the embed code.
    *
    * @var string
    */
-  public string $embedLinkNotValid = 'The embed link must start with https://infogram.com/. For example: https://infogram.com/abc123';
+  public string $embedLinkNotValid = 'The embed link must start with %value. For example: %value/abc123';
 
 }

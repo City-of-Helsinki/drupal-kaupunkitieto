@@ -33,7 +33,9 @@ class EmbedConstraintsValidator extends ConstraintValidator {
       isset(EmbedConstraints::VALIDATION_PATTERNS[$value->getName()]) &&
       !preg_match(EmbedConstraints::VALIDATION_PATTERNS[$value->getName()], $value->getString())
     ) {
-      $this->context->addViolation($constraint->{EmbedConstraints::EMBED_FIELDS[$value->getName()]});
+      $this->context->addViolation($constraint->{EmbedConstraints::EMBED_FIELDS[$value->getName()]}, [
+        '%value' => EmbedConstraints::VALID_VALUES[$value->getName()],
+      ]);
     }
   }
 
