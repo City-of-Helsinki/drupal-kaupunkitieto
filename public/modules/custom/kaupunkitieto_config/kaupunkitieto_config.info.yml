@@ -4,3 +4,5 @@ core_version_requirement: ^10
 dependencies:
   - helfi_platform_config:helfi_platform_config
   - helfi_tunnistamo:helfi_tunnistamo
+'interface translation project': kaupunkitieto_config
+'interface translation server pattern': modules/custom/kaupunkitieto_config/translations/%language.po

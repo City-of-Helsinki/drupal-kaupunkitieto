@@ -10,7 +10,7 @@ field_name: field_embed_code
 entity_type: paragraph
 bundle: embed
 label: 'Embed code'
-description: ''
+description: 'The embed code should be in format: https://e.infogram.com/js/dist/embed.js?abc123'
 required: false
 translatable: false
 default_value: {  }

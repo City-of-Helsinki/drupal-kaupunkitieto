@@ -12,7 +12,7 @@ field_name: field_embed_link
 entity_type: paragraph
 bundle: embed
 label: 'Embed link'
-description: ''
+description: 'Embed link is intended to be used when embed code and embed code ID fields cannot be used. The embed link should be in format: https://infogram.com/name-for-the-infogram'
 required: false
 translatable: false
 default_value: {  }
