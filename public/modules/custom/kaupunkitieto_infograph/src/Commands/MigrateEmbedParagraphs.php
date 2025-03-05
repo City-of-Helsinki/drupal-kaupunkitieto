@@ -88,10 +88,10 @@ final class MigrateEmbedParagraphs extends DrushCommands {
         ->fields('pi', ['parent_id', 'parent_type', 'parent_field_name'])
         ->condition('pi.id', $paragraph_id)
         ->condition('pi.type', 'embed');
-      $parents = $query->execute()->fetchAssoc();
+      $parent = $query->execute()->fetchAssoc();
 
-      if ($parents) {
-        $this->processMigration($parents, $paragraph_id);
+      if ($parent) {
+        $this->processMigration($parent, $paragraph_id);
       }
     }
   }
@@ -143,8 +143,10 @@ final class MigrateEmbedParagraphs extends DrushCommands {
             'langcode' => $embed_paragraph->language()->getId(),
             'field_helfi_chart_url' => [
               [
-                'uri' => $embed_paragraph->get('field_embed_link')->first(
-                )->getString(),
+                'uri' => $embed_paragraph
+                  ->get('field_embed_link')
+                  ->first()
+                  ->getString(),
               ],
             ],
             'field_helfi_chart_title' => [
@@ -159,6 +161,9 @@ final class MigrateEmbedParagraphs extends DrushCommands {
             'field_chart_chart' => [
               'target_id' => $chart_media->id(),
             ],
+            'field_iframe_title' => [
+              'value' => $title,
+            ],
             'langcode' => $embed_paragraph->language()->getId(),
           ]);
           $chart_paragraph->save();
@@ -166,7 +171,6 @@ final class MigrateEmbedParagraphs extends DrushCommands {
           $paragraph['target_id'] = $chart_paragraph->id();
           $paragraph['target_revision_id'] = $chart_paragraph->getRevisionId();
           $save = TRUE;
-          break;
         }
       }
 
@@ -175,8 +179,13 @@ final class MigrateEmbedParagraphs extends DrushCommands {
         $parent_entity->set($parent_field, $paragraphs);
         $parent_entity->save();
 
-        // Set the old Embed paragraph unpublished.
-        $embed_paragraph->setUnpublished();
+        if ($parent_type === 'node') {
+          global $base_url;
+          $this->loggerFactory->get('kaupunkitieto_config')->notice("Converted embed to chart in: $base_url/node/$parent_id");
+        }
+
+        // Delete the old Embed paragraph.
+        $embed_paragraph->delete();
       }
     }
   }
