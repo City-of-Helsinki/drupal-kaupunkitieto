@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\kaupunkitieto_config\Unit;
 
+use Drupal\Core\Entity\Plugin\DataType\EntityAdapter;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\kaupunkitieto_config\Plugin\Validation\Constraint\EmbedConstraints;
 use Drupal\kaupunkitieto_config\Plugin\Validation\Constraint\EmbedConstraintsValidator;
@@ -97,10 +98,13 @@ class EmbedConstraintsValidatorTest extends ConstraintValidatorTestCase {
       ],
     ]);
 
+    $entity_adapter = $this->createMock(EntityAdapter::class);
+    $entity_adapter->method('getValue')->willReturn($parent);
+
     $field_embed_link = $this->createMock(FieldItemListInterface::class);
     $field_embed_link->method('getName')->willReturn('field_embed_link');
     $field_embed_link->method('isEmpty')->willReturn(FALSE);
-    $field_embed_link->method('getParent')->willReturn($parent);
+    $field_embed_link->method('getParent')->willReturn($entity_adapter);
     $field_embed_link->method('getString')->willReturn('https://infogram.com/valid-link');
 
     $this->validator->validate($field_embed_link, $constraint);

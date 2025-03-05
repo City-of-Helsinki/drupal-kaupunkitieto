@@ -38,7 +38,8 @@ class EmbedConstraintsValidator extends ConstraintValidator {
       ]);
     }
 
-    $parent = $value->getParent();
+    /** @var \Drupal\Core\Entity\ContentEntityInterface|null $parent */
+    $parent = $value->getParent()?->getValue();
 
     // Handle only field_embed_link field.
     if (!$parent || $value->getName() !== 'field_embed_link' || $value->isEmpty()) {
