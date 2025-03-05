@@ -4,17 +4,18 @@ declare(strict_types=1);
 
 namespace Drupal\kaupunkitieto_config\Plugin\Validation\Constraint;
 
-use Symfony\Component\Validator\Constraint;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\Core\Validation\Attribute\Constraint;
+use Symfony\Component\Validator\Constraint as SymfonyConstraint;
 
 /**
  * Checks that the fields are valid in embed paragraph.
- *
- * @Constraint(
- *   id = "EmbedConstraints",
- *   label = @Translation("Fields are not valid.", context = "Validation"),
- * )
  */
-class EmbedConstraints extends Constraint {
+#[Constraint(
+  id: 'EmbedConstraints',
+  label: new TranslatableMarkup('Fields are not valid.', [], ['context' => 'Validation']),
+)]
+class EmbedConstraints extends SymfonyConstraint {
 
   /**
    * Embed fields and corresponding error message keys.
