@@ -87,8 +87,14 @@ class EmbedConstraintsValidatorTest extends ConstraintValidatorTestCase {
 
     $parent = $this->createMock(FieldItemListInterface::class);
     $parent->method('get')->willReturnMap([
-      ['field_embed_code', $this->createFieldMock('field_embed_code', 'https://e.infogram.com/js/dist/embed.js?valid123')],
-      ['field_embed_code_id', $this->createFieldMock('field_embed_code_id', 'infogram_0_abc1234-5678-9101-1121-314151617181')],
+      [
+        'field_embed_code',
+        $this->createFieldMock('field_embed_code', 'https://e.infogram.com/js/dist/embed.js?valid123'),
+      ],
+      [
+        'field_embed_code_id',
+        $this->createFieldMock('field_embed_code_id', 'infogram_0_abc1234-5678-9101-1121-314151617181'),
+      ],
     ]);
 
     $field_embed_link = $this->createMock(FieldItemListInterface::class);
