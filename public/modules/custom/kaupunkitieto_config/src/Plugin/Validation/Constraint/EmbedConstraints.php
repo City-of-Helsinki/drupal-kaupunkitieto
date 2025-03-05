@@ -70,4 +70,11 @@ class EmbedConstraints extends Constraint {
    */
   public string $embedLinkNotValid = 'The embed link must start with %value. For example: %value/abc123';
 
+  /**
+   * Message for the embed link should not be filled.
+   *
+   * @var string
+   */
+  public string $embedShouldNotBeFilled = 'Embed link should be empty when an embed code or embed code ID is filled.';
+
 }

@@ -80,6 +80,30 @@ class EmbedConstraintsValidatorTest extends ConstraintValidatorTestCase {
   }
 
   /**
+   * Tests that field_embed_link should be empty when embed fields are filled.
+   */
+  public function testEmbedShouldNotBeFilled(): void {
+    $constraint = new EmbedConstraints();
+
+    $parent = $this->createMock(FieldItemListInterface::class);
+    $parent->method('get')->willReturnMap([
+      ['field_embed_code', $this->createFieldMock('field_embed_code', 'https://e.infogram.com/js/dist/embed.js?valid123')],
+      ['field_embed_code_id', $this->createFieldMock('field_embed_code_id', 'infogram_0_abc1234-5678-9101-1121-314151617181')],
+    ]);
+
+    $field_embed_link = $this->createMock(FieldItemListInterface::class);
+    $field_embed_link->method('getName')->willReturn('field_embed_link');
+    $field_embed_link->method('isEmpty')->willReturn(FALSE);
+    $field_embed_link->method('getParent')->willReturn($parent);
+    $field_embed_link->method('getString')->willReturn('https://infogram.com/valid-link');
+
+    $this->validator->validate($field_embed_link, $constraint);
+
+    $this->assertCount(1, $this->context->getViolations());
+    $this->assertEquals($constraint->embedShouldNotBeFilled, $this->context->getViolations()[0]->getMessage());
+  }
+
+  /**
    * Creates a mock FieldItemListInterface object.
    */
   private function createFieldMock(string $name, string $value): MockObject {

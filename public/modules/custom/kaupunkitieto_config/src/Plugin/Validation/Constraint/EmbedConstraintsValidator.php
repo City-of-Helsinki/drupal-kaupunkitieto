@@ -37,6 +37,22 @@ class EmbedConstraintsValidator extends ConstraintValidator {
         '%value' => EmbedConstraints::VALID_VALUES[$value->getName()],
       ]);
     }
+
+    $parent = $value->getParent();
+
+    // Handle only field_embed_link field.
+    if (!$parent || $value->getName() !== 'field_embed_link' || $value->isEmpty()) {
+      return;
+    }
+
+    // Add violation if the embed link has value when the embed code and
+    // embed code ID are filled.
+    if (
+      !$parent->get('field_embed_code')->isEmpty() ||
+      !$parent->get('field_embed_code_id')->isEmpty()
+    ) {
+      $this->context->addViolation($constraint->embedShouldNotBeFilled);
+    }
   }
 
 }
