@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - node.type.announcement
     - node.type.landing_page
     - node.type.page
   module:
@@ -10,6 +11,7 @@ dependencies:
     - node
     - paragraphs
     - raven
+    - tfa
     - toolbar
     - view_unpublished
 id: read_only
@@ -19,7 +21,10 @@ is_admin: null
 permissions:
   - 'access toolbar'
   - 'delete own files'
+  - 'disable own tfa'
   - 'send performance traces to sentry'
+  - 'setup own tfa'
+  - 'view any unpublished announcement content'
   - 'view any unpublished landing_page content'
   - 'view any unpublished page content'
   - 'view own unpublished content'
