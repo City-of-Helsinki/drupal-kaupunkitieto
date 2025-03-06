@@ -3,8 +3,8 @@ langcode: en
 status: true
 dependencies: {  }
 id: embed
-label: Embed
+label: 'Infogram Embed'
 icon_uuid: null
 icon_default: null
-description: 'Embed content from an external source, such as YouTube and Power BI.'
+description: 'Embed content from Infogram'
 behavior_plugins: {  }

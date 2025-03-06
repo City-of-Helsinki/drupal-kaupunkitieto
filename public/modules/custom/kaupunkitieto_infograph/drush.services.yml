@@ -14,3 +14,8 @@ services:
     arguments: ['@module_handler', '@entity_type.manager', '@database']
     tags:
       - { name: drush.command }
+  kaupunkitieto_infograph.migrate_paragraphs:
+    class: \Drupal\kaupunkitieto_infograph\Commands\MigrateEmbedParagraphs
+    arguments: ['@entity_type.manager', '@database', '@logger.factory']
+    tags:
+      - { name: drush.command }
