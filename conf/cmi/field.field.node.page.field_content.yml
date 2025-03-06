@@ -6,22 +6,13 @@ dependencies:
     - field.storage.node.field_content
     - node.type.page
     - paragraphs.paragraphs_type.accordion
-    - paragraphs.paragraphs_type.banner
-    - paragraphs.paragraphs_type.chart
     - paragraphs.paragraphs_type.columns
-    - paragraphs.paragraphs_type.contact_card_listing
     - paragraphs.paragraphs_type.content_cards
     - paragraphs.paragraphs_type.content_liftup
     - paragraphs.paragraphs_type.content_menu
     - paragraphs.paragraphs_type.embed
-    - paragraphs.paragraphs_type.event_list
-    - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.image
-    - paragraphs.paragraphs_type.image_gallery
     - paragraphs.paragraphs_type.list_of_links
-    - paragraphs.paragraphs_type.map
-    - paragraphs.paragraphs_type.phasing
-    - paragraphs.paragraphs_type.remote_video
     - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
@@ -55,10 +46,10 @@ settings:
       chart: chart
       event_list: event_list
       contact_card_listing: contact_card_listing
+      image_gallery: image_gallery
       embed: embed
       content_menu: content_menu
       content_liftup: content_liftup
-      image_gallery: image_gallery
     negate: 0
     target_bundles_drag_drop:
       accordion:
