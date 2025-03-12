@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - external_entities
     - helfi_api_base
     - media
     - raven
@@ -17,5 +18,7 @@ permissions:
   - 'access content'
   - 'send javascript errors to sentry'
   - 'send performance traces to sentry'
+  - 'view helfi_announcements external entity'
+  - 'view helfi_surveys external entity'
   - 'view media'
   - 'view remote entities'
