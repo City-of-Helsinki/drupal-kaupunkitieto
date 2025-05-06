@@ -47,6 +47,7 @@ settings:
       event_list: event_list
       contact_card_listing: contact_card_listing
       image_gallery: image_gallery
+      number_highlights: number_highlights
       embed: embed
       content_menu: content_menu
       content_liftup: content_liftup
@@ -96,6 +97,9 @@ settings:
         enabled: true
       map:
         weight: 9
+        enabled: true
+      number_highlights:
+        weight: 17
         enabled: true
       phasing:
         weight: 7

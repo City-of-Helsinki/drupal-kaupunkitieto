@@ -45,6 +45,7 @@ settings:
       target_group_links: target_group_links
       event_list: event_list
       image_gallery: image_gallery
+      number_highlights: number_highlights
       curated_event_list: curated_event_list
       hearings: hearings
       infograph: infograph
@@ -96,6 +97,9 @@ settings:
         enabled: true
       map:
         weight: 8
+        enabled: true
+      number_highlights:
+        weight: 16
         enabled: true
       phasing:
         weight: 7
