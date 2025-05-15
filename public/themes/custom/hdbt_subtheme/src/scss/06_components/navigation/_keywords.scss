@@ -3,20 +3,15 @@
 
   .hds-tag {
     background-color: $color-black;
-    border-color: $color-black;
 
     &:hover {
-      background-color: $color-white;
       border-color: $color-black;
-
-      a {
-        color: $color-black;
-      }
     }
   }
 
   .hds-tag a {
     color: $color-white;
+    text-decoration: none
   }
 }
 
@@ -31,13 +26,11 @@
 
   .hds-tag {
     background-color: $color-black; 
-    border-color: $color-black;
     color: $color-white;
+    text-decoration: none;
 
     &:hover {
-      background-color: $color-white;
       border-color: $color-black;
-      color: $color-black;
     }
   }
 }
