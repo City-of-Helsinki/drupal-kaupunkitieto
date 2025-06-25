@@ -105,12 +105,6 @@ module.exports = (env, argv) => {
       extensions: ['.js', '.json'],
     },
     plugins: [
-      // Uncomment following lines to create svg icon sprite.
-      // new SvgToSprite(
-      //   path.resolve(__dirname, 'src/icons/**/*.svg'),
-      //   'icons/hdbt-subtheme-sprite.svg',
-      //   'icons.json'
-      // ),
       new FriendlyErrorsWebpackPlugin(),
       new RemoveEmptyScriptsPlugin(),
       new MiniCssExtractPlugin({
