@@ -341,4 +341,9 @@ $infograph-light-green: #e1eadc;
     height: 40px;
     width: 40px;
   }
+
+  .arrow-left-wrapper span,
+  .arrow-right-wrapper span {
+    cursor: pointer;
+  }
 }

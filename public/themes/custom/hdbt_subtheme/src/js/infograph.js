@@ -1,7 +1,12 @@
 ((Drupal, $) => {
 
   Drupal.behaviors.infographLinkBehavior = {
-    attach() {
+    attach(context) {
+      // Run only once for the full document.
+      if (context !== document || window.infographLinkBehaviorInitialized) {
+        return;
+      }
+
       $('.paragraph--type--infograph .infograph__value:contains("%")').html((_, html) =>
         html.split('%').join('<span class="small-char">%</span')
       );
@@ -14,11 +19,18 @@
           window.location.href = url;
         }
       });
+
+      window.infographLinkBehaviorInitialized = true;
     }
   };
 
   Drupal.behaviors.infographGroupBehavior = {
     attach(context, settings) {
+
+      // Run only once for the full document.
+      if (context !== document || window.infographGroupBehaviorInitialized) {
+        return;
+      }
 
       const resetSlider = () => {
         $('.paragraph--type--infograph-group').slick({
@@ -43,6 +55,8 @@
         $('.slick-slider').slick('unslick');
         resetSlider();
       });
+
+      window.infographGroupBehaviorInitialized = true;
     }
   };
 
