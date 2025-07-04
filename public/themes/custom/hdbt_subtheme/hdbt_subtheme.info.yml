@@ -30,6 +30,8 @@ libraries:
   - hdbt_subtheme/global-styling
   - hdbt_subtheme/global-scripting
 
-# Libraries override
+# Override libraries.
 libraries-override:
   hdbt/matomo: hdbt_subtheme/matomo
+  # This is here to make the contrib select2 module work since its asset management doesn't suit our proxy setup.
+  select2/select2.min: hdbt_subtheme/select2.min

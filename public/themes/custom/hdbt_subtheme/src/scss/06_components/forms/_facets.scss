@@ -31,6 +31,7 @@
   .select2-selection--multiple {
     background: none;
     border: 0 none;
+    line-height: 1;
     padding: 0;
   }
 
@@ -62,6 +63,14 @@
     margin-bottom: 6px;
     margin-left: 10px;
     margin-top: 8px;
+  }
+
+  .select2-selection--multiple .select2-search.select2-search--inline {
+    margin-top: 0;
+  }
+
+  .select2-selection--multiple .select2-search .select2-search__field {
+    margin-top: 9px;
   }
 }
 
@@ -103,10 +112,14 @@
   }
 
   h2 {
-    font-size: remify(16px);
+    color: var(--label-color-default);
+    display: block;
+    font-size: var(--fontsize-body-m);
     font-weight: 500;
-    line-height: 1.5;
-    margin: 4px 0;
+    letter-spacing: normal;
+    line-height: 24px;
+    margin-bottom: var(--spacing-3-xs);
+    margin-top: 0;
   }
 }
 

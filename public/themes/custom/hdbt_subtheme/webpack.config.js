@@ -113,6 +113,16 @@ module.exports = (env, argv) => {
       new CopyPlugin({
         'patterns': [
           {
+            'from': 'node_modules/select2/dist/js/select2.min.js',
+            'to': path.resolve(__dirname, 'dist') + '/js/',
+            'force': true,
+          },
+          {
+            'from': 'node_modules/select2/dist/css/select2.min.css',
+            'to': path.resolve(__dirname, 'dist') + '/css/',
+            'force': true,
+          },
+          {
             'from': 'node_modules/slick-carousel/slick/slick.css',
             'to': path.resolve(__dirname, 'dist') + '/css/',
             'force': true,
