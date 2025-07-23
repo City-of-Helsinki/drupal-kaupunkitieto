@@ -42,22 +42,20 @@
     controls: dropdown_id,
     anchor_target: '#cssmenu',
     js_target: 'js-cssmenu-button',
-
     open_label: 'Menu'|t(),
     open_screenreader: 'Open navigation menu'|t({}, {'context': 'Mobile navigation menu open button text for screen readers'}),
-
     close_label: 'Close'|t(),
     close_screenreader: 'Close navigation menu'|t({}, {'context': 'Mobile navigation menu close button text for screen readers'}),
   } %}
   {% endembed %}
 
-  {% embed "@hdbt/navigation/nav-toggle-button.twig" with {
+  {% embed "@hdbt/navigation/nav-toggle-dropdown.twig" with {
     id: dropdown_id,
     modifier_class: 'nav-toggle-dropdown--cssmenu',
     description: 'Navigation menu'|t({}, {'context': 'Mobile navigation menu description for screen readers'}),
   } %}
     {% block content %}
-      <div class="language-wrapper paatokset-language-wrapper-menu">
+      <div class="language-wrapper hdbt-subtheme--language-wrapper-menu">
         {{ drupal_entity('block', 'language_switcher')}}
       </div>
 
