@@ -56,24 +56,24 @@
   }
 }
 
-.header .paatokset-language-wrapper-menu {
+.header .hdbt-subtheme--language-wrapper-menu {
   height: auto;
 }
 
 @media (min-width: $breakpoint-m) {
-  .paatokset-language-wrapper-menu {
+  .hdbt-subtheme--language-wrapper-menu {
     display: none !important;
   }
 
   // Do not hide .language-wrapper when nav-toggle is pressed.
   // .language-wrapper uses breakpoints instead.
-  .language-wrapper:not(.paatokset-language-wrapper-menu) {
+  .language-wrapper:not(.hdbt-subtheme--language-wrapper-menu) {
     display: flex !important;
   }
 }
 
 @media (max-width: $breakpoint-m) {
-  .paatokset-language-wrapper-menu {
+  .hdbt-subtheme--language-wrapper-menu {
     display: flex !important;
   }
 }
