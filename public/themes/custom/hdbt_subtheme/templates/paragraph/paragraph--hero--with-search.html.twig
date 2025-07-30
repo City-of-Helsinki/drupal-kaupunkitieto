@@ -37,9 +37,9 @@
 
   {% if image|render %}
     <div class="hero__image-container">
-      {% include '@hdbt/misc/koro.twig' with { flip: true, extraContainer: true } %}
+      {% include '@hdbt/misc/koro.twig' with { flip: true } %}
       {{ image }}
     </div>
   {% endif %}
-  {% include '@hdbt/misc/koro.twig' with { flip: false } %}
+  {% include '@hdbt/misc/koro.twig' with { flip: true } %}
 </div>
