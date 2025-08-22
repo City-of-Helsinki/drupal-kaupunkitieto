@@ -445,7 +445,7 @@ display:
             trim_whitespace: false
             alt: ''
             rel: ''
-            link_class: 'hds-tag hds-tag--action'
+            link_class: 'hds-tag hds-tag--link'
             prefix: ''
             suffix: ''
             target: ''
