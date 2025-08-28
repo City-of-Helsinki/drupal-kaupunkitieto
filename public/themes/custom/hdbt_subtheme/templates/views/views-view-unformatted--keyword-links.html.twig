@@ -19,12 +19,5 @@
   <h3>{{ title }}</h3>
 {% endif %}
 {% for row in rows %}
-  {% set row_classes = [
-    default_row_class ? 'views-row',
-    'hds-tag',
-    'hds-tag--action',
-  ]%}
-  <div{{ row.attributes.addClass(row_classes) }}>
-    {{- row.content -}}
-  </div>
+  {{ row.content }}
 {% endfor %}
