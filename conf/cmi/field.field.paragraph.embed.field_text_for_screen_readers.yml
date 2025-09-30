@@ -6,11 +6,7 @@ dependencies:
     - field.storage.paragraph.field_text_for_screen_readers
     - paragraphs.paragraphs_type.embed
   module:
-    - allowed_formats
     - text
-third_party_settings:
-  allowed_formats:
-    allowed_formats: {  }
 id: paragraph.embed.field_text_for_screen_readers
 field_name: field_text_for_screen_readers
 entity_type: paragraph
