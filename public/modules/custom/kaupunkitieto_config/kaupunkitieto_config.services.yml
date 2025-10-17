@@ -3,7 +3,5 @@ services:
     autowire: true
     autoconfigure: true
 
-  Drupal\kaupunkitieto_config\EventSubscriber\TunnistamoRedirectUrlSubscriber: ~
-
   Drupal\kaupunkitieto_config\EventSubscriber\CspEventSubscriber:
       class: Drupal\kaupunkitieto_config\EventSubscriber\CspEventSubscriber
