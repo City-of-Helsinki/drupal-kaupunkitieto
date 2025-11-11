@@ -22,7 +22,9 @@
     "breakpoint-sass": "^3.0.0",
     "glob": "^11.0.0",
     "hds-design-tokens": "^2.0.0",
-    "npm-run-all2": "^8.0.4"
+    "npm-run-all2": "^8.0.4",
+    "select2": "^4.0.13",
+    "slick-carousel": "^1.8.1"
   },
   "browserslist": [
     "last 3 major versions",
