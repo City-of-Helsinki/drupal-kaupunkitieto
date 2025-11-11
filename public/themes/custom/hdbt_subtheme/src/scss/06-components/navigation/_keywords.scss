@@ -4,10 +4,10 @@
 
 .views-field-field-keywords {
   ul {
-    @include tag-container();
+    @include tag-container;
   }
 
   li {
-    @include tag-parent();
+    @include tag-parent;
   }
 }
