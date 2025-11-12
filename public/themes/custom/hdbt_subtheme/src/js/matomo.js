@@ -1,15 +1,17 @@
-(($, Drupal) => {
-
+((Drupal) => {
   const loadMatomoAnalytics = () => {
     // Load Matomo only if statistics cookies are allowed.
     if (Drupal.cookieConsent.getConsentStatus(['statistics'])) {
       // Matomo Tag Manager
-      // eslint-disable-next-line no-multi-assign
-      const _paq = window._paq = window._paq || [];
-      _paq.push(['setDomains', ['*.kaupunkitieto.hel.fi', '*.kaupunkitieto.hel.fi']]);
+      /** biome-ignore lint/suspicious/noAssignInExpressions: @todo UHF-12501 */
+      const _paq = (window._paq = window._paq || []);
+      _paq.push([
+        'setDomains',
+        ['*.kaupunkitieto.hel.fi', '*.kaupunkitieto.hel.fi'],
+      ]);
       _paq.push(['trackPageView']);
       _paq.push(['enableLinkTracking']);
-      const u='//webanalytics.digiaiiris.com/js/';
+      const u = '//webanalytics.digiaiiris.com/js/';
       _paq.push(['setTrackerUrl', `${u}tracker.php`]);
       _paq.push(['setSiteId', '532']);
 
@@ -20,7 +22,7 @@
       g.async = true;
       // Should the source be in the same container as other sites? See below.
       // g.src = '//webanalytics.digiaiiris.com/js/container_iNUwkZOx.js';
-      g.src= `${u}piwik.min.js`;
+      g.src = `${u}piwik.min.js`;
       s.parentNode.insertBefore(g, s);
     }
   };
@@ -31,4 +33,4 @@
   } else {
     Drupal.cookieConsent.loadFunction(loadMatomoAnalytics);
   }
-})(jQuery, Drupal);
+})(Drupal);

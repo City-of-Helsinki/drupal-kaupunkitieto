@@ -139,7 +139,7 @@
     @include font('button');
     color: $color-white;
     font-weight: 500;
-    word-break: break-word;
+    overflow-wrap: break-word;
   }
 }
 
