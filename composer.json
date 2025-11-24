@@ -98,11 +98,6 @@
         "patchLevel": {
           "drupal/core": "-p2"
         },
-        "patches": {
-            "drupal/helfi_platform_config": {
-                "Revoke admin role permissions manually.": "patches/helfi_platform_config_skip_helfi_base_content_update_9011.patch"
-            }
-        },
         "drupal-lenient": {
             "allowed-list": ["drupal/big_pipe_sessionless"]
         }
