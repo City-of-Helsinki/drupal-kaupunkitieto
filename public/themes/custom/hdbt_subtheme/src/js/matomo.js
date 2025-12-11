@@ -5,10 +5,7 @@
       // Matomo Tag Manager
       /** biome-ignore lint/suspicious/noAssignInExpressions: @todo UHF-12501 */
       const _paq = (window._paq = window._paq || []);
-      _paq.push([
-        'setDomains',
-        ['*.kaupunkitieto.hel.fi', '*.kaupunkitieto.hel.fi'],
-      ]);
+      _paq.push(['setDomains', ['*.kaupunkitieto.hel.fi', '*.kaupunkitieto.hel.fi']]);
       _paq.push(['trackPageView']);
       _paq.push(['enableLinkTracking']);
       const u = '//webanalytics.digiaiiris.com/js/';
