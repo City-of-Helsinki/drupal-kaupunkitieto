@@ -6,8 +6,8 @@
         return;
       }
 
-      $('.paragraph--type--infograph .infograph__value:contains("%")').html(
-        (_, html) => html.split('%').join('<span class="small-char">%</span'),
+      $('.paragraph--type--infograph .infograph__value:contains("%")').html((_, html) =>
+        html.split('%').join('<span class="small-char">%</span'),
       );
 
       $('.infograph .infograph__item').on('click', (event) => {
@@ -42,13 +42,10 @@
       const status = $('.pagingInfo');
       const slickElement = $('.paragraph--type--infograph-group');
 
-      slickElement.on(
-        'init reInit afterChange',
-        (_event, slick, currentSlide) => {
-          const i = (currentSlide || 0) + 1;
-          status.text(`${i} / ${slick.slideCount}`);
-        },
-      );
+      slickElement.on('init reInit afterChange', (_event, slick, currentSlide) => {
+        const i = (currentSlide || 0) + 1;
+        status.text(`${i} / ${slick.slideCount}`);
+      });
 
       resetSlider();
 
