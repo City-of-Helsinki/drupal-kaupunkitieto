@@ -1,10 +1,12 @@
+label: 'Custom block library'
+description: 'Find and manage custom blocks.'
 display:
   default:
     display_title: Oletus
     display_options:
       fields:
         info:
-          label: 'Block description'
+          label: 'Lohkon kuvaus'
           separator: ', '
         type:
           label: 'Lohkon tyyppi'
@@ -32,7 +34,7 @@ display:
       filters:
         info:
           expose:
-            label: 'Block description'
+            label: 'Lohkon kuvaus'
         type:
           expose:
             label: 'Lohkon tyyppi'
@@ -46,5 +48,3 @@ display:
       menu:
         title: Lohkot
         description: 'Create and edit block content.'
-label: 'Custom block library'
-description: 'Find and manage custom blocks.'
