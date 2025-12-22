@@ -4,7 +4,7 @@ display:
     display_options:
       fields:
         info:
-          label: 'Block description'
+          label: 'Lohkon kuvaus'
           separator: ', '
         type:
           label: 'Lohkon tyyppi'
@@ -32,19 +32,13 @@ display:
       filters:
         info:
           expose:
-            label: 'Block description'
+            label: 'Lohkon kuvaus'
         type:
           expose:
             label: 'Lohkon tyyppi'
       title: 'Custom block library'
-      empty:
-        area_text_custom:
-          content: 'There are no custom blocks available.'
   page_1:
     display_title: Sivu
     display_options:
       menu:
         title: Lohkot
-        description: 'Create and edit block content.'
-label: 'Custom block library'
-description: 'Find and manage custom blocks.'
