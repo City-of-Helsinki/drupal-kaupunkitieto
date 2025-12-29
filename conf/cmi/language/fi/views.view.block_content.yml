@@ -36,7 +36,6 @@ display:
         type:
           expose:
             label: 'Lohkon tyyppi'
-      title: 'Custom block library'
   page_1:
     display_title: Sivu
     display_options:
