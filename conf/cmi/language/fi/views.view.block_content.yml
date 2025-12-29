@@ -36,6 +36,10 @@ display:
         type:
           expose:
             label: 'Lohkon tyyppi'
+      title: 'Custom block library'
+      empty:
+        area_text_custom:
+          content: 'There are no custom blocks available.'
   page_1:
     display_title: Sivu
     display_options:
