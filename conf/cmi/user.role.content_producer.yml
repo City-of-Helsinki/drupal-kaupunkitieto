@@ -19,6 +19,7 @@ dependencies:
     - content_translation
     - entity_usage
     - file
+    - file_delete
     - filter
     - helfi_api_base
     - media
@@ -67,6 +68,8 @@ permissions:
   - 'create remote_video media'
   - 'create terms in keywords'
   - 'create url aliases'
+  - 'delete files immediately'
+  - 'delete files override usage'
   - 'delete media'
   - 'delete own announcement content'
   - 'delete own article content'
