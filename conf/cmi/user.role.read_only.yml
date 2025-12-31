@@ -8,6 +8,7 @@ dependencies:
     - node.type.page
   module:
     - file
+    - file_delete
     - node
     - paragraphs
     - raven
@@ -20,6 +21,8 @@ weight: 2
 is_admin: null
 permissions:
   - 'access toolbar'
+  - 'delete files immediately'
+  - 'delete files override usage'
   - 'delete own files'
   - 'disable own tfa'
   - 'send performance traces to sentry'
