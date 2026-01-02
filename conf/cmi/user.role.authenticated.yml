@@ -5,6 +5,7 @@ dependencies:
   module:
     - external_entities
     - file
+    - file_delete
     - helfi_api_base
     - media
     - paragraphs
@@ -21,6 +22,8 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access toolbar'
+  - 'delete files immediately'
+  - 'delete files override usage'
   - 'delete own files'
   - 'disable own tfa'
   - 'send javascript errors to sentry'

@@ -14,10 +14,12 @@ dependencies:
     - field.field.node.article.field_search_result_text
     - node.type.article
   module:
+    - hdbt_admin_tools
     - media_library
     - metatag
     - paragraphs
     - path
+    - publication_date
     - scheduler
     - select2
 _core:

@@ -18,6 +18,7 @@ dependencies:
     - content_translation
     - entity_usage
     - file
+    - file_delete
     - filter
     - helfi_api_base
     - locale
@@ -83,6 +84,8 @@ permissions:
   - 'delete any page content'
   - 'delete any remote_video media'
   - 'delete content translations'
+  - 'delete files immediately'
+  - 'delete files override usage'
   - 'delete landing_page revisions'
   - 'delete media'
   - 'delete own announcement content'
