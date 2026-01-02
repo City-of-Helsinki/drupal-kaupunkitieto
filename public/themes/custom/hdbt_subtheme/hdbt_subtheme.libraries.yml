@@ -2,18 +2,18 @@ global-styling:
   version: 1.x
   css:
     theme:
-      dist/css/styles.min.css: {}
+      dist/css/styles.min.css: { minified: true }
 
 search-toggle:
   version: 1.1
   js:
-    dist/js/searchToggle.min.js: {}
+    dist/js/searchToggle.min.js: { minified: true }
   dependencies:
     - core/drupal
 
 admin-content-liftup:
   js:
-    dist/js/contentLiftup.min.js: {}
+    dist/js/contentLiftup.min.js: { minified: true }
   version: 1.0
   dependencies:
     - core/drupal
@@ -22,16 +22,16 @@ admin-content-liftup:
 infograph:
   version: 1.1
   js:
-    dist/js/infograph.min.js: {}
-    dist/js/jqueryTypePolyfill.min.js: {}
-    dist/js/slick.min.js: {}
+    dist/js/infograph.min.js: { minified: true }
+    dist/js/jqueryTypePolyfill.min.js: { minified: true }
+    dist/js/slick.min.js: { minified: true }
   css:
     component:
       dist/css/slick.css: { preprocess: false }
 
 content-menu:
   js:
-    dist/js/contentMenu.min.js: {}
+    dist/js/contentMenu.min.js: { minified: true }
   version: 1.0
   dependencies:
     - core/drupal
@@ -42,6 +42,7 @@ matomo:
   version: 1.0
   js:
     dist/js/matomo.min.js: {
+      minified: true,
       attributes: {
         defer: true,
         preprocess: false
@@ -60,7 +61,7 @@ select2.min:
     dist/js/select2.min.js: { minified: true, preprocess: false }
   css:
     component:
-      dist/css/select2.min.css: { preprocess: false }
+      dist/css/select2.min.css: { minified: true, preprocess: false }
   dependencies:
     - core/drupal
     - core/sortable
