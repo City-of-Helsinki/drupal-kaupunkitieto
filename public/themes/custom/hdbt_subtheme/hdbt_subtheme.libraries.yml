@@ -2,35 +2,37 @@ global-styling:
   version: 1.x
   css:
     theme:
-      dist/css/styles.min.css: {}
+      dist/css/styles.min.css: { minified: true }
 
 search-toggle:
-  version: 1.1
+  version: 1.2
   js:
-    dist/js/searchToggle.min.js: {}
+    dist/js/searchToggle.min.js: { minified: true }
   dependencies:
     - core/drupal
+    - core/once
 
 admin-content-liftup:
   js:
-    dist/js/contentLiftup.min.js: {}
+    dist/js/contentLiftup.min.js: { minified: true }
   version: 1.0
   dependencies:
     - core/drupal
     - core/jquery
 
 infograph:
-  version: 1.0
+  version: 1.1
   js:
-    dist/js/infograph.min.js: {}
-    dist/js/slick.min.js: {}
+    dist/js/infograph.min.js: { minified: true }
+    dist/js/jqueryTypePolyfill.min.js: { minified: true }
+    dist/js/slick.min.js: { minified: true }
   css:
     component:
       dist/css/slick.css: { preprocess: false }
 
 content-menu:
   js:
-    dist/js/contentMenu.min.js: {}
+    dist/js/contentMenu.min.js: { minified: true }
   version: 1.0
   dependencies:
     - core/drupal
@@ -41,6 +43,7 @@ matomo:
   version: 1.0
   js:
     dist/js/matomo.min.js: {
+      minified: true,
       attributes: {
         defer: true,
         preprocess: false
@@ -50,6 +53,7 @@ matomo:
 # This is here to make the contrib select2 module work since its asset management doesn't suit our proxy setup.
 select2.min:
   remote: https://github.com/select2/select2
+  version: 2.0.0
   license:
     name: MIT
     url: https://github.com/select2/select2/blob/master/LICENSE.md
@@ -58,7 +62,7 @@ select2.min:
     dist/js/select2.min.js: { minified: true, preprocess: false }
   css:
     component:
-      dist/css/select2.min.css: { preprocess: false }
+      dist/css/select2.min.css: { minified: true, preprocess: false }
   dependencies:
     - core/drupal
     - core/sortable
