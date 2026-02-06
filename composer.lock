@@ -3748,20 +3748,20 @@
         },
         {
             "name": "drupal/external_entities",
-            "version": "3.0.0-beta7",
+            "version": "3.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/external_entities.git",
-                "reference": "3.0.0-beta7"
+                "reference": "3.0.0-rc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/external_entities-3.0.0-beta7.zip",
-                "reference": "3.0.0-beta7",
-                "shasum": "8815ba22fab0a750ff18e439a2d8f9408172aa33"
+                "url": "https://ftp.drupal.org/files/projects/external_entities-3.0.0-rc1.zip",
+                "reference": "3.0.0-rc1",
+                "shasum": "7319be341c37a0763a32815edba1a98081efc11e"
             },
             "require": {
-                "drupal/core": "^11.2",
+                "drupal/core": "^10 || ^11",
                 "galbar/jsonpath": "^2.0||^3.0"
             },
             "require-dev": {
@@ -3771,11 +3771,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.0-beta7",
-                    "datestamp": "1766072368",
+                    "version": "3.0.0-rc1",
+                    "datestamp": "1769878913",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "message": "RC releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -3838,17 +3838,17 @@
         },
         {
             "name": "drupal/externalauth",
-            "version": "2.0.8",
+            "version": "2.0.9",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/externalauth.git",
-                "reference": "2.0.8"
+                "reference": "2.0.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/externalauth-2.0.8.zip",
-                "reference": "2.0.8",
-                "shasum": "e9c1b41d6b59d0674b2756361ec729b046759387"
+                "url": "https://ftp.drupal.org/files/projects/externalauth-2.0.9.zip",
+                "reference": "2.0.9",
+                "shasum": "cd4fe65f9a3cad1ad0812c65728a2372f90f4490"
             },
             "require": {
                 "drupal/core": "^9.5 || ^10 || ^11"
@@ -3856,8 +3856,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.8",
-                    "datestamp": "1743603496",
+                    "version": "2.0.9",
+                    "datestamp": "1770044599",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4414,16 +4414,16 @@
         },
         {
             "name": "drupal/hdbt",
-            "version": "6.16.31",
+            "version": "6.16.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
-                "reference": "de93e0584acc1e9e8db79ce2354506e862d2aa18"
+                "reference": "d079344049a5f1ec47997ba041e1516fc88de09f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/de93e0584acc1e9e8db79ce2354506e862d2aa18",
-                "reference": "de93e0584acc1e9e8db79ce2354506e862d2aa18",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/d079344049a5f1ec47997ba041e1516fc88de09f",
+                "reference": "d079344049a5f1ec47997ba041e1516fc88de09f",
                 "shasum": ""
             },
             "require": {
@@ -4442,10 +4442,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.16.31",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.16.33",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
             },
-            "time": "2026-01-27T09:07:05+00:00"
+            "time": "2026-02-04T09:28:36+00:00"
         },
         {
             "name": "drupal/hdbt_admin",
@@ -4859,24 +4859,23 @@
         },
         {
             "name": "drupal/helfi_tpr",
-            "version": "2.4.1",
+            "version": "2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr.git",
-                "reference": "3f9d630956044e8c42da44084b82159c0845b901"
+                "reference": "ff224dbe7b8c7462c7e46cd5dc6b9f3c6dc9088f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/3f9d630956044e8c42da44084b82159c0845b901",
-                "reference": "3f9d630956044e8c42da44084b82159c0845b901",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-module-helfi-tpr/zipball/ff224dbe7b8c7462c7e46cd5dc6b9f3c6dc9088f",
+                "reference": "ff224dbe7b8c7462c7e46cd5dc6b9f3c6dc9088f",
                 "shasum": ""
             },
             "require": {
-                "drupal/address": "^1.0 || ^2.0",
+                "drupal/address": "^2.0",
                 "drupal/helfi_api_base": "*",
-                "drupal/readonly_field_widget": "^1.0",
-                "drupal/twig_tweak": "^2.0 || ^3.0",
-                "drupal/views_infinite_scroll": "^2.0",
+                "drupal/readonly_field_widget": "^1.0 || ^2.0",
+                "drupal/twig_tweak": "^3.0",
                 "php": "^8.0"
             },
             "conflict": {
@@ -4894,10 +4893,10 @@
             ],
             "description": "TPR integration",
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/2.4.1",
+                "source": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/tree/2.4.2",
                 "issues": "https://github.com/City-of-Helsinki/drupal-module-helfi-tpr/issues"
             },
-            "time": "2026-01-19T10:11:32+00:00"
+            "time": "2026-02-06T09:08:53+00:00"
         },
         {
             "name": "drupal/helfi_tunnistamo",
@@ -6535,17 +6534,17 @@
         },
         {
             "name": "drupal/role_delegation",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/role_delegation.git",
-                "reference": "8.x-1.5"
+                "reference": "8.x-1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/role_delegation-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "cdd9d5646708511b893de98c46c8bbf578109961"
+                "url": "https://ftp.drupal.org/files/projects/role_delegation-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "792971461a3b86cb8f6937d0eecd3745899bb7bf"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11"
@@ -6553,8 +6552,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1768413123",
+                    "version": "8.x-1.6",
+                    "datestamp": "1769768673",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7734,74 +7733,6 @@
             }
         },
         {
-            "name": "drupal/views_infinite_scroll",
-            "version": "2.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/views_infinite_scroll.git",
-                "reference": "2.0.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_infinite_scroll-2.0.3.zip",
-                "reference": "2.0.3",
-                "shasum": "3c56969f71256300226118a0f35bad66ab41306c"
-            },
-            "require": {
-                "drupal/core": "^10.1 || ^11"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.0.3",
-                    "datestamp": "1724335951",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "anybody",
-                    "homepage": "https://www.drupal.org/user/291091"
-                },
-                {
-                    "name": "grevil",
-                    "homepage": "https://www.drupal.org/user/3668491"
-                },
-                {
-                    "name": "Honza Pobořil",
-                    "homepage": "https://www.drupal.org/user/123612"
-                },
-                {
-                    "name": "neslee canil pinto",
-                    "homepage": "https://www.drupal.org/user/3580850"
-                },
-                {
-                    "name": "Remon",
-                    "homepage": "https://www.drupal.org/user/143827"
-                },
-                {
-                    "name": "sam152",
-                    "homepage": "https://www.drupal.org/user/1485048"
-                },
-                {
-                    "name": "thomas.frobieter",
-                    "homepage": "https://www.drupal.org/user/409335"
-                }
-            ],
-            "description": "A pager which allows an infinite scroll effect for views.",
-            "homepage": "https://www.drupal.org/project/views_infinite_scroll",
-            "support": {
-                "source": "https://git.drupalcode.org/project/views_infinite_scroll"
-            }
-        },
-        {
             "name": "drush/drush",
             "version": "13.7.1",
             "source": {
@@ -8969,30 +8900,30 @@
         },
         {
             "name": "laravel/prompts",
-            "version": "v0.3.11",
+            "version": "v0.3.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/prompts.git",
-                "reference": "dd2a2ed95acacbcccd32fd98dee4c946ae7a7217"
+                "reference": "4861ded9003b7f8a158176a0b7666f74ee761be8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/prompts/zipball/dd2a2ed95acacbcccd32fd98dee4c946ae7a7217",
-                "reference": "dd2a2ed95acacbcccd32fd98dee4c946ae7a7217",
+                "url": "https://api.github.com/repos/laravel/prompts/zipball/4861ded9003b7f8a158176a0b7666f74ee761be8",
+                "reference": "4861ded9003b7f8a158176a0b7666f74ee761be8",
                 "shasum": ""
             },
             "require": {
                 "composer-runtime-api": "^2.2",
                 "ext-mbstring": "*",
                 "php": "^8.1",
-                "symfony/console": "^6.2|^7.0"
+                "symfony/console": "^6.2|^7.0|^8.0"
             },
             "conflict": {
                 "illuminate/console": ">=10.17.0 <10.25.0",
                 "laravel/framework": ">=10.17.0 <10.25.0"
             },
             "require-dev": {
-                "illuminate/collections": "^10.0|^11.0|^12.0",
+                "illuminate/collections": "^10.0|^11.0|^12.0|^13.0",
                 "mockery/mockery": "^1.5",
                 "pestphp/pest": "^2.3|^3.4|^4.0",
                 "phpstan/phpstan": "^1.12.28",
@@ -9022,9 +8953,9 @@
             "description": "Add beautiful and user-friendly forms to your command-line applications.",
             "support": {
                 "issues": "https://github.com/laravel/prompts/issues",
-                "source": "https://github.com/laravel/prompts/tree/v0.3.11"
+                "source": "https://github.com/laravel/prompts/tree/v0.3.12"
             },
-            "time": "2026-01-27T02:55:06+00:00"
+            "time": "2026-02-03T06:57:26+00:00"
         },
         {
             "name": "league/container",
@@ -10677,28 +10608,28 @@
         },
         {
             "name": "php-tuf/composer-stager",
-            "version": "v2.0.2",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-tuf/composer-stager.git",
-                "reference": "3b8cad67352ebef1f854995efc722728518cafd8"
+                "reference": "85f2bb8b50c0376f05d9a084145b9fd169550a9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-tuf/composer-stager/zipball/3b8cad67352ebef1f854995efc722728518cafd8",
-                "reference": "3b8cad67352ebef1f854995efc722728518cafd8",
+                "url": "https://api.github.com/repos/php-tuf/composer-stager/zipball/85f2bb8b50c0376f05d9a084145b9fd169550a9b",
+                "reference": "85f2bb8b50c0376f05d9a084145b9fd169550a9b",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "php": ">=8.1.0",
-                "symfony/filesystem": "^6.2 || ^7.0",
-                "symfony/process": "^6.4.14 || ^7.1.7",
+                "symfony/filesystem": "^6.2 || ^7.0 || ^8.0",
+                "symfony/process": "^6.4.33 || ^7.3.11 || ^8.0",
                 "symfony/translation-contracts": "^3.1"
             },
             "conflict": {
-                "symfony/process": ">=6 <6.4.14 || >=7 <7.1.7",
-                "symfony/symfony": ">=6 <6.4.14 || >=7 <7.1.7"
+                "symfony/process": ">=6.4 <6.4.33 || >=7.3 <7.3.11 || >=7.4 <7.4.5 || >=8.0 <8.0.5",
+                "symfony/symfony": ">=6.4 <6.4.33 || >=7.3 <7.3.11 || >=7.4 <7.4.5 || >=8.0 <8.0.5"
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
@@ -10709,7 +10640,7 @@
                 "phpunit/phpunit": "^10.5.19",
                 "slevomat/coding-standard": "^8.13",
                 "squizlabs/php_codesniffer": "^3.7",
-                "symfony/config": "^6.3",
+                "symfony/config": "^6.3 || ^8.0",
                 "symfony/dependency-injection": "^6.3",
                 "symfony/yaml": "^6.3",
                 "thecodingmachine/phpstan-strict-rules": "^1.0"
@@ -10746,7 +10677,7 @@
                 "issues": "https://github.com/php-tuf/composer-stager/issues",
                 "source": "https://github.com/php-tuf/composer-stager"
             },
-            "time": "2025-11-17T14:51:07+00:00"
+            "time": "2026-02-04T20:55:34+00:00"
         },
         {
             "name": "phpowermove/docblock",
@@ -11271,16 +11202,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.12.18",
+            "version": "v0.12.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "ddff0ac01beddc251786fe70367cd8bbdb258196"
+                "reference": "a4f766e5c5b6773d8399711019bb7d90875a50ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/ddff0ac01beddc251786fe70367cd8bbdb258196",
-                "reference": "ddff0ac01beddc251786fe70367cd8bbdb258196",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/a4f766e5c5b6773d8399711019bb7d90875a50ee",
+                "reference": "a4f766e5c5b6773d8399711019bb7d90875a50ee",
                 "shasum": ""
             },
             "require": {
@@ -11344,9 +11275,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.12.18"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.12.19"
             },
-            "time": "2025-12-17T14:35:46+00:00"
+            "time": "2026-01-30T17:33:13+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
