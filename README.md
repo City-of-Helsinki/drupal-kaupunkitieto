@@ -7,8 +7,8 @@ Kaupunkitieto is a website project for the City of Helsinki's statistics and res
 Env | Branch   | URL
 --- |----------| ----------- 
 dev | *        |  https://kaupunkitieto.docker.sh/
-test | dev      |  https://drupal-kaupunkitieto.test.hel.ninja/
-staging | main    |  https://drupal-kaupunkitieto.stage.hel.ninja/
+test | dev      |  https://kaupunkitieto.test.hel.ninja/fi
+staging | main    |  https://kaupunkitieto.stage.hel.ninja/fi
 production | main | https://kaupunkitieto.hel.fi/
 
 ## Requirements
