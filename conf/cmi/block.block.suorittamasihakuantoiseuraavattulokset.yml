@@ -2,10 +2,7 @@ uuid: fd9de785-cf59-4637-a432-491272eaf8c5
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic_text:ee7f7285-520d-4be6-bfb1-7d409e6c3173'
   module:
-    - block_content
     - system
   theme:
     - hdbt_subtheme
@@ -20,8 +17,6 @@ settings:
   label: 'Your search returned the following results'
   label_display: visible
   provider: block_content
-  status: true
-  info: ''
   view_mode: full
 visibility:
   request_path:
