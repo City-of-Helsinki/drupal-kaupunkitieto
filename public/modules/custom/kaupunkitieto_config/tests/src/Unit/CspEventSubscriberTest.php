@@ -50,8 +50,6 @@ class CspEventSubscriberTest extends UnitTestCase {
    */
   protected function setUp(): void {
     parent::setUp();
-    BypassFinals::enable();
-
     $this->event = $this->prophesize(PolicyAlterEvent::class);
     $this->policy = $this->prophesize(Csp::class);
     $this->event->getPolicy()->willReturn($this->policy->reveal());
