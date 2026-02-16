@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\kaupunkitieto_config\Unit;
 
-use DG\BypassFinals;
 use Drupal\csp\Csp;
 use Drupal\csp\CspEvents;
 use Drupal\csp\Event\PolicyAlterEvent;
