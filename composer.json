@@ -9,7 +9,6 @@
     "require": {
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.6.7",
-        "drupal/core-composer-scaffold": "~11.2.0",
         "drupal/facets": "^2.0",
         "drupal/file_delete": "^3.0",
         "drupal/hdbt": "^6.0",
@@ -25,7 +24,6 @@
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
-        "dg/bypass-finals": "^1.5",
         "drupal/core-dev": "^11",
         "jangregor/phpstan-prophecy": "^1.0",
         "phpstan/phpstan-deprecation-rules": "^1.1",
