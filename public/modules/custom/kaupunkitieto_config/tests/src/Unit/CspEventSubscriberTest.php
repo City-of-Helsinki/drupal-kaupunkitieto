@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\kaupunkitieto_config\Unit;
 
-use DG\BypassFinals;
 use Drupal\csp\Csp;
 use Drupal\csp\CspEvents;
 use Drupal\csp\Event\PolicyAlterEvent;
@@ -50,8 +49,6 @@ class CspEventSubscriberTest extends UnitTestCase {
    */
   protected function setUp(): void {
     parent::setUp();
-    BypassFinals::enable();
-
     $this->event = $this->prophesize(PolicyAlterEvent::class);
     $this->policy = $this->prophesize(Csp::class);
     $this->event->getPolicy()->willReturn($this->policy->reveal());

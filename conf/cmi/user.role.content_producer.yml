@@ -101,6 +101,7 @@ permissions:
   - 'edit own remote_video media'
   - 'edit paragraph library item'
   - 'edit terms in keywords'
+  - 'rebuild node access permissions'
   - 'revert announcement revisions'
   - 'revert article revisions'
   - 'revert landing_page revisions'
