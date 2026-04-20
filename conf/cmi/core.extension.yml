@@ -139,6 +139,7 @@ module:
   redirect: 0
   redis: 0
   responsive_image: 0
+  rest: 0
   role_delegation: 0
   scheduler: 0
   search_api: 0
@@ -164,6 +165,7 @@ module:
   varnish_purger: 0
   view_unpublished: 0
   views_ui: 0
+  helfi_navigation: 1
   pathauto: 1
   content_translation: 10
   externalauth: 10

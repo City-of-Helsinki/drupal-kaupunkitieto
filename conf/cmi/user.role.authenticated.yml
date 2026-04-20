@@ -13,6 +13,9 @@ dependencies:
     - system
     - tfa
     - toolbar
+    - rest
+  config:
+    - rest.resource.helfi_global_mobile_menu
 _core:
   default_config_hash: 83Nuup-6oYkkdAsvg3nrR2pBOgtTXEV1JrzpCCLkYLM
 id: authenticated
@@ -34,3 +37,4 @@ permissions:
   - 'view media'
   - 'view remote entities'
   - 'view unpublished paragraphs'
+  - 'restful get helfi_global_mobile_menu'
