@@ -47,6 +47,15 @@ function hdbt_subtheme_theme_suggestions_block_alter(array &$suggestions): void 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
+function hdbt_subtheme_theme_suggestions_region_alter(array &$suggestions, array $variables) {
+  if ($variables['elements']['#region'] === 'header_top') {
+    $suggestions[] = 'region__header_top__non_core';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
 function hdbt_subtheme_theme_suggestions_menu_alter(array &$suggestions, array $variables): void {
   if (isset($variables['attributes']['block_id'])) {
     $block_id = str_replace('hdbt_subtheme_', '', $variables['attributes']['block_id']);
