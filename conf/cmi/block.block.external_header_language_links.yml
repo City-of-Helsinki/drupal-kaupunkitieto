@@ -1,0 +1,25 @@
+uuid: b9e7414b-8477-4a6d-aada-c29a65dfd00f
+langcode: en
+status: false
+dependencies:
+  config:
+    - header-language-links
+  module:
+    - helfi_navigation
+  theme:
+    - hdbt_subtheme
+id: external_header_language_links
+theme: hdbt_subtheme
+region: header_branding
+weight: 0
+provider: null
+plugin: 'external_menu_block:header-language-links'
+settings:
+  id: external_header_language_links
+  label: 'External - Header language links'
+  label_display: '0'
+  provider: helfi_navigation
+  level: 1
+  expand_all_items: true
+  depth: 2
+visibility: {  }
