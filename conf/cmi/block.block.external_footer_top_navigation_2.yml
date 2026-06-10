@@ -1,0 +1,23 @@
+uuid: aa14d7d3-3d2b-4fa5-b26d-6c80d9288688
+langcode: en
+status: false
+dependencies:
+  module:
+    - helfi_navigation
+  theme:
+    - hdbt_subtheme
+id: external_footer_top_navigation_2
+theme: hdbt_subtheme
+region: footer_top
+weight: -12
+provider: null
+plugin: 'external_menu_block:footer-top-navigation-2'
+settings:
+  id: external_footer_top_navigation_2
+  label: Connect
+  label_display: visible
+  provider: helfi_navigation
+  level: 1
+  expand_all_items: false
+  depth: 1
+visibility: {  }

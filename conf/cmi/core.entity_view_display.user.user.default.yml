@@ -1,0 +1,20 @@
+uuid: 002bf750-09a9-4b8a-9f64-b917c4e0942c
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  user_content:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  langcode: true
+  member_for: true
+  search_api_excerpt: true

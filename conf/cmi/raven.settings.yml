@@ -23,7 +23,8 @@ drush_error_handler: true
 public_dsn: ''
 ssl: verify_ssl
 ca_cert: ''
-ignored_channels: {  }
+ignored_channels:
+  - stage_file_proxy
 ignored_messages: {  }
 send_user_data: false
 rate_limit: 0
@@ -35,3 +36,4 @@ database_tracing: true
 twig_tracing: true
 auto_session_tracking: false
 http_compression: true
+enable_logs: true

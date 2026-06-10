@@ -9,7 +9,7 @@ _core:
 id: hdbt_subtheme_footertopblock
 theme: hdbt_subtheme
 region: footer_top
-weight: -3
+weight: -13
 provider: null
 plugin: footer_top_block
 settings:
