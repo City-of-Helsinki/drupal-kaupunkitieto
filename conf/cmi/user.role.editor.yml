@@ -17,6 +17,7 @@ dependencies:
   module:
     - content_translation
     - entity_usage
+    - external_entities
     - file
     - file_delete
     - filter
@@ -143,6 +144,7 @@ permissions:
   - 'translate remote_video media'
   - 'update any media'
   - 'update content translations'
+  - 'update linkedevents_event external entity'
   - 'update media'
   - 'use menu link attributes'
   - 'use text format full_html'
@@ -154,6 +156,8 @@ permissions:
   - 'view announcement revisions'
   - 'view any unpublished content'
   - 'view landing_page revisions'
+  - 'view linkedevents_event external entity'
+  - 'view linkedevents_event external entity collection'
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view page revisions'
