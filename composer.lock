@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cbd1f9f28dab81ef246ffef02d2f6cf8",
+    "content-hash": "111c27a79b284d8c14e5a03b518fc29e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4619,16 +4619,16 @@
         },
         {
             "name": "drupal/hdbt",
-            "version": "dev-UHF-13016",
+            "version": "6.17.43",
             "source": {
                 "type": "git",
                 "url": "https://github.com/City-of-Helsinki/drupal-hdbt.git",
-                "reference": "dc9ad6f09d6aab23a9701344cf5998547ada4990"
+                "reference": "2f13dbce3bdc197f64a9fa92076bf2d6c7058ce3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/dc9ad6f09d6aab23a9701344cf5998547ada4990",
-                "reference": "dc9ad6f09d6aab23a9701344cf5998547ada4990",
+                "url": "https://api.github.com/repos/City-of-Helsinki/drupal-hdbt/zipball/2f13dbce3bdc197f64a9fa92076bf2d6c7058ce3",
+                "reference": "2f13dbce3bdc197f64a9fa92076bf2d6c7058ce3",
                 "shasum": ""
             },
             "require": {
@@ -4647,10 +4647,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/UHF-13016",
+                "source": "https://github.com/City-of-Helsinki/drupal-hdbt/tree/6.17.43",
                 "issues": "https://github.com/City-of-Helsinki/drupal-hdbt/issues"
             },
-            "time": "2026-08-03T13:02:15+00:00"
+            "time": "2026-07-27T07:45:04+00:00"
         },
         {
             "name": "drupal/hdbt_admin",
@@ -22052,12 +22052,11 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/hdbt": 20,
         "drupal/helfi_drupal_tools": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {},
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
