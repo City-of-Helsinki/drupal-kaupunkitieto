@@ -101,7 +101,7 @@ $infograph-light-green: #e1eadc;
 
     &:focus,
     &:active {
-      outline-color: $color-white !important; // Needed in order to override default focus styles
+      outline-color: $color-white;
     }
   }
 
@@ -119,7 +119,7 @@ $infograph-light-green: #e1eadc;
 
     &:focus,
     &:active {
-      outline-color: $color-white !important; // Needed in order to override default focus styles
+      outline-color: $color-white;
     }
   }
 
@@ -146,7 +146,7 @@ $infograph-light-green: #e1eadc;
 
     &:focus,
     &:active {
-      outline-color: $color-white !important; // Needed in order to override default focus styles
+      outline-color: $color-white;
     }
   }
 
