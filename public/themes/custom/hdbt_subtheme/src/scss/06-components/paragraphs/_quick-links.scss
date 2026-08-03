@@ -126,6 +126,11 @@
         text-decoration: underline;
       }
     }
+
+    &:focus,
+    &:active {
+      outline-color: $color-white !important;
+    }
   }
 
   .quick-links__item__icon {
