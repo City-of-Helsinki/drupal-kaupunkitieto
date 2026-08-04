@@ -32,8 +32,8 @@
 
       const resetSlider = () => {
         $('.paragraph--type--infograph-group').slick({
-          prevArrow: '.arrow-left-wrapper span',
-          nextArrow: '.arrow-right-wrapper span',
+          prevArrow: '.arrow-left-wrapper',
+          nextArrow: '.arrow-right-wrapper',
           autoplay: settings?.infograph_group?.autoplay,
           autoplaySpeed: settings?.infograph_group?.speed,
         });

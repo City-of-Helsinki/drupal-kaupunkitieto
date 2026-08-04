@@ -98,6 +98,11 @@ $infograph-light-green: #e1eadc;
 
   a {
     color: $color-white;
+
+    &:focus,
+    &:active {
+      outline-color: $color-white;
+    }
   }
 
   .infograph__label {
@@ -111,6 +116,11 @@ $infograph-light-green: #e1eadc;
 
   a {
     color: $color-white;
+
+    &:focus,
+    &:active {
+      outline-color: $color-white;
+    }
   }
 
   .infograph__label {
@@ -133,6 +143,11 @@ $infograph-light-green: #e1eadc;
 
   a {
     color: $color-white;
+
+    &:focus,
+    &:active {
+      outline-color: $color-white;
+    }
   }
 
   .infograph__label {
@@ -164,6 +179,7 @@ $infograph-light-green: #e1eadc;
   gap: 6px;
 
   a {
+    display: block;
     text-decoration: none;
   }
 }
@@ -333,6 +349,18 @@ $infograph-light-green: #e1eadc;
   margin: 1rem 0;
   width: 100%;
 
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &:focus,
+    &:active {
+      outline: 3px solid $color-black;
+      outline-offset: 2px;
+    }
+  }
+
   .pagingInfo {
     margin: 0 1rem;
   }
@@ -340,10 +368,5 @@ $infograph-light-green: #e1eadc;
   svg {
     height: 40px;
     width: 40px;
-  }
-
-  .arrow-left-wrapper span,
-  .arrow-right-wrapper span {
-    cursor: pointer;
   }
 }
