@@ -1,0 +1,343 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Function kaupunkitieto_config_entity_bundle_field_info_alter\(\) has parameter \$bundle with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/modules/custom/kaupunkitieto_config/kaupunkitieto_config.module
+
+		-
+			message: '#^Function kaupunkitieto_config_entity_bundle_field_info_alter\(\) has parameter \$fields with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/modules/custom/kaupunkitieto_config/kaupunkitieto_config.module
+
+		-
+			message: '#^Function kaupunkitieto_config_form_node_form_alter\(\) has parameter \$form with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/modules/custom/kaupunkitieto_config/kaupunkitieto_config.module
+
+		-
+			message: '#^Method Drupal\\kaupunkitieto_config\\Plugin\\Block\\SiteTitleBlock\:\:build\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/modules/custom/kaupunkitieto_config/src/Plugin/Block/SiteTitleBlock.php
+
+		-
+			message: '#^Right side of \|\| is always false\.$#'
+			identifier: booleanOr.rightAlwaysFalse
+			count: 1
+			path: public/modules/custom/kaupunkitieto_config/src/Plugin/Validation/Constraint/EmbedConstraintsValidator.php
+
+		-
+			message: '#^Parameter \#1 \$event of method Drupal\\kaupunkitieto_config\\EventSubscriber\\CspEventSubscriber\:\:policyAlter\(\) expects Drupal\\csp\\Event\\PolicyAlterEvent, object given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/modules/custom/kaupunkitieto_config/tests/src/Unit/CspEventSubscriberTest.php
+
+		-
+			message: '#^Property Drupal\\Tests\\kaupunkitieto_config\\Unit\\CspEventSubscriberTest\:\:\$event with generic class Prophecy\\Prophecy\\ObjectProphecy does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: public/modules/custom/kaupunkitieto_config/tests/src/Unit/CspEventSubscriberTest.php
+
+		-
+			message: '#^Property Drupal\\Tests\\kaupunkitieto_config\\Unit\\CspEventSubscriberTest\:\:\$policy with generic class Prophecy\\Prophecy\\ObjectProphecy does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: public/modules/custom/kaupunkitieto_config/tests/src/Unit/CspEventSubscriberTest.php
+
+		-
+			message: '#^Class Drupal\\Tests\\kaupunkitieto_config\\Unit\\EmbedConstraintsValidatorTest extends generic class Symfony\\Component\\Validator\\Test\\ConstraintValidatorTestCase but does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: public/modules/custom/kaupunkitieto_config/tests/src/Unit/EmbedConstraintsValidatorTest.php
+
+		-
+			message: '#^Function kaupunkitieto_infograph_helfi_paragraph_types\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/modules/custom/kaupunkitieto_infograph/kaupunkitieto_infograph.module
+
+		-
+			message: '#^Drupal\\Core\\DependencyInjection\\DependencySerializationTrait does not support private properties\.$#'
+			identifier: dependencySerializationTraitProperty.unsupportedPrivateProperty
+			count: 3
+			path: public/modules/custom/kaupunkitieto_infograph/src/Commands/FixKaupunkitietoPlatformUpdate.php
+
+		-
+			message: '#^Method Drupal\\kaupunkitieto_infograph\\Commands\\FixKaupunkitietoPlatformUpdate\:\:processBatch\(\) has parameter \$context with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/modules/custom/kaupunkitieto_infograph/src/Commands/FixKaupunkitietoPlatformUpdate.php
+
+		-
+			message: '#^Method Drupal\\kaupunkitieto_infograph\\Commands\\FixKaupunkitietoPlatformUpdate\:\:processBatch\(\) has parameter \$entities with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/modules/custom/kaupunkitieto_infograph/src/Commands/FixKaupunkitietoPlatformUpdate.php
+
+		-
+			message: '#^Parameter \#1 \$messages of method Symfony\\Component\\Console\\Output\\OutputInterface\:\:writeln\(\) expects iterable\|string, Drupal\\Core\\StringTranslation\\TranslatableMarkup given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/modules/custom/kaupunkitieto_infograph/src/Commands/FixKaupunkitietoPlatformUpdate.php
+
+		-
+			message: '#^Drupal\\Core\\DependencyInjection\\DependencySerializationTrait does not support private properties\.$#'
+			identifier: dependencySerializationTraitProperty.unsupportedPrivateProperty
+			count: 3
+			path: public/modules/custom/kaupunkitieto_infograph/src/Commands/Infograph.php
+
+		-
+			message: '#^Method Drupal\\kaupunkitieto_infograph\\Commands\\Infograph\:\:getGraphs\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/modules/custom/kaupunkitieto_infograph/src/Commands/Infograph.php
+
+		-
+			message: '#^Property Drupal\\kaupunkitieto_infograph\\Commands\\Infograph\:\:\$connection is never read, only written\.$#'
+			identifier: property.onlyWritten
+			count: 1
+			path: public/modules/custom/kaupunkitieto_infograph/src/Commands/Infograph.php
+
+		-
+			message: '#^Drupal\\Core\\DependencyInjection\\DependencySerializationTrait does not support private properties\.$#'
+			identifier: dependencySerializationTraitProperty.unsupportedPrivateProperty
+			count: 3
+			path: public/modules/custom/kaupunkitieto_infograph/src/Commands/MigrateEmbedParagraphs.php
+
+		-
+			message: '#^Method Drupal\\kaupunkitieto_infograph\\Commands\\MigrateEmbedParagraphs\:\:commandName\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/modules/custom/kaupunkitieto_infograph/src/Commands/MigrateEmbedParagraphs.php
+
+		-
+			message: '#^Method Drupal\\kaupunkitieto_infograph\\Commands\\MigrateEmbedParagraphs\:\:create\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/modules/custom/kaupunkitieto_infograph/src/Commands/MigrateEmbedParagraphs.php
+
+		-
+			message: '#^Method Drupal\\kaupunkitieto_infograph\\Commands\\MigrateEmbedParagraphs\:\:processMigration\(\) has parameter \$parent_entity with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/modules/custom/kaupunkitieto_infograph/src/Commands/MigrateEmbedParagraphs.php
+
+		-
+			message: '#^Storing entity storage as a class property is not recommended\. Call Drupal\\Core\\Entity\\EntityTypeManagerInterface\:\:getStorage\(\) at the call\-site instead\.$#'
+			identifier: drupal.entityStoragePropertyAssignment
+			count: 2
+			path: public/modules/custom/kaupunkitieto_infograph/src/Commands/MigrateEmbedParagraphs.php
+
+		-
+			message: '#^Drupal\\Core\\DependencyInjection\\DependencySerializationTrait does not support private properties\.$#'
+			identifier: dependencySerializationTraitProperty.unsupportedPrivateProperty
+			count: 2
+			path: public/modules/custom/kaupunkitieto_infograph/src/Commands/RemoveOrphanParagraphs.php
+
+		-
+			message: '#^Method Drupal\\kaupunkitieto_infograph\\Commands\\RemoveOrphanParagraphs\:\:processBatch\(\) has parameter \$context with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/modules/custom/kaupunkitieto_infograph/src/Commands/RemoveOrphanParagraphs.php
+
+		-
+			message: '#^Method Drupal\\kaupunkitieto_infograph\\Commands\\RemoveOrphanParagraphs\:\:processBatch\(\) has parameter \$entity_ids with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/modules/custom/kaupunkitieto_infograph/src/Commands/RemoveOrphanParagraphs.php
+
+		-
+			message: '#^Parameter \#1 \$messages of method Symfony\\Component\\Console\\Output\\OutputInterface\:\:writeln\(\) expects iterable\|string, Drupal\\Core\\StringTranslation\\TranslatableMarkup given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/modules/custom/kaupunkitieto_infograph/src/Commands/RemoveOrphanParagraphs.php
+
+		-
+			message: '#^Property Drupal\\kaupunkitieto_infograph\\Commands\\RemoveOrphanParagraphs\:\:\$connection is never read, only written\.$#'
+			identifier: property.onlyWritten
+			count: 1
+			path: public/modules/custom/kaupunkitieto_infograph/src/Commands/RemoveOrphanParagraphs.php
+
+		-
+			message: '#^Method Drupal\\kaupunkitieto_infograph\\Form\\KaupunkiTietoSettingsForm\:\:buildForm\(\) has parameter \$form with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/modules/custom/kaupunkitieto_infograph/src/Form/KaupunkiTietoSettingsForm.php
+
+		-
+			message: '#^Method Drupal\\kaupunkitieto_infograph\\Form\\KaupunkiTietoSettingsForm\:\:buildForm\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/modules/custom/kaupunkitieto_infograph/src/Form/KaupunkiTietoSettingsForm.php
+
+		-
+			message: '#^Method Drupal\\kaupunkitieto_infograph\\Form\\KaupunkiTietoSettingsForm\:\:getEditableConfigNames\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/modules/custom/kaupunkitieto_infograph/src/Form/KaupunkiTietoSettingsForm.php
+
+		-
+			message: '#^Method Drupal\\kaupunkitieto_infograph\\Form\\KaupunkiTietoSettingsForm\:\:submitForm\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/modules/custom/kaupunkitieto_infograph/src/Form/KaupunkiTietoSettingsForm.php
+
+		-
+			message: '#^Method Drupal\\kaupunkitieto_infograph\\Form\\KaupunkiTietoSettingsForm\:\:submitForm\(\) has parameter \$form with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/modules/custom/kaupunkitieto_infograph/src/Form/KaupunkiTietoSettingsForm.php
+
+		-
+			message: '#^Function kaupunkitieto_search_theme\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/modules/custom/kaupunkitieto_search/kaupunkitieto_search.module
+
+		-
+			message: '#^Function kaupunkitieto_search_theme\(\) has parameter \$existing with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/modules/custom/kaupunkitieto_search/kaupunkitieto_search.module
+
+		-
+			message: '#^Function kaupunkitieto_search_theme\(\) has parameter \$path with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/modules/custom/kaupunkitieto_search/kaupunkitieto_search.module
+
+		-
+			message: '#^Function kaupunkitieto_search_theme\(\) has parameter \$theme with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/modules/custom/kaupunkitieto_search/kaupunkitieto_search.module
+
+		-
+			message: '#^Function kaupunkitieto_search_theme\(\) has parameter \$type with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/modules/custom/kaupunkitieto_search/kaupunkitieto_search.module
+
+		-
+			message: '#^Method Drupal\\kaupunkitieto_search\\Plugin\\Block\\HeaderSearchBlock\:\:__construct\(\) has parameter \$configuration with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/modules/custom/kaupunkitieto_search/src/Plugin/Block/HeaderSearchBlock.php
+
+		-
+			message: '#^Method Drupal\\kaupunkitieto_search\\Plugin\\Block\\HeaderSearchBlock\:\:build\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/modules/custom/kaupunkitieto_search/src/Plugin/Block/HeaderSearchBlock.php
+
+		-
+			message: '#^Method Drupal\\kaupunkitieto_search\\Plugin\\Block\\HeaderSearchBlock\:\:create\(\) has parameter \$configuration with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/modules/custom/kaupunkitieto_search/src/Plugin/Block/HeaderSearchBlock.php
+
+		-
+			message: '#^Function hdbt_subtheme_preprocess_block\(\) has parameter \$variables with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: '#^Function hdbt_subtheme_preprocess_html\(\) has parameter \$variables with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: '#^Function hdbt_subtheme_preprocess_paragraph\(\) has parameter \$variables with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: '#^Function hdbt_subtheme_theme_suggestions_block_alter\(\) has parameter \$suggestions with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: '#^Function hdbt_subtheme_theme_suggestions_block_alter\(\) has parameter \$variables with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: '#^Function hdbt_subtheme_theme_suggestions_input_alter\(\) has parameter \$suggestions with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: '#^Function hdbt_subtheme_theme_suggestions_input_alter\(\) has parameter \$variables with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: '#^Function hdbt_subtheme_theme_suggestions_menu_alter\(\) has parameter \$suggestions with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: '#^Function hdbt_subtheme_theme_suggestions_menu_alter\(\) has parameter \$variables with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: '#^Function hdbt_subtheme_theme_suggestions_paragraph_alter\(\) has parameter \$suggestions with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: '#^Function hdbt_subtheme_theme_suggestions_paragraph_alter\(\) has parameter \$variables with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: '#^Function hdbt_subtheme_theme_suggestions_region_alter\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: '#^Function hdbt_subtheme_theme_suggestions_region_alter\(\) has parameter \$suggestions with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: '#^Function hdbt_subtheme_theme_suggestions_region_alter\(\) has parameter \$variables with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: '#^Function hdbt_subtheme_theme_suggestions_views_view_field_alter\(\) has parameter \$hook with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: '#^Function hdbt_subtheme_theme_suggestions_views_view_field_alter\(\) has parameter \$suggestions with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
+
+		-
+			message: '#^Function hdbt_subtheme_theme_suggestions_views_view_field_alter\(\) has parameter \$variables with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/themes/custom/hdbt_subtheme/hdbt_subtheme.theme
