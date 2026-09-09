@@ -34,6 +34,7 @@ content:
     weight: 0
     region: content
 hidden:
+  changed_at: true
   field_author: true
   field_content: true
   field_has_hero: true
