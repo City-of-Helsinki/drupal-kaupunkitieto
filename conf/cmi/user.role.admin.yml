@@ -28,7 +28,6 @@ dependencies:
     - file
     - file_delete
     - filter
-    - hdbt_cookie_banner
     - helfi_api_base
     - locale
     - media
@@ -72,12 +71,12 @@ permissions:
   - 'administer block content'
   - 'administer block types'
   - 'administer blocks'
-  - 'administer hdbt_cookie_banner'
   - 'administer menu'
   - 'administer nodes'
   - 'administer paragraphs library'
   - 'administer pathauto'
   - 'administer redirects'
+  - 'administer site configuration'
   - 'administer sitemap settings'
   - 'administer url aliases'
   - 'administer users'
