@@ -11,7 +11,6 @@ dependencies:
     - field.field.node.page.field_lower_content
     - field.field.node.page.field_metatags
     - field.field.node.page.field_search_result_text
-    - field.field.node.page.field_sidebar_content
     - node.type.page
   module:
     - hdbt_admin_tools
