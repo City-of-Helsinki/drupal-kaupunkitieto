@@ -39,17 +39,21 @@ settings:
       remote_video: remote_video
       embed: embed
       chart: chart
+      number_highlights: number_highlights
+      accordion: accordion
+      banner: banner
+      contact_card_listing: contact_card_listing
     negate: 0
     target_bundles_drag_drop:
       accordion:
-        weight: -21
-        enabled: false
+        weight: 47
+        enabled: true
       accordion_item:
         weight: -20
         enabled: false
       banner:
-        weight: -16
-        enabled: false
+        weight: 48
+        enabled: true
       chart:
         weight: 45
         enabled: true
@@ -60,8 +64,8 @@ settings:
         weight: 47
         enabled: false
       contact_card_listing:
-        weight: 48
-        enabled: false
+        weight: 49
+        enabled: true
       content_cards:
         weight: -22
         enabled: true
@@ -126,8 +130,8 @@ settings:
         weight: 69
         enabled: false
       number_highlights:
-        weight: 70
-        enabled: false
+        weight: 46
+        enabled: true
       phasing:
         weight: 71
         enabled: false
