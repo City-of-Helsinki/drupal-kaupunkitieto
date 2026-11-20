@@ -32,6 +32,14 @@ function kaupunkitieto_infograph_helfi_paragraph_types() : array {
           'content_liftup' => 16,
         ],
       ],
+      'article' => [
+        'field_content' => [
+          'number_highlights' => 46,
+          'accordion' => 47,
+          'banner' => 48,
+          'contact_card_listing' => 49,
+        ],
+      ],
     ],
     'paragraph' => [
       'content_liftup' => [

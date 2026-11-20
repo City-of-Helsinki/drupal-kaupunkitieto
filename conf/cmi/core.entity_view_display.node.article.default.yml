@@ -92,9 +92,18 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  toc_enabled:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
 hidden:
   field_liftup_image: true
   langcode: true
   published_at: true
   search_api_excerpt: true
-  toc_enabled: true

@@ -33,3 +33,12 @@ function kaupunkitieto_config_entity_bundle_field_info_alter(&$fields, EntityTyp
     }
   }
 }
+
+/**
+ * Implements hook_helfi_toc_forms_alter().
+ */
+function kaupunkitieto_config_helfi_toc_forms_alter(array &$whitelisted_forms): void {
+  // Allow table of contents on article nodes.
+  $whitelisted_forms[] = 'node_article_form';
+  $whitelisted_forms[] = 'node_article_edit_form';
+}
