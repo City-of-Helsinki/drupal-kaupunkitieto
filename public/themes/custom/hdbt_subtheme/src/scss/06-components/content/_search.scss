@@ -39,6 +39,11 @@
     justify-content: flex-start;
     word-wrap: break-word;
 
+    // Exception: align header row number of items right.
+    &:has(.form-item-items-per-page) {
+      justify-content: space-between;
+    }
+
     @include breakpoint($breakpoint-l) {
       gap: calc(4% / 3);
     }
