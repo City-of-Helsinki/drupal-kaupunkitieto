@@ -1,20 +1,45 @@
-<div class="header-search dropdown dropdown--search">
-  <div class="header-search__form-wrapper">
-    <form class="helfi-search__form" action="{{ search_page_path }}" method="GET" role="search">
-      <div class="form-item hds-text-input">
-        {% if label %}
-          <label class="hds-text-input__label" for="search-form-kaupunkitieto">{{ label }}</label>
-        {% endif %}
-        <div class="hds-text-input__input-wrapper">
-          <input type="search" id="search-form-kaupunkitieto" name="search_api_fulltext" value="" size="30" maxlength="128" class="form-text hds-text-input__input" placeholder="{{ 'What are you looking for?'|t }}">
+{#
+/**
+ * @file
+ * Header search toggle button and dropdown.
+ *
+ * Uses the HDBT header navigation toggle components, so the button sits in
+ * the header branding search slot and HDBT's navToggle JavaScript opens and
+ * closes the dropdown (#search target, .js-search-button and
+ * .js-search-dropdown). See hdbt_subtheme_preprocess_html().
+ *
+ * Available variables:
+ * - search_page_path: The site search page path in the current language.
+ */
+#}
+{% set dropdown_id = 'search-dropdown' %}
+
+{% embed "@hdbt/navigation/nav-toggle-button.twig" with {
+  modifier_class: 'nav-toggle--search',
+  controls: dropdown_id,
+  js_target: 'js-search-button',
+  open_label: 'Search'|t({}, {'context': 'Helfi menu search button'}),
+} %}
+{% endembed %}
+
+{% embed "@hdbt/navigation/nav-toggle-dropdown.twig" with {
+  id: dropdown_id,
+  modifier_class: 'nav-toggle-dropdown--search js-search-dropdown',
+} %}
+  {% block content %}
+    <div class="header-search-wrapper">
+      <div class="header-search__title">{{ 'Search this site'|t({}, {'context': 'Site search'}) }}</div>
+      <form class="helfi-search__form" action="{{ search_page_path }}" method="get" role="search">
+        <div class="hds-search-input">
+          <label class="hds-search-input__label" for="search-form-header">{{ 'What are you looking for?'|t }}</label>
+          <div class="hds-search-input__input-wrapper">
+            <input type="search" id="search-form-header" name="search_api_fulltext" value="" size="30" maxlength="128" class="hds-search-input__input" autocomplete="off">
+            <div class="hds-search-input__buttons">
+              <button type="submit" aria-label="{{ 'Search'|t({}, {'context': 'Helfi search button'}) }}" class="hds-search-input__button hds-search-input__button--search"></button>
+            </div>
+          </div>
         </div>
-      </div>
-      <button class="hds-button hds-button--primary helfi-search__submit-button" type="submit" value="Submit">
-        <span class="hds-button__label">{{ 'Search'|t({}, {'context': 'Helfi search button'}) }}</span>
-      </button>
-      <button type="button" class="header_search_form__close" aria-labelledby="header_search_form_close_button">
-        <span id="header_search_form_close_button" class="is-hidden">{{ 'Close'|t }}</span>
-      </button>
-    </form>
-  </div>
-</div>
+      </form>
+    </div>
+  {% endblock %}
+{% endembed %}
