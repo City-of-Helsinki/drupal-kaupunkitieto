@@ -65,7 +65,9 @@ final class FulltextOrFallbackSubscriber implements EventSubscriberInterface {
       // Take the reference only now: a reference held during cloning would be
       // shared between the original query and the copy.
       $query_keys = &$query->getKeys();
-      $query_keys['#conjunction'] = 'OR';
+      if (is_array($query_keys)) {
+        $query_keys['#conjunction'] = 'OR';
+      }
     }
   }
 
