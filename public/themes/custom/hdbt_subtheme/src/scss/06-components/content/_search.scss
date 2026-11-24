@@ -35,8 +35,13 @@
   .flex-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 4%;
+    justify-content: flex-start;
     word-wrap: break-word;
+
+    @include breakpoint($breakpoint-l) {
+      gap: calc(4% / 3);
+    }
 
     &.spaced {
       align-items:center;
