@@ -1,0 +1,24 @@
+uuid: 90809a75-ec30-4764-a5d3-43a4cdda63cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.minimal
+    - paragraphs.paragraphs_type.article_series
+  module:
+    - text
+id: paragraph.article_series.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: article_series
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - minimal
+field_type: text_long

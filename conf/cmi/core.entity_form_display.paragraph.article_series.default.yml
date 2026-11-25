@@ -1,0 +1,41 @@
+uuid: 9daab038-de36-46d5-a208-1f8953567c2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.article_series.field_article_series
+    - field.field.paragraph.article_series.field_description
+    - field.field.paragraph.article_series.field_title
+    - paragraphs.paragraphs_type.article_series
+  module:
+    - text
+id: paragraph.article_series.default
+targetEntityType: paragraph
+bundle: article_series
+mode: default
+content:
+  field_article_series:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

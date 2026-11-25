@@ -1,0 +1,10 @@
+uuid: 1c4c2bbc-a6f0-48df-a362-d7ca21ad3cf7
+langcode: en
+status: true
+dependencies: {  }
+id: article_series
+label: 'Article series'
+icon_uuid: null
+icon_default: null
+description: 'List articles of the selected article series.'
+behavior_plugins: {  }
