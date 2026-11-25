@@ -10,10 +10,14 @@ $infograph-light-green: #e1eadc;
     line-height: 1.01;
 
     @include breakpoint($breakpoint-m) {
-      font-size: remify(110px);
+      font-size: remify(120px);
     }
 
     @include breakpoint($breakpoint-l) {
+      font-size: remify(165px);
+    }
+
+    @include breakpoint(1240px) {
       font-size: remify(215px);
     }
   }
