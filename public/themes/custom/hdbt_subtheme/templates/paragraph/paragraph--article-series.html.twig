@@ -8,7 +8,7 @@
     }
   %}
     {% block component_content %}
-      {{ drupal_view('article', 'article_series', paragraph.field_article_series.target_id) }}
+      {{ paragraph.getArticleList() }}
     {% endblock component_content %}
   {% endembed %}
 {% endblock paragraph %}

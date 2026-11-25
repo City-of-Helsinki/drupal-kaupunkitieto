@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\kaupunkitieto_config\ExistingSite;
 
+use Drupal\kaupunkitieto_config\Entity\ArticleSeries;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\taxonomy\Entity\Vocabulary;
 use Drupal\Tests\helfi_api_base\Functional\ExistingSiteTestBase;
@@ -22,6 +23,7 @@ class ArticleSeriesTest extends ExistingSiteTestBase {
    */
   public function testListsArticlesOfSelectedSeries(): void {
     $vocabulary = Vocabulary::load('article_series');
+    $this->assertInstanceOf(Vocabulary::class, $vocabulary, 'Article series vocabulary exists.');
     $series = $this->createTerm($vocabulary, ['name' => 'Test series', 'langcode' => 'fi']);
     $otherSeries = $this->createTerm($vocabulary, ['name' => 'Other test series', 'langcode' => 'fi']);
 
@@ -52,6 +54,7 @@ class ArticleSeriesTest extends ExistingSiteTestBase {
     ]);
     $paragraph->save();
     $this->markEntityForCleanup($paragraph);
+    $this->assertInstanceOf(ArticleSeries::class, $paragraph, 'Article series paragraph uses the article series bundle class.');
 
     $landingPage = $this->createNode([
       'type' => 'landing_page',

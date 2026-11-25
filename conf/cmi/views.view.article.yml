@@ -887,7 +887,7 @@ display:
             type: none
             fail: 'not found'
           validate_options: {  }
-          break_phrase: false
+          break_phrase: true
           not: false
           target_entity_type_id: taxonomy_term
       defaults:
@@ -910,6 +910,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_article_series'
         - 'config:field.storage.node.field_author'
         - 'config:field.storage.node.field_keywords'
         - 'config:field.storage.node.field_lead'
