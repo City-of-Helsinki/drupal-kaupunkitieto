@@ -21,16 +21,21 @@ class ArticleSeriesTest extends ExistingSiteTestBase {
    * Only articles of the selected series are listed.
    */
   public function testListsArticlesOfSelectedSeries(): void {
-    $series = $this->createTerm(Vocabulary::load('article_series'), [
-      'name' => 'Test series',
-      'langcode' => 'fi',
-    ]);
+    $vocabulary = Vocabulary::load('article_series');
+    $series = $this->createTerm($vocabulary, ['name' => 'Test series', 'langcode' => 'fi']);
+    $otherSeries = $this->createTerm($vocabulary, ['name' => 'Other test series', 'langcode' => 'fi']);
 
     $this->createNode([
       'type' => 'article',
       'title' => 'Article in series',
       'langcode' => 'fi',
       'field_article_series' => $series->id(),
+    ]);
+    $this->createNode([
+      'type' => 'article',
+      'title' => 'Article in other series',
+      'langcode' => 'fi',
+      'field_article_series' => $otherSeries->id(),
     ]);
     $this->createNode([
       'type' => 'article',
@@ -43,7 +48,7 @@ class ArticleSeriesTest extends ExistingSiteTestBase {
       'langcode' => 'fi',
       'field_title' => 'Series listing',
       'field_description' => 'Series description',
-      'field_article_series' => $series->id(),
+      'field_article_series' => [$series->id(), $otherSeries->id()],
     ]);
     $paragraph->save();
     $this->markEntityForCleanup($paragraph);
@@ -61,6 +66,7 @@ class ArticleSeriesTest extends ExistingSiteTestBase {
     $assert->elementTextContains('css', '.component--article-series .component__title', 'Series listing');
     $assert->elementTextContains('css', '.component--article-series .component__description', 'Series description');
     $assert->elementTextContains('css', '.views--article.views--article-series', 'Article in series');
+    $assert->elementTextContains('css', '.views--article.views--article-series', 'Article in other series');
     $assert->elementTextNotContains('css', '.views--article.views--article-series', 'Article outside series');
   }
 
