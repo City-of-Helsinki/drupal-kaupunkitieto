@@ -1,11 +1,11 @@
 global-styling:
-  version: 1.x
+  version: HELFI_DEPLOYMENT_IDENTIFIER
   css:
     theme:
       dist/css/styles.min.css: { minified: true }
 
 search-toggle:
-  version: 1.2
+  version: HELFI_DEPLOYMENT_IDENTIFIER
   js:
     dist/js/searchToggle.min.js: { minified: true }
   dependencies:
@@ -13,15 +13,15 @@ search-toggle:
     - core/once
 
 admin-content-liftup:
+  version: HELFI_DEPLOYMENT_IDENTIFIER
   js:
     dist/js/contentLiftup.min.js: { minified: true }
-  version: 1.0
   dependencies:
     - core/drupal
     - core/jquery
 
 infograph:
-  version: 1.1
+  version: HELFI_DEPLOYMENT_IDENTIFIER
   js:
     dist/js/infograph.min.js: { minified: true }
     dist/js/jqueryTypePolyfill.min.js: { minified: true }
@@ -29,18 +29,21 @@ infograph:
   css:
     component:
       dist/css/slick.css: { preprocess: false }
+  dependencies:
+    - core/drupal
+    - core/jquery
 
 content-menu:
+  version: HELFI_DEPLOYMENT_IDENTIFIER
   js:
     dist/js/contentMenu.min.js: { minified: true }
-  version: 1.0
   dependencies:
     - core/drupal
     - core/jquery
     - select2/select2.min
 
 matomo:
-  version: 1.0
+  version: HELFI_DEPLOYMENT_IDENTIFIER
   js:
     dist/js/matomo.min.js: {
       minified: true,
