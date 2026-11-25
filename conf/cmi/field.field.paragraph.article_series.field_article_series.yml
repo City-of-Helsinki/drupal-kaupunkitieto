@@ -12,7 +12,7 @@ entity_type: paragraph
 bundle: article_series
 label: 'Article series'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
