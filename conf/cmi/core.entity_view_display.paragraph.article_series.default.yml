@@ -1,0 +1,34 @@
+uuid: ceb2e37a-397e-4899-b15b-b6bda24fea88
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.article_series.field_article_series
+    - field.field.paragraph.article_series.field_description
+    - field.field.paragraph.article_series.field_title
+    - paragraphs.paragraphs_type.article_series
+  module:
+    - text
+id: paragraph.article_series.default
+targetEntityType: paragraph
+bundle: article_series
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_article_series: true
+  search_api_excerpt: true

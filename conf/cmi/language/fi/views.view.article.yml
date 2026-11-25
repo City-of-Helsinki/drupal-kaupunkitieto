@@ -17,3 +17,6 @@ display:
   recent:
     display_options:
       block_description: 'Uusimmat artikkelit'
+  article_series:
+    display_options:
+      block_description: Artikkelisarja

@@ -1,0 +1,14 @@
+{% block paragraph %}
+  {% embed "@hdbt/misc/component.twig" with
+    {
+      component_classes: [ 'component--article-series' ],
+      component_title: content.field_title,
+      component_description: content.field_description,
+      component_content_class: 'article-series',
+    }
+  %}
+    {% block component_content %}
+      {{ paragraph.getArticleList() }}
+    {% endblock component_content %}
+  {% endembed %}
+{% endblock paragraph %}

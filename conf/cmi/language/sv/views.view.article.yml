@@ -13,3 +13,6 @@ display:
             next: Nästa
             first: Första
             last: Sista
+  article_series:
+    display_options:
+      block_description: Artikelserie
