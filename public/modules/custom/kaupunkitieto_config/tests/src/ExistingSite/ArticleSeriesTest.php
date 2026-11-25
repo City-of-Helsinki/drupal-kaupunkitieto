@@ -73,4 +73,46 @@ class ArticleSeriesTest extends ExistingSiteTestBase {
     $assert->elementTextNotContains('css', '.views--article.views--article-series', 'Article outside series');
   }
 
+  /**
+   * All articles are listed when no series is selected.
+   */
+  public function testListsAllArticlesWithoutSelectedSeries(): void {
+    $vocabulary = Vocabulary::load('article_series');
+    $this->assertInstanceOf(Vocabulary::class, $vocabulary, 'Article series vocabulary exists.');
+    $series = $this->createTerm($vocabulary, ['name' => 'Test series', 'langcode' => 'fi']);
+
+    $this->createNode([
+      'type' => 'article',
+      'title' => 'Article in series',
+      'langcode' => 'fi',
+      'field_article_series' => $series->id(),
+    ]);
+    $this->createNode([
+      'type' => 'article',
+      'title' => 'Article outside series',
+      'langcode' => 'fi',
+    ]);
+
+    $paragraph = Paragraph::create([
+      'type' => 'article_series',
+      'langcode' => 'fi',
+      'field_title' => 'All articles listing',
+    ]);
+    $paragraph->save();
+    $this->markEntityForCleanup($paragraph);
+
+    $landingPage = $this->createNode([
+      'type' => 'landing_page',
+      'title' => 'Landing page',
+      'langcode' => 'fi',
+      'field_content' => [$paragraph],
+    ]);
+
+    $this->drupalGet($landingPage->toUrl());
+
+    $assert = $this->assertSession();
+    $assert->elementTextContains('css', '.views--article.views--article-series', 'Article in series');
+    $assert->elementTextContains('css', '.views--article.views--article-series', 'Article outside series');
+  }
+
 }

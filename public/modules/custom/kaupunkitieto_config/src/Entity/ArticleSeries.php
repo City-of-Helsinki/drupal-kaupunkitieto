@@ -24,16 +24,12 @@ class ArticleSeries extends Paragraph implements ParagraphInterface {
       $seriesIds[] = $item->target_id;
     }
 
-    if (!$seriesIds) {
-      return [];
-    }
-
-    // List articles from the selected series.
+    // List all articles when no series is selected.
     return [
       '#type' => 'view',
       '#name' => 'article',
       '#display_id' => 'article_series',
-      '#arguments' => [implode('+', $seriesIds)],
+      '#arguments' => $seriesIds ? [implode('+', $seriesIds)] : [],
     ];
   }
 

@@ -863,7 +863,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: entity_target_id
-          default_action: empty
+          default_action: ignore
           exception:
             value: all
             title_enable: false
