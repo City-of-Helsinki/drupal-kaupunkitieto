@@ -60,6 +60,7 @@ class ArticleSeriesTest extends ExistingSiteTestBase {
       'type' => 'landing_page',
       'title' => 'Landing page',
       'langcode' => 'fi',
+      'status' => 1,
       'field_content' => [$paragraph],
     ]);
 
@@ -105,6 +106,7 @@ class ArticleSeriesTest extends ExistingSiteTestBase {
       'type' => 'landing_page',
       'title' => 'Landing page',
       'langcode' => 'fi',
+      'status' => 1,
       'field_content' => [$paragraph],
     ]);
 
