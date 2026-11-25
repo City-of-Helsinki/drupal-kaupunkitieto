@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.article_series.field_title
     - paragraphs.paragraphs_type.article_series
   module:
+    - select2
     - text
 id: paragraph.article_series.default
 targetEntityType: paragraph
@@ -15,10 +16,14 @@ bundle: article_series
 mode: default
 content:
   field_article_series:
-    type: options_select
+    type: select2_entity_reference
     weight: 2
     region: content
-    settings: {  }
+    settings:
+      width: 100%
+      autocomplete: true
+      match_operator: CONTAINS
+      match_limit: 10
     third_party_settings: {  }
   field_description:
     type: text_textarea

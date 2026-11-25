@@ -19,4 +19,4 @@ display:
       block_description: 'Uusimmat artikkelit'
   article_series:
     display_options:
-      block_description: 'Artikkelisarja'
+      block_description: Artikkelisarja

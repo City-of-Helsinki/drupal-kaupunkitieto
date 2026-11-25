@@ -15,4 +15,4 @@ display:
             last: Sista
   article_series:
     display_options:
-      block_description: 'Artikelserie'
+      block_description: Artikelserie
