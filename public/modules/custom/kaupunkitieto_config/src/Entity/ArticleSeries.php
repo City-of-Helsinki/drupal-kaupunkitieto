@@ -21,7 +21,7 @@ class ArticleSeries extends Paragraph implements ParagraphInterface {
   public function getArticleList(): array {
     $seriesIds = [];
     foreach ($this->get('field_article_series') as $item) {
-      $seriesIds[] = $item->target_id;
+      $seriesIds[] = $item->get('target_id')->getValue();
     }
 
     // List all articles when no series is selected.
