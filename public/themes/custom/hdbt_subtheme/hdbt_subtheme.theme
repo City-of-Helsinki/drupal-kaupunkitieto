@@ -99,8 +99,17 @@ function hdbt_subtheme_preprocess_html(array &$variables): void {
   if ($current_route_name == 'view.site_search.page_1') {
     $variables['attributes']['class'][] = 'site-search';
   }
-  // Attach header search toggle to each page.
-  $variables['#attached']['library'][] = 'hdbt_subtheme/search-toggle';
+  // The header search block uses HDBT's header search toggle. HDBT enables it
+  // only together with its own global search, so enable the toggle here and
+  // add the #search target that its JavaScript and CSS need. The target must
+  // be a preceding sibling of the page wrapper, so it goes in page_top.
+  if (isset($variables['page']['header_branding']['kaupunkitietoheadersearch'])) {
+    $variables['#attached']['drupalSettings']['hdbt']['search_dropdown'] = TRUE;
+    $variables['page_top']['kaupunkitieto_search_target'] = [
+      '#markup' => '<div id="search" class="nav-toggle-target"></div>',
+      '#weight' => -100,
+    ];
+  }
 }
 
 /**

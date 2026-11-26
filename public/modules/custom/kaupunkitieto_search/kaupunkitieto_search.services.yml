@@ -1,0 +1,5 @@
+services:
+  kaupunkitieto_search.fulltext_or_fallback_subscriber:
+    class: Drupal\kaupunkitieto_search\EventSubscriber\FulltextOrFallbackSubscriber
+    tags:
+      - { name: event_subscriber }
