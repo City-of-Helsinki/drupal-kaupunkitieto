@@ -42,7 +42,7 @@ final class HeaderSearchTest extends ExistingSiteBase {
    */
   #[DataProvider('languageProvider')]
   public function testHeaderSearchMarkup(string $langcode): void {
-    $this->drupalGetFrontPage($langcode);
+    $this->drupalGetSearchPage($langcode);
     $assert = $this->assertSession();
 
     // The toggle button is in the header branding search slot.
@@ -70,7 +70,7 @@ final class HeaderSearchTest extends ExistingSiteBase {
    */
   #[DataProvider('languageProvider')]
   public function testHeaderSearchSubmit(string $langcode): void {
-    $this->drupalGetFrontPage($langcode);
+    $this->drupalGetSearchPage($langcode);
 
     $page = $this->getSession()->getPage();
     $form = $page->find('css', '#search-dropdown form');
@@ -92,10 +92,13 @@ final class HeaderSearchTest extends ExistingSiteBase {
   }
 
   /**
-   * Opens the front page in the given language.
+   * Opens the site search page in the given language.
+   *
+   * The search page comes from configuration, so it exists also on a site
+   * installed without content, like in CI. The front page is a node.
    */
-  private function drupalGetFrontPage(string $langcode): void {
-    $this->drupalGet(Url::fromRoute('<front>'), [
+  private function drupalGetSearchPage(string $langcode): void {
+    $this->drupalGet(Url::fromRoute('view.site_search.page_1'), [
       'language' => \Drupal::languageManager()->getLanguage($langcode),
     ]);
     $this->assertSession()->statusCodeEquals(200);
