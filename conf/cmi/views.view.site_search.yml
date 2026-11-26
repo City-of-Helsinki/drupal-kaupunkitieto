@@ -276,7 +276,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ created }} | <a href="/haku?filter[0]=author:{{ field_author__target_id }}">{{ field_author }}</a>'
+            text: '{{ created }} | <a href="{{ path(''view.site_search.page_1'') }}?filter[0]=author:{{ field_author__target_id }}">{{ field_author }}</a>'
             make_link: false
             path: ''
             absolute: false
@@ -638,7 +638,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: search_api_fulltext
-          operator: or
+          operator: and
           value: ''
           group: 1
           exposed: true
